@@ -1,4 +1,5 @@
-# BestCare
+# BestCare - Sistema de gestao de pacientes internados em Casas de Repouso
+
 Projeto de conclusão do Curso Entra21/2022 - Python
 
 Desenvolvedores:
@@ -6,8 +7,6 @@ Desenvolvedores:
 - Jackson Castellain
 - Lucas Rezende
 - Samir Buhatem
-
-## Sistema de gestao de pacientes internados em Casas de Repouso.
 
 ## 29/07/2022
 - Criado versão BestCare v1.0 no Draw.io para inicialização do diagrama de classes;
@@ -27,3 +26,10 @@ Desenvolvedores:
 - Cadastro Comorbidades
 - Cadastro Medicamentos
 - Inclusao Documentos
+
+### Sprint_01 - 12/08 a 19/08
+- Definicao Template
+- Responsavel: Todos
+- Ferramentas: HTML/CSS/JS
+
+
