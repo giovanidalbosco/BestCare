@@ -1,0 +1,38 @@
+body {
+    background: rgb(116,189,203);
+    background: linear-gradient(90deg, rgba(116,189,203,0.4) 0%, rgba(123, 92, 55, 0.4) 100%, rgba(0,212,255,0.4) 100%);
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'menulateral carrossel';
+}
+
+.logo {
+    height: 100px;
+}
+
+.container > header {
+    grid-area: header;
+}
+
+.flex-shrink-0 {
+    grid-area: menulateral;
+}
+
+.carousel {
+    grid-area: carrossel;
+}
+
+.link-custom {
+    color: gray;
+    font-size: large;
+}
+
+.btn-custom {
+    color: gray;
+    border: gray solid 1px;
+    font-size: medium;
+}
