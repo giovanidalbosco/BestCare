@@ -35,12 +35,16 @@ Desenvolvedores:
 ##  18/08/2022
 
 ### História do usuário
-- Sistema de gerenciamento de casas de repouso focado no residente com:
+- Sistema de gerenciamento para casas de repouso focado no residente. 
+- Principais funcionalidades:
   - Agenda diária de atividades, remédios, consultas e exames;
   - Lembretes automáticos;
   - Armazenamento de histórico de rotinas (eventos) com retorno de previsibilidade de consumo de itens pessoais e remedios;
   - Controle de estoque individualizado por residente de itens de higiene e medicamentos;
   - Comunicação com responsável externo (log de saída) a confirmação de todos os eventos do residente com o log do responsável pela solução;
+  - Dashboard.
+
+
 - Entidades do projeto:
   - Log-in;
   - Cadastro Usuario;
@@ -49,4 +53,7 @@ Desenvolvedores:
   - Cadastro Informacoes;
   - Cadastro Comorbidades;
   - Cadastro Medicamentos;
-  - Inclusao Documentos.
+  - Inclusao Documentos;
+  - Log de eventos.
+
+Beneficios:
