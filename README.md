@@ -53,12 +53,8 @@ Desenvolvedores:
   - Cadastro Informacoes;
   - Cadastro Comorbidades;
   - Cadastro Medicamentos;
-<<<<<<< HEAD
   - Inclusao Documentos;
   - Log de eventos.
 
 Beneficios:
-=======
   - Inclusao Documentos.
-
->>>>>>> 5125b9b1dfff1f42a5379ba758c237c1edd0c894
