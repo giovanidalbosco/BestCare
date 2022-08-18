@@ -32,4 +32,21 @@ Desenvolvedores:
 - Responsavel: Todos
 - Ferramentas: HTML/CSS/JS
 
+##  18/08/2022
 
+### História do usuário
+- Sistema de gerenciamento de casas de repouso focado no residente com:
+  - Agenda diária de atividades, remédios, consultas e exames;
+  - Lembretes automáticos;
+  - Armazenamento de histórico de rotinas (eventos) com retorno de previsibilidade de consumo de itens pessoais e remedios;
+  - Controle de estoque individualizado por residente de itens de higiene e medicamentos;
+  - Comunicação com responsável externo (log de saída) a confirmação de todos os eventos do residente com o log do responsável pela solução;
+- Entidades do projeto:
+  - Log-in;
+  - Cadastro Usuario;
+  - Cadastro Residente;
+  - Cadastro Contato/Responsavel;
+  - Cadastro Informacoes;
+  - Cadastro Comorbidades;
+  - Cadastro Medicamentos;
+  - Inclusao Documentos.
