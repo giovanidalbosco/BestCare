@@ -1,13 +1,10 @@
 body {
-background-color: #ebedf0 ;
+background-color: #b3ebf5 ;
 
 }
 
 .azul{
-    color: #1253a1;
-    font-size:1cm;
-}
-
-#azul {
-    color: #000;
+    color: #0b68d9;
+    font: size 30px;
+    text-align: center;
 }
