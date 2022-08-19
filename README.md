@@ -57,4 +57,12 @@ Desenvolvedores:
   - Log de eventos.
 
 Beneficios:
-  - Inclusao Documentos.
+  - Acompanhamento do residente em tempo real;
+  - Lembretes instantaneos;
+  - Gestao de estoque de medicamentos e itens de higiene;
+  - Estatistica de consumo de itens (fraldas por exemplo);
+  - Registro de ocorrencias anomalas;
+  - Gestao de responsabilidade das prescricoes medicas;
+  - Relatorio mensal dos eventos;
+  - Mensagens de intercorrencia instantaneas;
+  - Melhor relacao entre Cuidador e Responsavel Externo.
