@@ -69,8 +69,10 @@ Beneficios:
 
 # 22/08/2022
 
-# Diagrama de relacionamentos
 
+> Diagrama de relacionamentos
+
+```md
 Pessoas
 -
 pessoa_id int PK
@@ -121,5 +123,5 @@ Pessoas_Comorbidades
 -
 pessoa_comorbidade_id int PK
 pessoa_comorbidade_nome String  FK - Comorbidades.comorbidade_id
-
+```
 
