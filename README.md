@@ -66,3 +66,60 @@ Beneficios:
   - Relatorio mensal dos eventos;
   - Mensagens de intercorrencia instantaneas;
   - Melhor relacao entre Cuidador e Responsavel Externo.
+
+# 22/08/2022
+
+# Diagrama de relacionamentos
+
+Pessoas
+-
+pessoa_id int PK
+pessoa_nome string
+pessoa_endereco string
+pessoa_CPF String
+pessoa_classe_id String FK >- Classe.classe_id
+pessoa_telefone String
+pessoa_estoque_id String FK >- Estoque_Individual.estoque_id
+pessoa_comorbidade_id String FK >-< Pessoas_Comorbidades.pessoa_comorbidade_id
+
+
+Estoque_Individual
+-
+estoque_id int PK
+estoque_consumo_id string FK - Usos_E_Consumo.consumo_id 
+estoque_quantidade int
+
+
+Eventos
+-
+evento_id int PK
+evento_nome String
+evento_pessoa_paciente string FK >- Pessoas.pessoa_id
+evento_pessoa_funcionario String FK >- Pessoas.pessoa_id 
+
+user
+-
+usuario_id int PK
+usuario_nome String
+
+Comorbidades
+-
+comorbidade_id int PK
+comorbidade_nome String
+
+Classe
+-
+classe_id int PK
+classe_nome String
+
+Usos_E_Consumo
+-
+consumo_id int PK
+consumo_nome String
+
+Pessoas_Comorbidades
+-
+pessoa_comorbidade_id int PK
+pessoa_comorbidade_nome String  FK - Comorbidades.comorbidade_id
+
+
