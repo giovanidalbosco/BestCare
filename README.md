@@ -125,3 +125,113 @@ pessoa_comorbidade_id int PK
 pessoa_comorbidade_nome String  FK - Comorbidades.comorbidade_id
 ```
 
+# 28/08/2022
+## Atualizacao Entidades
+
+Pessoas
+-
+pessoa_id int PK
+pessoa_nome string
+pessoa_endereco string
+pessoa_numero int
+pessoa_compl string
+pessoa_cidade FK >- Cidades.cidade_id
+pessoa_estado FK >- Estados.estado_id
+pessoa_CPF String
+pessoa_classe_id String FK >- Classe.classe_id
+pessoa_telefone String
+pessoa_estoque_id String FK >- Estoque_Individual.estoque_id
+pessoa_comorbidade_id String FK >-< Comorbidades.comorbidade_id
+pessoa_plano string
+pessoa_documento_id FK -< Documentos.documento_id
+
+Cidades
+-
+cidade_id int PK
+ciade_nome string
+cidade_uf FK - Estados.estado_id
+
+Estados
+-
+estado_id int PK
+estado_nome string
+
+Estoque_Individual
+-
+estoque_id int PK
+estoque_consumo_id string FK - Usos_E_Consumo.consumo_id 
+estoque_quantidade int
+
+Eventos
+-
+evento_id int PK
+evento_nome String
+evento_pessoa_paciente string FK -< Pessoas.pessoa_id
+evento_pessoa_funcionario String FK >- Pessoas.pessoa_id 
+
+user
+-
+usuario_id int PK
+usuario_nome String
+
+Comorbidades
+-
+comorbidade_id int PK
+comorbidade_nome String
+
+Classe
+-
+classe_id int PK
+classe_nome String
+
+Usos_E_Consumo
+-
+consumo_id int PK
+consumo_nome String
+consumo_fabricante String
+consumo_apresentacao FK >- Apresentacoes.apresentacao_id
+consumo_via FK >- Vias.via_id
+consumo_frequencia FK >- Frequencias.frequencia_id
+consumo_aprazamento time
+consumo_dose string
+consumo_inicio date
+consumo_fim date
+consumo_observacao string
+
+Apresentacoes
+-
+apresentacao_id int PK
+apresentacao_nome string
+
+Vias
+-
+via_id int Pk
+via_nome string
+
+Frequencias
+-
+frequencia_id int PK
+frequencia_nome string
+
+SinaisVitais
+-
+sinalVital_id int pk
+sinalVita_nome FK >- Pessoas.pessoa_id
+sinalVital_date date
+sinalVital_time time
+sinalVital_pas int
+sinalVital_pad int
+sinalVital_fc int
+sinalVital_fr int
+sinalVital_temp int
+
+Documentos
+-
+documento_id int PK
+documento_nome pdf
+
+Pessoas_Comorbidades
+-
+pessoa_comorbidade_id int PK
+pessoa_comorbidade_nome String  FK - Comorbidades.comorbidade_id
+
