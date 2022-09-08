@@ -1,0 +1,21 @@
+{% extends  'index.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div id="login" class="Caracteristicas">
+
+      <a href="#fechar" title="Fechar"class="fechar">x</a>
+      <form method="post" class="formulario">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}" href="#telainicial">
+
+        {{ form|crispy }}
+
+        {% csrf_token %}
+      <a class= login2 href="app1/templates/telainicial"><button>Entrar</button></a>
+      <p class="criar_conta">Ainda não tem uma conta? <a href="{% url 'cadastro' %}"> Criar conta</a></p>
+      </form>
+
+</div>
+{% endblock %}

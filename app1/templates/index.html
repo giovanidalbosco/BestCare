@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Care/start/</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'CSS/index2.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="header-right">
+            <img src="/static/img/medico2.png">
+            <h1>BestCare</h1>
+        </div>
+        <nav class="header-left">
+            {% if user.is_authenticated %}
+
+            <p class="nos"><a href="/telainicial">test</a></p>
+            <p class="nos"><a href="comorbidades_list">Cadastro Geral</a></p>            
+            <p class="nos"><a href="/admin">Admin</a></p>
+            <p class="nos"><a href="solucoes">Soluções</a></p>
+            <p class="nos"><a href="quemSomos">Quem Somos</a></p>
+            {% else %}
+            <a id="botao" href="{% url 'cadastro' %}"><button class="entrar">Cadastre-se</button></a>
+            <a id="botao" href="#login"><button class="entrar">Entrar</button></a>
+            {% endif %}
+            {% if user.is_authenticated %}
+            <p class="nos"><a href="/accounts/logout">Sair</a></p>
+            {% endif %}
+        </nav>    
+    </header>
+    {% block content %}
+        
+    {% endblock %} 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> 
+    <script src="https://kit.fontawesome.com/9c6f81d8af.js" crossorigin="anonymous"></script>      
+</body>
+</html>

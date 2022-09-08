@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(116,189,203,0.4) 0%, rgba(123, 92, 55, 0.4) 100%, rgba(0,212,255,0.4) 100%);
+}
+
+header{
+    width: 100%;
+    padding: 2%;
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    transition: 0.2s ease-in-out;
+}
+
+header h1 {
+    width: 70px;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 3em;
+ 
+}
+.return-name{
+    color: grey;
+    text-decoration: none;
+    margin-left: -1%;
+}
+
+.return-name:hover{
+    color: rgb(63, 157, 175);
+}
+
+header img {
+    width: 70px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.return-img{
+    margin-left: 5.8%; 
+}
+
+.return-img :hover{
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 4px 3px rgb(186, 202, 201);
+}
+
+h2{
+    color: rgb(63, 157, 175);
+    margin-left: 25%;
+    font-size: 3em;
+}
+
+.missao{
+    width: 100%;
+    color:rgb(90, 87, 87);
+    display: flex;
+    flex-direction:column;
+    margin-top: 5em;
+}
+.missao img{
+    width: 50px;
+    height: 50px;
+    margin-left: 7.5%;
+}
+.missao h2{
+    color: black;
+    font-size: 1em;
+    margin-left: 12%;
+    margin-top: -2.5em;
+}
+
+.missao p{
+    margin-left: 12%;
+}
+.visao{
+    width: 100%;
+    color:rgb(90, 87, 87);
+    display: flex;
+    flex-direction:column;
+    margin-top: 5em;
+}
+
+.visao img{
+    width: 50px;
+    height: 50px;
+    margin-left: 7.5%;
+}
+
+.visao h2{
+    color: black;
+    font-size: 1em;
+    margin-left: 12%;
+    margin-top: -2.5em;
+}
+.visao p{
+    margin-left: 12%;
+}
+
+.quem-somos{
+    width: 100%;
+    color:rgb(90, 87, 87);
+    display: flex;
+    flex-direction:column;
+    margin-top: 5em;
+}
+
+.quem-somos img{
+    width: 50px;
+    height: 50px;
+    margin-left: 7.5%;
+}
+
+.quem-somos h2{
+    color: black;
+    font-size: 1em;
+    margin-left: 12%;
+    margin-top: -2.5em; 
+}
+
+.quem-somos p{
+    margin-left: 12%;
+    margin-right: 8%;
+}
+
+.students h2{
+    margin-left: 35%;
+    color: rgb(32, 32, 32);
+    margin-top: 10%;
+}
+.students ul{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    list-style-type: none;
+    margin-left: 12%;
+    margin-right: 8%;
+    margin-top: 10%;
+}
+.gio{
+    margin: 0.2em;
+    padding: 125px  125px;
+    background-color: aliceblue;
+}
+.jack{
+    margin: 0.2em;
+    padding: 125px  125px;
+    background-color: aliceblue;
+}
+.luck{
+    margin: 0.2em;
+    padding: 125px  125px;
+    background-color: aliceblue;
+}
+
+.mir{
+    margin: 0.2em;
+    padding: 125px  125px;
+    background-color: aliceblue;
+}
+
+footer{
+    text-align: center;
+    font-size: small;
+    font-family: Times;
+    bottom: 0;
+    width: 100%;
+    height: 9rem;
+    color: #000;
+    margin-top: 18%;
+    background-color: grey;  
+}
+#names{
+    padding: 2.5em;
+}
+

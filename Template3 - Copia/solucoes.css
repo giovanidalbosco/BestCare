@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(116,189,203,0.4) 0%, rgba(123, 92, 55, 0.4) 100%, rgba(0,212,255,0.4) 100%);
+}
+
+header{
+    width: 100%;
+    padding: 2%;
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    transition: 0.2s ease-in-out;
+}
+
+header h1 {
+    width: 70px;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 3em;
+ 
+}
+.return-name{
+    color: grey;
+    text-decoration: none;
+    margin-left: -1%;
+}
+
+.return-name:hover{
+    color: rgb(63, 157, 175);
+}
+
+header img {
+    width: 70px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.return-img{
+    margin-left: 5.8%; 
+}
+
+.return-img :hover{
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 4px 3px rgb(186, 202, 201);
+}
+
+h2{
+    color: rgb(63, 157, 175);
+    margin-left: 25%;
+    font-size: 3em;
+}
+
+.first{
+    width: 100%;
+    color:rgb(76, 75, 75);
+    display: flex;
+    flex-direction:column;
+}
+
+.first img{
+    width:130px;
+    height:130px;
+    border-radius: 4px;
+    margin-left: 18%;
+    margin-top: 9em;
+}
+
+.first p{
+    margin-top: -2.5em;
+    padding-left: 28%;
+    font-size: 27px;
+
+}
+
+.second{
+    width: 100%;
+    color:rgb(76, 75, 75);
+    display: flex;
+    flex-direction:column;
+}
+
+.second img{
+    width:130px;
+    height:130px;
+    margin-left: 18%;
+    margin-top: 9em;
+}
+
+.second p{
+    margin-top: -2.5em;
+    padding-left: 28%;
+    font-size: 27px;
+}
+
+.third{
+    width: 100%;
+    color:rgb(76, 75, 75);
+    display: flex;
+    flex-direction:column;
+}
+
+.third img{
+    width:130px;
+    height:130px;
+    margin-left: 18%;
+    margin-top: 9em;
+}
+
+.third p{
+    margin-top: -2.5em;
+    padding-left: 28%;
+    font-size: 27px;
+}
+
+.fourth{
+    width: 100%;
+    color:rgb(76, 75, 75);
+    display: flex;
+    flex-direction:column;
+}
+
+.fourth img{
+    width:130px;
+    height:130px;
+    margin-left: 18%;
+    margin-top: 9em;  
+}
+
+.fourth p{
+    margin-top: -2.5em;
+    padding-left: 28%;
+    font-size: 27px;
+}
+
+.cadastro a button{
+    font-size: 2em;
+    font-weight: 500;
+    cursor: pointer;
+    width: 29rem;
+    height: 2.5rem;
+    margin-top: 9em;
+    margin-left: 30%;
+    border-radius: 4px;
+    border-color: grey;
+    background:rgba(148, 156, 157, 0.2);
+    color:rgb(76, 75, 75);
+    text-decoration: none;  
+}
+
+.cadastro a button:hover{
+    color:rgb(14, 94, 200);
+    background: whitesmoke;
+}
+
+footer{
+    text-align: center;
+    font-size: small;
+    font-family: Times;
+    width: 100%;
+    height: 9rem;
+    margin-top: 15%;
+    color: #000;
+    background-color: grey;
+    
+}
+#names{
+    padding: 2em;
+}
+

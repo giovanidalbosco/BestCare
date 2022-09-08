@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block title %}Comorbidades{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Adicione Comorbidade:</h1>
+    <form action="" method="post" class="adicione-Comorbidades">    
+        {% csrf_token %}  
+        {{ form }}         
+        <input class="fas fa-search" type="submit" value="Submit">
+    </form>   
+</div>
+{% endblock %}

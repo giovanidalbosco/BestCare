@@ -1,0 +1,569 @@
+:root{
+    --cor-fundo:linear-gradient(90deg, rgba(116,189,203,0.4) 0%, rgba(123, 92, 55, 0.4) 100%, rgba(0,212,255,0.4) 100%);}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: var(--cor-fundo);
+}
+
+header{
+    width: 100%;
+    padding: 1%;
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.08);
+    align-items:initial;
+    transition: 0.2s ease-in-out;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.header-right{
+    display:flex;
+    flex-direction: row;
+}
+
+h1{
+    width: 100%;
+    font-weight: 400;
+    font-size: 3em;
+    color: grey;
+    text-align: center;  
+}
+
+h1:hover{
+    color: rgb(63, 157, 175);
+}
+header img{ 
+    width: 70px;
+    height: 50px;
+}
+
+header img:hover{
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 4px 3px rgb(186, 202, 201);
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    margin-left: 40%;
+    margin-top: 1.2%;
+    padding-left: 1em;  
+}
+
+.nos a{
+    color:grey;
+    font-size:18px;
+    font-weight: 500;
+    font-family:system-ui, -apple-system, sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    padding-right: 1.5em;
+}
+
+.nos a:hover{
+    color:#000
+}
+
+ nav a .entrar {
+    display:inline-block;
+    cursor:pointer;
+    font-family:Arial;
+    font-size:17px;
+    font-weight: 500;
+    margin-right: 1em;
+    padding:10px 21px;
+    padding-right: 2em;
+    border-radius: 7px;
+    background-color:inherit;
+    border: gray solid 1px;
+    text-decoration:none;
+    color:grey;
+}
+nav a .entrar:hover{
+    color: #000;
+}
+ 
+.entrar:hover{
+    box-shadow: 0px 0px 4px 3px rgb(166, 162, 162);
+}
+/*Fim do header*/
+
+.Caracteristicas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Caracteristicas{
+    position: fixed;
+    width: 450px;
+    height: 450px;
+    padding: 10px;
+    top:25%;
+    font-family: Helvetica, sans-serif;
+    background-color:#FFFFFF;
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    transition: 0.3 ease-in-out;
+    border-radius: 10px;
+    border: grey solid 1px;
+    margin-left: 33%;
+    margin-right: 33%;
+}
+       
+.Caracteristicas:target{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.fechar{
+    position: absolute;
+    width: 15px;
+    right: 13px;
+    top: 10px;
+    text-align: center;
+    line-height: 25px;
+    background:#FFFFFF;
+    color:#000;
+    text-decoration: none; 
+}
+.fechar:hover{
+    color: red;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario input{
+    background:rgba(204, 204, 197, 0.826);
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    width: 350px;
+    height: 40px;
+    padding: 5px;
+    margin: 2%;
+}
+.login2 button{
+    background:rgba(204, 204, 197, 0.826);
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    margin: 2%;
+    cursor: pointer;
+}
+
+.login2 button{   
+    text-decoration: none;
+    list-style-type: none;
+    color: #000;
+}
+.login2 button:hover{
+    color:rgba(14, 94, 200,1);
+}
+
+::placeholder{
+    text-align:start;
+}
+
+div a{
+    color:rgb(76, 75, 75); 
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 2%;
+    margin-left: 8px;
+    font-weight: 900;
+    font-size: 17px;
+    background:#FFFFFF;
+    border: none;
+}
+
+div a:hover{
+    color: rgba(14, 94, 200,1);
+}
+div .criar_conta{
+    margin: 3%;
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;  
+}
+
+/*Termina janela input*/
+
+.slogan{
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    padding: 7rem;
+}
+
+.slogan p{
+    margin-top: 3%;
+    font-family:Verdana;
+    font-size: 2em;
+    font-weight: 500;
+    color: rgb(14, 94, 200);
+}
+
+.entrar2{
+    font-size: 2em;
+    font-weight: 500;
+    cursor: pointer;
+    width: 29rem;
+    height: 2.5rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    background:var(--cor-fundo);
+    color:rgb(14, 94, 200);
+    text-decoration: none;  
+}
+
+.entrar2:hover{
+    color: aliceblue;
+}
+
+.slogan button:hover{
+    background-color: rgb(67, 107, 159);;
+    border-radius: 1rem;
+    box-shadow:0px 0px 4px 3px rgb(166, 162, 162) ;
+}
+
+
+#quem{
+    color: rgb(77, 105, 81);
+    font-size: 8em;
+    text-align: center;
+    margin-top: 10%;
+}
+/*Bloco do quemSomos*/
+
+.missao{
+    width: 100%;
+    color:rgb(90, 87, 87);
+    display: flex;
+    flex-direction:column;
+    margin-top: 5em;
+}
+.missao img{
+    width: 50px;
+    height: 50px;
+    margin-left: 7.5%;
+}
+.missao h2{
+    color: black;
+    font-size: 1em;
+    margin-left: 12%;
+    margin-top: -2.5em;
+}
+
+.missao p{
+    margin-left: 12%;
+}
+.visao{
+    width: 100%;
+    color:rgb(90, 87, 87);
+    display: flex;
+    flex-direction:column;
+    margin-top: 5em;
+}
+
+.visao img{
+    width: 50px;
+    height: 50px;
+    margin-left: 7.5%;
+}
+
+.visao h2{
+    color: black;
+    font-size: 1em;
+    margin-left: 12%;
+    margin-top: -2.5em;
+}
+.visao p{
+    margin-left: 12%;
+}
+
+.quem-somos{
+    width: 100%;
+    color:rgb(90, 87, 87);
+    display: flex;
+    flex-direction:column;
+    margin-top: 5em;
+}
+
+.quem-somos img{
+    width: 50px;
+    height: 50px;
+    margin-left: 7.5%;
+}
+
+.quem-somos h2{
+    color: black;
+    font-size: 1em;
+    margin-left: 12%;
+    margin-top: -2.5em; 
+}
+
+.quem-somos p{
+    margin-left: 12%;
+    margin-right: 8%;
+}
+
+.students h2{
+    margin-left: 35%;
+    color: rgb(32, 32, 32);
+    margin-top: 10%;
+    font-size: 3.5em;
+}
+.students ul{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    list-style-type: none;
+    margin-left: 8%;
+    margin-right: 12%;
+    margin-top: 6%;
+}
+.gio{
+    margin: 0.2em;
+    padding: 125px  125px;
+    background-color: aliceblue;
+}
+.jack{
+    margin: 0.2em;
+    padding: 125px  125px;
+    background-color: aliceblue;
+}
+.luck{
+    margin: 0.2em;
+    padding: 125px  125px;
+    background-color: aliceblue;
+}
+
+.mir{
+    text-align: center;
+}
+
+.mir a{
+    cursor: pointer;
+    text-decoration: none;
+    font-family:Arial;
+    font-size:17px;
+    font-weight: 200;
+    background-color:inherit;
+    border:none;
+    text-decoration:none;
+    color:#000;
+}
+.mir a:hover{
+    color: rgb(12, 82, 136);
+}
+.mir img{
+    width: 290px;
+    height: 290px;
+    margin: 0.2em;
+}
+/*Fim bloco do quemSomos*/
+
+/*Rodapé=> Será igual sempre */
+footer{
+    text-align: center;
+    font-size: small;
+    font-family: Times;
+    bottom: 0;
+    width: 100%;
+    height: 9rem;
+    color: #000;
+    margin-top: 18%;
+    background-color: grey;  
+}
+#names{
+    padding: 2.5em;
+}
+/*Fim do rodapé*/
+
+/*Inicio solucoes*/
+.first{
+    width: 100%;
+    color:rgb(76, 75, 75);
+    display: flex;
+    flex-direction:column;
+}
+
+.first img{
+    width:130px;
+    height:130px;
+    border-radius: 4px;
+    margin-left: 18%;
+    margin-top: 9em;
+}
+
+.first p{
+    margin-top: -2.5em;
+    padding-left: 28%;
+    font-size: 27px;
+
+}
+
+.second{
+    width: 100%;
+    color:rgb(76, 75, 75);
+    display: flex;
+    flex-direction:column;
+}
+
+.second img{
+    width:130px;
+    height:130px;
+    margin-left: 18%;
+    margin-top: 9em;
+}
+
+.second p{
+    margin-top: -2.5em;
+    padding-left: 28%;
+    font-size: 27px;
+}
+
+.third{
+    width: 100%;
+    color:rgb(76, 75, 75);
+    display: flex;
+    flex-direction:column;
+}
+
+.third img{
+    width:130px;
+    height:130px;
+    margin-left: 18%;
+    margin-top: 9em;
+}
+
+.third p{
+    margin-top: -2.5em;
+    padding-left: 28%;
+    font-size: 27px;
+}
+
+.fourth{
+    width: 100%;
+    color:rgb(76, 75, 75);
+    display: flex;
+    flex-direction:column;
+}
+
+.fourth img{
+    width:130px;
+    height:130px;
+    margin-left: 18%;
+    margin-top: 9em;  
+}
+
+.fourth p{
+    margin-top: -2.5em;
+    padding-left: 28%;
+    font-size: 27px;
+}
+
+.cadastro{
+    font-size: 2em;
+    font-weight: 500;
+    cursor: pointer;
+    width: 29rem;
+    height: 2.5rem;
+    margin-top: 9em;
+    margin-left: 30%;
+    border-radius: 4px;
+    border-color: grey;
+    background:rgba(148, 156, 157, 0.2);
+    color:rgb(76, 75, 75);
+    text-decoration: none;  
+}
+
+.cadastro:hover{
+    color:rgb(14, 94, 200);
+    background: whitesmoke;
+}
+
+.btn-cad-geral{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-cad-geral{
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    padding: 2%;
+    top:25%;
+    font-family: Helvetica, sans-serif;
+    background-color:#FFFFFF;
+    border-radius: 10px;
+    margin-left: 33%;
+    margin-right: 33%;
+}
+.input-btn input{
+    align-items: flex-end;
+    top:10%;
+    background:rgba(204, 204, 197, 0.826);
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    width: 300px;
+    height: 40px;
+    padding: 5%;
+    margin: 2%;  
+}
+
+.adicione-Comorbidades{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+}
+
+.adicione-Comorbidades input{
+    background: local;
+    font-weight: 600;
+    font-size: 13px;
+    border-color: dark;
+
+    width: 350px;
+    height: 40px;
+}
