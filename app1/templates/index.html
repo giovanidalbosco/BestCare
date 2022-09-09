@@ -38,19 +38,25 @@
     {% if user.is_authenticated %}
 
     {% else %}
-    <div class=" text-dark font-italic bg-transparent mt-6" >
-        <h2 class=" display-5 p-lg-4">Pontualidade</h2>
-        <h2 class=" display-5 p-lg-4">Compromisso</h2>
-        <h2 class=" display-5 p-lg-4">Transparência</h2>
-        <h2 class=" display-5 p-lg-4">Comunicação em tempo real</h2>
+    <div class="container">
+        <div class="row">
+            <div class=" text-dark font-italic bg-transparent       mt-6" >
+                <h2 class=" display-5 p-lg-4">Pontualidade</h2>
+                <h2 class=" display-5 p-lg-4">Compromisso</h2>
+                <h2 class=" display-5 p-lg-4">Transparência</h2>
+                <h2 class=" display-5 p-lg-4">Comunicação em        tempo real</h2>
+            </div>
+            <img src="..." alt="..." class="img-thumbnail">
+        </div>
     </div>
-
     {% endif %}
 
+
     {% block content %}
-        
-    {% endblock %}
     
+    {% endblock %}
+
+
     <div class="card-footer text-center text-white bg-dark ">
         <p class="card-text" id="names"> &copy; Giovanni Dalbosco  Jackson Castellain  Lucas Resende  Samir Buhatem</p><br>
         <p class="card-text" > Projeto Entra 21 &reg;</p>
