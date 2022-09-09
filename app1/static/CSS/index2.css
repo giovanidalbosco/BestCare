@@ -392,27 +392,23 @@ div .criar_conta{
     color: rgb(12, 82, 136);
 }
 .mir img{
-    width: 290px;
-    height: 290px;
+    width: 250px;
+    height: 330px;
     margin: 0.2em;
 }
 /*Fim bloco do quemSomos*/
 
 /*Rodapé=> Será igual sempre */
-footer{
-    text-align: center;
+
+.card-footer{
     font-size: small;
     font-family: Times;
     bottom: 0;
     width: 100%;
     height: 9rem;
-    color: #000;
-    margin-top: 18%;
-    background-color: grey;  
+    margin-top: 18%; 
 }
-#names{
-    padding: 2.5em;
-}
+
 /*Fim do rodapé*/
 
 /*Inicio solucoes*/
