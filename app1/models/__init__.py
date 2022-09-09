@@ -62,7 +62,7 @@ from .Comorbidades import Comorbidades
 from .Cidades import Cidades
 from .Pessoas import Pessoas
 from .Documentos import Documentos
-from .Usos_consumo import Usos_Consumo
+from .Uso_Consumo import Uso_Consumo
 from .Estoque_Individual import Estoque_Individual
 from .Eventos import Eventos
 from .Ocorrencias import Ocorrencias

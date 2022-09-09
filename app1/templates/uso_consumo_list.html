@@ -1,0 +1,75 @@
+{% extends 'index.html' %}
+
+{% block title %}Uso e consumo{% endblock %}
+
+{% block content %}
+<div class="offset-1 col-10 list-div">
+    <h1>Uso e consumo</h1>
+    <div class="container dashboard" style="margin-top: 5%;">
+        <div class="col-6 dashboard-box" id="dashboard-done">
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li {% if message.tags %}
+                class="alert alert-{{messages.tags}}"{% endif %}
+                >{{message}}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        
+            <h4>Uso e consumo</h4>
+            <ul class="task-list">
+                <div class="row" style="margin-top: 5%;">
+                    <div class="col">
+                        <span
+                        text-left>ID</span>
+                    </div>
+                    <div class="col">
+                        <span>Nome</span>
+                    </div>
+                    <div class="col">
+                        <span><i class="fas fa-edit"></i></span>
+                        <span><i class="fas fa-trash"></i></span>
+                    </div>
+                </div>
+                {% for i in uso_consumo %}
+                <div  class="border border-dark row">
+                    <div class="col">
+                        <span>{{i.id}}</span>
+                    </div>
+                    <div class="col">
+                        <span>{{i.consumo_nome}}</span>
+                    </div>
+                    <div class="col">
+                        <a href="/uso_consumo_edit/{{i.id}}"><span><i class="fas fa-edit"></i></span></a>
+                        <a href="/uso_consumo_delete/{{i.id}}" class="delete-btn"><span><i class="fas fa-trash"></i></span></a>
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="row">
+                    <div class="col">
+                        <a id="add-link" href="uso_consumo_add">
+                            <div class="add-div">
+                                <i class="fas fa-plus"></i>
+                                Adicionar Uso e consumo
+                            </div>
+                        </a>               
+                    </div>
+                    <div class="col">
+                        <div class="search-div">
+                            <form method="GET" id="search-form">
+                                <input class="form-control" type="text" id="search" name="search"
+                                placeholder="Digite o nome para buscar..." value="{{ request.GET.search }}">
+                                <i class="fas fa-search" id="search-btn"></i>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
