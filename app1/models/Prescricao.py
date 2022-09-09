@@ -1,10 +1,9 @@
 from app1.models import *
-from app1.models import Pessoas
 
 
 class Prescricao(models.Model):
     prescricao_pessoa_nome = models.ForeignKey(Pessoas, on_delete=models.CASCADE, verbose_name="Residente", default='')
-    prescricao_consumo_nome = models.ForeignKey(Usos_Consumo, on_delete=models.CASCADE, verbose_name="Produto", default='')
+    prescricao_consumo_nome = models.ForeignKey(Uso_Consumo, on_delete=models.CASCADE, verbose_name="Produto", default='')
     prescricao_frequencia = models.CharField(max_length=1, choices=FREQUENCIA, default='')
     prescricao_aprazamento = models.TimeField(verbose_name='Aprazamento', editable=True)
     prescricao_dose = models.CharField(max_length=1, choices=DOSE, default='')

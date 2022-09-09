@@ -1,8 +1,8 @@
 from app1.models import *
 
 
-class Usos_Consumo(models.Model):
-    consumo_nome = models.CharField(max_length=50, verbose_name='Nome', default=0)
+class Uso_Consumo(models.Model):
+    consumo_nome = models.CharField(max_length=50, verbose_name='Uso e consumo', default='')
     consumo_fabricante = models.CharField(max_length=50, verbose_name='Fabricante', default='')
     consumo_apresentacao = models.CharField(max_length=1, verbose_name='Apresentacao',choices=APRESENTACAO, default='')
     consumo_via = models.CharField(max_length=1, choices=VIA, default='')
@@ -13,4 +13,4 @@ class Usos_Consumo(models.Model):
 
     class Meta:
         ordering = ['consumo_nome']
-        verbose_name = 'Usos e Consumo'
+        verbose_name = 'Uso e consumo'
