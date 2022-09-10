@@ -12,91 +12,13 @@ body{
     width: 100%;
     height: 100vh;
     background: var(--cor-fundo);
+    transition: 0.3 ease-in-out;
 }
 
-header{
-    width: 100%;
-    padding: 1%;
-    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.08);
-    align-items:initial;
-    transition: 0.2s ease-in-out;
-
-    display: flex;
-    flex-direction: row;
-}
-
-.header-right{
-    display:flex;
-    flex-direction: row;
-}
-
-h1{
-    width: 100%;
-    font-weight: 400;
-    font-size: 3em;
-    color: grey;
-    text-align: center;  
-}
-
-h1:hover{
+/*:hover{
     color: rgb(63, 157, 175);
-}
-header img{ 
-    width: 70px;
-    height: 50px;
-}
+}*/
 
-header img:hover{
-    border-radius: 0.5rem;
-    box-shadow: 0px 0px 4px 3px rgb(186, 202, 201);
-}
-
-nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items:center;
-    margin-left: 2%;
-    margin-top: 1.2%;
-    padding-left: 1em;  
-}
-
-.nos a{
-    color:grey;
-    font-size:18px;
-    font-weight: 500;
-    font-family:system-ui, -apple-system, sans-serif;
-    cursor: pointer;
-    text-decoration: none;
-    padding-right: 1.5em;
-}
-
-.nos a:hover{
-    color:#000
-}
-
- nav a .entrar {
-    display:inline-block;
-    cursor:pointer;
-    font-family:Arial;
-    font-size:17px;
-    font-weight: 500;
-    margin-right: 1em;
-    padding:10px 21px;
-    padding-right: 2em;
-    border-radius: 7px;
-    background-color:inherit;
-    border: gray solid 1px;
-    text-decoration:none;
-    color:grey;
-}
-nav a .entrar:hover{
-    color: #000;
-}
- 
-.entrar:hover{
-    box-shadow: 0px 0px 4px 3px rgb(166, 162, 162);
-}
 /*Fim do header*/
 
 .Caracteristicas{

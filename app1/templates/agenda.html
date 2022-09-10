@@ -1,51 +1,39 @@
-{% extends 'index.html' %}
+{% extends 'index.html' %} {% block content %}
+<div class="container">
+  <div class="row" style="margin-top: 3%">
+    <div class="btn-group-vertical" style="margin-top: 3%">
+      <a href="" type="button" class="btn btn-secondary mr-5">Usuário</a>
+      <a
+        href="telainicial"
+        type="button"
+        class="btn btn-info"
+        style="margin-top: 3rem"
+        >Home</a
+      >
+      <a href="" type="button " class="btn btn-info" style="margin-top: 3rem"
+        >Ocorrência</a
+      >
+      <a href="" type="button " class="btn btn-info" style="margin-top: 3rem"
+        >Sinais Vitais</a
+      >
+      <a href="" type="button " class="btn btn-info" style="margin-top: 3rem"
+        >Estoque</a
+      >
+      <a href="" type="button " class="btn btn-info" style="margin-top: 3rem"
+        >Remédios</a
+      >
+      <a href="" type="button " class="btn btn-info" style="margin-top: 3rem"
+        >Comorbidades</a
+      >
+      <a href="" type="button" class="btn btn-info" style="margin-top: 3rem"
+        >Relatórios</a
+      >
+    </div>
 
-{% block content %}
-<div class="btn-group-vertical">
-    <button type="button" class="btn btn-secondary">Usuário</button>
-    <button type="button" class="btn btn-secondary">Agenda</button>
-    <button type="button" class="btn btn-secondary">Ocorrência</button>
-    <button type="button" class="btn btn-secondary">Sinais Vitais</button>
-    <button type="button" class="btn btn-secondary">Estoque</button>
-    <button type="button" class="btn btn-secondary">Remédios</button>
-    <button type="button" class="btn btn-secondary">Comorbidades</button>
-    <button type="button" class="btn btn-secondary">Relatórios</button>
-  
+    <div class="col border border-secondary shadow p-3 bg-gradient" style="margin-top: 4.6rem">
+      <p class="text-center">Conteúdo Da Agenda</p>
+    </div>
+  </div>
 </div>
-  <table class="table table-hover w-25 p-1">
-      <thead>
-        <tr>
-          <th scope="col">Usuário:</th>
-        </tr>
-      </thead>
-      <tbody >
-          <tr>
-              <td><a href="#modal1"  style="cursor:pointer; color:#000">Agenda</a></td>
-          </tr>
-        <tr>
-          <td><a href="" style="cursor:pointer; color:#000">Ocorrência</a></td>
-        </tr>
-        <tr>
-          <td><a href="" style="cursor:pointer; color:#000">Sinais Vitais</a></td>
-        </tr>
-        <tr>
-          <td><a href="" style="cursor:pointer; color:#000">Estoque</a></td>
-        </tr>
-        <tr>
-          <td><a href="" style="cursor:pointer; color:#000">Remédios</a></td>
-        </tr>
-        <tr>
-          <td><a href="" style="cursor:pointer; color:#000">Comorbidades</a></td>
-        </tr>
-        <tr>
-          <td><a href="" style="cursor:pointer; color:#000">Relatório</a></td>
-        </tr>
-        <tr>
-          <td><button type="button" class="btn btn-outline-dark btn-sm mt-2 ml-2 " data-toggle="modal" data-target="#Modal1">Agenda</button></td>
-        </tr>
-      </tbody>
-  </table>
-
-  <div>teste</div>
 
 {% endblock %}
