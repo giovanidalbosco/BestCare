@@ -7,14 +7,15 @@ def Uso_Consumo_edit(request, id):
     form = Uso_ConsumoForm(instance=uso_consumo)
     if (request.method == 'POST'):
         form = Uso_ConsumoForm(request.POST, instance=uso_consumo)
+        print(f'form2: {form}')
         if (form.is_valid()):
             uso_consumo.save()
             return redirect('/uso_consumo_list')
-        else:
-            return render(request, 'uso_consumo_edit.html', {
-                'form': form, 
-                'uso_consumo': uso_consumo
-            })
+        # else:
+        #     return render(request, 'uso_consumo_edit.html', {
+        #         'form': form, 
+        #         'uso_consumo': uso_consumo
+        #     })
     else:
         return render(request, 'uso_consumo_edit.html', {
             'form': form,

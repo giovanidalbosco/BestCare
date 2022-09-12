@@ -12,6 +12,5 @@ def Uso_Consumo_add(request):
     else:
         form = Uso_ConsumoForm()
 
-    uso_consumo = Uso_Consumo.objects.all()
 
-    return render(request, 'uso_consumo_add.html', {'form': form, 'uso_consumo': uso_consumo})
+    return render(request, 'uso_consumo_add.html', {'form': form})

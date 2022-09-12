@@ -9,5 +9,4 @@ def Uso_Consumo_list(request):
     else:
         uso_consumo = Uso_Consumo.objects.all()
 
-    return render(request, 'uso_consumo_list.html',
-                  {'uso_consumo': uso_consumo})
+    return render(request, 'uso_consumo_list.html', {'uso_consumo': uso_consumo})

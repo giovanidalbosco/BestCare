@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block title %}Estoque Individual{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Adicione Estoque Individual:</h1>
+    <form action="" method="post" class="">
+        {% csrf_token %}
+        {{ form }}
+        <input class="fas fa-search" type="submit" value="Submit">
+    </form>
+</div>
+{% endblock %}

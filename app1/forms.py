@@ -1,5 +1,5 @@
 from django import forms
-from .models import Pessoas, Comorbidades, Uso_Consumo
+from .models import Pessoas, Comorbidades, Uso_Consumo, Estoque_Individual
 
 class Cadastro(forms.ModelForm):
 
@@ -19,3 +19,9 @@ class Uso_ConsumoForm(forms.ModelForm):
     class Meta:
         model = Uso_Consumo
         fields = ('consumo_nome',)
+
+class Estoque_IndividualForm(forms.ModelForm):
+
+    class Meta:
+        model = Estoque_Individual
+        fields = ('estoque_pessoa_nome','estoque_usos_consumo',)
