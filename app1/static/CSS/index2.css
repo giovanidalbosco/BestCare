@@ -16,6 +16,11 @@ body{
 }
 /* Inicio do header*/
 
+.row img{
+    width: 90px;
+    height: 70px;
+    border-radius: 8px;
+}
 
 /*Fim do header*/
 
@@ -188,6 +193,18 @@ div .criar_conta{
 }
 /*Bloco do quemSomos*/
 
+.media #quemSomos{
+    width: 100%;
+    color:rgb(76, 75, 75);
+}
+
+.media #quemSomos{
+    width:50px;
+    height:50px;
+    border-radius: 4px;
+    margin-left: 10%
+}
+
 .missao{
     width: 100%;
     color:rgb(90, 87, 87);
@@ -332,106 +349,17 @@ div .criar_conta{
 /*Fim do rodapé*/
 
 /*Inicio solucoes*/
-.first{
+.media{
     width: 100%;
     color:rgb(76, 75, 75);
-    display: flex;
-    flex-direction:column;
+    margin-top: 9em;
 }
 
-.first img{
+.media img{
     width:130px;
     height:130px;
     border-radius: 4px;
-    margin-left: 18%;
-    margin-top: 9em;
-}
-
-.first p{
-    margin-top: -2.5em;
-    padding-left: 28%;
-    font-size: 27px;
-
-}
-
-.second{
-    width: 100%;
-    color:rgb(76, 75, 75);
-    display: flex;
-    flex-direction:column;
-}
-
-.second img{
-    width:130px;
-    height:130px;
-    margin-left: 18%;
-    margin-top: 9em;
-}
-
-.second p{
-    margin-top: -2.5em;
-    padding-left: 28%;
-    font-size: 27px;
-}
-
-.third{
-    width: 100%;
-    color:rgb(76, 75, 75);
-    display: flex;
-    flex-direction:column;
-}
-
-.third img{
-    width:130px;
-    height:130px;
-    margin-left: 18%;
-    margin-top: 9em;
-}
-
-.third p{
-    margin-top: -2.5em;
-    padding-left: 28%;
-    font-size: 27px;
-}
-
-.fourth{
-    width: 100%;
-    color:rgb(76, 75, 75);
-    display: flex;
-    flex-direction:column;
-}
-
-.fourth img{
-    width:130px;
-    height:130px;
-    margin-left: 18%;
-    margin-top: 9em;  
-}
-
-.fourth p{
-    margin-top: -2.5em;
-    padding-left: 28%;
-    font-size: 27px;
-}
-
-.cadastro{
-    font-size: 2em;
-    font-weight: 500;
-    cursor: pointer;
-    width: 29rem;
-    height: 2.5rem;
-    margin-top: 9em;
-    margin-left: 30%;
-    border-radius: 4px;
-    border-color: grey;
-    background:rgba(148, 156, 157, 0.2);
-    color:rgb(76, 75, 75);
-    text-decoration: none;  
-}
-
-.cadastro:hover{
-    color:rgb(14, 94, 200);
-    background: whitesmoke;
+    margin-left: 18%
 }
 
 .btn-cad-geral{
