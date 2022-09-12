@@ -1,38 +1,10 @@
-# BestCare - Sistema de gestao de pacientes internados em Casas de Repouso
-
-Projeto de conclusão do Curso Entra21/2022 - Python
+# BestCare - Sistema de Controle de Residentes internados em Casas de Repouso
 
 Desenvolvedores:
 - Giovani Dalbosco
 - Jackson Castellain
 - Lucas Rezende
 - Samir Buhatem
-
-## 29/07/2022
-- Criado versão BestCare v1.0 no Draw.io para inicialização do diagrama de classes;
-- Definido foco na administração do paciente;
-
-##  01/08/2022
-- Aprovado o Projeto pelo Prof. Adriano
-- Mensagens via WhattsApp, Telegram e E-mail devem ser colocados em Entidade Propria, e nao enviar.
-- Programa devera ser iniciado pela criacao das paginas de Front End
-
-### Paginas a serem criadas
-- Log-in
-- Cadastro Usuario
-- Cadastro Residente
-- Cadastro Contato/Responsavel
-- Cadastro Informacoes
-- Cadastro Comorbidades
-- Cadastro Medicamentos
-- Inclusao Documentos
-
-### Sprint_01 - 12/08 a 19/08
-- Definicao Template
-- Responsavel: Todos
-- Ferramentas: HTML/CSS/JS
-
-##  18/08/2022
 
 ### História do usuário
 - Sistema de gerenciamento para casas de repouso focado no residente. 
@@ -44,17 +16,29 @@ Desenvolvedores:
   - Comunicação com responsável externo (log de saída) a confirmação de todos os eventos do residente com o log do responsável pela solução;
   - Dashboard.
 
-
 - Entidades do projeto:
   - Log-in;
-  - Cadastro Usuario;
-  - Cadastro Residente;
-  - Cadastro Contato/Responsavel;
-  - Cadastro Informacoes;
-  - Cadastro Comorbidades;
-  - Cadastro Medicamentos;
-  - Inclusao Documentos;
-  - Log de eventos.
+    > Destinado a armazenar os logs de ingresso ao sistema.
+  - Cidades;
+    > Lista dos municipios brasileiros e seu estado.
+  - Comorbidades;
+    > Relacao das comorbidades listadas no site do Ministerio da Saude.
+  - Documentos;
+    > Armazenamento de arquivos documentais do Residente.
+  - Estoque_Individual;
+    > Estoque individual do residente, com finalidade de controlar o consumos de itens pessoais, sob a guarda da Casa de Repouso.
+  - Eventos;
+    > Eventos previsiveis e capaz de gerar log na agenda do Residente.
+  - Ocorrencias;
+    > Ocorrencias nao previsiveis, que devem ser armazenadas compondo o relatorio do Residente.
+  - Pessoas;
+    > Cadastro com dados de Residentes, Cuidadores e Responsaveis Externo.
+  - Prescricao;
+    > medicamentos prescritos, registrados no arquivo de documento, populado em agenda. 
+  - SinalVital;
+    > Levantamento periodico dos sinais Vitais do Residente, com geracao de graficos evolutivos.
+  - Usos_Consumo;
+    > Material de uso e consumo do Residente, devidamente controlado pelo modulo de estoque.
 
 Beneficios:
   - Acompanhamento do residente em tempo real;
@@ -67,171 +51,27 @@ Beneficios:
   - Mensagens de intercorrencia instantaneas;
   - Melhor relacao entre Cuidador e Responsavel Externo.
 
-# 22/08/2022
+## Instalação
 
+Instale a versão 3.x do **Python** :
 
-> Diagrama de relacionamentos
+Clone este repositório no propmt do CMD: 
+>git clone https://github.com/giovanidalbosco/BestCare.git
 
-```md
-Pessoas
--
-pessoa_id int PK
-pessoa_nome string
-pessoa_endereco string
-pessoa_CPF String
-pessoa_classe_id String FK >- Classe.classe_id
-pessoa_telefone String
-pessoa_estoque_id String FK >- Estoque_Individual.estoque_id
-pessoa_comorbidade_id String FK >-< Pessoas_Comorbidades.pessoa_comorbidade_id
+Vá para o repositório :
+>cd BestCare
 
+Crie um ambiente de desenvolvimento: 
+> python -m venv venv
 
-Estoque_Individual
--
-estoque_id int PK
-estoque_consumo_id string FK - Usos_E_Consumo.consumo_id 
-estoque_quantidade int
+Vá para o ambiente:
+> venv/Scripts/activate
 
+Instale as dependências:
+> pip install -r requirements.txt
 
-Eventos
--
-evento_id int PK
-evento_nome String
-evento_pessoa_paciente string FK >- Pessoas.pessoa_id
-evento_pessoa_funcionario String FK >- Pessoas.pessoa_id 
+Suba o servidor: 
+> python manage.py runserver
 
-user
--
-usuario_id int PK
-usuario_nome String
-
-Comorbidades
--
-comorbidade_id int PK
-comorbidade_nome String
-
-Classe
--
-classe_id int PK
-classe_nome String
-
-Usos_E_Consumo
--
-consumo_id int PK
-consumo_nome String
-
-Pessoas_Comorbidades
--
-pessoa_comorbidade_id int PK
-pessoa_comorbidade_nome String  FK - Comorbidades.comorbidade_id
-```
-
-# 28/08/2022
-## Atualizacao Entidades
-
-Pessoas
--
-pessoa_id int PK
-pessoa_nome string
-pessoa_endereco string
-pessoa_numero int
-pessoa_compl string
-pessoa_cidade FK >- Cidades.cidade_id
-pessoa_estado FK >- Estados.estado_id
-pessoa_CPF String
-pessoa_classe_id String FK >- Classe.classe_id
-pessoa_telefone String
-pessoa_estoque_id String FK >- Estoque_Individual.estoque_id
-pessoa_comorbidade_id String FK >-< Comorbidades.comorbidade_id
-pessoa_plano string
-pessoa_documento_id FK -< Documentos.documento_id
-
-Cidades
--
-cidade_id int PK
-ciade_nome string
-cidade_uf FK - Estados.estado_id
-
-Estados
--
-estado_id int PK
-estado_nome string
-
-Estoque_Individual
--
-estoque_id int PK
-estoque_consumo_id string FK - Usos_E_Consumo.consumo_id 
-estoque_quantidade int
-
-Eventos
--
-evento_id int PK
-evento_nome String
-evento_pessoa_paciente string FK -< Pessoas.pessoa_id
-evento_pessoa_funcionario String FK >- Pessoas.pessoa_id 
-
-user
--
-usuario_id int PK
-usuario_nome String
-
-Comorbidades
--
-comorbidade_id int PK
-comorbidade_nome String
-
-Classe
--
-classe_id int PK
-classe_nome String
-
-Usos_E_Consumo
--
-consumo_id int PK
-consumo_nome String
-consumo_fabricante String
-consumo_apresentacao FK >- Apresentacoes.apresentacao_id
-consumo_via FK >- Vias.via_id
-consumo_frequencia FK >- Frequencias.frequencia_id
-consumo_aprazamento time
-consumo_dose string
-consumo_inicio date
-consumo_fim date
-consumo_observacao string
-
-Apresentacoes
--
-apresentacao_id int PK
-apresentacao_nome string
-
-Vias
--
-via_id int Pk
-via_nome string
-
-Frequencias
--
-frequencia_id int PK
-frequencia_nome string
-
-SinaisVitais
--
-sinalVital_id int pk
-sinalVita_nome FK >- Pessoas.pessoa_id
-sinalVital_date date
-sinalVital_time time
-sinalVital_pas int
-sinalVital_pad int
-sinalVital_fc int
-sinalVital_fr int
-sinalVital_temp int
-
-Documentos
--
-documento_id int PK
-documento_nome pdf
-
-Pessoas_Comorbidades
--
-pessoa_comorbidade_id int PK
-pessoa_comorbidade_nome String  FK - Comorbidades.comorbidade_id
-
+Acesse o programa:
+> 127.0.0.1:8000

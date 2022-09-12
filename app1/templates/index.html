@@ -13,30 +13,31 @@
 </head>
 
 <body>
-    <header>
-        <div class="header-right">
-            <img src="/static/img/medico2.png">
-            <h1>BestCare</h1>
-        </div>
-        <nav class="header-left">
-            {% if user.is_authenticated %}
-
-            <p class="nos"><a href="/telainicial">Home</a></p>
-            <p class="nos"><a href="comorbidades_list">Cadastro Geral</a></p>
-            <!-- <p class="nos"><a href="uso_consumo_list">Cadastro Uso e consumo</a></p> -->
-            <p class="nos"><a href="estoque_individual_list">Estoque Individual</a></p>
-            <p class="nos"><a href="/admin">Admin</a></p>
-            <p class="nos"><a href="solucoes">Soluções</a></p>
-            <p class="nos"><a href="quemSomos">Quem Somos</a></p>
-            {% else %}
-            <a id="botao" href="{% url 'cadastro' %}"><button class="entrar">Cadastre-se</button></a>
-            <a id="botao" href="#login"><button class="entrar">Entrar</button></a>
-            {% endif %}
-            {% if user.is_authenticated %}
-            <p class="nos"><a href="/accounts/logout">Sair</a></p>
-            {% endif %}
-        </nav>    
-    </header>
+    <div class="container-fluid shadow-lg p-3 mb-5">
+            <div class="row">
+            
+                <div class="row">
+                    <img src="/static/img/medico2.png" alt="Logo"  class="img ml-5">
+                    <h1 class="text-secondary align-middle">BestCare</h1>
+                </div>
+                    {% if user.is_authenticated %}
+                <div class="text-secondary ml-3">
+                    <a href="telainicial" type="button" class="btn btn-link ml-sm-1" style="color: grey;font-size:17px;font-weight: 500;">Home</a>
+                    <a href="comorbidades_list" type="button" class="btn btn-link ml-sm-1"style="color: grey;font-size:17px;font-weight: 500;">Cadastro Geral</a>
+                    <a href= "uso_consumo_list" type="button" class="btn btn-link ml-sm-1 "style="color: grey;font-size:17px;font-weight: 500;">Cadastro Uso e consumo</a>
+                    <a href="admin" type="button" class="btn btn-link ml-sm-1"style="color: grey;font-size:17px;font-weight: 500;">Admin</a>
+                    <a href="solucoes" type="button" class="btn btn-link ml-sm-1"style="color: grey;font-size:17px;font-weight: 500;">Soluções</a>
+                    <a href="quemSomos" type="button" class="btn btn-link ml-sm-1"style="color: grey;font-size:17px;font-weight: 500;">Quem Somos</a>
+                    {% else %}
+                    <a href="{% url 'cadastro' %}" type="button" class="btn btn-outline-secondary btn-lg mx-lg-5">Cadastre-se</a>
+                    <a href="#login" type="button" class="btn btn-outline-secondary btn-lg ">Entrar</a>
+                    {% endif %}
+                    {% if user.is_authenticated %}
+                    <a href="/accounts/logout" type="button" class="btn btn-secondary">Sair</a>
+                    {% endif %} 
+                </div>
+            </div>  
+    </div>
     {% if user.is_authenticated %}
 
     {% else %}
@@ -49,7 +50,7 @@
                 <h2 class=" display-5 p-lg-4">Comunicação em tempo real</h2>
             </div>
             <div class= "col" style="margin-top: 5%;">
-            <img src="/static/img/imagem1.jpg" alt="..." class="img-thumbnail">
+            <img src="/static/img/imagem1.jpg" alt="Imagem Apresentação" id="imagemApresentacao" class="img-thumbnail">
             <figcaption class="figure-caption">Sempre ao seu lado.</figcaption>
             </div>
         </div>
