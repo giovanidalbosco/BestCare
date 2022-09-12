@@ -16,4 +16,8 @@ urlpatterns = [
     path('uso_consumo_add', views.Uso_Consumo_add, name='uso_consumo_add'),
     path('uso_consumo_edit/<int:id>', views.Uso_Consumo_edit, name="uso_consumo_edit"),
     path('uso_consumo_delete/<int:id>', views.Uso_Consumo_delete, name="uso_consumo_delete"),
+    path('estoque_individual_list', views.Estoque_Individual_list, name='estoque_individual_list'),
+    path('estoque_individual_add', views.Estoque_Individual_add, name='estoque_individual_add'),
+    # path('estoque_edit/<int:id>', views.Estoque_edit, name="estoque_edit"),
+    # path('estoque_delete/<int:id>', views.Estoque_delete, name="estoque_delete"),
 ]
