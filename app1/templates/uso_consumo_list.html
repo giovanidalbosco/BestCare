@@ -18,6 +18,11 @@
             {% endif %}
         
             <h4>Uso e consumo</h4>
+            <form method="GET" id="search-form">
+                <input class="form-control col-sm-6" type="text" id="search" name="search"
+                placeholder="Digite o nome para buscar..." value="{{ request.GET.search }}">
+                <input type="submit" value="Buscar" class="search btn btn-secondary btn-sm "></input>
+            </form>
             <ul class="task-list">
                 <div class="row" style="margin-top: 5%;">
                     <div class="col">
@@ -55,21 +60,9 @@
                             </div>
                         </a>               
                     </div>
-                    <div class="col">
-                        <div class="search-div">
-                            <form method="GET" id="search-form">
-                                <input class="form-control" type="text" id="search" name="search"
-                                placeholder="Digite o nome para buscar..." value="{{ request.GET.search }}">
-                                <i class="fas fa-search" id="search-btn"></i>
-                            </form>
-                        </div>
-                    </div>
                 </div>
             </ul>
         </div>
     </div>
 </div>
-
-
 {% endblock %}
-
