@@ -70,8 +70,5 @@ Vá para o ambiente:
 Instale as dependências:
 > pip install -r requirements.txt
 
-Suba o servidor: 
+Play o servidor: 
 > python manage.py runserver
-
-Acesse o programa:
-> 127.0.0.1:8000

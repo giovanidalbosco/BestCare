@@ -3,8 +3,8 @@ from app1.models import *
 
 class Estoque_Individual(models.Model):
     estoqueCreate = models.DateTimeField(verbose_name="TimeStamp",auto_now_add=True,blank=True)
-    estoque_pessoa_nome = models.OneToOneField(Pessoas, on_delete=models.CASCADE, verbose_name='Residente')
-    estoque_usos_consumo = models.OneToOneField(Uso_Consumo, on_delete=models.CASCADE, verbose_name='Produto')
+    estoque_pessoa_nome = models.ManyToManyField(Pessoas, on_delete=models.CASCADE, verbose_name='Residente')
+    estoque_usos_consumo = models.ManyToManyField(Uso_Consumo, on_delete=models.CASCADE, verbose_name='Produto')
     estoque_movimento = models.CharField(max_length=1, choices=Entrada_Saida, default='')
     estoque_quantidade = models.IntegerField(verbose_name='Quantidade', default=0)
     estoque_saldo = models.IntegerField(verbose_name='Saldo em Estoque', default=0)
