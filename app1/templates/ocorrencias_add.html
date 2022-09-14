@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block title %}Ocorrencias{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Adicione Ocorrencia:</h1>
+    <form action="" method="post" class="adicione-Ocorrencias">    
+        {% csrf_token %}  
+        {{ form }}         
+        <input class="fas fa-search" type="submit" value="Salvar">
+    </form>   
+</div>
+{% endblock %}

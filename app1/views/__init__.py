@@ -2,7 +2,7 @@ from http.client import ImproperConnectionState
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from app1.models import *
-from app1.forms import Cadastro, ComorbidadesForm, Uso_ConsumoForm, Estoque_IndividualForm
+from app1.forms import Cadastro, ComorbidadesForm, Uso_ConsumoForm, Estoque_IndividualForm, OcorrenciasForm
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 
@@ -22,3 +22,7 @@ from .Uso_Consumo_add import Uso_Consumo_add
 from .Uso_Consumo_list import Uso_Consumo_list
 from .Estoque_Individual_list import Estoque_Individual_list
 from .Estoque_Individual_add import Estoque_Individual_add
+from .Ocorrencias_list import Ocorrencias_list
+from .Ocorrencias_add import Ocorrencias_add
+from .Ocorrencias_edit import Ocorrencias_edit
+from .Ocorrencias_delete import Ocorrencias_delete
