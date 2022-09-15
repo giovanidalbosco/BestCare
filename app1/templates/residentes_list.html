@@ -1,10 +1,10 @@
 {% extends 'index.html' %}
 
-{% block title %}Ocorrencias{% endblock %}
+{% block title %}Residentes{% endblock %}
 
 {% block content %}
 <div class="offset-1 col-10 list-div">
-    <h1 class="text-secondary text-center">Ocorrencias</h1>
+    <h1 class="text-secondary text-center">Residentes</h1>
     <div class="container dashboard" style="margin-top: 5%;">
         <div class="col-6 dashboard-box" id="dashboard-done">
             {% if messages %}
@@ -17,7 +17,7 @@
             </ul>
             {% endif %}
         
-            <h4>Ocorrencias</h4>
+            <h4>Residentes</h4>
             <ul class="task-list">
                 <div class="row" style="margin-top: 5%;">
                     <div class="col">
@@ -25,32 +25,62 @@
                         text-left>Id</span>
                     </div>
                     <div class="col">
-                        <span>Ocorrencia</span>
+                        <span>Nome</span>
                     </div>
                     <div class="col">
-                        <span>Residente</span>
+                        <span>Endereco</span>
                     </div>
                     <div class="col">
-                        <span>Cuidador</span>
+                        <span>Numero</span>
+                    </div>
+                    <div class="col">
+                        <span>Complemento</span>
+                    </div>
+                    <div class="col">
+                        <span>Cidade</span>
+                    </div>
+                    <div class="col">
+                        <span>CPF</span>
+                    </div>
+                    <div class="col">
+                        <span>Comorbidades</span>
+                    </div>
+                    <div class="col">
+                        <span>Plano</span>
                     </div>
                     <div class="col">
                         <span><i class="fas fa-edit bg-transparent text-dark"></i></span>
                         <span><i class="fas fa-trash bg-transparent text-dark "></i></span>
                     </div>
                 </div>
-                {% for i in ocorrencia %}
+                {% for i in residentes %}
                 <div  class="border border-dark row">
                     <div class="col">
                         <span>{{i.id}}</span>
                     </div>
                     <div class="col">
-                        <span>{{i.ocorrencia_nome}}</span>
+                        <span>{{i.pessoa_nome}}</span>
                     </div>
                     <div class="col">
-                        <span>{{i.ocorrencia_pessoa_nome}}</span>
+                        <span>{{i.pessoa_endereco}}</span>
                     </div>
                     <div class="col">
-                        <span>{{i.ocorrencia_pessoa_cuidador}}</span>
+                        <span>{{i.pessoa_numero}}</span>
+                    </div>
+                    <div class="col">
+                        <span>{{i.pessoa_compl}}</span>
+                    </div>
+                    <div class="col">
+                        <span>{{i.pessoa_cidade}}</span>
+                    </div>
+                    <div class="col">
+                        <span>{{i.pessoa_CPF}}</span>
+                    </div>
+                    <div class="col">
+                        <span>{{i.pessoa_comorbidade}}</span>
+                    </div>
+                    <div class="col">
+                        <span>{{i.pessoa_plano}}</span>
                     </div>
                     <div class="col">
                         <a href="/ocorrencias_edit/{{i.id}}" class="delete-btn bg-transparent"><span><i class="fas fa-edit"></i></span></a>
@@ -60,10 +90,10 @@
                 {% endfor %}
                 <div class="row">
                     <div class="col">
-                        <a id="add-link" href="ocorrencias_add">
+                        <a id="add-link" href="residentes_add">
                             <div class="add-div">
                                 <i class="fas fa-plus"></i>
-                                Adicionar Ocorrencias
+                                Adicionar Residente
                             </div>
                         </a>               
                     </div>
