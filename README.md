@@ -70,17 +70,6 @@ Vá para o ambiente:
 Instale as dependências:
 > pip install -r requirements.txt
 
-Suba o servidor: 
+Play o servidor: 
 > python manage.py runserver
 
-Acesse o programa:
-> 127.0.0.1:8000
-
-
-## Informações do arquivo .env para o envio de e-mail
-
->EMAIL_HOST_USER=bestcareauth@outlook.com
->EMAIL_HOST_PASSWORD=bestcare@123
->EMAIL_USE_TLS=True
->EMAIL_PORT=587
->EMAIL_HOST=smtp-mail.outlook.com
