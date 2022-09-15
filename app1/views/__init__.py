@@ -4,7 +4,9 @@ from django.contrib.auth.decorators import login_required
 from app1.models import *
 from app1.forms import Cadastro, ComorbidadesForm, Uso_ConsumoForm, Estoque_IndividualForm
 from django.http import HttpResponseRedirect
+from django.http import HttpResponse
 from django.contrib import messages
+from django.core.mail import send_mail
 
 from .Agenda import Agenda
 from .Cad import Cad

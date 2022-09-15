@@ -139,3 +139,15 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/telainicial'
 LOGOUT_REDIRECT_URL = '/accounts/login'
+
+#Email
+#DEFAULT_FROM_EMAIL = ''
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  #smtp ou console
+
+#Parâmetros que precisam ser passados para o envio de email.
+#Fazendo o uso do python-decouple para esconder essas informações. (criar o arquivo .env)
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')  
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = config('EMAIL_USE_TLS')
+EMAIL_PORT = config('EMAIL_PORT')
+EMAIL_HOST = config('EMAIL_HOST')
