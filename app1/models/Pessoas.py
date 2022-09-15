@@ -13,7 +13,7 @@ class Pessoas(models.Model):
     pessoa_email = models.EmailField(verbose_name='E-mail', default='')
     pessoa_comorbidade = models.ManyToManyField(Comorbidades,verbose_name='Comorbidades')
     pessoa_plano = models.CharField(max_length=1, choices=PLANO, default='')
-    pessoa_estoque_individual = models.ForeignKey(Estoque_Individual, on_delete=models.CASCADE, verbose_name='Estoque_Individual')
+    pessoa_estoque_individual = models.OneToOneField(Estoque_Individual, on_delete=models.CASCADE, verbose_name='Estoque_Individual')
 
 
     def __str__(self):
