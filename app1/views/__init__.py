@@ -24,3 +24,4 @@ from .Uso_Consumo_add import Uso_Consumo_add
 from .Uso_Consumo_list import Uso_Consumo_list
 from .Estoque_Individual_list import Estoque_Individual_list
 from .Estoque_Individual_add import Estoque_Individual_add
+from .Envia_email import envia_email
