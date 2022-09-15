@@ -30,10 +30,6 @@ body{
     height: 360px;
 }
 
-
-
-
-
 /*Fim Tela inicial*/
 .Caracteristicas{
     display: flex;
@@ -307,3 +303,4 @@ div .criar_conta{
     width: 350px;
     height: 40px;
 }
+

@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Care/start/</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v2.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'CSS/index2.css' %}">
+</head>
+
+<body>
+    <div class="container-fluid shadow-lg p-3 mb-5">
+            <div class="row">
+            
+                <div class="row">
+                    <img src="/static/img/medico2.png" alt="Logo"  class="img ml-lg-5">
+                    <h1 class="text-secondary mt-4  mx-lg-3">BestCare</h1>
+                </div>
+                    {% if user.is_authenticated %}
+                <div class="text-secondary ml-3">
+                    <a href="telainicial" type="button" class="btn btn-link ml-sm-1" style="color: grey;font-size:17px;font-weight: 500;">Home</a>
+                    <a href="comorbidades_list" type="button" class="btn btn-link ml-sm-1"style="color: grey;font-size:17px;font-weight: 500;">Cadastro Geral</a>
+                    <a href= "uso_consumo_list" type="button" class="btn btn-link ml-sm-1 "style="color: grey;font-size:17px;font-weight: 500;">Cadastro Uso e consumo</a>
+                    <a href="admin" type="button" class="btn btn-link ml-sm-1"style="color: grey;font-size:17px;font-weight: 500;">Admin</a>
+
+                    {% else %}
+
+                    <a href="/solucoes" type="button" class="btn btn-link mx-lg-5"style="color: grey;font-size:22px;font-weight: 500;">Soluções</a>
+                    <a href="/quemSomos" type="button" class="btn btn-link mx-lg-5"style="color: grey;font-size:22px;font-weight: 500;">QuemSomos</a>
+                    <a href="{% url 'cadastro' %}" type="button" class="btn btn-outline-secondary btn-lg mx-lg-5">Cadastre-se</a>
+                    <a href="#login" type="button" class="btn btn-outline-secondary btn-lg ">Entrar</a>
+
+                    {% endif %}
+
+                    {% if user.is_authenticated %}
+                    <a href="/accounts/logout" type="button" class="btn btn-secondary">Sair</a>
+                    {% endif %} 
+                </div>
+            </div>  
+    </div>
+
+    {% block content %}
+    
+    {% endblock %}
+
+
+    <div class="card-footer text-center text-white bg-dark ">
+        <p class="card-text" id="names"> &copy; Giovanni Dalbosco  Jackson Castellain  Lucas Resende  Samir Buhatem</p><br>
+        <p class="card-text" > Projeto Entra 21 &reg;</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+962DzO0rT7abK41JStQIAqVgRVzpbzo2smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ2stwEULTy" crossorigin="anonymous"></script> 
+    <script src="https://kit.fontawesome.com/9c6f81d8af.js" crossorigin="anonymous"></script>      
+</body>
+</html>
