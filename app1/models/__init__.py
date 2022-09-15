@@ -60,12 +60,12 @@ DOSE = (
 
 from .Comorbidades import Comorbidades
 from .Cidades import Cidades
-from .Pessoas import Pessoas
-from .Documentos import Documentos
 from .Uso_Consumo import Uso_Consumo
 from .Estoque_Individual import Estoque_Individual
+from .Pessoas_Comorbidades import Pessoas_Comorbidades
+from .Pessoas import Pessoas
+from .Documentos import Documentos
 from .Eventos import Eventos
 from .Ocorrencias import Ocorrencias
-from .Pessoas_Comorbidades import Pessoas_Comorbidades
 from .Prescricao import Prescricao
 from .SinalVital import SinalVital

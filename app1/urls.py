@@ -22,6 +22,7 @@ urlpatterns = [
     path('ocorrencias_add', views.Ocorrencias_add, name='ocorrencias_add'),
     path('ocorrencias_edit', views.Ocorrencias_edit, name='ocorrencias_edit'),
     path('ocorrencias_delete', views.Ocorrencias_delete, name='ocorrencias_delete'),
+    #path('email', views.Envia_email, name='envia_email'),
     # path('estoque_edit/<int:id>', views.Estoque_edit, name="estoque_edit"),
     # path('estoque_delete/<int:id>', views.Estoque_delete, name="estoque_delete"),
 ]

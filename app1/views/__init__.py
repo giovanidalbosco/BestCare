@@ -4,7 +4,9 @@ from django.contrib.auth.decorators import login_required
 from app1.models import *
 from app1.forms import Cadastro, ComorbidadesForm, Uso_ConsumoForm, Estoque_IndividualForm, OcorrenciasForm
 from django.http import HttpResponseRedirect
+from django.http import HttpResponse
 from django.contrib import messages
+from django.core.mail import send_mail
 
 from .Agenda import Agenda
 from .Cad import Cad
@@ -26,3 +28,4 @@ from .Ocorrencias_list import Ocorrencias_list
 from .Ocorrencias_add import Ocorrencias_add
 from .Ocorrencias_edit import Ocorrencias_edit
 from .Ocorrencias_delete import Ocorrencias_delete
+from .Envia_email import envia_email
