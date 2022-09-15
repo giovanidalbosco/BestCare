@@ -15,6 +15,7 @@ class Pessoas(models.Model):
     pessoa_plano = models.CharField(max_length=1, choices=PLANO, default='')
 
 
+
     def __str__(self):
         return self.pessoa_nome
     

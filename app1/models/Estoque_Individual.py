@@ -1,9 +1,10 @@
+from tkinter import ON
 from app1.models import *
 
 
 class Estoque_Individual(models.Model):
     estoqueCreate = models.DateTimeField(verbose_name="TimeStamp",auto_now_add=True,blank=True)
-    estoque_pessoa_nome = models.ManyToManyField(Pessoas, verbose_name='Residente')
+    estoque_pessoa_nome = models.ForeignKey(Pessoas, on_delete=models.CASCADE, verbose_name='Residente')
     estoque_usos_consumo = models.ManyToManyField(Uso_Consumo, verbose_name='Produto')
     estoque_movimento = models.CharField(max_length=1, choices=Entrada_Saida, default='')
     estoque_quantidade = models.IntegerField(verbose_name='Quantidade', default=0)
@@ -12,7 +13,11 @@ class Estoque_Individual(models.Model):
 
 
     def __str__(self):
-        return self.estoque_pessoa_nome.pessoa_nome
+        itens = ''
+        for i in self.estoque_usos_consumo.all():
+            itens += i.consumo_nome
+
+        return f'{self.estoque_pessoa_nome.pessoa_nome}, {itens}'
 
     class Meta:
         verbose_name = 'Estoque Individual'
