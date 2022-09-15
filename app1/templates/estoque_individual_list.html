@@ -1,24 +1,28 @@
-{% extends 'index.html' %}
+{% extends 'telainicial.html' %}
 
-{% block title %}Estoque Individual{% endblock %}
+<!-- {% block title %}Estoque Individual{% endblock %} -->
 
-{% block content %}
-<div class="offset-1 col-10 list-div">
-    <h1>Estoque Individual</h1>
+{% block content2 %}
+<div>
+    <h3>Estoque Individual</h3>
     <div class="container dashboard" style="margin-top: 5%;">
-        <div class="col-6 dashboard-box" id="dashboard-done">
-            {% if messages %}
-            <ul class="messages">
-                {% for message in messages %}
-                <li {% if message.tags %}
-                class="alert alert-{{messages.tags}}"{% endif %}
-                >{{message}}</li>
-                {% endfor %}
-            </ul>
-            {% endif %}
-        
-            <h4>Estoque Individual</h4>
-            <ul class="task-list">
+        <div>
+            <div>
+                <h6>Selecione o residente</h6>
+                <div class="search-div">
+                    <form method="GET" id="search-form">
+                        <input list="pessoas" name="search" id="search">
+                        <datalist id="pessoas">
+                            <option value=" ">
+                            {% for item in pessoa_nome %}
+                                <option value={{item.pessoa_nome}}>
+                            {% endfor %}
+                        </datalist>
+                        <input type="submit">
+                        <i class="fas fa-search" id="search-btn"></i>
+                    </form>
+                </div>
+            
                 <div class="row" style="margin-top: 5%;">
                     <div class="col">
                         <span
@@ -26,6 +30,12 @@
                     </div>
                     <div class="col">
                         <span>Nome</span>
+                    </div>
+                    <div class="col">
+                        <span>Item</span>
+                    </div>
+                    <div class="col">
+                        <span>Qtde</span>
                     </div>
                     <div class="col">
                         <span><i class="fas fa-edit bg-transparent text-dark"></i></span>
@@ -40,9 +50,11 @@
                     <div class="col">
                         <span>{{i.estoque_pessoa_nome.pessoa_nome}}</span>
                     </div>
-                    <div class="col">
-                        <span>{{i.estoque_usos_consumo.consumo_nome}}</span>
-                    </div>
+                    {% for j in i.estoque_usos_consumo.all %}
+                        <div class="col">
+                            <span>{{j.consumo_nome}}</span>
+                        </div>
+                    {% endfor %}
                     <div class="col">
                         <span>{{i.estoque_saldo}}</span>
                     </div>
@@ -52,30 +64,21 @@
                     </div>
                 </div>
                 {% endfor %}
+            </div>
                 <div class="row">
-                    <div class="col">
+                    
                         <a id="add-link" href="estoque_individual_add">
                             <div class="add-div">
                                 <i class="fas fa-plus"></i>
                                 Adicionar Estoque Individual
                             </div>
                         </a>               
-                    </div>
-                    <div class="col">
-                        <div class="search-div">
-                            <form method="GET" id="search-form">
-                                <input class="form-control" type="text" id="search" name="search"
-                                placeholder="Digite o nome para buscar..." value="{{ request.GET.search }}">
-                                <i class="fas fa-search" id="search-btn"></i>
-                            </form>
-                        </div>
-                    </div>
+                    
                 </div>
-            </ul>
+
         </div>
     </div>
 </div>
 
 
-{% endblock %}
-
+{% endblock content2 %}
