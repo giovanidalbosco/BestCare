@@ -4,11 +4,14 @@
 
 {% block content %}
 <div>
-    <h1>Adicione Ocorrencia</h1>
-    <form action="" method="post" class="adicione-Comorbidades">    
-        {% csrf_token %}  
-        {{ form }}         
-        <input class="fas fa-search" type="submit" value="Salvar">
-    </form>   
+    <div class="offset-1 col-10 list-div">
+        <h1>Adicione Ocorrencia:</h1>
+        <form action="" method="post"  >    
+            {% csrf_token %}  
+            {{ form }}         
+        <input type="submit" value="Salvar">
+        </form>
 </div>
+
 {% endblock %}
+
