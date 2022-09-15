@@ -18,11 +18,6 @@
             {% endif %}
         
             <h4>Ocorrencias</h4>
-            <form method="GET" id="search-form">
-                <input class="form-control col-sm-6" type="text" id="search" name="search"
-                placeholder="Digite o nome para buscar..." value="{{ request.GET.search }}">
-                <input type="submit" value="Buscar" class="search btn btn-secondary btn-sm "></input>
-            </form>
             <ul class="task-list">
                 <div class="row" style="margin-top: 5%;">
                     <div class="col">
@@ -34,7 +29,7 @@
                     </div>
                     <div class="col">
                         <span><i class="fas fa-edit bg-transparent text-dark"></i></span>
-                        <span><i class="fas fa-trash bg-transparent text-dark"></i></span>
+                        <span><i class="fas fa-trash bg-transparent text-dark "></i></span>
                     </div>
                 </div>
                 {% for i in ocorrencias %}
@@ -52,7 +47,7 @@
                         <span>{{i.ocorrencia_pessoa_cuidador}}</span>
                     </div>
                     <div class="col">
-                        <a href="/ocorrencias_edit/{{i.id}}" class="delete-btn bg-transparent"><span><i class="fas fa-edit"></i></span></a>
+                        <a href="/ocorrencias_edit/{{i.id}}" class="delete-btn bg-transparent" ><span><i class="fas fa-edit"></i></span></a>
                         <a href="/ocorrencias_delete/{{i.id}}" class="delete-btn bg-transparent"><span><i class="fas fa-trash"></i></span></a>
                     </div>
                 </div>
@@ -62,13 +57,24 @@
                         <a id="add-link" href="ocorrencias_add">
                             <div class="add-div">
                                 <i class="fas fa-plus"></i>
-                                Adicionar Ocorrencia
+                                Adicionar Ocorrencias
                             </div>
                         </a>               
+                    </div>
+                    <div class="col">
+                        <div class="search-div">
+                            <form method="GET" id="search-form">
+                                <input class="form-control" type="search" id="search" name="search"
+                                placeholder="Digite o nome para buscar..." value="{{ request.GET.search }}">
+                                <i class="fas fa-search" id="search-btn"></i>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </ul>
         </div>
     </div>
 </div>
+
+
 {% endblock %}
