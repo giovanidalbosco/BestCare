@@ -1,10 +1,9 @@
 {% extends 'index.html' %}
 
 {% block content %}
-<div class="offset-1 col-10 list-div">
-    <h1>Cadastro</h1>
-</div>
+
 <div class="btn-cad-geral">
+    <h3 class="text-secondary text-center">Cadastro</h3>
     <form action="" method="POST" class="input-btn">    
         {% csrf_token %}  
         {{ form.as_p }}         

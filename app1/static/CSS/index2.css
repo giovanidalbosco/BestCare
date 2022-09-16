@@ -13,12 +13,17 @@ body{
     height: 100vh;
     background: var(--cor-fundo);
     transition: 0.3 ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+
 }
 /* Inicio do header*/
 
 .row img{
-    width: 90px;
-    height: 70px;
+    width: 5.5em;
+    height: 4.3em;
     border-radius: 8px;
 }
 
@@ -26,8 +31,8 @@ body{
 /*Tela inicial*/
 
 #imagemApresentacao{
-    width: 540px;
-    height: 360px;
+    width: 33.5em;
+    height: 22.5em;
 }
 
 /*Fim Tela inicial*/
@@ -40,9 +45,9 @@ body{
 
 .Caracteristicas{
     position: fixed;
-    width: 450px;
-    height: 450px;
-    padding: 10px;
+    width: 28.12em;
+    height: 28.12em;
+    padding: 2%;
     top:25%;
     font-family: Helvetica, sans-serif;
     background-color:#FFFFFF;
@@ -66,9 +71,9 @@ body{
 
 .fechar{
     position: absolute;
-    width: 15px;
-    right: 13px;
-    top: 10px;
+    width: 1em;
+    right: 0.9em;
+    top: 2%;
     text-align: center;
     line-height: 25px;
     background:#FFFFFF;
@@ -196,7 +201,7 @@ div .criar_conta{
     color: rgb(77, 105, 81);
     font-size: 8em;
     text-align: center;
-    margin-top: 10%;
+    /*margin-top: 10%;*/
 }
 /*Bloco do quemSomos*/
 
@@ -234,8 +239,19 @@ div .criar_conta{
     font-family: Times;
     bottom: 0;
     width: 100%;
-    height: 9rem;
-    margin-top: 18%; 
+    height: 15em;
+    margin-top: 4%;
+}
+.card-footer a{
+    color: black;
+    font-size: 17px;
+    font-weight: 600;
+   
+}
+.card-footer p{
+    color: darkgrey;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 /*Fim do rodapé*/
@@ -261,27 +277,27 @@ div .criar_conta{
 
 .btn-cad-geral{
     position: fixed;
-    width: 400px;
-    height: 400px;
+    width: 31em;
+    height: 31em;
     padding: 2%;
     top:25%;
     font-family: Helvetica, sans-serif;
-    background-color:#FFFFFF;
+    background-color:#ffffff;
     border-radius: 10px;
     margin-left: 33%;
     margin-right: 33%;
+    align-items:center;
 }
 .input-btn input{
-    align-items: flex-end;
     top:10%;
     background:rgba(204, 204, 197, 0.826);
     font-weight: 700;
     font-size: 14px;
     border: none;
     outline: none;
-    border-radius: 10px;
-    width: 300px;
-    height: 40px;
+    border-radius: 3px;
+    width: 24em;
+    height: 2em;
     padding: 5%;
     margin: 2%;  
 }
