@@ -31,7 +31,7 @@
                 <a href="/solucoes" type="button" class="btn btn-link mx-lg-5"style="color: grey;font-size:22px;font-weight:5">Soluções</a>
                 <a href="/quemSomos" type="button" class="btn btn-link mx-lg-5"style="color: grey;font-size:22px;font-weight:">QuemSomos</a>
                 <a href="{% url 'cadastro' %}" type="button" class="btn btn-outline-secondary btn-lg mx-lg-5">Cadastre-se</a>
-                <a href="#login" type="button" class="btn btn-outline-secondary btn-lg ">Entrar</a>
+                <a href="/accounts/logout/#login" type="button" class="btn btn-outline-secondary btn-lg ">Entrar</a>
                 {% endif %}
                 {% if user.is_authenticated %}
                 <a href="/accounts/logout" type="button" class="btn btn-secondary">Sair</a>
@@ -39,6 +39,23 @@
             </div>
         </div>  
     </div>
+    {% if user.is_authenticated %}
+    {% else %}
+    <div class="container">
+        <div class="row">
+            <div class="col text-dark font-italic bg-transparent" style="margin-top: 5%;">
+                <h2 class=" display-5 p-lg-4">Pontualidade</h2>
+                <h2 class=" display-5 p-lg-4">Compromisso</h2>
+                <h2 class=" display-5 p-lg-4">Transparência</h2>
+                <h2 class=" display-5 p-lg-4">Comunicação em tempo real</h2>
+            </div>
+            <div class= "col" style="margin-top: 5%;">
+            <img src="/static/img/imagem1.jpg" alt="Imagem Apresentação" id="imagemApresentacao" class="img-thumbnail">
+            <figcaption class="figure-caption">Sempre ao seu lado.</figcaption>
+            </div>
+        </div>
+    </div>
+    {% endif %}
     {% block content %}
     {% endblock %}
 
