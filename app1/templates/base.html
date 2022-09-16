@@ -39,23 +39,6 @@
             </div>
         </div>  
     </div>
-    {% if user.is_authenticated %}
-    {% else %}
-    <div class="container">
-        <div class="row">
-            <div class="col text-dark font-italic bg-transparent" style="margin-top: 5%;">
-                <h2 class=" display-5 p-lg-4">Pontualidade</h2>
-                <h2 class=" display-5 p-lg-4">Compromisso</h2>
-                <h2 class=" display-5 p-lg-4">Transparência</h2>
-                <h2 class=" display-5 p-lg-4">Comunicação em tempo real</h2>
-            </div>
-            <div class= "col" style="margin-top: 5%;">
-            <img src="/static/img/imagem1.jpg" alt="Imagem Apresentação" id="imagemApresentacao" class="img-thumbnail">
-            <figcaption class="figure-caption">Sempre ao seu lado.</figcaption>
-            </div>
-        </div>
-    </div>
-    {% endif %}
     {% block content %}
     {% endblock %}
 
