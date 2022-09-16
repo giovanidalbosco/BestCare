@@ -9,14 +9,14 @@ def Residentes_edit(request, id):
         form = ResidentesForm(request.POST, instance=residente)
         if (form.is_valid()):
             residente.save()
-            return redirect('/uso_consumo_list')
+            return redirect('/residentes_list')
         else:
             return render(request, 'residentes_edit.html', {
                 'form': form, 
                  'residente': residente
              })
     else:
-        return render(request, 'residente_edit.html', {
+        return render(request, 'residentes_edit.html', {
             'form': form,
             'residente': residente
         })
