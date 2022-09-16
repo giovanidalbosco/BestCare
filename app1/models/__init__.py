@@ -69,3 +69,4 @@ from .Eventos import Eventos
 from .Ocorrencias import Ocorrencias
 from .Prescricao import Prescricao
 from .SinalVital import SinalVital
+from .Event import Event

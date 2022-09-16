@@ -15,6 +15,7 @@ admin.site.register(SinalVital)
 admin.site.register(Documentos)
 admin.site.register(Prescricao)
 admin.site.register(Ocorrencias)
+admin.site.register(Event)
 
 
 

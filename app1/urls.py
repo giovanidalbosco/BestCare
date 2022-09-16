@@ -27,6 +27,7 @@ urlpatterns = [
     path('residentes_add', views.Residentes_add, name='residente_add'),
     path('residentes_edit', views.Residentes_edit, name='residente_edit'),
     path('residentes_delete', views.Residentes_delete, name='residente_delete'),
+    path('calendario/', views.CalendarView.as_view(), name='calendario'),
     #path('email', views.Envia_email, name='envia_email'),
     # path('estoque_edit/<int:id>', views.Estoque_edit, name="estoque_edit"),
     # path('estoque_delete/<int:id>', views.Estoque_delete, name="estoque_delete"),
