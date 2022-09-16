@@ -34,4 +34,4 @@ from .Residentes_list import Residentes_list
 from .Residentes_add import Residentes_add
 from .Residentes_edit import Residentes_edit
 from .Residentes_delete import Residentes_delete
-from .Calendario import CalendarView
+from .Calendario import CalendarView, get_date

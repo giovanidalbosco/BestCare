@@ -9,7 +9,7 @@ from app1.utils import Calendar
 
 class CalendarView(generic.ListView):
     model = Event
-    template_name = 'app1/calendar.html'
+    template_name = 'calendar.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
