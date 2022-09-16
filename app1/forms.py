@@ -32,3 +32,19 @@ class OcorrenciasForm(forms.ModelForm):
     class Meta:
         model = Ocorrencias
         fields = ('ocorrencia_nome', 'ocorrencia_pessoa_nome', 'ocorrencia_pessoa_cuidador',)
+
+
+class ResidentesForm(forms.ModelForm):
+
+    class Meta:
+        model = Pessoas
+        fields = (
+            'pessoa_nome', 
+            'pessoa_endereco', 
+            'pessoa_numero',
+            'pessoa_compl',
+            'pessoa_cidade',
+            'pessoa_CPF',
+            'pessoa_comorbidade',
+            'pessoa_plano'
+        )

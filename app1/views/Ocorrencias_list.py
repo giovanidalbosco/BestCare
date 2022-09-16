@@ -13,4 +13,4 @@ def Ocorrencias_list(request):
         'ocorrencia_nome': ocorrencia
     }
 
-    return render(request, template_name='ocorrencias_list.html', context=context)
+    return render(request, 'ocorrencias_list.html', {'ocorrencia': ocorrencia})
