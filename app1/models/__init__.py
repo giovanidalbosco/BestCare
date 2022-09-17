@@ -11,19 +11,19 @@ PLANO = (
         ('3', 'CONVENIO')
     )
 APRESENTACAO = (
-        ('1','Comprimido'),
-        ('2','Dragea'),
-        ('3', 'Gota'),
-        ('4', 'Injetavel'),
-        ('5', 'Ampola'),
-        ('6', 'Bisnaga'),
-        ('7', 'Unidade')
+        (1,'Comprimido'),
+        (2,'Dragea'),
+        (3, 'Gota'),
+        (4, 'Injetavel'),
+        (5, 'Ampola'),
+        (6, 'Bisnaga'),
+        (7, 'Unidade')
     )
 VIA = (
-        ('1','Oral'),
-        ('2', 'Intra-Venoso'),
-        ('3', 'Nasal'),
-        ('4', 'Ocular')
+        (1,'Oral'),
+        (2, 'Intra-Venoso'),
+        (3, 'Nasal'),
+        (4, 'Ocular')
     )
 
 Entrada_Saida = (

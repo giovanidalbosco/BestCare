@@ -18,7 +18,7 @@ class Uso_ConsumoForm(forms.ModelForm):
 
     class Meta:
         model = Uso_Consumo
-        fields = ('consumo_nome',)
+        fields = ('consumo_nome', 'consumo_fabricante', 'consumo_apresentacao', 'consumo_via',)
 
 class Estoque_IndividualForm(forms.ModelForm):
 
