@@ -36,6 +36,8 @@ body{
 }
 
 /*Fim Tela inicial*/
+
+/*Inicio da janela de input*/
 .Caracteristicas{
     display: flex;
     flex-direction: column;
@@ -80,8 +82,19 @@ body{
     color:#000;
     text-decoration: none; 
 }
+
 .fechar:hover{
     color: red;
+}
+
+.header-login img{
+    width: 3.5em;
+    height: 2.3em;
+    margin-top: -18%;
+}
+
+.header-login span{
+    margin-top: -16%; 
 }
 
 .formulario{
@@ -102,6 +115,7 @@ body{
     height: 40px;
     padding: 5px;
     margin: 2%;
+    margin-top: 2%;
 }
 .login2 button{
     background:rgba(204, 204, 197, 0.826);
@@ -157,6 +171,46 @@ div .criar_conta{
 
 /*Termina janela input*/
 
+/*Início Cadastro*/
+
+.btn-cad-geral{
+    position: fixed;
+    width: 28.12em;
+    height: 28.12em;
+    padding: 2%;
+    top:25%;
+    font-family: Helvetica, sans-serif;
+    background-color:#FFFFFF;
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    transition: 0.3 ease-in-out;
+    border-radius: 10px;
+    border: grey solid 1px;
+    margin-left: 33%;
+    margin-right: 33%;
+}
+
+.btn-cad-geral{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.cadastro-login img{
+    width: 3.5em;
+    height: 2.3em;
+    margin-top: -5%;
+}
+
+.cadastro-login span{
+    margin-top: -3%; 
+}
+
+/*Fim Cadastro*/
+
 .slogan{
     text-align: start;
     display: flex;
@@ -165,12 +219,14 @@ div .criar_conta{
     padding: 7rem;
 }
 
-.slogan p{
-    margin-top: 3%;
-    font-family:Verdana;
-    font-size: 2em;
-    font-weight: 500;
-    color: rgb(14, 94, 200);
+.carrossel1 #carousel img{
+    width: 30em;
+    height: 25em;
+}
+#carousel img{
+    opacity: 0.6;
+    backdrop-filter: blur(10px);
+    backdrop-filter: sepia(90%);
 }
 
 .entrar2{
@@ -189,13 +245,6 @@ div .criar_conta{
 .entrar2:hover{
     color: aliceblue;
 }
-
-.slogan button:hover{
-    background-color: rgb(67, 107, 159);;
-    border-radius: 1rem;
-    box-shadow:0px 0px 4px 3px rgb(166, 162, 162) ;
-}
-
 
 #quem{
     color: rgb(77, 105, 81);
@@ -233,7 +282,6 @@ div .criar_conta{
 /*Fim bloco do quemSomos*/
 
 /*Rodapé=> Será igual sempre */
-
 .card-footer{
     font-size: small;
     font-family: Times;
@@ -253,7 +301,6 @@ div .criar_conta{
     margin-top: 1%;
     margin-bottom: 1%;
 }
-
 /*Fim do rodapé*/
 
 /*Inicio solucoes*/
@@ -320,3 +367,70 @@ div .criar_conta{
     height: 40px;
 }
 
+
+
+/*post-it posição*/
+.sticky-container {
+    max-width: 270px;
+    position: relative;
+}
+
+.sticky-outer {
+  display: flex;
+  padding-top: 92.5925926%;
+  position: relative; 
+}
+
+.sticky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+  
+  /* Sombra atrás do post-it */
+.sticky:before {
+  box-shadow: -2px 2px 15px 0 rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.25);
+  content: '';
+  width: 90%;
+  left: 5px;
+  height: 75%;
+  position: absolute;
+  top: 30%;
+}
+  
+  /*Conteúdo do post-it*/
+.sticky-content {
+    background:rgb(197, 209, 210);
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    font-family:monospace;
+    font-size: 1.25rem;
+    
+    display: flex;
+    align-items:center;
+    justify-content:center; 
+
+  clip-path: url(#stickyClip);
+}
+
+.container-inner {
+  width: 40%;
+  margin: 2em;
+}
+
+.post-it{
+    display: flex;
+    align-items:center;
+    justify-content:center; 
+}
+ 
+
+ 
+ 
+ 
+
+  
