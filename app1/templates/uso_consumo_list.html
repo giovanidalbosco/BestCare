@@ -3,10 +3,10 @@
 {% block title %}Uso e consumo{% endblock %}
 
 {% block content %}
-<div class="offset-1 col-10 list-div">
+<div class=" w-100 list-div">
     <h1 class="text-secondary text-center">Uso e consumo</h1>
-    <div class="container dashboard" style="margin-top: 5%;">
-        <div class="col-6 dashboard-box" id="dashboard-done">
+    <div class="container w-100" style="margin-top: 5%;">
+        <div class="col-12 dashboard-box" id="dashboard-done">
             {% if messages %}
             <ul class="messages">
                 {% for message in messages %}
@@ -16,8 +16,29 @@
                 {% endfor %}
             </ul>
             {% endif %}
-        
-            <h4>Uso e consumo</h4>
+            <div class="row d-inline-block">
+                <div class="modal-header">
+                    <h4>Uso e consumo</h4>
+                    <a class="bg-transparent mx-lg-5"  id="add-link" href="uso_consumo_add">
+                        <div class="add-div">
+                            <i class="fas fa-plus btn"></i>
+                            Adicionar Uso e consumo
+                        </div>
+                    </a>
+                    <div class="search-div bg-transparent">
+                        <form method="GET" id="search-form">
+                            <input list="pessoas" name="search" id="search" placeholder="Digite o nome para buscar..."  value={{pessoa_selec.pessoa_nome}}>
+                            <datalist id="pessoas">
+                                <option value=" ">
+                                {% for item in pessoa_nome %}
+                                    <option value={{item.pessoa_nome}}>
+                                {% endfor %}
+                            </datalist>
+                            <input class="btn btn-outline-info btn-sm" type="submit">
+                        </form>
+                    </div> 
+                </div>
+            </div>
             <ul class="task-list">
                 <div class="row" style="margin-top: 5%;">
                     <div class="col">
@@ -64,30 +85,10 @@
                     </div>
                 </div>
                 {% endfor %}
-                <div class="row">
-                    <div class="col">
-                        <a id="add-link" href="uso_consumo_add">
-                            <div class="add-div">
-                                <i class="fas fa-plus"></i>
-                                Adicionar Uso e consumo
-                            </div>
-                        </a>               
-                    </div>
-                    <div class="col">
-                        <div class="search-div">
-                            <form method="GET" id="search-form">
-                                <input class="form-control" type="text" id="search" name="search"
-                                placeholder="Digite o nome para buscar..." value="{{ request.GET.search }}">
-                                <input type="submit" value="Buscar"></input>
-                            </form>
-                        </div>
-                    </div>
-                </div>
             </ul>
         </div>
     </div>
 </div>
-
 
 {% endblock %}
 

@@ -224,9 +224,23 @@ div .criar_conta{
     height: 25em;
 }
 #carousel img{
-    opacity: 0.6;
-    backdrop-filter: blur(10px);
-    backdrop-filter: sepia(90%);
+    opacity: 0.5;
+}
+.carrossel1 .carrossel1-frase{
+    color: #000;
+    font-family:monospace;
+    font-size: 2.5em;
+    font-weight: 600;
+    backdrop-filter: blur(2px);
+
+}
+
+/**/
+#dashboard-done{
+    border-left: 2px solid #000;
+}
+#add-link{
+    margin-top: -0%;
 }
 
 .entrar2{
@@ -367,7 +381,7 @@ div .criar_conta{
     height: 40px;
 }
 
-
+/*Início post-it*/
 
 /*post-it posição*/
 .sticky-container {
@@ -377,7 +391,7 @@ div .criar_conta{
 
 .sticky-outer {
   display: flex;
-  padding-top: 92.5925926%;
+  padding-top: 92%;
   position: relative; 
 }
 
@@ -424,9 +438,14 @@ div .criar_conta{
 
 .post-it{
     display: flex;
-    align-items:center;
-    justify-content:center; 
+    flex-direction:row;
+    justify-content:space-between;
+
 }
+    
+    
+    
+
  
 
  
