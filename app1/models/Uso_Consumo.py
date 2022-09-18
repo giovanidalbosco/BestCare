@@ -4,8 +4,8 @@ from app1.models import *
 class Uso_Consumo(models.Model):
     consumo_nome = models.CharField(max_length=50, verbose_name='Uso e consumo', default='')
     consumo_fabricante = models.CharField(max_length=50, verbose_name='Fabricante', default='')
-    consumo_apresentacao = models.CharField(max_length=1, verbose_name='Apresentacao',choices=APRESENTACAO, default='')
-    consumo_via = models.CharField(max_length=1, choices=VIA, default='')
+    consumo_apresentacao = models.IntegerField(verbose_name='Apresentacao', choices=APRESENTACAO, default=None)
+    consumo_via = models.IntegerField(choices=VIA, default=None)
 
 
     def __str__(self):

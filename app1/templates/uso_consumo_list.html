@@ -28,6 +28,15 @@
                         <span>Nome</span>
                     </div>
                     <div class="col">
+                        <span>Fabricante</span>
+                    </div>
+                    <div class="col">
+                        <span>Apresentação</span>
+                    </div>
+                    <div class="col">
+                        <span>Via</span>
+                    </div>
+                    <div class="col">
                         <span><i class="fas fa-edit bg-transparent text-dark"></i></span>
                         <span><i class="fas fa-trash bg-transparent text-dark"></i></span>
                     </div>
@@ -39,6 +48,15 @@
                     </div>
                     <div class="col">
                         <span>{{i.consumo_nome}}</span>
+                    </div>
+                    <div class="col">
+                        <span>{{i.consumo_fabricante}}</span>
+                    </div>
+                    <div class="col">
+                        <span>{{i.get_consumo_apresentacao_display}}</span>
+                    </div>
+                    <div class="col">
+                        <span>{{i.get_consumo_via_display}}</span>
                     </div>
                     <div class="col">
                         <a href="/uso_consumo_edit/{{i.id}}" class="delete-btn bg-transparent"><span><i class="fas fa-edit"></i></span></a>

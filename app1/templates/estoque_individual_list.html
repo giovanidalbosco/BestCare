@@ -11,7 +11,7 @@
                 <h6>Selecione o residente</h6>
                 <div class="search-div">
                     <form method="GET" id="search-form">
-                        <input list="pessoas" name="search" id="search">
+                        <input list="pessoas" name="search" id="search" value={{pessoa_selec.pessoa_nome}}>
                         <datalist id="pessoas">
                             <option value=" ">
                             {% for item in pessoa_nome %}

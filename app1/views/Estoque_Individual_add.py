@@ -3,18 +3,24 @@ from app1.views import *
 
 @login_required
 def Estoque_Individual_add(request):
-    print('aqui 1')
     if request.method == 'POST':
-        print('aqui 2')
         form = Estoque_IndividualForm(request.POST)
+        print(f'testando {form}')
         if form.is_valid():
-            print('aqui 3')
             estoque_Individual = form.save(commit=False)
             estoque_Individual.save()
-            return render(request, 'estoque_individual_list.html')
+            print(f'salvo {estoque_Individual}')
+            return HttpResponseRedirect('/estoque_individual_list')
+            # return redirect('/estoque_individual_list')
     else:
-        print('aqui 4')
-        form = Estoque_IndividualForm()
+        # meu_objeto = Pessoas.objects.filter(pessoa_nome__icontains='Samir').first()
+        # meu_objeto = get_object_or_404(Estoque_Individual, pk=1)
+        meu_objeto = Estoque_Individual.objects.filter(estoque_pessoa_nome__pessoa_nome='Samir').first()
+        print(meu_objeto)
+        form = Estoque_IndividualForm(instance=meu_objeto)
 
-    print('aqui 5')
+        # form = Estoque_IndividualForm()
+
+        
+
     return render(request, 'estoque_individual_add.html', {'form': form})
