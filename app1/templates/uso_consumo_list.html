@@ -34,7 +34,7 @@
                                     <option value={{item.pessoa_nome}}>
                                 {% endfor %}
                             </datalist>
-                            <input class="btn btn-outline-info btn-sm" type="submit">
+                            <input class="btn btn-outline-secondary btn-sm" type="submit">
                         </form>
                     </div> 
                 </div>
@@ -43,19 +43,19 @@
                 <div class="row" style="margin-top: 5%;">
                     <div class="col">
                         <span
-                        text-left>ID</span>
+                        text-left><strong>ID</strong></span>
                     </div>
                     <div class="col">
-                        <span>Nome</span>
+                        <span><strong>Nome</strong></span>
                     </div>
                     <div class="col">
-                        <span>Fabricante</span>
+                        <span><strong>Fabricante</strong></span>
                     </div>
                     <div class="col">
-                        <span>Apresentação</span>
+                        <span><strong>Apresentação</strong></span>
                     </div>
                     <div class="col">
-                        <span>Via</span>
+                        <span><strong>Via</strong></span>
                     </div>
                     <div class="col">
                         <span><i class="fas fa-edit bg-transparent text-dark"></i></span>
@@ -80,8 +80,8 @@
                         <span>{{i.get_consumo_via_display}}</span>
                     </div>
                     <div class="col">
-                        <a href="/uso_consumo_edit/{{i.id}}" class="delete-btn bg-transparent"><span><i class="fas fa-edit"></i></span></a>
-                        <a href="/uso_consumo_delete/{{i.id}}" class="delete-btn bg-transparent"><span><i class="fas fa-trash"></i></span></a>
+                        <a href="/uso_consumo_edit/{{i.id}}" class="delete-btn bg-transparent"><span><abbr title="EDITAR"><i class="fas fa-edit"></i></abbr></span></a>
+                        <a href="/uso_consumo_delete/{{i.id}}" class="delete-btn bg-transparent"><span><abbr title="EXCLUIR"><i class="fas fa-trash"></i></abbr></span></a>
                     </div>
                 </div>
                 {% endfor %}

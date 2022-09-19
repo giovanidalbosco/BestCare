@@ -3,10 +3,10 @@
 {% block title %}Comorbidades{% endblock %}
 
 {% block content %}
-<div class="offset-1 col-10 list-div">
+<div class="w-100 list-div">
     <h1 class="text-secondary text-center">Comorbidades</h1>
-    <div class="container dashboard" style="margin-top: 5%;">
-        <div class="col-6 dashboard-box" id="dashboard-done">
+    <div class="container w-100" style="margin-top: 5%;">
+        <div class="col-12 dashboard-box" id="dashboard-done">
             {% if messages %}
             <ul class="messages">
                 {% for message in messages %}
@@ -16,16 +16,31 @@
                 {% endfor %}
             </ul>
             {% endif %}
-        
-            <h4>Comorbidade</h4>
+            <div class="row d-inline-block">
+                <div class="modal-header">
+                    <h4>Comorbidade</h4>
+                    <a class="bg-transparent mx-lg-5"  id="add-link" href="comorbidades_add">
+                        <div class="add-div">
+                            <i class="fas fa-plus"></i>
+                            Adicionar Comorbidade
+                        </div>
+                    </a>
+                    <div class="search-div bg-transparent">
+                        <form method="GET" id="search-form">
+                            <input type="search" id="search" name="search"placeholder="Digite o nome para buscar..." value="{{ request.GET.search }}">
+                            <input class="btn btn-outline-secondary btn-sm" type="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>               
             <ul class="task-list">
                 <div class="row" style="margin-top: 5%;">
                     <div class="col">
                         <span
-                        text-left>ID</span>
+                        text-left><strong>ID</strong></span>
                     </div>
                     <div class="col">
-                        <span>Nome</span>
+                        <span><strong>Nome</strong></span>
                     </div>
                     <div class="col">
                         <span><i class="fas fa-edit bg-transparent text-dark"></i></span>
@@ -41,35 +56,15 @@
                         <span>{{i.comorbidade_nome}}</span>
                     </div>
                     <div class="col">
-                        <a href="/comorbidade_edit/{{i.id}}" class="delete-btn bg-transparent" ><span><i class="fas fa-edit"></i></span></a>
-                        <a href="/comorbidade_delete/{{i.id}}" class="delete-btn bg-transparent"><span><i class="fas fa-trash"></i></span></a>
+                        <a href="/comorbidade_edit/{{i.id}}" class="delete-btn bg-transparent" ><span><abbr title="EDITAR" ><i class="fas fa-edit"></i></abbr></span></a>
+                        <a href="/comorbidade_delete/{{i.id}}" class="delete-btn bg-transparent"><span><abbr title="EXCLUIR"><i class="fas fa-trash"></i></abbr></span></a>
                     </div>
                 </div>
                 {% endfor %}
-                <div class="row">
-                    <div class="col">
-                        <a id="add-link" href="comorbidades_add">
-                            <div class="add-div">
-                                <i class="fas fa-plus"></i>
-                                Adicionar Comorbidade
-                            </div>
-                        </a>               
-                    </div>
-                    <div class="col">
-                        <div class="search-div">
-                            <form method="GET" id="search-form">
-                                <input class="form-control" type="search" id="search" name="search"
-                                placeholder="Digite o nome para buscar..." value="{{ request.GET.search }}">
-                                <i class="fas fa-search" id="search-btn"></i>
-                            </form>
-                        </div>
-                    </div>
-                </div>
             </ul>
         </div>
     </div>
 </div>
-
 
 {% endblock %}
 
