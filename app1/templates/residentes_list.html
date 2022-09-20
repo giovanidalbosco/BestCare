@@ -56,7 +56,7 @@
                         <span><i class="fas fa-trash bg-transparent text-dark "></i></span>
                     </div>
                 </div>
-                {% for i in residentes %}
+                {% for i in residente %}
                 <div  class="border border-dark row">
                     <div class="col">
                         <span>{{i.id}}</span>
@@ -83,14 +83,16 @@
                         <span>{{i.pessoa_CPF}}</span>
                     </div>
                     <div class="col">
-                        <span>{{i.pessoa_comorbidade}}</span>
+                        {% for dados in pessoas_pessoa_comorbidade %}
+                            <span>{{dados}}</span>
+                        {% endfor %}  
                     </div>
                     <div class="col">
                         <span>{{i.pessoa_plano}}</span>
                     </div>
                     <div class="col">
-                        <a href="/residentes_edit/{{i.id}}" class="delete-btn bg-transparent"><span><i class="fas fa-edit"></i></span></a>
-                        <a href="/residentes_delete/{{i.id}}" class="delete-btn bg-transparent"><span><i class="fas fa-trash"></i></span></a>
+                        <a href="residentes_edit/{{i.id}}" class="delete-btn bg-transparent"><span><i class="fas fa-edit"></i></span></a>
+                        <a href="residentes_delete/{{i.id}}" class="delete-btn bg-transparent"><span><i class="fas fa-trash"></i></span></a>
                     </div>
                 </div>
                 {% endfor %}
