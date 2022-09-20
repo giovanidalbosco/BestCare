@@ -5,7 +5,7 @@
 
 {% block content %}
 <div class="offset-1 col-10 list-div">
-    <h1>Editando '{{residentes.pessoa_nome}}'</h1>
+    <h1>Editando '{{residente.pessoa_nome}}'</h1>
     <form method="POST">
         {% csrf_token %}
         {{ form|crispy }}
