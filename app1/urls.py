@@ -30,5 +30,5 @@ urlpatterns = [
     path('calendario/', views.CalendarView.as_view(), name='calendario'),
     #path('email', views.Envia_email, name='envia_email'),
     # path('estoque_edit/<int:id>', views.Estoque_edit, name="estoque_edit"),
-    # path('estoque_delete/<int:id>', views.Estoque_delete, name="estoque_delete"),
+    path('estoque_individual_delete/<int:id>', views.Estoque_Individual_delete, name="estoque_individual_delete"),
 ]

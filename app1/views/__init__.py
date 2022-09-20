@@ -24,6 +24,7 @@ from .Uso_Consumo_add import Uso_Consumo_add
 from .Uso_Consumo_list import Uso_Consumo_list
 from .Estoque_Individual_list import Estoque_Individual_list
 from .Estoque_Individual_add import Estoque_Individual_add
+from .Estoque_Individual_delete import Estoque_Individual_delete
 from .Ocorrencias_list import Ocorrencias_list
 from .Ocorrencias_add import Ocorrencias_add
 from .Ocorrencias_edit import Ocorrencias_edit
