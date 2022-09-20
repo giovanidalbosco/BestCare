@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
-from decouple import config
+from decouple import os.getenv
 import django_heroku
 import dj_database_url
 
@@ -100,7 +100,7 @@ except ImportError:
 
 DATABASES = {}
 
-DATABASES['default']=dj_database_url.config(conn_max_age=600)
+DATABASES['default']=dj_database_url.os.getenv(conn_max_age=600)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -152,11 +152,15 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  #smtp ou console
 
 #Parâmetros que precisam ser passados para o envio de email.
 #Fazendo o uso do python-decouple para esconder essas informações. (criar o arquivo .env)
-EMAIL_HOST_USER = config('EMAIL_HOST_USER')  
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-EMAIL_USE_TLS = config('EMAIL_USE_TLS')
-EMAIL_PORT = config('EMAIL_PORT')
-EMAIL_HOST = config('EMAIL_HOST')
+
+try:
+    EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')  
+    EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+    EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS')
+    EMAIL_PORT = os.getenv('EMAIL_PORT')
+    EMAIL_HOST = os.getenv('EMAIL_HOST')
+except ImportError:
+    pass
 
 
 try:
