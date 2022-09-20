@@ -1,4 +1,3 @@
-from tkinter import ON
 from app1.models import *
 
 
