@@ -3,14 +3,15 @@
 {% block title %}Adicione Residentes{% endblock %}
 
 {% block content %}
-<div>
-    <div class="offset-1 col-10 list-div">
+<div class=" col-9 px-5">
+    <div class=" align-middle table" id="dashboard-done"></div>
         <h1>Adicione Residente:</h1>
-        <form action="" method="post"  >    
+        <form action="" method="post" class="col-sm-3 px-2 form-group">    
             {% csrf_token %}  
             {{ form }}         
-        <input type="submit" value="Salvar">
+        <input class="btn btn-outline-secondary btn-sm mt-lg-5"  type="submit" value="Salvar">
         </form>
+    </div>
 </div>
 
 {% endblock %}
