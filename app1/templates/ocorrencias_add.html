@@ -3,14 +3,15 @@
 {% block title %}Adicione Ocorrencias{% endblock %}
 
 {% block content %}
-<div>
-    <div class="offset-1 col-10 list-div">
+<div class=" col-6 px-5">
+    <div class="align-middle table" id="dashboard-done">
         <h1>Adicione Ocorrencia:</h1>
-        <form action="" method="post"  >    
+        <form action="" method="post" class="col-lg-3 form-group" >    
             {% csrf_token %}  
             {{ form }}         
-        <input type="submit" value="Salvar">
+        <input class="btn btn-outline-secondary btn-sm mt-lg-5" type="submit" value="Salvar">
         </form>
+    </div>
 </div>
 
 {% endblock %}

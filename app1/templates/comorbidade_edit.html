@@ -4,7 +4,7 @@
 {% block title %}{{comorbidade.comorbidade_nome}}{% endblock %}
 
 {% block content %}
-<div class="offset-1 col-10 list-div">
+<div class="offset-1 col-6 list-div" id="dashboard-done">
     <h1>Editando '{{comorbidade.comorbidade_nome}}'</h1>
     <form method="POST">
         {% csrf_token %}
