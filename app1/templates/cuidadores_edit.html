@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{cuidadores.pessoa_nome}}{% endblock %}
+
+{% block content %}
+<div class="offset-1 col-12 list-div" id="dashboard-done">
+    <h1>Editando Cuidador'{{cuidadores.pessoa_nome}}'</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" class="btn btn-outline-secondary mt-5" value="Salvar">
+    </form>
+</div>
+{% endblock %}

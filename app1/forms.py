@@ -49,3 +49,20 @@ class ResidentesForm(forms.ModelForm):
             'pessoa_comorbidade',
             'pessoa_plano'
         )
+
+
+class CuidadoresForm(forms.ModelForm):
+
+    class Meta:
+        model = Pessoas
+        fields = (
+            'pessoa_nome', 
+            'pessoa_endereco', 
+            'pessoa_numero',
+            'pessoa_compl',
+            'pessoa_cidade',
+            'pessoa_classe',
+            'pessoa_CPF',
+            'pessoa_telefone',
+            'pessoa_email'
+        )
