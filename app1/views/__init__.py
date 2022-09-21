@@ -2,7 +2,7 @@ from http.client import ImproperConnectionState
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from app1.models import *
-from app1.forms import Cadastro, ComorbidadesForm, Uso_ConsumoForm, Estoque_IndividualForm, OcorrenciasForm, ResidentesForm
+from app1.forms import Cadastro, ComorbidadesForm, Uso_ConsumoForm, Estoque_IndividualForm, OcorrenciasForm, ResidentesForm, CuidadoresForm
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.contrib import messages
@@ -35,3 +35,8 @@ from .Residentes_add import Residentes_add
 from .Residentes_edit import Residentes_edit
 from .Residentes_delete import Residentes_delete
 from .Calendario import CalendarView, get_date
+from .Cuidadores_list import Cuidadores_list
+from .Cuidadores_add import Cuidadores_add
+from .Cuidadores_edit import Cuidadores_edit
+from .Cuidadores_delete import Cuidadores_delete
+

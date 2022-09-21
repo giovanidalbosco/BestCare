@@ -1,3 +1,4 @@
+from inspect import Attribute
 from app1.views import *
 
 
