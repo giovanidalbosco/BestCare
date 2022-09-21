@@ -16,7 +16,7 @@ def Residentes_edit(request, id):
                  'residente': residente
              })
     else:
-        return render(request, '/residentes_edit', {
+        return render(request, 'residentes_edit.html', {
             'form': form,
             'residente': residente
         })

@@ -3,12 +3,14 @@
 {% block title %}Estoque Individual{% endblock %}
 
 {% block content %}
-<div>
-    <h1>Adicione Estoque Individual:</h1>
-    <form action="" method="post" class="">
-        {% csrf_token %}
-        {{ form }}
-        <input class="fas fa-search" type="submit" value="Submit">
-    </form>
+<div class=" col-6 px-5">
+    <div class=" align-middle table" id="dashboard-done">
+        <h1>Adicione Estoque Individual:</h1>
+        <form action="" method="post" class="col-lg-3   form-group">
+            {% csrf_token %}
+            {{ form }}
+            <input class="btn btn-outline-secondary btn-sm mt-lg-5"type="submit"  value="Salvar">
+        </form>
+    </div>
 </div>
 {% endblock %}

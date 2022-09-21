@@ -4,7 +4,7 @@
 {% block title %}{{uso_consumo.consumo_nome}}{% endblock %}
 
 {% block content %}
-<div class="offset-1 col-10 list-div">
+<div class="offset-1 col-7 list-div" id="dashboard-done">
     <h1>Editando '{{uso_consumo.consumo_nome}}'</h1>
     <form method="POST">
         {% csrf_token %}

@@ -4,12 +4,12 @@
 {% block title %}{{residentes.pessoa_nome}}{% endblock %}
 
 {% block content %}
-<div class="offset-1 col-10 list-div">
-    <h1>Editando '{{residentes.pessoa_nome}}'</h1>
+<div class="offset-1 col-12 list-div" id="dashboard-done">
+    <h1>Editando Residente'{{residentes.pessoa_nome}}'</h1>
     <form method="POST">
         {% csrf_token %}
         {{ form|crispy }}
-        <input type="submit" class="btn btn-success" value="Salvar">
+        <input type="submit" class="btn btn-outline-secondary mt-5" value="Salvar">
     </form>
 </div>
 {% endblock %}
