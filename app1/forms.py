@@ -24,7 +24,7 @@ class Estoque_IndividualForm(forms.ModelForm):
 
     class Meta:
         model = Estoque_Individual
-        fields = ('estoque_pessoa_nome','estoque_usos_consumo',)
+        fields = ('estoque_pessoa_nome','estoque_usos_consumo','estoque_quantidade',)
 
 
 class OcorrenciasForm(forms.ModelForm):
