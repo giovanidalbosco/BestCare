@@ -66,3 +66,20 @@ class CuidadoresForm(forms.ModelForm):
             'pessoa_telefone',
             'pessoa_email'
         )
+
+
+class ResponsavelForm(forms.ModelForm):
+
+    class Meta:
+        model = Pessoas
+        fields = (
+            'pessoa_nome', 
+            'pessoa_endereco', 
+            'pessoa_numero',
+            'pessoa_compl',
+            'pessoa_cidade',
+            'pessoa_classe',
+            'pessoa_CPF',
+            'pessoa_telefone',
+            'pessoa_email'
+        )
