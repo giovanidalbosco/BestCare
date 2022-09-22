@@ -1,4 +1,3 @@
-from inspect import Attribute
 from app1.views import *
 
 
@@ -6,12 +5,8 @@ from app1.views import *
 def Residentes_list(request):
     search = request.GET.get('search')
     if search:
-        residente = Pessoas.objects.filter(pessoa_nome__icontains=search)
+        residente = Pessoas.objects.filter(pessoa_classe__icontains='2')
     else:
-        residente = Pessoas.objects.all()
-
-    context = {
-        'residente_nome': residente
-    }
+        residente = Pessoas.objects.filter(pessoa_classe__icontains='2')
 
     return render(request, 'residentes_list.html', {'residente': residente})

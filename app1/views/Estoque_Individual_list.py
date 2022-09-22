@@ -5,7 +5,7 @@ from app1.views import *
 def Estoque_Individual_list(request):
     search = request.GET.get('search')
     pessoa_nome = Pessoas.objects.all()
-    print(f'pessoas:{pessoa_nome}')
+    print(f'pessoas:{search}')
     if search:
         dono_estoque = Estoque_Individual.objects.filter(estoque_pessoa_nome__pessoa_nome__icontains=search)
         print(dono_estoque)
