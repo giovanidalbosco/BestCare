@@ -63,7 +63,6 @@ from .Cidades import Cidades
 from .Uso_Consumo import Uso_Consumo
 from .Pessoas import Pessoas
 from .Estoque_Individual import Estoque_Individual
-from .Pessoas_Comorbidades import Pessoas_Comorbidades
 from .Documentos import Documentos
 from .Eventos import Eventos
 from .Ocorrencias import Ocorrencias
