@@ -96,7 +96,10 @@
                         <span>{{i.pessoa_CPF}}</span>
                     </div>
                     <div class="col">
-                        <span>{{i.pessoas_pessoa_comorbidade_comorbidade}}</span>    
+                        {% for j in i.pessoas_pessoa_comorbidade.all %}
+                            {{j.comorbidade_nome}}
+                    </div>
+                        {% endfor %}</span>    
                     </div>
                     <div class="col">
                         <span>{{i.get_pessoa_plano_display}}</span>

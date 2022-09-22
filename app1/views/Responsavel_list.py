@@ -2,12 +2,12 @@ from app1.views import *
 
 
 @login_required
-def Residentes_list(request):
+def Responsavel_list(request):
     search = request.GET.get('search')
     if search:
-        responsavel = Pessoas.objects.filter(pessoa_nome__icontains=search)
+        responsavel = Pessoas.objects.filter(pessoa_nome__icontains='3')
     else:
-        responsavel = Pessoas.objects.all()
+        responsavel = Pessoas.objects.filter(pessoa_classe__icontains='3')
 
     context = {
         'responsavel_nome': responsavel
