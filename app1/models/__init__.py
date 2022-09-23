@@ -110,6 +110,40 @@ DOSE = (
         (7, '1 + 3/4')
     )
 
+COMORBIDADES = (
+    (1, 'Asma em uso de corticoide inalatório ou sistêmico (Moderada ou Grave)'),
+    (2, 'Doença Pulmonar Obstrutiva Crônica (DPOC)'),
+    (3, 'Bronquiectasia'),
+    (4, 'Fibrose Cística'),
+    (5, 'Doenças Intersticiais do pulmão'),
+    (6, 'Displasia broncopulmonar'),
+    (7, 'Hipertensão Arterial Pulmonar'),
+    (8, 'Doença cardíaca congênita'),
+    (9, 'Hipertensão arterial sistêmica com comorbidade'),
+    (10, 'Doença cardíaca isquêmica'), 
+    (11, 'Insuficiência cardíaca'),
+    (12, 'Doença renal nos estágios 3,4 e 5'),
+    (13, 'Síndrome nefrótica'),
+    (14, 'Paciente em diálise'),
+    (15, 'Atresia biliar'),
+    (16, 'Hepatites crônicas'),
+    (17, 'Cirrose'),
+    (18, 'função respiratória Comprometida'),
+    (19, 'Acidente Vascular Cerebral'),
+    (20, 'Indivíduos com paralisia cerebral'), 
+    (21, 'Esclerose múltipla'),
+    (22, 'Doenças hereditárias'),
+    (23, 'Doencas Degenerativas'),
+    (24, 'Deficiência neurológica grave'),
+    (25, 'Diabetes Mellitus tipo I e tipo II'),
+    (26, 'Imunodeficiência'),
+    (27, 'Obesidade grau III'),
+    (28, 'Síndrome de Down'),
+    (29, 'Síndrome de Klinefelter'),
+    (30, 'Síndrome de Wakany'),
+
+)
+
 
 from .Comorbidades import Comorbidades
 from .Cidades import Cidades
