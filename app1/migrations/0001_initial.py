@@ -59,13 +59,7 @@ class Migration(migrations.Migration):
                 'ordering': ['pessoa_nome'],
             },
         ),
-        migrations.CreateModel(
-            name='Pessoas_Comorbidades',
-            fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('pessoa_comorbidade_nome', models.CharField(default=0, max_length=10, verbose_name='Nome')),
-            ],
-        ),
+
         migrations.CreateModel(
             name='Uso_Consumo',
             fields=[

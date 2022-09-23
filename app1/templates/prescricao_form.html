@@ -6,7 +6,10 @@
     <h1>Editar Prescricao '{{prescricao.get_prescricao_pessoa_nome_display}}'</h1>
     <form method="POST">
         {% csrf_token %}
-        {{ form|crispy }}
+        <table>
+            {{ form.as_table}}
+        </table>
+        
         <input type="submit" class="btn btn-outline-secondary mt-5" value="Salvar">
     </form>
 
