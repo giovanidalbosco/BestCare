@@ -93,7 +93,6 @@ class PrescricaoForm(forms.ModelForm):
             'prescricao_pessoa_nome',
             'prescricao_consumo_nome',
             'prescricao_frequencia',
-            'prescricao_frequencia',
             'prescricao_aprazamento',
             'prescricao_dose',
             'prescricao_inicio',
