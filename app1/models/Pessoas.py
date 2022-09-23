@@ -8,11 +8,11 @@ class Pessoas(models.Model):
     pessoa_compl = models.CharField(max_length=30, verbose_name='Complemento', blank=True, null=True)
     pessoa_cidade = models.ForeignKey(Cidades, on_delete=models.CASCADE, verbose_name='Cidade', default='')
     pessoa_CPF = models.CharField(max_length=11, verbose_name='CPF', default=0, unique=True)
-    pessoa_classe = models.CharField(max_length=1, choices=CLASSE, blank=False, null=False)
+    pessoa_classe = models.IntegerField(choices=CLASSE, blank=False, null=False)
     pessoa_telefone  = models.CharField(max_length=20, verbose_name='Telefone', blank=True, null=True, unique=True)
     pessoa_email = models.EmailField(verbose_name='E-mail', blank=True, null=True, unique=True)
     pessoa_comorbidade = models.ManyToManyField(Comorbidades,verbose_name='Comorbidades')
-    pessoa_plano = models.CharField(max_length=1, choices=PLANO, blank=True, null=True)
+    pessoa_plano = models.IntegerField(choices=PLANO, blank=True, null=True)
 
 
 

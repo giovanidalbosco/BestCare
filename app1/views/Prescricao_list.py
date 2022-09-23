@@ -5,7 +5,7 @@ from app1.views import *
 def Prescricao_list(request):
     search = request.GET.get('search')
     if search:
-        prescricao = Prescricao.objects.filter(prescricao_pessoa__icontains=search)
+        prescricao = Prescricao.objects.filter(prescricao_pessoa_nome__icontains=search)
     else:
         prescricao = Prescricao.objects.all()
 
