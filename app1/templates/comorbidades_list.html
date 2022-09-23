@@ -28,17 +28,13 @@
                     <div class="search-div bg-transparent">
                         <form method="GET" id="search-form">
                             <input type="search" id="search" name="search"placeholder="Digite o nome para buscar..." value="{{ request.GET.search }}">
-                            <input class="btn btn-outline-secondary btn-sm" type="submit">
+                            <input class="btn btn-outline-secondary btn-sm" type="submit" value="Buscar">
                         </form>
                     </div>
                 </div>
             </div>               
             <ul class="task-list">
                 <div class="row" style="margin-top: 5%;">
-                    <div class="col">
-                        <span
-                        text-left><strong>ID</strong></span>
-                    </div>
                     <div class="col">
                         <span><strong>Nome</strong></span>
                     </div>
@@ -49,9 +45,6 @@
                 </div>
                 {% for i in comorbidade %}
                 <div  class="border border-dark row">
-                    <div class="col">
-                        <span>{{i.id}}</span>
-                    </div>
                     <div class="col">
                         <span>{{i.comorbidade_nome}}</span>
                     </div>

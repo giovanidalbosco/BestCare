@@ -11,12 +11,12 @@ def Comorbidade_edit(request, id):
             comorbidades.save()
             return redirect('/comorbidades_list')
         else:
-            return render(request, 'comorbidade_edit.html', {
+            return render(request, 'comorbidade_form.html', {
                 'form': form, 
                 'comorbidade': comorbidades
             })
     else:
-        return render(request, 'comorbidade_edit.html', {
+        return render(request, 'comorbidades_form.html', {
             'form': form,
             'comorbidade': comorbidades
         })
