@@ -15,5 +15,5 @@ def Ocorrencias_add(request):
     ocorrencia = Ocorrencias.objects.all()
 
     return render(request, 'ocorrencias_form.html', {'form': form,
-    'ocorrencias': ocorrencia})
+    'ocorrencia': ocorrencia})
 
