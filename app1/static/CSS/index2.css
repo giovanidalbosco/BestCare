@@ -22,9 +22,22 @@ body{
 /* Inicio do header*/
 
 .row img{
-    width: 5.5em;
-    height: 4.3em;
+    width: 4.5em;
+    height: 3.3em;
     border-radius: 8px;
+}
+
+#header a{
+    color: black;
+}
+
+.header-logout{
+    width: 95%;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:space-between;
+
 }
 
 /*Fim do header*/
