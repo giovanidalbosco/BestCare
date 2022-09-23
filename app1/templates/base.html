@@ -13,14 +13,13 @@
 </head>
 
 <body>
-    <div class="container-fluid shadow-lg p-3 mb-5">
-        <div class="row">
+    <div class="container-fluid shadow-lg p-3" id="header">
+        <div class="row" id="header">
                 {% if user.is_authenticated %}
-            <div class=" row text-secondary ml-3">
-                <div class="row">
-                    <a href="/telainicial"  class="bg-transparent"><img src="/static/img/medico2.png" alt="Logo"  class="img  ml-lg-5"></a> 
-                    <a href="/telainicial"  class="bg-transparent border-0" style="color: grey;"><h1 class="text-secondary mt-3 mx-lg-3" 
-                style="color: grey;">BestCare</h1></a> 
+            <div class=" row  header">
+                <div class="row" id="header">
+                    <a href="/telainicial"  class="bg-transparent"><img src="/static/img/medico2.png" alt="Logo"></a> 
+                    <a href="/telainicial"  class="bg-transparent border-0"><h1 class="mt-3 ">BestCare</h1></a> 
                 </div>
                 <a href="/telainicial" type="button" class="btn btn-link ml-sm-1 mt-lg-4" style="color: grey;font-size:22px;font-weight:500">Home</a>
                 <a href= "uso_consumo_list" type="button" class="btn btn-link ml-sm-1 mt-lg-4"style="color: grey;font-size:22px;font-500">Usos e consumo</a>
@@ -28,17 +27,21 @@
                 <a href= "cuidadores_list" type="button" class="btn btn-link ml-sm-1 mt-lg-4"style="color: grey;font-size:22px;font-500">Cuidadores</a>
                 <a href= "responsavel_list" type="button" class="btn btn-link ml-sm-1 mt-lg-4"style="color: grey;font-size:22px;font-500">Responsavel</a>
                 <a href= "prescricao_list" type="button" class="btn btn-link ml-sm-1 mt-lg-4"style="color: grey;font-size:22px;font-500">Prescricao</a>
-                <a href="admin" type="button" class="btn btn-link ml-sm-1 mt-lg-4"style="color: grey;font-size:22px;font-weight: 500;">Admim</a>
                 {% else %}
-                <div class="row">
-                    <a href="/"  class="bg-transparent"><img src="/static/img/medico2.png" alt="Logo"  class="img  ml-lg-5"></a> 
-                    <a href="/"  class="bg-transparent border-0" style="color: grey;"><h1 class="text-secondary mt-3 mx-lg-3" 
-                style="color: grey;">BestCare</h1></a> 
+                <div class="header-logout">
+                    <div class="row">
+                        <a href="/"  class="bg-transparent"><img src="/static/img/medico2.png" alt="Logo"  class="img  ml-5"></a> 
+                        <a href="/"  class="bg-transparent border-0"><h1 class="mt-3">BestCare</h1></a> 
+                    </div>
+                    <div class="row">
+                    <a href="/solucoes" type="button" class="btn btn-link">Soluções</a>
+                    <a href="/quemSomos" type="button" class="btn btn-link">QuemSomos</a>
+                    </div>
+                    <div class="row">
+                    <a href="{% url 'cadastro' %}" type="button" class="btn btn-outline-secondary btn">Cadastre-se</a>
+                    <a href="/accounts/logout/#login" type="button" class="btn btn-outline-secondary btn ">Entrar</a>
+                    </div>
                 </div>
-                <a href="/solucoes" type="button" class="btn btn-link mx-lg-5"style="color: grey;font-size:22px;font-weight:5">Soluções</a>
-                <a href="/quemSomos" type="button" class="btn btn-link mx-lg-5"style="color: grey;font-size:22px;font-weight:">QuemSomos</a>
-                <a href="{% url 'cadastro' %}" type="button" class="btn btn-outline-secondary btn-lg mx-lg-5">Cadastre-se</a>
-                <a href="/accounts/logout/#login" type="button" class="btn btn-outline-secondary btn-lg ">Entrar</a>
                 {% endif %}
                 {% if user.is_authenticated %}
                 <a href="/accounts/logout" type="button" class="btn btn-secondary mb-lg-3 mt-lg-4">Sair</a>
