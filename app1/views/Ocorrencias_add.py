@@ -7,9 +7,6 @@ def Ocorrencias_add(request):
         form = OcorrenciasForm(request.POST)
         if form.is_valid():
             nova_ocorrencia = form.save(commit=False)
-            nova_ocorrencia.ocorrencia_nome = form.cleaned_data['ocorrencia_nome']
-            nova_ocorrencia.ocorrencia_pessoa_nome = form.cleaned_data['ocorrencia_pessoa_nome']
-            nova_ocorrencia.ocorrencia_pessoa_cuidador = form.cleaned_data['ocorrencia_pessoa_cuidador']
             nova_ocorrencia.save()
             return HttpResponseRedirect('/ocorrencias_list')
     else:
@@ -17,6 +14,6 @@ def Ocorrencias_add(request):
 
     ocorrencia = Ocorrencias.objects.all()
 
-    return render(request, 'ocorrencias_add.html', {'form': form,
+    return render(request, 'ocorrencias_form.html', {'form': form,
     'ocorrencias': ocorrencia})
 

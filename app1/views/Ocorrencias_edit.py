@@ -16,7 +16,7 @@ def Ocorrencias_edit(request, id):
                 'ocorrencia': ocorrencia
             })
     else:
-        return render(request, 'ocorrencias_edit.html', {
+        return render(request, 'ocorrencias_form.html', {
             'form': form,
             'ocorrencia': ocorrencia
         })

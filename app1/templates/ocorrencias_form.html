@@ -1,15 +1,13 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 
-{% block title %}{{ocorrencias.ocorrencia_nome}}{% endblock %}
-
 {% block content %}
-<div class="offset-1 col-6 list-div" id="dashboard-done">
-    <h1>Editar Ocorrência '{{ocorrencias.ocorrencia_nome}}'</h1>
+
+    <h1>Editar Ocorrência '{{ocorrencia.get_ocorrencia_nome_display}}'</h1>
     <form method="POST">
         {% csrf_token %}
         {{ form|crispy }}
         <input type="submit" class="btn btn-outline-secondary mt-5" value="Salvar">
     </form>
-</div>
+
 {% endblock %}
