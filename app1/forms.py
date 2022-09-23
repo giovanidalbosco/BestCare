@@ -83,3 +83,20 @@ class ResponsavelForm(forms.ModelForm):
             'pessoa_telefone',
             'pessoa_email'
         )
+
+
+class PrescricaoForm(forms.ModelForm):
+
+    class Meta:
+        model = Pessoas
+        fields = (
+            'prescricao_pessoa_nome',
+            'prescricao_consumo_nome',
+            'prescricao_frequencia',
+            'prescricao_frequencia',
+            'prescricao_aprazamento',
+            'prescricao_dose',
+            'prescricao_inicio',
+            'prescricao_fim',
+            'prescricao_observacao'
+        )

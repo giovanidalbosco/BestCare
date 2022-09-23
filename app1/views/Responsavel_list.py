@@ -9,8 +9,4 @@ def Responsavel_list(request):
     else:
         responsavel = Pessoas.objects.filter(pessoa_classe__icontains='3')
 
-    context = {
-        'responsavel_nome': responsavel
-    }
-
-    return render(request, 'responsavel_list.html', {'responsavel': responsavel})
+    return render(request, 'responsavel_list.html', {'responsavel_nome': responsavel})

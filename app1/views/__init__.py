@@ -43,4 +43,4 @@ from .Responsavel_list import Responsavel_list
 from .Responsavel_add import Responsavel_add
 from .Responsavel_edit import Responsavel_edit
 from .Responsavel_delete import Responsavel_delete
-
+from .Prescricao_list import Prescricao_list

@@ -36,6 +36,7 @@ urlpatterns = [
     path('responsavel_add', views.Responsavel_add, name='responsavel_add'),
     path('responsavel_edit/<int:id>', views.Responsavel_edit, name='responsavel_edit'),
     path('responsavel_delete/<int:id>', views.Responsavel_delete, name='responsavel_delete'),
+    path('prescricao_list', views.prescricao_list, name='prescricao_list'),
     #path('email', views.Envia_email, name='envia_email'),
     # path('estoque_edit/<int:id>', views.Estoque_edit, name="estoque_edit"),
     # path('estoque_delete/<int:id>', views.Estoque_delete, name="estoque_delete"),
