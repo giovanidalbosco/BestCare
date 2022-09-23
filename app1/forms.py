@@ -9,11 +9,6 @@ class Cadastro(forms.ModelForm):
 
         fields = ('pessoa_nome','pessoa_CPF','pessoa_email',)
 
-class ComorbidadesForm(forms.ModelForm):
-
-    class Meta:
-        model = Comorbidades
-        fields = ('comorbidade_nome',)
 
 class Uso_ConsumoForm(forms.ModelForm):
 
