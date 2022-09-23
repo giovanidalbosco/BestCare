@@ -1,5 +1,6 @@
 from django import forms
-from .models import Pessoas, Comorbidades, Uso_Consumo, Estoque_Individual, Ocorrencias
+
+from .models import Pessoas, Comorbidades, Uso_Consumo, Estoque_Individual, Ocorrencias, Prescricao
 
 class Cadastro(forms.ModelForm):
 
@@ -88,7 +89,7 @@ class ResponsavelForm(forms.ModelForm):
 class PrescricaoForm(forms.ModelForm):
 
     class Meta:
-        model = Pessoas
+        model = Prescricao
         fields = (
             'prescricao_pessoa_nome',
             'prescricao_consumo_nome',

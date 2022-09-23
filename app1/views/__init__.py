@@ -2,7 +2,7 @@ from http.client import ImproperConnectionState
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from app1.models import *
-from app1.forms import Cadastro, ComorbidadesForm, Uso_ConsumoForm, Estoque_IndividualForm, OcorrenciasForm, ResidentesForm, CuidadoresForm, ResponsavelForm
+from app1.forms import Cadastro, ComorbidadesForm, Uso_ConsumoForm, Estoque_IndividualForm, OcorrenciasForm, ResidentesForm, CuidadoresForm, ResponsavelForm, PrescricaoForm
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.contrib import messages
@@ -44,3 +44,6 @@ from .Responsavel_add import Responsavel_add
 from .Responsavel_edit import Responsavel_edit
 from .Responsavel_delete import Responsavel_delete
 from .Prescricao_list import Prescricao_list
+from .Prescricao_add import Prescricao_add
+from .Prescricao_edit import Prescricao_edit
+from .Prescricao_delete import Prescricao_delete
