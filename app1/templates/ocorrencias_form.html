@@ -3,7 +3,12 @@
 
 {% block content %}
 
-    <h1>Editar Ocorrência '{{ocorrencia.get_ocorrencia_nome_display}}'</h1>
+    {% if ocorrencia.id != null %}
+        <h1>Editar Ocorrência '{{ocorrencia.get_ocorrencia_nome_display}}'</h1>
+    {% else %}
+        <h1>Adicionar Ocorrência</h1>
+    {% endif %}
+
     <form method="POST">
         {% csrf_token %}
         {{ form|crispy }}
