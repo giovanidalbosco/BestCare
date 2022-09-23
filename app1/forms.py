@@ -31,7 +31,7 @@ class OcorrenciasForm(forms.ModelForm):
 
     class Meta:
         model = Ocorrencias
-        fields = ('ocorrencia_nome', 'ocorrencia_pessoa_nome', 'ocorrencia_pessoa_cuidador',)
+        fields = ('ocorrencia_nome', 'ocorrencia_pessoa_nome', 'ocorrencia_pessoa_cuidador', 'ocorrencia_observacao',)
 
 
 class ResidentesForm(forms.ModelForm):
@@ -47,7 +47,7 @@ class ResidentesForm(forms.ModelForm):
             'pessoa_classe',
             'pessoa_CPF',
             'pessoa_comorbidade',
-            'pessoa_plano'
+            'pessoa_plano',
         )
 
 
@@ -64,7 +64,7 @@ class CuidadoresForm(forms.ModelForm):
             'pessoa_classe',
             'pessoa_CPF',
             'pessoa_telefone',
-            'pessoa_email'
+            'pessoa_email',
         )
 
 
@@ -81,7 +81,7 @@ class ResponsavelForm(forms.ModelForm):
             'pessoa_classe',
             'pessoa_CPF',
             'pessoa_telefone',
-            'pessoa_email'
+            'pessoa_email',
         )
 
 
@@ -98,5 +98,5 @@ class PrescricaoForm(forms.ModelForm):
             'prescricao_dose',
             'prescricao_inicio',
             'prescricao_fim',
-            'prescricao_observacao'
+            'prescricao_observacao',
         )
