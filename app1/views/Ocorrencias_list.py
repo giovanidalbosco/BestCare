@@ -9,8 +9,5 @@ def Ocorrencias_list(request):
     else:
         ocorrencia = Ocorrencias.objects.all()
 
-    context = {
-        'ocorrencia_nome': ocorrencia
-    }
 
     return render(request, 'ocorrencias_list.html', {'ocorrencia': ocorrencia})
