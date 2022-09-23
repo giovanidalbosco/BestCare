@@ -7,7 +7,6 @@ def Uso_Consumo_edit(request, id):
     form = Uso_ConsumoForm(instance=uso_consumo)
     if (request.method == 'POST'):
         form = Uso_ConsumoForm(request.POST, instance=uso_consumo)
-        print(f'form2: {form}')
         if (form.is_valid()):
             uso_consumo.save()
             return redirect('/uso_consumo_list')

@@ -9,6 +9,11 @@ def Ocorrencias_add(request):
             nova_ocorrencia = form.save(commit=False)
             nova_ocorrencia.save()
             return HttpResponseRedirect('/ocorrencias_list')
+        else:
+            return render(request, 'ocorrencias_edit.html', {
+                'form': form, 
+                'ocorrencia': ocorrencia
+            })
     else:
         form = OcorrenciasForm()
 
