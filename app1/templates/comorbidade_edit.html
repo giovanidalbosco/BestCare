@@ -1,18 +1,15 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 
+{% block title %}{{comorbidade.comorbidade_nome}}{% endblock %}
+
 {% block content %}
-
-    {% if prescricao.id != null %}
-        <h1>Editar Prescricao '{{prescricao.get_prescricao_pessoa_nome_display}}'</h1>
-    {% else %}
-        <h1>Adicionar Prescricao</h1>
-    {% endif %}
-
+<div class="offset-1 col-6 list-div" id="dashboard-done">
+    <h1>Editando '{{comorbidade.comorbidade_nome}}'</h1>
     <form method="POST">
         {% csrf_token %}
         {{ form|crispy }}
         <input type="submit" class="btn btn-outline-secondary mt-5" value="Salvar">
     </form>
-
+</div>
 {% endblock %}

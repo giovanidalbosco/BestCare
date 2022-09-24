@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Pessoas, Comorbidades, Uso_Consumo, Estoque_Individual, Ocorrencias, Prescricao
+from .models import Pessoas, Uso_Consumo, Estoque_Individual, Ocorrencias, Prescricao, Comorbidades
 
 class Cadastro(forms.ModelForm):
 
@@ -9,6 +9,11 @@ class Cadastro(forms.ModelForm):
 
         fields = ('pessoa_nome','pessoa_CPF','pessoa_email',)
 
+class ComorbidadesForm(forms.ModelForm):
+
+    class Meta:
+        model = Comorbidades
+        fields = ('comorbidade_nome',)
 
 class Uso_ConsumoForm(forms.ModelForm):
 
