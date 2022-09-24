@@ -1,3 +1,4 @@
+from io import open_code
 from random import choices
 from app1.models import *
 
@@ -12,7 +13,7 @@ class Pessoas(models.Model):
     pessoa_classe = models.IntegerField(choices=CLASSE, blank=False, null=False)
     pessoa_telefone  = models.CharField(max_length=20, verbose_name='Telefone', blank=True, null=True, unique=True)
     pessoa_email = models.EmailField(verbose_name='E-mail', blank=True, null=True, unique=True)
-    pessoa_comorbidade = models.IntegerField(choices=COMORBIDADES, verbose_name='Comorbidades')
+    pessoa_comorbidade = models.ManyToManyField(Comorbidades, verbose_name='Comorbidades')
     pessoa_plano = models.IntegerField(choices=PLANO, blank=True, null=True)
 
 
