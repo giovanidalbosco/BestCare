@@ -1,15 +1,18 @@
-{% extends 'base.html' %}
+{% extends 'base_telainicial.html' %}
 {% load crispy_forms_tags %}
 
 {% block title %}{{residentes.pessoa_nome}}{% endblock %}
 
-{% block content %}
-<div class="offset-1 col-12 list-div" id="dashboard-done">
-    <h1>Editando Responsavel'{{responsavel.pessoa_nome}}'</h1>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <input type="submit" class="btn btn-outline-secondary mt-5" value="Salvar">
-    </form>
-</div>
-{% endblock %}
+{% block content3 %}
+    <div>
+        <h1>Editando Responsavel'{{responsavel.pessoa_nome}}'</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <table>
+                {{ form.as_table}}
+            </table>
+
+            <input type="submit" class="btn     btn-outline-secondary mt-5" value="Salvar">
+        </form>
+    </div>
+{% endblock content3 %}

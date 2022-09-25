@@ -1,16 +1,15 @@
-{% extends 'base.html' %}
+{% extends 'base_telainicial.html' %}
 {% load crispy_forms_tags %}
 
-{% block content %}
-
-    <h1>Editar Prescricao '{{prescricao.get_prescricao_pessoa_nome_display}}'</h1>
-    <form method="POST">
-        {% csrf_token %}
-        <table>
-            {{ form.as_table}}
-        </table>
-        
-        <input type="submit" class="btn btn-outline-secondary mt-5" value="Salvar">
-    </form>
-
-{% endblock %}
+{% block content3 %}
+    <div  id="prescricao1" class="prescricao">
+        <h1>Editar Prescricao '{{prescricao.get_prescricao_pessoa_nome_display}}'</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <table class="prescricao_form" >
+                {{ form.as_table}}
+            </table>
+            <input type="submit" class="btn btn-outline-secondary mt-5" value="Salvar">
+        </form>
+    </div>
+{% endblock content3 %}

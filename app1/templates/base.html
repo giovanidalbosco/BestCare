@@ -14,46 +14,44 @@
 
 <body>
     <div class="container-fluid shadow-lg p-3" id="header">
-        <div class="row" id="header">
-                {% if user.is_authenticated %}
-            <div class=" row  header">
-                <div class="row" id="header">
-                    <a href="/telainicial"  class="bg-transparent"><img src="/static/img/medico2.png" alt="Logo"></a> 
-                    <a href="/telainicial"  class="bg-transparent border-0"><h1 class="mt-3 ">BestCare</h1></a> 
+        <div class="row">
+            {% if user.is_authenticated %}
+            <div class="header-logout">
+                <div class="row">
+                    <a href="/telainicial"  class="bg-transparent"><img src="/static/img/medico2.png" alt="Logo" class="img  ml-5"></a> 
+                    <a href="/telainicial"  class="bg-transparent border-0"><span>BestCare</span></a> 
                 </div>
-                <a href="/telainicial" type="button" class="btn btn-link ml-sm-1 mt-lg-4" style="color: grey;font-size:22px;font-weight:500">Home</a>
-                <a href= "uso_consumo_list" type="button" class="btn btn-link ml-sm-1 mt-lg-4"style="color: grey;font-size:22px;font-500">Usos e consumo</a>
-                <a href= "residentes_list" type="button" class="btn btn-link ml-sm-1 mt-lg-4"style="color: grey;font-size:22px;font-500">Residentes</a>
-                <a href= "cuidadores_list" type="button" class="btn btn-link ml-sm-1 mt-lg-4"style="color: grey;font-size:22px;font-500">Cuidadores</a>
-                <a href= "responsavel_list" type="button" class="btn btn-link ml-sm-1 mt-lg-4"style="color: grey;font-size:22px;font-500">Responsavel</a>
-                <a href= "prescricao_list" type="button" class="btn btn-link ml-sm-1 mt-lg-4"style="color: grey;font-size:22px;font-500">Prescricao</a>
-                {% else %}
-                <div class="header-logout">
-                    <div class="row">
-                        <a href="/"  class="bg-transparent"><img src="/static/img/medico2.png" alt="Logo"  class="img  ml-5"></a> 
-                        <a href="/"  class="bg-transparent border-0"><h1 class="mt-3">BestCare</h1></a> 
-                    </div>
-                    <div class="row">
+                <div class="row" id="solucoes">
+                    <a href="/base_telainicial" type="button" class="btn btn-link ml-sm-1 mt-lg-4">Home</a>
+                    <a href= "residentes_list" type="button" class="btn btn-link ml-sm-1 mt-lg-4">Residentes</a>
+                </div>
+                <div class="row">
+                    <a href="/accounts/logout" type="button" class="btn btn-secondary btn">Sair</a>
+                </div>
+            </div>
+            {% else %}
+            <div class="header-logout">
+                <div class="row">
+                    <a href="/"  class="bg-transparent"><img src="/static/img/medico2.png" alt="Logo"  class="img  ml-5"></a> 
+                    <a href="/"  class="bg-transparent border-0"><span>BestCare</span></a> 
+                </div>
+                <div class="row" id="solucoes">
                     <a href="/solucoes" type="button" class="btn btn-link">Soluções</a>
                     <a href="/quemSomos" type="button" class="btn btn-link">QuemSomos</a>
-                    </div>
-                    <div class="row">
+                </div>
+                <div class="row">
                     <a href="{% url 'cadastro' %}" type="button" class="btn btn-outline-secondary btn">Cadastre-se</a>
                     <a href="/accounts/logout/#login" type="button" class="btn btn-outline-secondary btn ">Entrar</a>
-                    </div>
                 </div>
-                {% endif %}
-                {% if user.is_authenticated %}
-                <a href="/accounts/logout" type="button" class="btn btn-secondary mb-lg-3 mt-lg-4">Sair</a>
-                {% endif %} 
             </div>
+            {% endif %}
         </div>  
     </div>
     {% block content %}
     {% endblock %}
 
     <div class="card-footer text-center text-white bg-dark ">
-        <p class="card-text" id="names"> &copy; Giovani Dalbosco &nbsp &nbsp Jackson Castellain &nbsp &nbsp Lucas Resende &nbsp &nbsp Samir Buhatem</p><br>
+        <p class="card-text" id="names"> &copy; Giovani Dalbosco &nbsp &nbsp Jackson Castellain &nbsp &nbsp Lucas Resende &nbsp &nbsp Samir Buhatem</p>
         <a href="/solucoes" type="button" class="btn btn-link">Soluções</a>
         <a href="/quemSomos" class="btn btn-link">QuemSomos</a>
         <p class="card-text" > Projeto Entra 21 &reg;</p>

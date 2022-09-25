@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section>
+    <div class="vh-100  base_telainicial">
+          <div  class="back" >
+            <div class="col" id="solucoes">
+                <a href= "uso_consumo_list" type="button" class="btn bg-transparent">Usos e consumo</a>
+                <a href= "residentes_list" type="button" class="btn bg-transparent">Residentes</a>
+                <a href= "cuidadores_list" type="button" class="btn bg-transparent">Cuidadores</a>
+                <a href= "responsavel_list" type="button" class="btn bg-transparent">Responsavel</a>
+                <a href= "prescricao_list" type="button" class="btn bg-transparent">Prescrição</a>
+            </div>
+          </div>
+        <div class="content3">
+            {% block content3 %}
+            {% endblock content3 %}
+        </div>
+    </div>
+</section>
+{% endblock %}

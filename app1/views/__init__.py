@@ -7,7 +7,7 @@ from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.contrib import messages
 from django.core.mail import send_mail
-
+from .Base_telainicial import Base_telainicial
 from .Agenda import Agenda
 from .Cad import Cad
 from .Comorbidade_delete import Comorbidade_delete
@@ -29,7 +29,6 @@ from .Ocorrencias_add import Ocorrencias_add
 from .Ocorrencias_edit import Ocorrencias_edit
 from .Ocorrencias_delete import Ocorrencias_delete
 from .Envia_email import envia_email
-from .first import first
 from .Residentes_list import Residentes_list
 from .Residentes_add import Residentes_add
 from .Residentes_edit import Residentes_edit
