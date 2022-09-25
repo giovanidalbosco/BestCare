@@ -40,7 +40,6 @@ body{
     flex-direction:row;
     align-items:center;
     justify-content:space-between;
-
 }
 
 #header a span{
@@ -179,10 +178,6 @@ div a{
     border: none;
 }
 
-/*div a:hover{
-    color: rgba(14, 94, 200,1);
-}*/
-
 div .criar_conta{
     margin: 3%;
     font-weight: 700;
@@ -222,6 +217,26 @@ div .criar_conta{
     opacity: 1;
     pointer-events: auto;
 }
+.btn-cad-geral .input-cadastrar{
+    background:rgba(204, 204, 197, 0.826);
+    color:#000;
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+}
+.btn-cad-geral .input-cadastrar:hover{
+    color:rgba(14, 94, 200,1);
+}
+
+.input-btn .input-cadastrar{
+    margin-left: 33%;
+    margin-right: 33%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
 
 .cadastro-login img{
     width: 3.5em;
@@ -255,15 +270,10 @@ div .criar_conta{
     font-family:'Segoe UI';
     font-size: 2.5em;
     font-weight: 400;
+    text-shadow: 9px 9px 4px  rgb(4, 50, 69), 5px 5px 3em black;
 }
 
-/**/
-#dashboard-done{
-    border-left: 2px solid #000;
-}
-#add-link{
-    margin-top: -0%;
-}
+/*Cor da lixeira */
 
 .fa-trash:hover{
     color: rgb(188, 58, 58);
@@ -290,7 +300,6 @@ div .criar_conta{
     color: rgb(77, 105, 81);
     font-size: 8em;
     text-align: center;
-    /*margin-top: 10%;*/
 }
 /*Bloco do quemSomos*/
 
@@ -398,7 +407,7 @@ table .prescricao_form input{
 .btn-cad-geral{
     position: fixed;
     width: 31em;
-    height: 31em;
+    height: 28em;
     padding: 2%;
     top:25%;
     font-family: Helvetica, sans-serif;
@@ -485,51 +494,6 @@ table .prescricao_form input{
 
 }
 
-
-/*TESTE#############################*/
-
-
-.prescricao1{
-    position: fixed;
-    width: 38.12em;
-    height: 30.12em;
-    padding: 2%;
-    top:25%;
-    font-family: Helvetica, sans-serif;
-    background-color:#FFFFFF;
-    z-index: 99999;
-    opacity:0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    pointer-events: none;
-    transition: 0.3 ease-in-out;
-    border-radius: 5px;
-    border: grey solid 1px;
-    margin-left: 13%;
-    margin-right: 13%;
-}
-       
-.prescricao1:target{
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.prescricao1.fechar{
-    position: absolute;
-    width: 1em;
-    right: 0.9em;
-    top: 2%;
-    text-align: center;
-    line-height: 25px;
-    background:#FFFFFF;
-    color:#000;
-    text-decoration: none; 
-}
-
-.prescricao1.fechar:hover{
-    color: red;
-}
     
     
     

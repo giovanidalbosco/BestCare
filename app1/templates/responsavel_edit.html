@@ -1,4 +1,4 @@
-{% extends 'base_telainicial.html' %}
+{% extends 'responsavel_edit.html' %}
 {% load crispy_forms_tags %}
 
 {% block title %}{{residentes.pessoa_nome}}{% endblock %}
@@ -12,7 +12,7 @@
                 {{ form.as_table}}
             </table>
 
-            <input type="submit" class="btn     btn-outline-secondary mt-5" value="Salvar">
+            <input type="submit" class="btn btn-outline-secondary mt-5" value="Salvar">
         </form>
     </div>
 {% endblock content3 %}

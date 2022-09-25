@@ -1,43 +1,10 @@
-{% extends 'base.html' %} 
-{% block content %}
+{% extends 'base_telainicial.html' %} 
+{% block content3 %}
 
 <div class="container">
-  <div class="row">
-    <div class="btn-group-vertical" style="margin-top: 3.4%">
-      <a class="btn bg-transparent"></a>
-      <a href="" type="button" class="btn btn-secondary" style="margin-top: 3%">Residente</a>
-      <a
-        href="agenda"
-        class="btn btn-info"
-        style="margin-top:3rem"
-        >Agenda</a
-      >
-      <a href="ocorrencias_list" type="button" class="btn btn-info" style="margin-top: 5%"
-        >Ocorrência</a
-      >
-      <a href="" type="button" class="btn btn-info" style="margin-top: 5%"
-        >Sinais Vitais</a
-      >
-      <a href="estoque_individual_list" type="button" class="btn btn-info" style="margin-top: 5%"
-        >Estoque</a
-      >
-      <a href="" type="button" class="btn btn-info" style="margin-top: 5%"
-        >Remédios</a
-      >
-      <a href="comorbidades_list" type="button" class="btn btn-info" style="margin-top: 5%"
-        >Comorbidades</a
-      >
-      <a href="" type="button" class="btn btn-info" style="margin-top: 5%"
-        >Relatórios</a
-      >
-    </div>
 
-    <div
-      class="col shadow p-3 mb-1 bg-white rounded"
-      style="margin-top: 3.7rem">
-      {% block content2 %}
-      {% endblock content2 %}
-    </div>
-  </div>
+  {% block content %}
+  {{ calendar }}
+  {% endblock %}
 </div>
-{% endblock %}
+{% endblock content3 %}
