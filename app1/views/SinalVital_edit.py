@@ -9,14 +9,14 @@ def SinalVital_edit(request, id):
         form = SinalVitalForm(request.POST, instance=sinalvital)
         if (form.is_valid()):
             sinalvital.save()
-            return redirect('/sinalVital_list')
+            return redirect('/sinalvital_list')
         else:
-            return render(request, 'sinalVital_form.html', {
+            return render(request, 'sinalvital_form.html', {
                 'form': form, 
-                'sinalVital': sinalvital
+                'sinalvital': sinalvital
             })
     else:
-        return render(request, 'sinalVital_form.html', {
+        return render(request, 'sinalvital_form.html', {
             'form': form,
             'ocorrencia': sinalvital
         })

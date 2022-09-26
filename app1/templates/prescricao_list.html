@@ -63,19 +63,19 @@
                 {% for i in prescricao %}
                 <div  class="border border-dark row">
                     <div class="col">
-                        <span>{{i.get_prescricao_pessoa_nome_display}}</span>
+                        <span>{{i.prescricao_pessoa_nome}}</span>
                     </div>
                     <div class="col">
-                        <span>{{i.get_prescricao_consumo_nome_display}}</span>
+                        <span>{{i.prescricao_consumo_nome}}</span>
                     </div>
                     <div class="col">
-                        <span>{{i.prescricao_frequencia}}</span>
+                        <span>{{i.get_prescricao_frequencia_display}}</span>
                     </div>
                     <div class="col">
                         <span>{{i.prescricao_aprazamento}}</span>
                     </div>
                     <div class="col">
-                        <span>{{i.prescricao_dose}}</span>
+                        <span>{{i.get_prescricao_dose_display}}</span>
                     </div>
                     <div class="col">
                         <span>{{i.prescricao_inicio}}</span>

@@ -1,6 +1,7 @@
 from app1.views import *
 
 
+
 @login_required
 def Prescricao_list(request):
     search = request.GET.get('search')

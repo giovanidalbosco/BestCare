@@ -19,7 +19,7 @@
             <div class="row d-inline-block">
                 <div class="modal-header">
                     <h4>Sinal Vital</h4>
-                    <a class="bg-transparent mx-lg-5" id="add-link" href="sinalVital_add">
+                    <a class="bg-transparent mx-lg-5" id="add-link" href="sinalvital_add">
                         <div class="add-div">
                             <i class="fas fa-plus btn"></i>
                             Adicionar Sinal Vital
@@ -66,37 +66,37 @@
                         <span><strong>IMC</strong></span>
                     </div>
                 </div>
-                {% for i in sinalVital %}
+                {% for i in sinalvital %}
                 <div  class="border border-dark row">
                     <div class="col">
-                        <span>{{i.sinalVitalCreate}}</span>
+                        <span>{{i.sinalvitalCreate}}</span>
                     </div>
                     <div class="col">
-                        <span>{{i.sinalVital_pessoa_nome}}</span>
+                        <span>{{i.sinalvital_pessoa_nome}}</span>
                     </div>
                     <div class="col">
-                        <span>{{i.sinalVital_pas}}</span>
+                        <span>{{i.sinalvital_pas}}</span>
                     </div>
                     <div class="col">
-                        <span>{{i.sinalVital_pad}}</span>
+                        <span>{{i.sinalvital_pad}}</span>
                     </div>
                     <div class="col">
-                        <span>{{i.sinalVital_fc}}</span>
+                        <span>{{i.sinalvital_fc}}</span>
                     </div>
                     <div class="col">
-                        <span>{{i.sinalVital_fr}}</span>
+                        <span>{{i.sinalvital_fr}}</span>
                     </div>
                     <div class="col">
-                        <span>{{i.sinalVital_temp}}</span>
+                        <span>{{i.sinalvital_temp}}</span>
                     </div>
                     <div class="col">
-                        <span>{{i.sinalVital_peso}}</span>
+                        <span>{{i.sinalvital_peso}}</span>
                     </div>
                     <div class="col">
-                        <span>{{i.sinalVital_altura}}</span>
+                        <span>{{i.sinalvital_altura}}</span>
                     </div>
                     <div class="col">
-                        <span>{{i.sinalVital_IMC}}</span>
+                        <span>{{i.sinalvital_IMC}}</span>
                     </div>
                     <div class="col">
                         <a href="/sinalvital_edit/{{i.id}}" class="delete-btn bg-transparent"><span><abbr title="EDITAR"><i class="fas fa-edit"></i></abbr></span></a>

@@ -16,7 +16,7 @@ class SinalVital(models.Model):
 
 
     def __str__(self):
-        return f'{self.sinalVitalCreate} : {self.sinalVital_nome} PAS: {self.sinalVital_pas}  PAD: {self.sinalVital_pad}'
+        return f'{self.sinalVitalCreate} : {self.sinalVital_pessoa_nome} PAS: {self.sinalVital_pas}  PAD: {self.sinalVital_pad}'
 
 
     class Meta:

@@ -11,7 +11,7 @@ def Prescricao_edit(request, id):
             prescricao.save()
             return redirect('/prescricao_list')
         else:
-            return render(request, 'prescricao_edit.html', {
+            return render(request, 'prescricao_form.html', {
                 'form': form, 
                 'prescricao': prescricao
             })

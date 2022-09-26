@@ -8,11 +8,11 @@ def SinalVital_add(request):
         if form.is_valid():
             nova_sinalvital = form.save(commit=False)
             nova_sinalvital.save()
-            return HttpResponseRedirect('/sinalVital_list')
+            return HttpResponseRedirect('/sinalvital_list')
         else:
-            return render(request, 'sinalVital_form.html', {
+            return render(request, 'sinalvital_form.html', {
                 'form': form, 
-                'sinalVital': sinalvital
+                'sinalvital': sinalvital
             })
     else:
         form = SinalVitalForm()
@@ -20,4 +20,4 @@ def SinalVital_add(request):
     sinalvital = SinalVital.objects.all()
 
     return render(request, 'sinalVital_form.html', {'form': form,
-    'sinalVital': sinalvital})
+    'sinalvital': sinalvital})
