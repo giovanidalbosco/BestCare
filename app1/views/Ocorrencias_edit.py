@@ -11,7 +11,7 @@ def Ocorrencias_edit(request, id):
             ocorrencia.save()
             return redirect('/ocorrencias_list')
         else:
-            return render(request, 'ocorrencias_edit.html', {
+            return render(request, 'ocorrencias_form.html', {
                 'form': form, 
                 'ocorrencia': ocorrencia
             })

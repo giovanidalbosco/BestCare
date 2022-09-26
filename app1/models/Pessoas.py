@@ -21,6 +21,7 @@ class Pessoas(models.Model):
     def __str__(self):
         return self.pessoa_nome
     
+    
     class Meta:
         ordering = ['pessoa_nome']
         verbose_name = 'Pessoa'

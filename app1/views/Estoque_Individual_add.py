@@ -21,4 +21,4 @@ def Estoque_Individual_add(request, nome):
 
         
 
-    return render(request, 'estoque_individual_add.html', {'form': form})
+    return render(request, 'estoque_individual_form.html', {'form': form})

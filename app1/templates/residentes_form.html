@@ -1,17 +1,20 @@
 {% extends 'base_telainicial.html' %}
 {% load crispy_forms_tags %}
 
-{% block title %}{{uso_consumo.consumo_nome}}{% endblock %}
+{% block title %}{{residente.pessoa_nome}}{% endblock %}
 
 {% block content3 %}
-<div class="offset-1 col-7 list-div" id="dashboard-done">
-    <h1>Editando '{{uso_consumo.consumo_nome}}'</h1>
+
+{% if residente.id != null %}
+        <h1>Editar Residente '{{residente.pessoa_nome}}'</h1>
+    {% else %}
+        <h1>Adicionar Residente</h1>
+    {% endif %}
+
     <form method="POST">
         {% csrf_token %}
-        <table>
-            {{ form.as_table}}
-        </table>
+        {{ form|crispy }}
         <input type="submit" class="btn btn-outline-secondary mt-5" value="Salvar">
     </form>
-</div>
+
 {% endblock content3 %}

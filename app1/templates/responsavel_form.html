@@ -1,17 +1,22 @@
 {% extends 'base_telainicial.html' %}
 {% load crispy_forms_tags %}
 
+{% block title %}{{responsavel.pessoa_nome}}{% endblock %}
+
 {% block content3 %}
 
-    {% if ocorrencia.id != null %}
-        <h1>Editar Ocorrência '{{ocorrencia.get_ocorrencia_nome_display}}'</h1>
+    {% if responsavel.id != null %}
+        <h1>Editar Responsável '{{responsavel.pessoa_nome}}'</h1>
     {% else %}
-        <h1>Adicionar Ocorrência</h1>
+        <h1>Adicionar Responsável</h1>
     {% endif %}
 
     <form method="POST">
         {% csrf_token %}
-        {{ form|crispy }}
+        <table>
+            {{ form.as_table}}
+        </table>
+
         <input type="submit" class="btn btn-outline-secondary mt-5" value="Salvar">
     </form>
 

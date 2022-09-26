@@ -18,6 +18,7 @@ class Estoque_Individual(models.Model):
 
         return f'{self.estoque_pessoa_nome.pessoa_nome}, {itens}'
 
+
     class Meta:
         verbose_name = 'Estoque Individual'
         verbose_name_plural = 'Estoque Individuais'
