@@ -56,7 +56,7 @@ VIA = (
         (14, 'Vaginal'),
     )
 
-Entrada_Saida = (
+ENTRADA_SAIDA = (
         (1, 'Entrada'),
         (2, 'Saida')
     )
@@ -111,8 +111,9 @@ DOSE = (
     )
 
 
-from .Comorbidades import Comorbidades
+
 from .Cidades import Cidades
+from .Comorbidades import Comorbidades
 from .Uso_Consumo import Uso_Consumo
 from .Pessoas import Pessoas
 from .Estoque_Individual import Estoque_Individual
