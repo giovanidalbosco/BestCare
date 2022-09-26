@@ -3,10 +3,7 @@ from django.forms import ModelForm, DateInput
 
 from .models import *
 
-<<<<<<< HEAD
-=======
 from .models import Pessoas, Uso_Consumo, Estoque_Individual, Ocorrencias, Prescricao, Comorbidades
->>>>>>> 7f82b47009b2cc34d1591922405cb83d4846e2ac
 
 class Cadastro(forms.ModelForm):
     

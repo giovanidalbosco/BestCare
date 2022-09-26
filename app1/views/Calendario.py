@@ -59,4 +59,4 @@ def event(request, event_id=None):
     if request.POST and form.is_valid():
         form.save()
         return HttpResponseRedirect(reverse('calendario'))
-    return render(request, 'event_list.html', {'form': form})
+    return render(request, 'event.html', {'form': form})
