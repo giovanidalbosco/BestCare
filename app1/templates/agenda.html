@@ -1,65 +1,8 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base_telainicial.html' %} 
 
-<div class="container-fluid mr-2">
-  <div class="row " style="margin-top: 3%">
-    <div class="btn-group-vertical " style="margin-top:3.4%">
-      <a class="btn bg-transparent"></a>
-      <a href="" type="button" class="btn btn-secondary" style="margin-top: 4%">Usuário</a>
-      <a
-        href="telainicial"
-        type="button"
-        class="btn btn-info"
-        style="margin-top: 3rem"
-        >Home</a
-      >
-      <a href="" type="button " class="btn btn-info" style="margin-top: 5%"
-        >Ocorrência</a
-      >
-      <a href="" type="button " class="btn btn-info" style="margin-top: 5%"
-        >Sinais Vitais</a
-      >
-      <a href="" type="button " class="btn btn-info" style="margin-top: 5%"
-        >Estoque</a
-      >
-      <a href="" type="button " class="btn btn-info" style="margin-top: 5%"
-        >Remédios</a
-      >
-      <a href=""  type="button " class="btn btn-info" style="margin-top: 5% "
-        > Comorbidades</a
-      >
-      <a href="" type="button" class="btn btn-info" style="margin-top: 5%"
-        >Relatórios</a
-      >
-    </div>
+{% block content3 %}
 
-    <div class="col border border-secondary shadow p-3 mx-lg-4 " style="margin-top: 4.6rem">
-      <p class="text-center">Conteúdo Da Agenda</p>
-  </div>
+<div>
+  <span>Conteúdo da agenda</span>
 </div>
-
-
-
-
-
-
-<div class="modal" id="comorbidades_agenda" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Título do modal</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Texto do corpo do modal, é aqui.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary">Salvar mudanças</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-{% endblock %}
+{% endblock content3 %}

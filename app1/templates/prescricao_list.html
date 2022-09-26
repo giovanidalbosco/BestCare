@@ -4,9 +4,9 @@
 
 {% block content3 %}
 <div class="w-100 list-div">
-    <h1 class="text-secondary text-center">Prescricao</h1>
-    <div class="container w-100" style="margin-top: 5%;">
-        <div class="col-12 ">
+    <h1 class="text-secondary text-center">Prescrição</h1>
+    <div class="w-100" style="margin-top: 5%;">
+        <div class="col-lg-12 dashboard-box">
             {% if messages %}
             <ul class="messages">
                 {% for message in messages %}
@@ -16,13 +16,13 @@
                 {% endfor %}
             </ul>
             {% endif %}
-            <div class="row d-inline-block">
+            <div class="row-lg-12 d-inline-block">
                 <div class="modal-header">
-                    <h4>Prescricao</h4>
+                    <h4>Prescrição</h4>
                     <a class="bg-transparent mx-lg-5" id="add-link"href="prescricao_add">
                         <div class="add-div">
-                            <i class="fas fa-plus btn"></i>
-                            Adicionar Prescricao
+                            <i class="fas fa-plus"></i>
+                            Adicionar Prescrição
                         </div>
                     </a> 
                     <div class="search-div bg-transparent">
@@ -39,10 +39,10 @@
                         <span><strong>Residente</strong></span>
                     </div>
                     <div class="col">
-                        <span><strong>Descricao</strong></span>
+                        <span><strong>Descrição</strong></span>
                     </div>
                     <div class="col">
-                        <span><strong>Frequencia</strong></span>
+                        <span><strong>Frequência</strong></span>
                     </div>
                     <div class="col">
                         <span><strong>Aprazamento</strong></span>
@@ -57,7 +57,7 @@
                         <span><strong>Fim</strong></span>
                     </div>
                     <div class="col">
-                        <span><strong>Observacao</strong></span>
+                        <span><strong>Observação</strong></span>
                     </div>
                 </div>
                 {% for i in prescricao %}

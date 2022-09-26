@@ -3,7 +3,7 @@
 {% block title %}Comorbidades{% endblock %}
 
 {% block content3 %}
-<div class="w-100 list-div">
+<div class=" w-100 list-div">
     <h1 class="text-secondary text-center">Comorbidades</h1>
     <div class="container w-100" style="margin-top: 5%;">
         <div class="col-12 dashboard-box">
@@ -33,7 +33,7 @@
                     </div>
                 </div>
             </div>               
-            <ul class="task-list">
+            <ul class="table-responsive  task-list">
                 <div class="row" style="margin-top: 5%;">
                     <div class="col">
                         <span
@@ -43,8 +43,8 @@
                         <span><strong>Nome</strong></span>
                     </div>
                 </div>
-                {% for i in comorbidades %}
-                <div  class="border border-dark row">
+                {% for i in comorbidade %}
+                <div  class="border border-dark row ">
                     <div class="col">
                         <span>{{i.id}}</span>
                     </div>
