@@ -1,8 +1,8 @@
-{% extends 'telainicial.html' %}
+{% extends 'base_telainicial.html' %}
 
 {% block title %}Ocorrencias{% endblock %}
 
-{% block content2 %}
+{% block content3 %}
 <div class="w-100 list-div">
     <h1 class="text-secondary text-center">Ocorrências</h1>
     <div class="container w-100" style="margin-top: 5%;">
@@ -47,10 +47,6 @@
                     <div class="col">
                         <span><strong>Observação</strong></span>
                     </div>
-                    <div class="col">
-                        <span><i class="fas fa-edit bg-transparent text-dark"></i></span>
-                        <span><i class="fas fa-trash bg-transparent text-dark "></i></span>
-                    </div>
                 </div>
                 {% for i in ocorrencia %}
                 <div  class="border border-dark row">
@@ -77,4 +73,4 @@
     </div>
 </div>
 
-{% endblock content2 %}
+{% endblock content3 %}

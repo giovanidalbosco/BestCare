@@ -1,7 +1,7 @@
-{% extends 'base.html' %}
+{% extends 'base_telainicial.html' %}
 {% load crispy_forms_tags %}
 
-{% block content %}
+{% block content3 %}
 
     {% if ocorrencia.id != null %}
         <h1>Editar Ocorrência '{{ocorrencia.get_ocorrencia_nome_display}}'</h1>
@@ -15,4 +15,4 @@
         <input type="submit" class="btn btn-outline-secondary mt-5" value="Salvar">
     </form>
 
-{% endblock %}
+{% endblock content3 %}

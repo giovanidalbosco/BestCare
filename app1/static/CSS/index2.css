@@ -296,16 +296,10 @@ div .criar_conta{
     color: aliceblue;
 }
 
-#quem{
-    color: rgb(77, 105, 81);
-    font-size: 8em;
-    text-align: center;
-}
 /*Bloco do quemSomos*/
 
-.media #quemSomos{
-    width: 100%;
-    color:rgb(76, 75, 75);
+.quemsomos{
+    color:rgba(18, 31, 52, 0.888); 
 }
 
 .media #quemSomos{
@@ -319,14 +313,14 @@ div .criar_conta{
     margin-top: 9%;
 }
 #fotos{
-    margin-top: 9%;
     width: 250px;
     height: 330px;
     margin-top: 9%;
+    border: blanchedalmond 1.5px solid;
 }
 #linkfotos{
-    color:grey;
-    font-size: 2em;
+    color:rgba(18, 31, 52, 0.888);
+    font-size: 1.5em;
 }
 /*Fim bloco do quemSomos*/
 
@@ -350,7 +344,7 @@ div .criar_conta{
     margin-top: 1%;
 }
 /*Fim do rodapé*/
-
+/*Inicio Base_telainicial*/
 .base_telainicial{
     background:#FFFFFF;
     width: 100%;
@@ -377,18 +371,10 @@ div .criar_conta{
 
 /*Fim-Base-telainicial*/
 
-/*Inicio Prescricao_form*/
-table .prescricao_form input{
-    border-radius: 10px;
-}
-
-/*FIM  Prescrivao_form*/
-
-
 /*Inicio solucoes*/
 .media{
     width: 100%;
-    color:rgb(76, 75, 75);
+    color:rgba(18, 31, 52, 0.888);
     margin-top: 9em;
 }
 
@@ -430,7 +416,6 @@ table .prescricao_form input{
     padding: 5%;
     margin: 2%;  
 }
-
 
 /*Início post-it*/
 
