@@ -7,6 +7,7 @@ from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.contrib import messages
 from django.core.mail import send_mail
+
 from .Base_telainicial import Base_telainicial
 from .Agenda import Agenda
 from .Cad import Cad
@@ -46,3 +47,4 @@ from .Prescricao_list import Prescricao_list
 from .Prescricao_add import Prescricao_add
 from .Prescricao_edit import Prescricao_edit
 from .Prescricao_delete import Prescricao_delete
+from .Calendario import *

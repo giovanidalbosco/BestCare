@@ -77,8 +77,13 @@ Play o servidor:
 ## Informações que devem ser adicionadas no arquivo .env
 
 >SECRET_KEY = 'django-insecure-^nl5(2384i&aauk2flacfeq=mu9&xrn7a6t^p+g7@*bl9by55v'
+
 >EMAIL_HOST_USER=bestcaureauth
+
 >EMAIL_HOST_PASSWORD=bestcare@123
+
 >EMAIL_USE_TLS=True
+
 >EMAIL_PORT=587
+
 >EMAIL_HOST=smtp-mail.outlook.com
