@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Pessoas, Uso_Consumo, Estoque_Individual, Ocorrencias, Prescricao, Comorbidades
+from .models import Pessoas, Uso_Consumo, Estoque_Individual, Ocorrencias, Prescricao, Comorbidades, SinalVital
 
 class Cadastro(forms.ModelForm):
 
@@ -100,3 +100,20 @@ class PrescricaoForm(forms.ModelForm):
             'prescricao_fim',
             'prescricao_observacao',
         )
+
+
+class SinalVitalForm(forms.ModelForm):
+
+    class Meta:
+        model = SinalVital
+        fields = (
+            'sinalVital_pessoa_nome',
+            'sinalVital_pas',
+            'sinalVital_pad',
+            'sinalVital_fc',
+            'sinalVital_fr',
+            'sinalVital_peso',
+            'sinalVital_altura',
+            'sinalVital_IMC',
+        )
+

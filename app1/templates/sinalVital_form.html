@@ -1,0 +1,18 @@
+{% extends 'base_telainicial.html' %}
+{% load crispy_forms_tags %}
+
+{% block content3 %}
+
+    {% if sinalVital.id != null %}
+        <h1>Editar Sinal Vital '{{sinalVital.get_sinalVital_pessoa_nome_display}}'</h1>
+    {% else %}
+        <h1>Adicionar Sinal Vital</h1>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" class="btn btn-outline-secondary mt-5" value="Salvar">
+    </form>
+
+{% endblock content3 %}

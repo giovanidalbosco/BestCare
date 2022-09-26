@@ -2,7 +2,7 @@ from http.client import ImproperConnectionState
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from app1.models import *
-from app1.forms import Cadastro, ComorbidadesForm, Uso_ConsumoForm, Estoque_IndividualForm, OcorrenciasForm, ResidentesForm, CuidadoresForm, ResponsavelForm, PrescricaoForm
+from app1.forms import Cadastro, ComorbidadesForm, Uso_ConsumoForm, Estoque_IndividualForm, OcorrenciasForm, ResidentesForm, CuidadoresForm, ResponsavelForm, PrescricaoForm, SinalVitalForm
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.contrib import messages
@@ -46,3 +46,7 @@ from .Prescricao_list import Prescricao_list
 from .Prescricao_add import Prescricao_add
 from .Prescricao_edit import Prescricao_edit
 from .Prescricao_delete import Prescricao_delete
+from .SinalVital_list import SinalVital_list
+from .SinalVital_add import SinalVital_add
+from .SinalVital_edit import SinalVital_edit
+from .SinalVital_delete import SinalVital_delete
