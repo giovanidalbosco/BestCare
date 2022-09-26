@@ -7,6 +7,7 @@ from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.contrib import messages
 from django.core.mail import send_mail
+
 from .Base_telainicial import Base_telainicial
 from .Agenda import Agenda
 from .Cad import Cad
@@ -50,3 +51,5 @@ from .SinalVital_list import SinalVital_list
 from .SinalVital_add import SinalVital_add
 from .SinalVital_edit import SinalVital_edit
 from .SinalVital_delete import SinalVital_delete
+from .Calendario import *
+

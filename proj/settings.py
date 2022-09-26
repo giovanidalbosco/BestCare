@@ -166,6 +166,6 @@ except ImportError:
 
 
 try:
-    from . local_settings import *
+    from proj.local_settings import *
 except ImportError:
     pass
