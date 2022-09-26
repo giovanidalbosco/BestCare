@@ -1,12 +1,12 @@
-{% extends 'base.html' %}
+{% extends 'base_telainicial.html' %}
 
 {% block title %}Residentes{% endblock %}
 
-{% block content %}
+{% block content3 %}
 <div class="w-100 list-div">
     <h1 class="text-secondary text-center">Residentes</h1>
     <div class="container w-100" style="margin-top: 5%;">
-        <div class="col-12 dashboard-box"     id="dashboard-done">
+        <div class="col-12 dashboard-box">
             {% if messages %}
             <ul class="messages">
                 {% for message in messages %}
@@ -64,10 +64,6 @@
                     <div class="col">
                         <span><strong>Plano</strong></span>
                     </div>
-                    <div class="col">
-                        <span><i class="fas fa-edit bg-transparent text-dark"></i></span>
-                        <span><i class="fas fa-trash bg-transparent text-dark "></i></span>
-                    </div>
                 </div>
                 {% for i in residente %}
                 <div  class="border border-dark row">
@@ -113,4 +109,4 @@
         </div>
     </div>
 </div>
-{% endblock %}
+{% endblock content3 %}

@@ -22,25 +22,34 @@ body{
 /* Inicio do header*/
 
 .row img{
-    width: 4.5em;
-    height: 3.3em;
+    width: 4em;
+    height: 2.8em;
     border-radius: 8px;
 }
 
 #header a{
-    color: black;
+    color:rgba(18, 31, 52, 0.888);
+}
+#solucoes a{
+    font-size: 1.3em;
 }
 
 .header-logout{
     width: 95%;
     display: flex;
     flex-direction:row;
-    align-items: center;
+    align-items:center;
     justify-content:space-between;
-
 }
 
-/*Fim do header*/
+#header a span{
+    color: rgba(18, 31, 52, 0.888);
+    font-size: 1.6em;
+    font-weight:500; 
+}
+
+/*Fim do header*
+
 /*Tela inicial*/
 
 #imagemApresentacao{
@@ -169,10 +178,6 @@ div a{
     border: none;
 }
 
-/*div a:hover{
-    color: rgba(14, 94, 200,1);
-}*/
-
 div .criar_conta{
     margin: 3%;
     font-weight: 700;
@@ -212,6 +217,26 @@ div .criar_conta{
     opacity: 1;
     pointer-events: auto;
 }
+.btn-cad-geral .input-cadastrar{
+    background:rgba(204, 204, 197, 0.826);
+    color:#000;
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+}
+.btn-cad-geral .input-cadastrar:hover{
+    color:rgba(14, 94, 200,1);
+}
+
+.input-btn .input-cadastrar{
+    margin-left: 33%;
+    margin-right: 33%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
 
 .cadastro-login img{
     width: 3.5em;
@@ -245,15 +270,10 @@ div .criar_conta{
     font-family:'Segoe UI';
     font-size: 2.5em;
     font-weight: 400;
+    text-shadow: 9px 9px 4px  rgb(4, 50, 69), 5px 5px 3em black;
 }
 
-/**/
-#dashboard-done{
-    border-left: 2px solid #000;
-}
-#add-link{
-    margin-top: -0%;
-}
+/*Cor da lixeira */
 
 .fa-trash:hover{
     color: rgb(188, 58, 58);
@@ -280,7 +300,6 @@ div .criar_conta{
     color: rgb(77, 105, 81);
     font-size: 8em;
     text-align: center;
-    /*margin-top: 10%;*/
 }
 /*Bloco do quemSomos*/
 
@@ -317,21 +336,54 @@ div .criar_conta{
     font-family: Times;
     bottom: 0;
     width: 100%;
-    height: 15em;
+    height: 100%;
     margin-top: 10%;
 }
 .card-footer a{
     color: black;
-    font-size: 17px;
+    font-size: 1.1em;
     font-weight: 600;
    
 }
 .card-footer p{
     color: darkgrey;
     margin-top: 1%;
-    margin-bottom: 1%;
 }
 /*Fim do rodapé*/
+
+.base_telainicial{
+    background:#FFFFFF;
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    margin-bottom: -10%;
+}
+
+.back{
+    background: #b2aeae48;
+    width: 14em;
+    height: 100vh;
+    border-radius: 5px;
+}
+
+#solucoes a{
+    color:#000;
+    margin-top: 18%;
+}
+
+.content3{
+    padding: 1%;  
+}
+
+/*Fim-Base-telainicial*/
+
+/*Inicio Prescricao_form*/
+table .prescricao_form input{
+    border-radius: 10px;
+}
+
+/*FIM  Prescrivao_form*/
+
 
 /*Inicio solucoes*/
 .media{
@@ -355,7 +407,7 @@ div .criar_conta{
 .btn-cad-geral{
     position: fixed;
     width: 31em;
-    height: 31em;
+    height: 28em;
     padding: 2%;
     top:25%;
     font-family: Helvetica, sans-serif;
@@ -441,6 +493,7 @@ div .criar_conta{
     justify-content:space-between;
 
 }
+
     
     
     

@@ -1,16 +1,18 @@
-{% extends 'base.html' %}
+{% extends 'base_telainicial.html' %}
 
 {% block title %}Uso e consumo{% endblock %}
 
-{% block content %}
+{% block content3 %}
 <div class=" col-6 px-5">
-    <div class=" align-middle table" id="dashboard-done">
+    <div class=" align-middle table">
         <h1>Adicione Uso e consumo:</h1>
-        <form action="" method="post" class="col-lg-3 form-group  adicione-Uso_Consumo">    
+        <form action="" method="post">    
             {% csrf_token %}  
-            {{ form.as_p }}         
+            <table>
+                {{ form.as_table}}
+            </table>        
             <input  class="btn btn-outline-secondary btn-sm mt-lg-5" type="submit" value="Salvar">
         </form>
     </div>   
 </div>
-{% endblock %}
+{% endblock content3 %}

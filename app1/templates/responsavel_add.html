@@ -1,17 +1,20 @@
-{% extends 'base.html' %}
+{% extends 'responsavel_list.html' %}
 
 {% block title %}Adicione Responsavel{% endblock %}
 
-{% block content %}
-<div class="col-9  px-5">
+{% block content3 %}
+<div class=" col-9  px-5">
     <div class=" align-middle table" id="dashboard-done"></div>
         <h1>Adicione Responsavel:</h1>
-        <form action="" method="post" class="col-sm-3 px-2.5 form-group">    
-            {% csrf_token %}  
-            {{ form }}         
+        <form action="" method="post">    
+            {% csrf_token %} 
+            <table>
+                {{ form.as_table}}
+            </table>
+                     
         <input class="btn btn-outline-secondary btn-sm mt-lg-5"  type="submit" value="Salvar">
         </form>
     </div>
 </div>
 
-{% endblock %}
+{% endblock content3 %}

@@ -1,12 +1,12 @@
-{% extends 'base.html' %}
+{% extends 'base_telainicial.html' %}
 
 {% block title %}Prescricao{% endblock %}
 
-{% block content %}
+{% block content3 %}
 <div class="w-100 list-div">
     <h1 class="text-secondary text-center">Prescricao</h1>
     <div class="container w-100" style="margin-top: 5%;">
-        <div class="col-12 dashboard-box" id="dashboard-done">
+        <div class="col-12 ">
             {% if messages %}
             <ul class="messages">
                 {% for message in messages %}
@@ -19,7 +19,7 @@
             <div class="row d-inline-block">
                 <div class="modal-header">
                     <h4>Prescricao</h4>
-                    <a class="bg-transparent mx-lg-5" id="add-link" href="prescricao_add">
+                    <a class="bg-transparent mx-lg-5" id="add-link"href="prescricao_add">
                         <div class="add-div">
                             <i class="fas fa-plus btn"></i>
                             Adicionar Prescricao
@@ -33,7 +33,7 @@
                     </div>
                 </div>
             </div>          
-            <ul class="task-list">
+            <ul class=" col-12 task-list">
                 <div class="row" style="margin-top: 5%;">
                     <div class="col">
                         <span><strong>Residente</strong></span>
@@ -58,10 +58,6 @@
                     </div>
                     <div class="col">
                         <span><strong>Observacao</strong></span>
-                    </div>
-                    <div class="col">
-                        <span><i class="fas fa-edit bg-transparent text-dark"></i></span>
-                        <span><i class="fas fa-trash bg-transparent text-dark "></i></span>
                     </div>
                 </div>
                 {% for i in prescricao %}
@@ -101,4 +97,4 @@
     </div>
 </div>
 
-{% endblock content %}
+{% endblock content3 %}

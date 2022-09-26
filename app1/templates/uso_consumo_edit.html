@@ -1,15 +1,17 @@
-{% extends 'base.html' %}
+{% extends 'base_telainicial.html' %}
 {% load crispy_forms_tags %}
 
 {% block title %}{{uso_consumo.consumo_nome}}{% endblock %}
 
-{% block content %}
+{% block content3 %}
 <div class="offset-1 col-7 list-div" id="dashboard-done">
     <h1>Editando '{{uso_consumo.consumo_nome}}'</h1>
     <form method="POST">
         {% csrf_token %}
-        {{ form|crispy }}
+        <table>
+            {{ form.as_table}}
+        </table>
         <input type="submit" class="btn btn-outline-secondary mt-5" value="Salvar">
     </form>
 </div>
-{% endblock %}
+{% endblock content3 %}
