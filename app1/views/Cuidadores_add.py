@@ -14,5 +14,5 @@ def Cuidadores_add(request):
 
     cuidador = Pessoas.objects.all()
 
-    return render(request, 'cuidadores_add.html', {'form': form,
+    return render(request, 'cuidadores_form.html', {'form': form,
     'cuidadores': cuidador})

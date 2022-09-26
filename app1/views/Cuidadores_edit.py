@@ -11,12 +11,12 @@ def Cuidadores_edit(request, id):
             cuidador.save()
             return redirect('/cuidadores_list')
         else:
-            return render(request, 'cuidadores_edit.html', {
+            return render(request, 'cuidadores_form.html', {
                 'form': form, 
                  'cuidador': cuidador
              })
     else:
-        return render(request, 'cuidadores_edit.html', {
+        return render(request, 'cuidadores_form.html', {
             'form': form,
             'cuidador': cuidador
         })

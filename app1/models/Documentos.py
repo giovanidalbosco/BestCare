@@ -11,6 +11,7 @@ class Documentos(models.Model):
     def __str__(self):
         return f'{self.documento_pessoa_nome} : {self.documento_nome}'
 
+    
     class Meta:
         ordering = ['documento_pessoa_nome']
         verbose_name = 'Documento'
