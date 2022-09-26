@@ -10,7 +10,7 @@ def Ocorrencias_add(request):
             nova_ocorrencia.save()
             return HttpResponseRedirect('/ocorrencias_list')
         else:
-            return render(request, 'ocorrencias_edit.html', {
+            return render(request, 'ocorrencias_form.html', {
                 'form': form, 
                 'ocorrencia': ocorrencia
             })

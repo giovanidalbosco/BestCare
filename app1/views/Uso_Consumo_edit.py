@@ -10,13 +10,13 @@ def Uso_Consumo_edit(request, id):
         if (form.is_valid()):
             uso_consumo.save()
             return redirect('/uso_consumo_list')
-        # else:
-        #     return render(request, 'uso_consumo_edit.html', {
-        #         'form': form, 
-        #         'uso_consumo': uso_consumo
-        #     })
+        else:
+            return render(request, 'uso_consumo_form.html', {
+                'form': form, 
+                'uso_consumo': uso_consumo
+            })
     else:
-        return render(request, 'uso_consumo_edit.html', {
+        return render(request, 'uso_consumo_form.html', {
             'form': form,
             'uso_consumo': uso_consumo
         })

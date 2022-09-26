@@ -13,5 +13,5 @@ def Uso_Consumo_add(request):
         form = Uso_ConsumoForm()
 
 
-    return render(request, 'uso_consumo_add.html', {'form': form})
+    return render(request, 'uso_consumo_form.html', {'form': form})
     

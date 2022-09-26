@@ -1,0 +1,19 @@
+{% extends 'base_telainicial.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{comorbidade.comorbidade_nome}}{% endblock %}
+
+{% block content3 %}
+
+    {% if comorbidade.id != null %}
+        <h1>Editar Ocorrência '{{comorbidade.comorbidade_nome}}'</h1>
+    {% else %}
+        <h1>Adicionar Ocorrência</h1>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" class="btn btn-outline-secondary mt-5" value="Salvar">
+    </form>
+{% endblock content3 %}

@@ -10,8 +10,8 @@ from django.core.mail import send_mail
 from .Base_telainicial import Base_telainicial
 from .Agenda import Agenda
 from .Cad import Cad
-from .Comorbidade_delete import Comorbidade_delete
-from .Comorbidade_edit import Comorbidade_edit
+from .Comorbidades_delete import Comorbidades_delete
+from .Comorbidades_edit import Comorbidades_edit
 from .Comorbidades_add import Comorbidades_add
 from .Comorbidades_list import Comorbidades_list
 from .index import index

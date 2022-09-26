@@ -11,12 +11,12 @@ def Responsavel_edit(request, id):
             responsavel.save()
             return redirect('/responsavel_list')
         else:
-            return render(request, 'responsavel_edit.html', {
+            return render(request, 'responsavel_form.html', {
                 'form': form, 
                  'responsavel': responsavel
              })
     else:
-        return render(request, 'responsavel_edit.html', {
+        return render(request, 'responsavel_form.html', {
             'form': form,
             'responsavel': responsavel
         })

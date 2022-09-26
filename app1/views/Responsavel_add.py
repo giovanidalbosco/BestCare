@@ -14,5 +14,5 @@ def Responsavel_add(request):
 
     responsavel = Pessoas.objects.all()
 
-    return render(request, 'responsavel_add.html', {'form': form,
+    return render(request, 'responsavel_form.html', {'form': form,
     'responsavel': responsavel})

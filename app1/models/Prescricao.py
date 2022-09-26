@@ -15,6 +15,7 @@ class Prescricao(models.Model):
     def __str__(self):
         return self.consumo_nome
 
+
     class Meta:
         verbose_name = 'Prescricao'
         verbose_name_plural = 'Prescricoes'

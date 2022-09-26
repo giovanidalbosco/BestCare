@@ -1,0 +1,22 @@
+{% extends 'base_telainicial.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{cuidadores.pessoa_nome}}{% endblock %}
+
+{% block content3 %}
+
+    {% if cuidadores.id != null %}
+        <h1>Editar Cuidador '{{cuidadores.pessoa_nome}}'</h1>
+    {% else %}
+        <h1>Adicionar Cuidador</h1>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <table class="prescricao_form" >
+            {{ form.as_table}}
+        </table>
+        <input type="submit" class="btn btn-outline-secondary mt-5" value="Salvar">
+    </form>
+
+{% endblock content3 %}

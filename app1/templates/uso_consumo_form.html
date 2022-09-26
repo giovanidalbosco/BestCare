@@ -1,17 +1,22 @@
 {% extends 'base_telainicial.html' %}
 {% load crispy_forms_tags %}
 
-{% block title %}{{cuidadores.pessoa_nome}}{% endblock %}
+{% block title %}{{uso_consumo.consumo_nome}}{% endblock %}
 
 {% block content3 %}
-<div class="offset-1 col-12 list-div" id="dashboard-done">
-    <h1>Editando Cuidador'{{cuidadores.pessoa_nome}}'</h1>
+
+    {% if uso_consumo.id != null %}
+        <h1>Editar Uso e Consumo '{{uso_consumo.consumo_nome}}'</h1>
+    {% else %}
+        <h1>Adicionar Uso e Consumo</h1>
+    {% endif %}
+
     <form method="POST">
         {% csrf_token %}
-        <table class="prescricao_form" >
+        <table>
             {{ form.as_table}}
         </table>
         <input type="submit" class="btn btn-outline-secondary mt-5" value="Salvar">
     </form>
-</div>
+
 {% endblock content3 %}

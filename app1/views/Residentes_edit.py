@@ -11,12 +11,12 @@ def Residentes_edit(request, id):
             residente.save()
             return redirect('/residentes_list')
         else:
-            return render(request, 'residentes_edit.html', {
+            return render(request, 'residentes_form.html', {
                 'form': form, 
                  'residente': residente
              })
     else:
-        return render(request, 'residentes_edit.html', {
+        return render(request, 'residentes_form.html', {
             'form': form,
             'residente': residente
         })
