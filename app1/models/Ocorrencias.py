@@ -11,6 +11,7 @@ class Ocorrencias(models.Model):
     def __str__(self):
         return f'{self.ocorrencia_nome} - Residente: {self.ocorrencia_pessoa_nome} Cuidador: {self.ocorrencia_pessoa_cuidador}'
     
+    
     class Meta:
         verbose_name = 'Ocorrencia'
         verbose_name_plural = 'Ocorrencias'

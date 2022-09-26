@@ -10,6 +10,7 @@ class Eventos(models.Model):
     def __str__(self):
         return f'{self.eventoCreate} : {self.evento_pessoa_nome} - {self.evento_observacao}'
 
+
     class Meta:
         ordering = ['evento_pessoa_nome']
         verbose_name = 'Evento'

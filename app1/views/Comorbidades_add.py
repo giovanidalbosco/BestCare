@@ -14,5 +14,5 @@ def Comorbidades_add(request):
 
     comorbidade = Comorbidades.objects.all()
 
-    return render(request, 'comorbidades_add.html', {'form': form,
+    return render(request, 'comorbidades_form.html', {'form': form,
     'comorbidade': comorbidade})

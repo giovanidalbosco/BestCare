@@ -14,5 +14,4 @@ def Residentes_add(request):
 
     residente = Pessoas.objects.all()
 
-    return render(request, 'residentes_add.html', {'form': form,
-    'residentes': residente})
+    return render(request, 'residentes_form.html', {'form': form, 'residente': residente})

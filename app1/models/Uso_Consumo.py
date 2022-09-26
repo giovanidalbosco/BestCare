@@ -11,6 +11,7 @@ class Uso_Consumo(models.Model):
     def __str__(self):
         return self.consumo_nome
 
+
     class Meta:
         ordering = ['consumo_nome']
         verbose_name = 'Uso e consumo'

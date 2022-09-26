@@ -1,8 +1,8 @@
-{% extends 'telainicial.html' %}
+{% extends 'base_telainicial.html' %}
 
 <!-- {% block title %}Estoque Individual{% endblock %} -->
 
-{% block content2 %}
+{% block content3 %}
 <div>
     <h3>Estoque Individual</h3>
     <div class="container dashboard" style="margin-top: 5%;">
@@ -11,7 +11,7 @@
                 <h6>Selecione o residente</h6>
                 <div class="search-div">
                     <form method="GET" id="search-form">
-                        <input list="pessoas" name="search" id="search" value={{pessoa_selec.pessoa_nome}}>
+                        <input list="pessoas" name="search" id="search" value={{request.GET.search}}>
                         <datalist id="pessoas">
                             <option value=" ">
                             {% for item in pessoa_nome %}
@@ -66,14 +66,14 @@
                 {% endfor %}
             </div>
             <div class="row">
-
-                <a id="add-link" href="/estoque_individual_add/{{pessoa_selec.pessoa_nome}}">
+                {%if request.GET.search != null %}
+                <a id="add-link" href="/estoque_individual_add/{{request.GET.search}}">
                     <div class="add-div">
                         <i class="fas fa-plus"></i>
                         Adicionar Estoque Individual
                     </div>
                 </a>
-
+                {% endif %}
             </div>
             
         </div>
@@ -81,4 +81,4 @@
 </div>
 
 
-{% endblock content2 %}
+{% endblock content3 %}
