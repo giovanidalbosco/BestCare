@@ -4,7 +4,7 @@ from django.urls import reverse
 CLASSE = (
         (1, 'Cuidador'),
         (2, 'Residente'),
-        (3,'Responsavel')
+        (3, 'Responsavel')
     )
 PLANO = (
         (1,'PARTICULAR'),
@@ -111,16 +111,26 @@ DOSE = (
         (7, '1 + 3/4')
     )
 
+EVENTO = (
+    (1, 'Refeicao'),
+    (2, 'Medicamento'),
+    (3, 'Consulta Medica'),
+    (4, 'Fisioterapia'),
+    (5, 'Atividade Fisica'),
+    (6, 'Atividade Cultural'),
+    (7, 'Atividade Recreativa')
+)
+
 
 
 from .Cidades import Cidades
 from .Comorbidades import Comorbidades
 from .Uso_Consumo import Uso_Consumo
 from .Pessoas import Pessoas
+from .Event import Event
 from .Estoque_Individual import Estoque_Individual
 from .Documentos import Documentos
 from .Eventos import Eventos
 from .Ocorrencias import Ocorrencias
 from .Prescricao import Prescricao
 from .SinalVital import SinalVital
-from .Event import Event
