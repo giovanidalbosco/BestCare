@@ -1,5 +1,4 @@
 from app1.models import *
-from django.urls import reverse
 
 
 class Event(models.Model):

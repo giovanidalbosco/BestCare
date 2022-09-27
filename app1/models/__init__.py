@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 CLASSE = (
         (1, 'Cuidador'),

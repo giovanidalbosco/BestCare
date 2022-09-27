@@ -1,9 +1,6 @@
 from django import forms
-from django.forms import ModelForm, DateInput
-
 from .models import *
 
-from .models import Pessoas, Uso_Consumo, Estoque_Individual, Ocorrencias, Prescricao, Comorbidades, SinalVital
 
 class Cadastro(forms.ModelForm):
     
@@ -122,13 +119,13 @@ class SinalVitalForm(forms.ModelForm):
 
 
 
-class EventForm(ModelForm):
+class EventForm(forms.ModelForm):
   class Meta:
     model = Event
     # datetime-local is a HTML5 input type, format to make date time show on fields
     widgets = {
-      'start_time': DateInput(attrs={'type': 'datetime-local'}, format='%Y-%m-%dT%H:%M'),
-      'end_time': DateInput(attrs={'type': 'datetime-local'}, format='%Y-%m-%dT%H:%M'),
+      'start_time': forms.DateInput(attrs={'type': 'datetime-local'}, format='%Y-%m-%dT%H:%M'),
+      'end_time': forms.DateInput(attrs={'type': 'datetime-local'}, format='%Y-%m-%dT%H:%M'),
     }
     fields = '__all__'
 

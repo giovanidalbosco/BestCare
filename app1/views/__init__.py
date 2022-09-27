@@ -9,7 +9,7 @@ from django.contrib import messages
 from django.core.mail import send_mail
 
 from .Base_telainicial import Base_telainicial
-from .Agenda import Agenda
+from .Agenda import *
 from .Cad import Cad
 from .Comorbidades_delete import Comorbidades_delete
 from .Comorbidades_edit import Comorbidades_edit
@@ -34,7 +34,6 @@ from .Residentes_list import Residentes_list
 from .Residentes_add import Residentes_add
 from .Residentes_edit import Residentes_edit
 from .Residentes_delete import Residentes_delete
-from .Calendario import CalendarView, get_date
 from .Cuidadores_list import Cuidadores_list
 from .Cuidadores_add import Cuidadores_add
 from .Cuidadores_edit import Cuidadores_edit
@@ -51,5 +50,5 @@ from .SinalVital_list import SinalVital_list
 from .SinalVital_add import SinalVital_add
 from .SinalVital_edit import SinalVital_edit
 from .SinalVital_delete import SinalVital_delete
-from .Calendario import *
+
 
