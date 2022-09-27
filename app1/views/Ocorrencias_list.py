@@ -5,7 +5,7 @@ from app1.views import *
 def Ocorrencias_list(request):
     search = request.GET.get('search')
     if search:
-        ocorrencia = Ocorrencias.objects.filter(ocorrencia_pessoa_nome__pessoa_nome__icontains=search)
+        ocorrencia = Ocorrencias.objects.filter(pessoa_classe__icontains=('2','1'))
     else:
         ocorrencia = Ocorrencias.objects.all()
 
