@@ -6,15 +6,17 @@
 {% block content3 %}
 
 {% if residente.id != null %}
-        <h1>Editar Residente '{{residente.pessoa_nome}}'</h1>
+        <h4>Editar Residente '{{residente.pessoa_nome}}'</h4>
     {% else %}
-        <h1>Adicionar Residente</h1>
+        <h4>Adicionar Residente</h4>
     {% endif %}
 
     <form method="POST">
         {% csrf_token %}
-        {{ form|crispy }}
-        <input type="submit" class="btn btn-outline-secondary mt-5" value="Salvar">
+        <table class="form form-table">
+            {{ form.as_table}}   
+        </table>
+        <input type="submit" class="btn btn-outline-info right" value="Salvar">
     </form>
 
 {% endblock content3 %}

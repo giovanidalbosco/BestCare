@@ -4,17 +4,16 @@
 {% block content3 %}
 
     {% if ocorrencia.id != null %}
-        <h1>Editar Ocorrência '{{ocorrencia.get_ocorrencia_nome_display}}'</h1>
+        <h4>Editar Ocorrência '{{ocorrencia.get_ocorrencia_nome_display}}'</h4>
     {% else %}
-        <h1>Adicionar Ocorrência</h1>
+        <h4>Adicionar Ocorrência</h4>
     {% endif %}
 
     <form method="POST">
         {% csrf_token %}
-        <table class="form form-table"></table>
-            {{ form|crispy }}
-            
+        <table class="form form-table">
+            {{ form.as_table}}   
         </table>
-        <input type="submit" class="btn btn-outline-secondary right" value="Salvar">
+        <input type="submit" class="btn btn-outline-info right" value="Salvar">
     </form>
 {% endblock content3 %}
