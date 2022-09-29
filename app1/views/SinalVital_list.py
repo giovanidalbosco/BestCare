@@ -10,4 +10,4 @@ def SinalVital_list(request):
         sinalvital = SinalVital.objects.filter()
 
 
-    return render(request, 'sinalvital_list.html', {'responsavel': sinalvital})
+    return render(request, 'sinalvital_list.html', {'residente': sinalvital})

@@ -18,5 +18,5 @@ def SinalVital_edit(request, id):
     else:
         return render(request, 'sinalvital_form.html', {
             'form': form,
-            'ocorrencia': sinalvital
+            'sinalvital': sinalvital
         })

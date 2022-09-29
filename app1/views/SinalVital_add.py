@@ -19,5 +19,5 @@ def SinalVital_add(request):
 
     sinalvital = SinalVital.objects.all()
 
-    return render(request, 'sinalVital_form.html', {'form': form,
+    return render(request, 'sinalvital_form.html', {'form': form,
     'sinalvital': sinalvital})
