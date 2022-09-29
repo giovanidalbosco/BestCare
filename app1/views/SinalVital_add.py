@@ -11,13 +11,10 @@ def SinalVital_add(request):
             return HttpResponseRedirect('/sinalvital_list')
         else:
             return render(request, 'sinalvital_form.html', {
-                'form': form, 
-                'sinalvital': sinalvital
+                'form': form
             })
     else:
         form = SinalVitalForm()
 
-    sinalvital = SinalVital.objects.all()
 
-    return render(request, 'sinalVital_form.html', {'form': form,
-    'sinalvital': sinalvital})
+    return render(request, 'sinalVital_form.html', {'form': form})
