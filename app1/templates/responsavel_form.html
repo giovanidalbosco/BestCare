@@ -6,9 +6,9 @@
 {% block content3 %}
 
     {% if responsavel.id != null %}
-        <h1>Editar Responsável '{{responsavel.pessoa_nome}}'</h1>
+        <h4>Editar Responsável '{{responsavel.pessoa_nome}}'</h4>
     {% else %}
-        <h1>Adicionar Responsável</h1>
+        <h4>Adicionar Responsável</h4>
     {% endif %}
 
     <form method="POST">
