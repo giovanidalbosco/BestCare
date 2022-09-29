@@ -1,5 +1,7 @@
 from calendar import HTMLCalendar
 from .models import Event
+import locale
+
 
 class Calendar(HTMLCalendar):
 	def __init__(self, year=None, month=None):
@@ -29,6 +31,8 @@ class Calendar(HTMLCalendar):
 	# formats a month as a table
 	# filter events by year and month
 	def formatmonth(self, withyear=True):
+		locale.setlocale(locale.LC_ALL, 'pt_BR')
+
 		events = Event.objects.filter(start_time__year=self.year, start_time__month=self.month)
 
 		cal = f'<table border="0" cellpadding="0" cellspacing="0" class="calendar">\n'
