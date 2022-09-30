@@ -10,5 +10,5 @@ def SinalVital_list(request):
         sinalvital = SinalVital.objects.all()
 
 
-    return render(request, 'sinalvital_list.html', {'residente': sinalvital})
+    return render(request, 'sinalvital_list.html', {'sinalvital': sinalvital})
 
