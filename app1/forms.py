@@ -1,3 +1,5 @@
+from random import choices
+from tkinter import Widget
 from django import forms
 from .models import *
 
@@ -103,6 +105,11 @@ class PrescricaoForm(forms.ModelForm):
 
 
 class SinalVitalForm(forms.ModelForm):
+    sinalVital_pessoa_nome = forms.ModelMultipleChoiceField(
+        widget = forms.Select,
+        queryset = Pessoas.objects.filter(pessoa_classe=2),
+        label = 'Residente'
+    )
 
     class Meta:
         model = SinalVital

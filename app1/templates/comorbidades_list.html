@@ -5,7 +5,7 @@
 {% block content3 %}
 <div class="tamanho-div">
     <h1 class="text-secondary text-center">Comorbidades</h1>
-    <div class="container w-100" style="margin-top: 5%;">
+    <div class="w-100" style="margin-top: 5%;">
         <div class="col-12 dashboard-box">
             {% if messages %}
             <ul class="messages">
@@ -16,11 +16,11 @@
                 {% endfor %}
             </ul>
             {% endif %}
-            <div class="row d-inline-block">
+            <div class="row-lg-12 d-inline-block">
                 <div class="modal-header">
-                    <h4>Comorbidade</h4>
-                    <a class="bg-transparent mx-lg-5"  id="add-link" href="/comorbidades_add">
-                        <div class="add-div">
+                    <h5>Comorbidade</h5>
+                    <a class="bg-transparent mx-lg-5" href="/comorbidades_add">
+                        <div class="adicionar">
                             <i class="fas fa-plus"></i>
                             Adicionar Comorbidade
                         </div>
@@ -33,27 +33,30 @@
                     </div>
                 </div>
             </div>
-            <div class=" base-scrool">               
-                <div class="row" style="margin-top: 5%;">
-                    <div class="col">
-                        <span><strong>Nome</strong></span>
-                    </div>
-                </div>
-                {% for i in comorbidade %}
-                <div  class="border border-dark row ">
-                    <div class="col">
-                        <span>{{i.comorbidade_nome}}</span>
-                    </div>
-                    <div class="col">
-                        <a href="/comorbidades_edit/{{i.id}}" class="delete-btn bg-transparent" ><span><abbr title="EDITAR"><i     class="fas fa-edit"></i></abbr></span></a>
-                        <a href="/comorbidades_delete/{{i.id}}" class="delete-btn bg-transparent"><span><abbrtitle="EXCLUIR"><i    class="fas fa-trash"></i></abbr></span></a>
-                    </div>
-                </div>
-                {% endfor %}
-            </div> 
+            <div class=" base-scrool">          
+                <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">Nome</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for i in comorbidade %}
+                      <tr>
+                        <td>{{i.comorbidade_nome}}</td>
+                        <td>
+                            <div class="col">
+                                <a href="/comorbidades_edit/{{i.id}}" class="delete-btn   bg-transparent"><span><abbr title="EDITAR"><i class="fas fa-edit"></i></abbr></span></a>
+                                <a href="/comorbidades_delete/{{i.id}}" class="delete-btn bg-transparent"><span><abbr  title="EXCLUIR"><i class="fas fa-trash"></i></abbr></span></a>
+                            </div>
+                        </td>
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
-
 {% endblock content3 %}
 

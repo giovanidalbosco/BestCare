@@ -3,9 +3,9 @@
 {% block title %}Residentes{% endblock %}
 
 {% block content3 %}
-<div class="w-100 list-div">
+<div class="tamanho-div">
     <h1 class="text-secondary text-center">Residentes</h1>
-    <div class="container w-100" style="margin-top: 5%;">
+    <div class="w-100" style="margin-top: 5%;">
         <div class="col-12 dashboard-box">
             {% if messages %}
             <ul class="messages">
@@ -16,9 +16,9 @@
             {% endif %}
             <div class="row d-inline-block">
                 <div class="modal-header">
-                    <h4>Residentes</h4>
+                    <h5>Residentes</h5>
                     <a class="bg-transparent mx-lg-5"  id="add-link" href="/residentes_add">
-                        <div class="add-div">
+                        <div class="adicionar">
                             <i class="fas fa-plus"></i>
                             Adicionar Residente
                         </div>
@@ -31,81 +31,52 @@
                     </div> 
                 </div>
             </div>             
-            <ul class="task-list">
-                <div class="row" style="margin-top: 5%;">
-                    <div class="col">
-                        <span
-                        text-left><strong>Id</strong></span>
-                    </div>
-                    <div class="col">
-                        <span><strong>Nome</strong></span>
-                    </div>
-                    <div class="col">
-                        <span><strong>Endereço</strong></span>
-                    </div>
-                    <div class="col">
-                        <span><strong> Número</strong></span>
-                    </div>
-                    <div class="col">
-                        <span><strong>Complemento</strong> </span>
-                    </div>
-                    <div class="col">
-                        <span><strong>Cidade</strong></span>
-                    </div>
-                    <div class="col">
-                        <span><strong>Classe</strong></span>
-                    </div>
-                    <div class="col">
-                        <span><strong>CPF</strong></span>
-                    </div>
-                    <div class="col">
-                        <span><strong>Comorbidades</strong></span>
-                    </div>
-                    <div class="col">
-                        <span><strong>Plano</strong></span>
-                    </div>
-                </div>
-                {% for i in residente %}
-                <div  class="border border-dark row">
-                    <div class="col">
-                        <span>{{i.id}}</span>
-                    </div>
-                    <div class="col">
-                        <span>{{i.pessoa_nome}}</span>
-                    </div>
-                    <div class="col">
-                        <span>{{i.pessoa_endereco}}</span>
-                    </div>
-                    <div class="col">
-                        <span>{{i.pessoa_numero}}</span>
-                    </div>
-                    <div class="col">
-                        <span>{{i.pessoa_compl}}</span>
-                    </div>
-                    <div class="col">
-                        <span>{{i.pessoa_cidade}}</span>
-                    </div>
-                    <div class="col">
-                        <span>{{i.get_pessoa_classe_display}}</span>
-                    </div>
-                    <div class="col">
-                        <span>{{i.pessoa_CPF}}</span>
-                    </div>
-                    {% for j in i.pessoa_comorbidade.all %}
-                        <div class="col">
-                            <span>{{j.comorbidade_nome}}</span>    
-                        </div>
+            <div class="base-scrool">             
+                <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Endereço</th>
+                        <th scope="col">Número</th>
+                        <th scope="col">Complemento</th>
+                        <th scope="col">Cidade</th>
+                        <th scope="col">Classe</th>
+                        <th scope="col">CPF</th>
+                        <th scope="col">Comorbidade</th>
+                        <th scope="col">Plano</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for i in residente %}
+                      <tr>
+                        <td>{{i.pessoa_nome}}</td>
+                        <td>{{i.pessoa_endereco}}</td>
+                        <td>{{i.pessoa_numero}}</td>
+                        <td>{{i.pessoa_compl}}</td>
+                        <td>{{i.pessoa_cidade}}</td>
+                        <td>{{i.get_pessoa_classe_display}}</td>
+                        <td>{{i.pessoa_CPF}}</td>
+                        <td>
+                            {% for j in i.pessoa_comorbidade.all %}
+                            <div class="col">
+                                <span>{{j.comorbidade_nome}}</span>    
+                            </div>
+                            {% endfor %} 
+                        </td>
+                        <td>{{i.get_pessoa_plano_display}}</td>
+                        <td>
+                            <div class="col">
+                                <a href="/responsavel_edit/{{i.id}}" class="delete-btn bg-transparent"><span><abbr title="EDITAR"><i 
+                            class="fas fa-edit"></i></abbr></span></a>
+                                <a href="/responsavel_delete/{{i.id}}" class="delete-btn bg-transparent"><span><abbr    title="EXCLUIR"><i 
+                            class="fas fa-trash"></i></abbr></span></a>
+                            </div>
+                        </td>
+                      </tr>
                     {% endfor %}
-                    <div class="col">
-                        <span>{{i.get_pessoa_plano_display}}</span>
-                    </div>
-                    <div class="col">
-                        <a href="/residentes_edit/{{i.id}}" class="delete-btn bg-transparent"><span><abbr title="EDITAR"><i class="fas fa-edit"></i></abbr></span></a>
-                        <a href="/residentes_delete/{{i.id}}" class="delete-btn bg-transparent"><span><abbr title="EXCLUIR"><i class="fas fa-trash"></i></abbr></span></a>
-                    </div>
-                </div>
-                {% endfor %}
-            </ul>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
