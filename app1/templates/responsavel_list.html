@@ -3,9 +3,9 @@
 {% block title %}Responsavel{% endblock %}
 
 {% block content3 %}
-<div class="w-100 list-div">
+<div class="tamanho-div">
     <h1 class="text-secondary text-center">Responsável</h1>
-    <div class="w-100" style="margin-top: 5%;">
+    <div class=" w-100" style="margin-top: 5%;">
         <div class="col-lg-12 dashboard-box">
             {% if messages %}
             <ul class="messages">
@@ -16,9 +16,9 @@
             {% endif %}
             <div class="row-lg-12 d-inline-block">
                 <div class=" modal-header">
-                    <h4>Responsável</h4>
-                    <a class="bg-transparent mx-lg-5"  id="add-link" href="/responsavel_add">
-                        <div class="add-div" >
+                    <h5>Responsável</h5>
+                    <a class="bg-transparent mx-lg-5"  href="/responsavel_add">
+                        <div class="adicionar" >
                             <i class="fas fa-plus"></i>
                             Adicionar Responsavel
                         </div>
@@ -30,80 +30,47 @@
                         </form>
                     </div> 
                 </div>
-            </div>             
-            <ul class="w-100  task-list ml-0">
-                <div class="row" style="margin-top: 5%;">
-                    <div class="col">
-                        <span
-                        text-left><strong>Id</strong></span>
-                    </div>
-                    <div class="col">
-                        <span><strong>Nome</strong></span>
-                    </div>
-                    <div class="col">
-                        <span><strong>Endereço</strong></span>
-                    </div>
-                    <div class="col">
-                        <span><strong> Número</strong></span>
-                    </div>
-                    <div class="col">
-                        <span><strong>Complemento</strong> </span>
-                    </div>
-                    <div class="col">
-                        <span><strong>Cidade</strong></span>
-                    </div>
-                    <div class="col">
-                        <span><strong>Classe</strong></span>
-                    </div>
-                    <div class="col">
-                        <span><strong>CPF</strong></span>
-                    </div>
-                    <div class="col">
-                        <span><strong>Telefone</strong></span>
-                    </div>
-                    <div class="col">
-                        <span><strong>E-mail</strong></span>
-                    </div>
-                </div>
-                {% for i in responsavel %}
-                <div  class="border border-dark row">
-                    <div class="col">
-                        <span>{{i.id}}</span>
-                    </div>
-                    <div class="col">
-                        <span>{{i.pessoa_nome}}</span>
-                    </div>
-                    <div class="col">
-                        <span>{{i.pessoa_endereco}}</span>
-                    </div>
-                    <div class="col">
-                        <span>{{i.pessoa_numero}}</span>
-                    </div>
-                    <div class="col">
-                        <span>{{i.pessoa_compl}}</span>
-                    </div>
-                    <div class="col">
-                        <span>{{i.pessoa_cidade}}</span>
-                    </div>
-                    <div class="col">
-                        <span>{{i.get_pessoa_classe_display}}</span>
-                    </div>
-                    <div class="col">
-                        <span>{{i.pessoa_CPF}}</span>
-                    </div>
-                    <div class="col">
-                        <span>{{i.pessoa_telefone}}</span>    
-                    </div>
-                    <div class="col">
-                        <span>{{i.pessoa_email}}</span>
-                    </div>
-                    <div class="col">
-                        <a href="/responsavel_edit/{{i.id}}" class="delete-btn bg-transparent"><span><abbr title="EDITAR"><i class="fas fa-edit"></i></abbr></span></a>
-                        <a href="/responsavel_delete/{{i.id}}" class="delete-btn bg-transparent"><span><abbr title="EXCLUIR"><i class="fas fa-trash"></i></abbr></span></a>
-                    </div>
-                </div>
-                {% endfor %}
-            </ul>
+            </div>
+            <div class="base-scrool">              
+                <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Endereço</th>
+                        <th scope="col">Número</th>
+                        <th scope="col">Complemento</th>
+                        <th scope="col">Cidade</th>
+                        <th scope="col">Classe</th>
+                        <th scope="col">CPF</th>
+                        <th scope="col">Telefone</th>
+                        <th scope="col">E-Mail</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for i in responsavel %}
+                      <tr>
+                        <td>{{i.pessoa_nome}}</td>
+                        <td>{{i.pessoa_endereco}}</td>
+                        <td>{{i.pessoa_numero}}</td>
+                        <td>{{i.pessoa_compl}}</td>
+                        <td>{{i.pessoa_cidade}}</td>
+                        <td>{{i.get_pessoa_classe_display}}</td>
+                        <td>{{i.pessoa_CPF}}</td>
+                        <td>{{i.pessoa_telefone}}</td>
+                        <td>{{i.pessoa_email}}</td>
+                        <td>
+                            <div class="col">
+                                <a href="/responsavel_edit/{{i.id}}" class="delete-btn bg-transparent"><span><abbr title="EDITAR"><i 
+                            class="fas fa-edit"></i></abbr></span></a>
+                                <a href="/responsavel_delete/{{i.id}}" class="delete-btn bg-transparent"><span><abbr       title="EXCLUIR"><i 
+                            class="fas fa-trash"></i></abbr></span></a>
+                            </div>
+                        </td>
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>

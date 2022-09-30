@@ -344,6 +344,7 @@ div .criar_conta{
     margin-top: 1%;
 }
 /*Fim do rodapé*/
+
 /*Inicio Base_telainicial*/
 .base_telainicial{
     background:#FFFFFF;
@@ -366,8 +367,16 @@ div .criar_conta{
     margin-top: 18%;
 }
 
-.content3{
-    padding: 1%;  
+.content3{  
+    width: 100%;
+}
+#search{
+    width: 200px;
+    height: 32px;
+    border-radius: 4px;
+}
+a .adicionar{
+    margin-top: -5%;
 }
 
 /*Fim-Base-telainicial*/
@@ -479,16 +488,17 @@ div .criar_conta{
     justify-content:space-between;
 
 }
-
+/*Telas internas com scroll bar */
 .base-scrool{
+    position: sticky;
     height: 70vh;
-    overflow-y: scroll;
+    overflow:auto;
 }
 
 .tamanho-div{
-    width: 78rem;
+    width: 100%;
 }
-
+/* fim telas internas com scroll bar*/
     
     
     
