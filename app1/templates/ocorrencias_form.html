@@ -6,7 +6,7 @@
     {% if ocorrencia.id != null %}
         <h4>Editar Ocorrência '{{ocorrencia.get_ocorrencia_nome_display}}'</h4>
     {% else %}
-        <h4>Adicionar Ocorrência</h4>
+        <h4 class="d-flex justify-content-center py-4">Adicionar Ocorrência</h4>
     {% endif %}
 
     <form method="POST">
@@ -15,5 +15,5 @@
             {{ form.as_table}}   
         </table>
         <input type="submit" class="btn btn-outline-info mx-auto d-block" value="Salvar">
-    </form>t
+    </form>
 {% endblock content3 %}
