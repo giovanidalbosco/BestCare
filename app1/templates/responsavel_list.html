@@ -4,8 +4,8 @@
 
 {% block content3 %}
 <div class="tamanho-div">
-    <h1 class="text-secondary text-center">Responsável</h1>
-    <div class=" w-100" style="margin-top: 5%;">
+    <h1 class="text-secondary text-center mt-4">Responsável</h1>
+    <div class=" w-100" style="margin-top: 3%;">
         <div class="col-lg-12 dashboard-box">
             {% if messages %}
             <ul class="messages">
@@ -24,8 +24,8 @@
                         </div>
                     </a> 
                     <div class="search-div bg-transparent">
-                        <form method="GET" id="search-form">
-                            <input type="search" id="search" name="search"placeholder="Digite o nome para buscar..." value="{{ request.GET.search }}">
+                        <form method="GET" id="search-form" class="d-flex justify-content-end pl-3">
+                            <input id="search" name="search" placeholder="Digite o nome para buscar..." value="{{ request.GET.search }}">
                             <input class="btn btn-outline-secondary btn-sm" type="submit" value="Buscar">
                         </form>
                     </div> 
@@ -44,6 +44,7 @@
                         <th scope="col">CPF</th>
                         <th scope="col">Telefone</th>
                         <th scope="col">E-Mail</th>
+                        <th scope="col"></th>
                       </tr>
                     </thead>
                     <tbody>
