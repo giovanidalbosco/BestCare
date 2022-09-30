@@ -17,4 +17,4 @@ def SinalVital_add(request):
         form = SinalVitalForm()
 
 
-    return render(request, 'sinalVital_form.html', {'form': form})
+    return render(request, 'sinalvital_form.html', {'form': form})
