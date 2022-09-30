@@ -105,11 +105,12 @@ class PrescricaoForm(forms.ModelForm):
 
 
 class SinalVitalForm(forms.ModelForm):
-    sinalVital_pessoa_nome = forms.ModelMultipleChoiceField(
+    sinalVital_pessoa_nome = forms.ModelChoiceField(
         widget = forms.Select,
         queryset = Pessoas.objects.filter(pessoa_classe=2),
         label = 'Residente'
     )
+    
 
     class Meta:
         model = SinalVital
