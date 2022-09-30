@@ -7,7 +7,8 @@ def SinalVital_list(request):
     if search:
         sinalvital = SinalVital.objects.filter(sinalvital_pessoa_nome__icontains=search)
     else:
-        sinalvital = SinalVital.objects.filter()
+        sinalvital = SinalVital.objects.all()
 
 
     return render(request, 'sinalvital_list.html', {'residente': sinalvital})
+

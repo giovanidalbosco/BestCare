@@ -20,3 +20,4 @@ def SinalVital_edit(request, id):
             'form': form,
             'sinalvital': sinalvital
         })
+
