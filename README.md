@@ -17,26 +17,21 @@ Desenvolvedores:
   - Dashboard.
 
 - Entidades do projeto:
-  - Log-in;
-    > Destinado a armazenar os logs de ingresso ao sistema.
+
   - Cidades;
-    > Lista dos municipios brasileiros e seu estado.
+    > Lista dos municipios e estado.
   - Comorbidades;
     > Relacao das comorbidades listadas no site do Ministerio da Saude.
-  - Documentos;
-    > Armazenamento de arquivos documentais do Residente.
   - Estoque_Individual;
     > Estoque individual do residente, com finalidade de controlar o consumos de itens pessoais, sob a guarda da Casa de Repouso.
-  - Eventos;
-    > Eventos previsiveis e capaz de gerar log na agenda do Residente.
+  - Event;
+    > Eventos previsiveis gerarando log na agenda do Residente.
   - Ocorrencias;
     > Ocorrencias nao previsiveis, que devem ser armazenadas compondo o relatorio do Residente.
   - Pessoas;
     > Cadastro com dados de Residentes, Cuidadores e Responsaveis Externo.
-  - Prescricao;
-    > medicamentos prescritos, registrados no arquivo de documento, populado em agenda. 
   - SinalVital;
-    > Levantamento periodico dos sinais Vitais do Residente, com geracao de graficos evolutivos.
+    > Levantamento periodico dos sinais Vitais do Residente;
   - Usos_Consumo;
     > Material de uso e consumo do Residente, devidamente controlado pelo modulo de estoque.
 
@@ -44,10 +39,8 @@ Beneficios:
   - Acompanhamento do residente em tempo real;
   - Lembretes instantaneos;
   - Gestao de estoque de medicamentos e itens de higiene;
-  - Estatistica de consumo de itens (fraldas por exemplo);
   - Registro de ocorrencias anomalas;
   - Gestao de responsabilidade das prescricoes medicas;
-  - Relatorio mensal dos eventos;
   - Mensagens de intercorrencia instantaneas;
   - Melhor relacao entre Cuidador e Responsavel Externo.
 
@@ -61,14 +54,15 @@ Clone este repositório no propmt do CMD:
 Vá para o repositório :
 >cd BestCare
 
-Crie um ambiente de desenvolvimento: 
+Criar um ambiente de desenvolvimento: 
 > python -m venv venv
 
-Vá para o ambiente:
+Ativar o ambiente virtual:
 > venv/Scripts/activate
 
-Instale as dependências:
+Instalar as dependências:
 > pip install -r requirements.txt
 
-Play o servidor: 
+Rodar o servidor: 
 > python manage.py runserver
+
