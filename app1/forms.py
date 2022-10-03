@@ -2,12 +2,15 @@ from django import forms
 from .models import *
 
 
-class Cadastro(forms.ModelForm):
-    
-    class Meta:
-        model = Pessoas
+class LoginForm(forms.Form):
+    usuario = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}), label='Usuario', required=True)
+    senha = forms.CharField(max_length=32, widget=forms.PasswordInput(attrs={'class': 'form-control'}), label='Senha', required=True)
 
-        fields = ('pessoa_nome','pessoa_CPF','pessoa_email',)
+class CadastroForm(forms.Form):
+    usuario = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}), label='Usuario', required=True)
+    email = forms.CharField(widget=forms.EmailInput(attrs={'class': 'form-control'}), required=True)
+    senha = forms.CharField(max_length=32, widget=forms.PasswordInput(attrs={'class': 'form-control'}), label='Senha', required=True)
+
 
 class ComorbidadesForm(forms.ModelForm):
     
