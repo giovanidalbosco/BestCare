@@ -1,5 +1,7 @@
 {% extends 'base_telainicial.html' %}
+{% load static %}
 {% load crispy_forms_tags %}
+
 
 {% block title %}{{residente.pessoa_nome}}{% endblock %}
 
@@ -18,5 +20,8 @@
         </table>
         <input type="submit" class="btn btn-outline-info mx-auto d-block" value="Salvar">
     </form>
+<script src={% static '/jquery-3.6.1.min.js' %}></script>
+<script src={% static '/jquery.mask.min.js' %}></script>
+<script src={% static '/mascara.js' %}></script>
 
 {% endblock content3 %}

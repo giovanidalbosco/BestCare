@@ -53,6 +53,11 @@ class ResidentesForm(forms.ModelForm):
             'pessoa_plano',
         )
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['pessoa_CPF'].widget.attrs.update({'class': 'mask-cpf'})
+
+
 
 class CuidadoresForm(forms.ModelForm):
     
