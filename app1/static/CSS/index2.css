@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family:Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body{
@@ -22,9 +22,14 @@ body{
 /* Inicio do header*/
 
 .row img{
-    width: 4em;
-    height: 2.8em;
-    border-radius: 8px;
+    width: 3.5em;
+    height: 2.3em;
+}
+#best1{
+    width: 6em;
+    height: 0.9em;
+    border-radius:0;
+    margin-top: 22%;
 }
 
 #header a{
@@ -73,7 +78,6 @@ body{
     height: 28.12em;
     padding: 2%;
     top:25%;
-    font-family: Helvetica, sans-serif;
     background-color:#FFFFFF;
     z-index: 99999;
     opacity:0;
@@ -107,16 +111,6 @@ body{
 
 .fechar:hover{
     color: red;
-}
-
-.header-login img{
-    width: 3.5em;
-    height: 2.3em;
-    margin-top: -18%;
-}
-
-.header-login span{
-    margin-top: -16%; 
 }
 
 .formulario{
@@ -188,6 +182,19 @@ div .criar_conta{
     text-decoration: none;  
 }
 
+#img_best3{
+    width: 2.5em;
+    height: 2em;
+    margin-top: -25%;
+}
+
+#best3{
+    width: 4.5em;
+    height: 0.8em;
+    border-radius: 0;
+    margin-top: -20%; 
+}
+
 /*Termina janela input*/
 
 /*Início Cadastro*/
@@ -198,7 +205,6 @@ div .criar_conta{
     height: 28.12em;
     padding: 2%;
     top:25%;
-    font-family: Helvetica, sans-serif;
     background-color:#FFFFFF;
     z-index: 99999;
     opacity:0;
@@ -238,14 +244,17 @@ div .criar_conta{
     align-items: center;    
 }
 
-.cadastro-login img{
-    width: 3.5em;
-    height: 2.3em;
-    margin-top: -5%;
+#img_best{
+    width: 2.5em;
+    height: 2em;
+    margin-top: -1%;
 }
 
-.cadastro-login span{
-    margin-top: -3%; 
+#best2{
+    width: 4.5em;
+    height: 0.8em;
+    border-radius: 0;
+    margin-top: 3%; 
 }
 
 /*Fim Cadastro*/
@@ -318,9 +327,15 @@ div .criar_conta{
     margin-top: 9%;
     border: blanchedalmond 1.5px solid;
 }
+
+.imagens a{
+    display: flex;
+    flex-direction: column;
+}
 #linkfotos{
     color:rgba(18, 31, 52, 0.888);
-    font-size: 1.5em;
+    font-size: 1em;
+    
 }
 /*Fim bloco do quemSomos*/
 
@@ -361,15 +376,20 @@ div .criar_conta{
     border-radius: 5px;
 }
 
-#solucoes a{
+#base_inicial_solucoes{
+    margin-top: 48%;
+}
+
+#base_inicial_solucoes a{
     color:#000;
     font-size: 1.1em;
-    margin-top: 18%;
+    margin-top: 15%;
 }
 
 .content3{  
     width: 100%;
 }
+
 #search{
     width: 200px;
     height: 32px;
@@ -385,15 +405,16 @@ a .adicionar{
 .media{
     width: 100%;
     color:rgba(18, 31, 52, 0.888);
-    margin-top: 9em;
+    margin-top: 8em;
 }
 
 .media img{
-    width:130px;
-    height:130px;
+    width:100px;
+    height:100px;
     border-radius: 4px;
     margin-left: 18%
 }
+/*Fim soluções*/
 
 .btn-cad-geral{
     display: flex;

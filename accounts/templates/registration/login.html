@@ -7,18 +7,17 @@
 
       <div class=" container header-login">
         <div class="row">
-          <img src="/static/img/medico2.png" alt="Logo"  class="img ">
-          <span class="text-secondary " style="color: grey;">BestCare</span> 
+          <img src="/static/img/bestcare-logo.png" alt="Logo"  id="img_best3">
+          <img src="/static/img/bestcare.png" alt="Logo" id="best3"> 
           <a href="/" title="Fechar"class="fechar">x</a>
         </div>
       </div>
       <form method="post" class="formulario">
         {% csrf_token %}
         <input type="hidden" name="next" value="{{ next }}" href="#telainicial">
-
-        {{ form|crispy }}
-
-        {% csrf_token %}
+        <table>
+          {{ form.as_table}}
+        </table>       
       <a class= login2 href="./app1/base_telainicial"><button>Entrar</button></a>
       <p class="criar_conta">Ainda não tem uma conta? <a href="{% url 'cadastro' %}"> Criar conta</a></p>
       </form>
