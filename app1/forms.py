@@ -3,13 +3,13 @@ from .models import *
 
 
 class LoginForm(forms.Form):
-    usuario = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}), label='Usuario', required=True)
-    senha = forms.CharField(max_length=32, widget=forms.PasswordInput(attrs={'class': 'form-control'}), label='Senha', required=True)
+    usuario = forms.CharField(widget=forms.TextInput(label='Usuario', required=True))
+    senha = forms.CharField(max_length=32, widget=forms.PasswordInput(label='Senha', required=True))
 
 class CadastroForm(forms.Form):
-    usuario = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}), label='Usuario', required=True)
-    email = forms.CharField(widget=forms.EmailInput(attrs={'class': 'form-control'}), required=True)
-    senha = forms.CharField(max_length=32, widget=forms.PasswordInput(attrs={'class': 'form-control'}), label='Senha', required=True)
+    usuario = forms.CharField(widget=forms.TextInput(label='Usuario', required=True))
+    email = forms.CharField(widget=forms.EmailInput(required=True))
+    senha = forms.CharField(max_length=32, widget=forms.PasswordInput(label='Senha', required=True))
 
 
 class ComorbidadesForm(forms.ModelForm):
