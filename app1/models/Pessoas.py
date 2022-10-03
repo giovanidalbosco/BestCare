@@ -15,11 +15,17 @@ class Pessoas(models.Model):
     pessoa_plano = models.IntegerField(choices=PLANO, blank=True, null=True)
 
 
-
     def __str__(self):
         return self.pessoa_nome
     
     
+    def cria_cuidador(self, nome, email):
+        self.pessoa_nome = nome
+        self.pessoa_email = email
+        self.pessoa_classe = 1
+        self.pessoa_cidade_id = '2'
+
+
     class Meta:
         ordering = ['pessoa_nome']
         verbose_name = 'Pessoa'

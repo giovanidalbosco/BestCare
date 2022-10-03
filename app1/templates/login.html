@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<div id="content">
+    <div class="container-fluid">
+        <div class="row">
+            <form class="col-md-4 col-lg-4 offset-md-4 offset-lg-4" method="POST" action="">
+                <h3 class="text-center">{{titulo}}</h3>
+
+                {% if mensagem is not None %}
+                    <div class="alert alert-{{ mensagem.type }}">{{ mensagem.text }}</div>
+                {% endif %}
+
+                {% csrf_token %}
+
+                {{ form }}
+
+                <a href="{{link_href}}" style="display: block; text-align: center; margin-bottom: 20px;">{{link_text}}</a>
+                <button type="submit" class="btn btn-primary">{{button_text}}</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
