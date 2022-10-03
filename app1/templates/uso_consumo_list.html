@@ -27,14 +27,14 @@
                     </a>
                     <div class="search-div bg-transparent">
                         <form method="GET" id="search-form">
-                            <input list="pessoas" name="search" id="search" placeholder="Digite o nome para buscar..."  value={{pessoa_selec.pessoa_nome}}>
+                            <input class="btn btn-outline-dark btn-sm" id="teste" list="pessoas" name="search" id="search" placeholder="Digite o nome para buscar..."  value={{pessoa_selec.pessoa_nome}}>
                             <datalist id="pessoas">
                                 <option value=" ">
                                 {% for item in pessoa_nome %}
                                     <option value={{item.pessoa_nome}}>
                                 {% endfor %}
                             </datalist>
-                            <input class="btn btn-outline-secondary btn-sm" type="submit" value="Buscar">
+                            <input class="btn btn-outline-dark btn-sm" type="submit" value="Buscar">
                         </form>
                     </div> 
                 </div>

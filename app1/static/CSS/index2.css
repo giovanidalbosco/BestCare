@@ -500,7 +500,10 @@ a .adicionar{
 }
 /* fim telas internas com scroll bar*/
     
-    
+
+#teste:hover{
+    background-color: white;
+}
     
 
  
