@@ -520,11 +520,11 @@ a .adicionar{
     width: 100%;
 }
 /* fim telas internas com scroll bar*/
-    
-    
-    
 
- 
+#teste:hover{
+    background-color: white;
+    cursor: text;
+}
 
  
  
