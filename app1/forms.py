@@ -6,11 +6,21 @@ class LoginForm(forms.Form):
     usuario = forms.CharField(widget=forms.TextInput, label='Usuario', required=True)
     senha = forms.CharField(max_length=32, widget=forms.PasswordInput, label='Senha', required=True)
 
-class CadastroForm(forms.Form):
+class CadastroForm(forms.ModelForm):
     usuario = forms.CharField(widget=forms.TextInput, label='Usuario', required=True)
+    # endereco = forms.CharField(widget=forms.TextInput, label='Endereço', required=True)
+    # numero = forms.CharField(widget=forms.TextInput, label='Número', required=True)
+    # complemento = forms.CharField(widget=forms.TextInput, label='Complemento', required=True)
+    # cidade = forms.CharField(widget=forms.TextInput, label='Cidade', required=True)
+    # CPF = forms.CharField(widget=forms.TextInput, label='CPF', required=True)
+    # telefone = forms.CharField(widget=forms.TextInput, label='Telefone', required=True)
     email = forms.CharField(widget=forms.EmailInput, required=True)
     senha = forms.CharField(max_length=32, widget=forms.PasswordInput, label='Senha', required=True)
 
+    class Meta:
+        model = Pessoas
+        fields = '__all__'
+        exclude = ('pessoa_nome', 'pessoa_classe', 'pessoa_email', 'pessoa_comorbidade', 'pessoa_plano')
 
 class ComorbidadesForm(forms.ModelForm):
     

@@ -69,7 +69,6 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 .Caracteristicas{
@@ -114,48 +113,6 @@ body{
     color: red;
 }
 
-.formulario{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/*.formulario input{
-    background:rgba(204, 204, 197, 0.826);
-    font-weight: 700;
-    font-size: 14px;
-    border: none;
-    outline: none;
-    border-radius: 10px;
-    width: 350px;
-    height: 40px;
-    padding: 5px;
-    margin: 2%;
-    margin-top: 2%;
-}
-.login2 button{
-    background:rgba(204, 204, 197, 0.826);
-    font-weight: 700;
-    font-size: 14px;
-    border: none;
-    outline: none;
-    border-radius: 10px;
-    width: 150px;
-    height: 40px;
-    padding: 5px;
-    margin: 2%;
-    cursor: pointer;
-}
-
-.login2 button{   
-    text-decoration: none;
-    list-style-type: none;
-    color: #000;
-}
-.login2 button:hover{
-    color:rgba(14, 94, 200,1);
-}*/
 
 div a{
     color:rgb(76, 75, 75); 
@@ -164,33 +121,34 @@ div a{
     margin-top: 2%;
     margin-left: 8px;
     font-weight: 900;
-    font-size: 17px;
+    font-size: 16px;
     background:#FFFFFF;
     border: none;
 }
 
-div .criar_conta{
-    margin: 3%;
-    font-weight: 700;
-    font-size: 14px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    text-decoration: none;  
-}
-
-#img_best2{
+#img_best{
     width: 2.5em;
     height: 2em;
-    margin-top: -25%;
+    margin-top: -2%;
 }
 
 #best2{
     width: 4.5em;
     height: 0.8em;
     border-radius: 0;
-    margin-top: -20%; 
+    margin-top: 2.5%; 
 }
+.btn-entrar{
+    margin-left: 23%;
+    margin-top: 5%;
+}
+
+.btn-entrar button{
+    margin-left: 5%;
+    
+
+}
+
 
 /*Termina janela input*/
 
@@ -223,8 +181,8 @@ div .criar_conta{
 .btn-cad-geral .input-cadastrar{
     background:rgba(204, 204, 197, 0.826);
     color:#000;
-    width: 150px;
-    height: 30px;
+    width: 50px;
+    height: 10px;
     cursor: pointer;
 }
 .btn-cad-geral .input-cadastrar:hover{
@@ -241,18 +199,6 @@ div .criar_conta{
     align-items: center;    
 }
 
-#img_best{
-    width: 2.5em;
-    height: 2em;
-    margin-top: -1%;
-}
-
-#best2{
-    width: 4.5em;
-    height: 0.8em;
-    border-radius: 0;
-    margin-top: 3%; 
-}
 
 /*Fim Cadastro*/
 

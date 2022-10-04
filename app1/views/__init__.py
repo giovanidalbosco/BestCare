@@ -2,7 +2,7 @@ from http.client import ImproperConnectionState
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from app1.models import *
-from app1.forms import ComorbidadesForm, Uso_ConsumoForm, Estoque_IndividualForm, OcorrenciasForm, ResidentesForm, CuidadoresForm, ResponsavelForm, PrescricaoForm, SinalVitalForm, LoginForm, CadastroForm
+from app1.forms import *
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.contrib import messages

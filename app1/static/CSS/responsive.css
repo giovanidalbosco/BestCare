@@ -1,0 +1,80 @@
+
+@media (max-width: 670px){
+    .Caracteristicas{
+        margin-left: 10%;
+        
+    }
+
+    #img_best{
+        width: 2em;
+        height: 1.1em;
+        margin-top: 0%;
+        margin-left: 5%;
+    }
+        
+    #best2{
+        width: 4em;
+        height: 0.5em;
+        border-radius: 0;
+        margin-top: 2.5%; 
+    }
+}
+
+
+@media (max-width: 576px){
+    body{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        transition: 0.4 ease-in-out;
+        flex-direction: column;
+        justify-content:space-between;
+    }
+
+    .row img{
+        width: 2em;
+        height: 1.1em;
+    }
+
+    #best1{
+        width: 4em;
+        height: 0.5em;
+        border-radius:0;
+        margin-top: 22%;
+        margin-left: 10%;
+    }
+
+    #solucoes a{
+        font-size: 1em;
+    }
+
+    .Caracteristicas{
+        width: 85%;
+        height: 70vh;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .Caracteristicas h3{
+        font-size: 1.1em;
+    }
+
+    #img_best{
+        width: 2em;
+        height: 1.1em;
+        margin-top: 0%;
+        margin-left: 5%;
+    }
+    
+    #best2{
+        width: 4em;
+        height: 0.5em;
+        border-radius: 0;
+        margin-top: 2.5%; 
+    }
+
+    .carrossel1 #carousel img{
+        width: 100%;
+        height: 70vh;
+    }
+}
