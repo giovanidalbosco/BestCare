@@ -56,7 +56,7 @@ class ResidentesForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['pessoa_CPF'].widget.attrs.update({'class': 'mask-cpf'})
+        self.fields['id_pessoa_CPF'].widget.attrs.update({'class': 'mask-cpf'})
 
 
 
