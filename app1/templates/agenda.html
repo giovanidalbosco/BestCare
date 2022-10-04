@@ -3,8 +3,8 @@
 {% block content3 %}
 	<div>
 		<div class="clearfix">
-			<a class="btn btn-info ml-lg-3" href="/agenda?/{{ prev_month }}">Mês anterior</a>
-			<a class="btn btn-info right" href="/agenda?/{{ next_month }}">Próximo mês</a>
+			<a class="btn btn-info left" href="/agenda/?{{ prev_month }}">Mês anterior</a>
+			<a class="btn btn-info right" href="/agenda/?{{ next_month }}">Próximo mês</a>
 			<a class="btn btn-info right" href="/event/new">Novo Evento</a>
 			<table>
 				{{ calendar }}

@@ -72,7 +72,7 @@ OCORRENCIAS = (
         (7, 'Desidratacao'),
         (8, 'Desnutricao'),
         (9, 'Diarreia'),
-        (10 ,'Doencas Respiratorias'),
+        (10, 'Doencas Respiratorias'),
         (11, 'Dor Abdominal'),
         (12, 'Dor Epigastrica'),
         (13, 'dor Torassica'),
@@ -127,10 +127,10 @@ from .Cidades import Cidades
 from .Comorbidades import Comorbidades
 from .Uso_Consumo import Uso_Consumo
 from .Pessoas import Pessoas
-from .Event import Event
 from .Estoque_Individual import Estoque_Individual
 from .Documentos import Documentos
 from .Eventos import Eventos
 from .Ocorrencias import Ocorrencias
 from .Prescricao import Prescricao
 from .SinalVital import SinalVital
+from .Event import Event
