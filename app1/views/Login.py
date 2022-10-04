@@ -30,7 +30,7 @@ def Login(request):
         'mensagem': mensagem,
         'titulo': 'Login',
         'button_text': 'Entrar',
-        'link_text': 'Cadastrar',
+        'link_text': 'Cadastre-se',
         'link_href': '/cadastro'
     }
 

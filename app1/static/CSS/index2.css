@@ -87,7 +87,7 @@ body{
     pointer-events: none;
     transition: 0.3 ease-in-out;
     border-radius: 10px;
-    box-shadow: -2px 2px 15px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 8px 15px 8px rgba(0, 0, 0, 0.5);
     border: grey solid 1px;
     margin-left: 33%;
     margin-right: 33%;
@@ -152,13 +152,10 @@ body{
     text-decoration: none;
     list-style-type: none;
     color: #000;
-}*/
+}
 .login2 button:hover{
     color:rgba(14, 94, 200,1);
-}
-
-
-
+}*/
 
 div a{
     color:rgb(76, 75, 75); 
