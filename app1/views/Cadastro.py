@@ -38,7 +38,7 @@ def Cadastro(request):
         'mensagem': mensagem,
         'titulo': 'Registrar',
         'button_text': 'Registrar',
-        'link_text': 'Login',
+        'link_text': 'Entrar',
         'link_href': '/login'
     }
     return render(request, template_name='login.html', context=context, status=200)

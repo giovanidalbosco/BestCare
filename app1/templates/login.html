@@ -4,7 +4,7 @@
 <div>
     <div id="login" class="Caracteristicas">
         <div>
-            <div class="row text-start">
+            <div class="row">
                 <img src="/static/img/bestcare-logo.png" alt="Logo"  id="img_best">
                 <img src="/static/img/bestcare.png" alt="Logo" id="best2">
                 <a href="/" title="Fechar"class="fechar">x</a>
@@ -17,8 +17,10 @@
             {% endif %}
             {% csrf_token %}
             {{ form.as_table }}
-            <a href="{{link_href}}" >{{link_text}}</a>
-            <button type="submit" class="btn btn-primary">{{button_text}}</button>
+            <div class="btn-entrar">
+                <a href="{{link_href}}" >{{link_text}}</a>
+                <button type="submit" class="btn btn-primary">{{button_text}}</button>
+            </div>
         </form>   
     </div>
 </div>
