@@ -1,25 +1,38 @@
 {% extends "base.html" %}
-{% load static %}
-
 
 {% block content %}
-<div id="content">
-    <div class="container-fluid">
-        <div class="row">
-            <form class="col-md-4 col-lg-4 offset-md-4 offset-lg-4" method="POST" action="">
-                <h3 class="text-center">{{titulo}}</h3>
-
-                {% if mensagem is not None %}
-                    <div class="alert alert-{{ mensagem.type }}">{{ mensagem.text }}</div>
-                {% endif %}
-
-                {% csrf_token %}
-
-                {{ form.as_table }}
-
-                <a href="{{link_href}}" style="display: block; text-align: center; margin-bottom: 20px;">{{link_text}}</a>
-                <button type="submit" class="btn btn-primary">{{button_text}}</button>
-            </form>
+<div>
+    <div id="login" class="Caracteristicas">
+        <div>
+            <div class="row text-start">
+                <img src="/static/img/bestcare-logo.png" alt="Logo"  id="img_best">
+                <img src="/static/img/bestcare.png" alt="Logo" id="best2">
+                <a href="/" title="Fechar"class="fechar">x</a>
+            </div>
+        </div>
+        <h3 class="text-center">{{titulo}}</h3>
+        <form class="form form-table"  method="POST">
+            {% if mensagem is not None %}
+                <div class="alert alert-{{ mensagem.type }}">{{ mensagem.text }}</div>
+            {% endif %}
+            {% csrf_token %}
+            {{ form.as_table }}
+            <a href="{{link_href}}" >{{link_text}}</a>
+            <button type="submit" class="btn btn-primary">{{button_text}}</button>
+        </form>   
+    </div>
+</div>
+<div class="container" style="opacity:0.4;">
+    <div class="row">
+        <div class="col text-dark font-italic bg-transparent" style="margin-top: 5%;">
+            <h2 class=" display-5 p-lg-4">Pontualidade</h2>
+            <h2 class=" display-5 p-lg-4">Compromisso</h2>
+            <h2 class=" display-5 p-lg-4">Transparência</h2>
+            <h2 class=" display-5 p-lg-4">Comunicação em tempo real</h2>
+        </div>
+        <div class= "col" style="margin-top: 5%;">
+        <img src="/static/img/imagem1.jpg" alt="Imagem Apresentação" id="imagemApresentacao" class="img-thumbnail">
+        <figcaption class="figure-caption">Sempre ao seu lado.</figcaption>
         </div>
     </div>
 </div>
