@@ -329,6 +329,19 @@ div a{
     width: 100%;
 }
 
+.content3 ::-webkit-scrollbar {
+    width: 12px;
+    background: #5b878db0;
+}
+.content3 ::-webkit-scrollbar-thumb {
+    background: rgb(107, 132, 150);
+    border-radius: 3px;
+}
+.content3 ::-webkit-scrollbar-button{
+    background-color:rgb(107, 132, 150);
+    border-radius: 3px;
+}
+
 #search{
     width: 200px;
     height: 32px;
