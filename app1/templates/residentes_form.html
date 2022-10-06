@@ -10,6 +10,7 @@
 {% if residente.id != null %}
         <h4>Editar Residente '{{residente.pessoa_nome}}'</h4>
     {% else %}
+    <a class="btn btn-info left clearfix" href="/residentes_list"> Voltar </a>
         <h4 class="d-flex justify-content-center py-4">Adicionar Residente</h4>
     {% endif %}
 
@@ -17,8 +18,8 @@
         {% csrf_token %}
         <table class="form form-table">
             {{ form.as_table}}   
+            <tr><td colspan="2"><button type="submit" class="btn btn-info right"> Salvar </button></td></tr>
         </table>
-        <input type="submit" class="btn btn-outline-info mx-auto d-block" value="Salvar">
     </form>
 <script src={% static '/jquery-3.6.1.min.js' %}></script>
 <script src={% static '/jquery.mask.min.js' %}></script>

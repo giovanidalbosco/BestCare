@@ -8,6 +8,7 @@
     {% if cuidadores.id != null %}
         <h4>Editar Cuidador '{{cuidadores.pessoa_nome}}'</h4>
     {% else %}
+    <a class="btn btn-info left clearfix" href="/cuidadores_list"> Voltar </a>
         <h4 class="d-flex justify-content-center py-4">Adicionar Cuidador</h4>
     {% endif %}
 
@@ -15,8 +16,8 @@
         {% csrf_token %}
         <table class="form form-table">
             {{ form.as_table}}
+            <tr><td colspan="2"><button type="submit" class="btn btn-info right"> Salvar </button></td></tr>
         </table>
-        <input type="submit" class="btn btn-outline-info mx-auto d-block" value="Salvar">
     </form>
 
 {% endblock content3 %}

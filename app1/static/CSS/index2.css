@@ -35,9 +35,6 @@ body{
 #header a{
     color:rgba(18, 31, 52, 0.888);
 }
-#solucoes a{
-    font-size: 1.3em;
-}
 
 .header-logout{
     width: 95%;
