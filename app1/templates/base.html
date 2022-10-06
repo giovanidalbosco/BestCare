@@ -41,8 +41,8 @@
                     <a href="/quemSomos" type="button" class="btn btn-link">QuemSomos</a>
                 </div>
                 <div class="row">
-                    <a href="/cadastro" type="button" class="btn btn-outline-secondary btn">Cadastre-se</a>
-                    <a href="/login" type="button" class="btn btn-outline-secondary btn ">Entrar</a>
+                    <a onclick="toggleModal()" type="button" class="btn btn-outline-secondary btn">Cadastre-se</a>
+                    <a onclick="toggleModal()" type="button" class="btn btn-outline-secondary btn ">Entrar</a>
                 </div>
             </div>
             {% endif %}
@@ -50,6 +50,51 @@
     </div>
     {% block content %}
     {% endblock %}
+
+    </div>
+    <div class="modal-background" id="modal">
+        <div id="login" class="Caracteristicas">
+            <div>
+                <div class="row">
+                    <img src="/static/img/bestcare-logo.png" alt="Logo"  id="img_best">
+                    <img src="/static/img/bestcare.png" alt="Logo" id="best2">
+                    <a href="/" title="Fechar"class="fechar">x</a>
+                </div>
+            </div id="check-in">
+            <h3 class="text-center">{{titulo}}</h3>
+            <form class="form form-table"  method="POST">
+                {% if mensagem is not None %}
+                    <div class="alert alert-{{ mensagem.type }}">{{ mensagem.text }}</div>
+                {% endif %}
+                {% csrf_token %}
+                {{ form.as_table }}
+                <div class="btn-entrar">
+                    <a href="{{link_href}}" >{{link_text}}</a>
+                    <button type="submit" class="btn btn-primary btn-sm">{{button_text}}</button>
+                </div>
+            </form>   
+        </div>
+    </div>
+
+    <div class="modal-background" id="modal">
+        <div class="btn-cad-geral">
+            <div class=" container cadastro-login">
+                <div class="row">
+                  <img src="/static/img/bestcare-logo.png" alt="Logo"  id="img_best">
+                  <img src="/static/img/bestcare.png" alt="Logo" id="best2">
+                  <a href="/" title="Fechar"class="fechar">x</a>
+                </div>
+            </div>
+            <h3 class="text-secondary text-center mt-5">Cadastro</h3>
+            <form action="" method="POST" class="input-btn">    
+                {% csrf_token %}  
+                <table>
+                    {{ form.as_table}}
+                </table>       
+                <input class="input-cadastrar" type="submit" value="Cadastrar">
+            </form>    
+        </div>
+    </div>
 
     <div class="card-footer text-center text-white bg-dark ">
         <p class="card-text" id="names"> &copy; Giovani Dalbosco &nbsp &nbsp Jackson Castellain &nbsp &nbsp Lucas Rezende &nbsp &nbsp Samir Buhatem</p>
