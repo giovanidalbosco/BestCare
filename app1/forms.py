@@ -1,15 +1,26 @@
-from random import choices
-from tkinter import Widget
 from django import forms
 from .models import *
 
 
-class Cadastro(forms.ModelForm):
-    
+class LoginForm(forms.Form):
+    usuario = forms.CharField(widget=forms.TextInput, label='Usuario', required=True)
+    senha = forms.CharField(max_length=32, widget=forms.PasswordInput, label='Senha', required=True)
+
+class CadastroForm(forms.ModelForm):
+    usuario = forms.CharField(widget=forms.TextInput, label='Usuario', required=True)
+    # endereco = forms.CharField(widget=forms.TextInput, label='Endereço', required=True)
+    # numero = forms.CharField(widget=forms.TextInput, label='Número', required=True)
+    # complemento = forms.CharField(widget=forms.TextInput, label='Complemento', required=True)
+    # cidade = forms.CharField(widget=forms.TextInput, label='Cidade', required=True)
+    # CPF = forms.CharField(widget=forms.TextInput, label='CPF', required=True)
+    # telefone = forms.CharField(widget=forms.TextInput, label='Telefone', required=True)
+    email = forms.CharField(widget=forms.EmailInput, required=True)
+    senha = forms.CharField(max_length=32, widget=forms.PasswordInput, label='Senha', required=True)
+
     class Meta:
         model = Pessoas
-
-        fields = ('pessoa_nome','pessoa_CPF','pessoa_email',)
+        fields = '__all__'
+        exclude = ('pessoa_nome', 'pessoa_classe', 'pessoa_email', 'pessoa_comorbidade', 'pessoa_plano')
 
 class ComorbidadesForm(forms.ModelForm):
     
@@ -47,6 +58,7 @@ class ResidentesForm(forms.ModelForm):
             'pessoa_numero',
             'pessoa_compl',
             'pessoa_cidade',
+            'pessoa_CEP',
             'pessoa_classe',
             'pessoa_CPF',
             'pessoa_comorbidade',
@@ -55,8 +67,8 @@ class ResidentesForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self.fields['pessoa_CEP'].widget.attrs.update({'class': 'mask-cep'})
         self.fields['pessoa_CPF'].widget.attrs.update({'class': 'mask-cpf'})
-
 
 
 class CuidadoresForm(forms.ModelForm):
@@ -69,13 +81,20 @@ class CuidadoresForm(forms.ModelForm):
             'pessoa_numero',
             'pessoa_compl',
             'pessoa_cidade',
+            'pessoa_CEP',
             'pessoa_classe',
             'pessoa_CPF',
             'pessoa_telefone',
             'pessoa_email',
         )
 
-
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['pessoa_CEP'].widget.attrs.update({'class': 'mask-cep'})
+        self.fields['pessoa_CPF'].widget.attrs.update({'class': 'mask-cpf'})
+        self.fields['pessoa_telefone'].widget.attrs.update({'class': 'mask-telefone'})
+        
+             
 class ResponsavelForm(forms.ModelForm):
     
     class Meta:
@@ -86,12 +105,19 @@ class ResponsavelForm(forms.ModelForm):
             'pessoa_numero',
             'pessoa_compl',
             'pessoa_cidade',
+            'pessoa_CEP',
             'pessoa_classe',
             'pessoa_CPF',
             'pessoa_telefone',
             'pessoa_email',
         )
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['pessoa_CEP'].widget.attrs.update({'class': 'mask-cep'})
+        self.fields['pessoa_CPF'].widget.attrs.update({'class': 'mask-cpf'})
+        self.fields['pessoa_telefone'].widget.attrs.update({'class': 'mask-telefone'})
+        
 
 class PrescricaoForm(forms.ModelForm):
     
@@ -131,20 +157,19 @@ class SinalVitalForm(forms.ModelForm):
         )
 
 
-
 class EventForm(forms.ModelForm):
-  class Meta:
-    model = Event
-    # datetime-local is a HTML5 input type, format to make date time show on fields
-    widgets = {
-      'start_time': forms.DateInput(attrs={'type': 'datetime-local'}, format='%Y-%m-%dT%H:%M'),
-      'end_time': forms.DateInput(attrs={'type': 'datetime-local'}, format='%Y-%m-%dT%H:%M'),
-    }
-    fields = '__all__'
+    class Meta:
+        model = Event
+        # datetime-local is a HTML5 input type, format to make date time show on fields
+        widgets = {
+        'start_time': forms.DateInput(attrs={'type': 'datetime-local'}, format='%Y-%m-%dT%H:%M'),
+        'end_time': forms.DateInput(attrs={'type': 'datetime-local'}, format='%Y-%m-%dT%H:%M'),
+        }
+        fields = '__all__'
 
-  def __init__(self, *args, **kwargs):
-    super(EventForm, self).__init__(*args, **kwargs)
-    # input_formats to parse HTML5 datetime-local input to datetime field
-    self.fields['start_time'].input_formats = ('%Y-%m-%dT%H:%M',)
-    self.fields['end_time'].input_formats = ('%Y-%m-%dT%H:%M',)
+    def __init__(self, *args, **kwargs):
+        super(EventForm, self).__init__(*args, **kwargs)
+        # input_formats to parse HTML5 datetime-local input to datetime field
+        self.fields['start_time'].input_formats = ('%Y-%m-%dT%H:%M',)
+        self.fields['end_time'].input_formats = ('%Y-%m-%dT%H:%M',)
 

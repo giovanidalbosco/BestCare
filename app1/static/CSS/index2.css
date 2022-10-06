@@ -66,7 +66,6 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 .Caracteristicas{
@@ -74,23 +73,24 @@ body{
     width: 28.12em;
     height: 28.12em;
     padding: 2%;
-    top:25%;
+    top:18%;
     background-color:#FFFFFF;
     z-index: 99999;
-    opacity:0;
+    /*opacity:1;*/
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
     pointer-events: none;
     transition: 0.3 ease-in-out;
     border-radius: 10px;
+    box-shadow: 0px 8px 15px 8px rgba(0, 0, 0, 0.5);
     border: grey solid 1px;
     margin-left: 33%;
     margin-right: 33%;
 }
        
-.Caracteristicas:target{
-    opacity: 1;
+.Caracteristicas{
+    /*opacity: 1;*/
     pointer-events: auto;
 }
 
@@ -100,6 +100,7 @@ body{
     right: 0.9em;
     top: 2%;
     text-align: center;
+    font-size: 1.1em;
     line-height: 25px;
     background:#FFFFFF;
     color:#000;
@@ -110,52 +111,6 @@ body{
     color: red;
 }
 
-.formulario{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.formulario input{
-    background:rgba(204, 204, 197, 0.826);
-    font-weight: 700;
-    font-size: 14px;
-    border: none;
-    outline: none;
-    border-radius: 10px;
-    width: 350px;
-    height: 40px;
-    padding: 5px;
-    margin: 2%;
-    margin-top: 2%;
-}
-.login2 button{
-    background:rgba(204, 204, 197, 0.826);
-    font-weight: 700;
-    font-size: 14px;
-    border: none;
-    outline: none;
-    border-radius: 10px;
-    width: 150px;
-    height: 40px;
-    padding: 5px;
-    margin: 2%;
-    cursor: pointer;
-}
-
-.login2 button{   
-    text-decoration: none;
-    list-style-type: none;
-    color: #000;
-}
-.login2 button:hover{
-    color:rgba(14, 94, 200,1);
-}
-
-::placeholder{
-    text-align:start;
-}
 
 div a{
     color:rgb(76, 75, 75); 
@@ -164,33 +119,32 @@ div a{
     margin-top: 2%;
     margin-left: 8px;
     font-weight: 900;
-    font-size: 17px;
+    font-size: 16px;
     background:#FFFFFF;
     border: none;
 }
 
-div .criar_conta{
-    margin: 3%;
-    font-weight: 700;
-    font-size: 14px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    text-decoration: none;  
-}
-
-#img_best3{
+#img_best{
     width: 2.5em;
     height: 2em;
-    margin-top: -25%;
+    margin-top: -2%;
 }
 
-#best3{
+#best2{
     width: 4.5em;
     height: 0.8em;
     border-radius: 0;
-    margin-top: -20%; 
+    margin-top: 2.5%; 
 }
+.btn-entrar{
+    margin-left: 23%;
+    margin-top: 5%;
+}
+
+.btn-entrar button{
+    margin-left: 5%;
+}
+
 
 /*Termina janela input*/
 
@@ -204,7 +158,7 @@ div .criar_conta{
     top:25%;
     background-color:#FFFFFF;
     z-index: 99999;
-    opacity:0;
+    opacity:1;
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
@@ -223,8 +177,8 @@ div .criar_conta{
 .btn-cad-geral .input-cadastrar{
     background:rgba(204, 204, 197, 0.826);
     color:#000;
-    width: 150px;
-    height: 30px;
+    width: 50px;
+    height: 10px;
     cursor: pointer;
 }
 .btn-cad-geral .input-cadastrar:hover{
@@ -241,18 +195,6 @@ div .criar_conta{
     align-items: center;    
 }
 
-#img_best{
-    width: 2.5em;
-    height: 2em;
-    margin-top: -1%;
-}
-
-#best2{
-    width: 4.5em;
-    height: 0.8em;
-    border-radius: 0;
-    margin-top: 3%; 
-}
 
 /*Fim Cadastro*/
 
@@ -524,7 +466,26 @@ a .adicionar{
 }
 
  
+/* teste modal login*/ 
+
+.modal-background{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    /*top:0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(2px); /*DESFOQUE*/
+    /*display: flex;
+    align-items: center;
+    justify-content: center;*/
  
+    display: none;
+}
  
+.modal-background.modal-visible{
+    display: flex;
+}
 
   

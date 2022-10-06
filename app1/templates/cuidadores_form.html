@@ -1,5 +1,6 @@
 {% extends 'base_telainicial.html' %}
 {% load crispy_forms_tags %}
+{% load static %}
 
 {% block title %}{{cuidadores.pessoa_nome}}{% endblock %}
 
@@ -19,5 +20,27 @@
             <tr><td colspan="2"><button type="submit" class="btn btn-info right"> Salvar </button></td></tr>
         </table>
     </form>
+
+    {% block script%}
+    <script src="{% static 'JS/jquery.mask.min.js' %}"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.mask-cpf').mask('000.000.000-00');
+            $('.mask-cep').mask('00.000-000');
+            
+            var SPMaskBehavior = function (val) {
+                return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+                },
+                spOptions = {
+                onKeyPress: function(val, e, field, options) {
+                    field.mask(SPMaskBehavior.apply({}, arguments), options);
+                    }
+                };
+
+                $('.mask-telefone').mask(SPMaskBehavior, spOptions);
+            });   
+    </script>
+    {% endblock%}
 
 {% endblock content3 %}

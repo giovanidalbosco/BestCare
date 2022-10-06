@@ -2,7 +2,7 @@ from http.client import ImproperConnectionState
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from app1.models import *
-from app1.forms import Cadastro, ComorbidadesForm, Uso_ConsumoForm, Estoque_IndividualForm, OcorrenciasForm, ResidentesForm, CuidadoresForm, ResponsavelForm, PrescricaoForm, SinalVitalForm
+from app1.forms import *
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.contrib import messages
@@ -10,7 +10,8 @@ from django.core.mail import send_mail
 
 from .Base_telainicial import Base_telainicial
 from .Agenda import *
-from .Cad import Cad
+from .Cadastro import Cadastro
+from .Login import Login
 from .Comorbidades_delete import Comorbidades_delete
 from .Comorbidades_edit import Comorbidades_edit
 from .Comorbidades_add import Comorbidades_add
@@ -50,5 +51,3 @@ from .SinalVital_list import SinalVital_list
 from .SinalVital_add import SinalVital_add
 from .SinalVital_edit import SinalVital_edit
 from .SinalVital_delete import SinalVital_delete
-
-

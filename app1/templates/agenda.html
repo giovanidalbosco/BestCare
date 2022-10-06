@@ -7,8 +7,19 @@
 		<a class="btn btn-info left" href="/event/new"> New Event </a>
 	</div>
 	<div>
+<<<<<<< HEAD
 		<table>
 			{{ calendar }}
 		</table>
+=======
+		<div class="clearfix">
+			<a class="btn btn-info left" href="/agenda/?{{ prev_month }}">Mês anterior</a>
+			<a class="btn btn-info right" href="/agenda/?{{ next_month }}">Próximo mês</a>
+			<a class="btn btn-info right" href="/event/new">Novo Evento</a>
+			<table>
+				{{ calendar }}
+			</table>
+		</div>
+>>>>>>> 96db5eafcf103ba2c42f81028469715d4b713d7d
 	</div>
 {% endblock content3 %}

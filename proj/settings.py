@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app1',
-    'accounts',
     'crispy_forms'    
 ]
 
@@ -132,7 +131,7 @@ TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -145,8 +144,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = '/login'
 LOGIN_REDIRECT_URL = '/agenda'
-LOGOUT_REDIRECT_URL = '/accounts/login'
+# LOGOUT_URL = '/logout'
+LOGOUT_REDIRECT_URL = '/login'
 
 #Email
 #DEFAULT_FROM_EMAIL = ''

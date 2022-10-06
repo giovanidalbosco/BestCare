@@ -7,10 +7,8 @@ class Uso_Consumo(models.Model):
     consumo_apresentacao = models.IntegerField(verbose_name='Apresentacao', choices=APRESENTACAO, default=None)
     consumo_via = models.IntegerField(choices=VIA, default=None)
 
-
     def __str__(self):
         return self.consumo_nome
-
 
     class Meta:
         ordering = ['consumo_nome']
