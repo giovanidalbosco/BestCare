@@ -8,6 +8,8 @@ def Residentes_add(request):
         if form.is_valid():
             novo_residente = form.save(commit=False)
             novo_residente.save()
+            if hasattr(form, 'save_m2m'):
+                form.save_m2m()
             return HttpResponseRedirect('/residentes_list')
     else:
         form = ResidentesForm()
