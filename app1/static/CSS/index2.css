@@ -334,6 +334,12 @@ div a{
     height: 32px;
     border-radius: 4px;
 }
+
+#search:hover {
+    background-color: white;
+    cursor: text;
+}
+
 a .adicionar{
     margin-top: -5%;
 }
@@ -460,18 +466,11 @@ a .adicionar{
 }
 /* fim telas internas com scroll bar*/
 
-#teste:hover{
-    background-color: white;
-    cursor: text;
-}
-
  
 /* teste modal login*/ 
-
 .modal-background{
     width: 100%;
     height: 100%;
-
     position: absolute;
     /*top:0;
     left: 0;
@@ -480,12 +479,10 @@ a .adicionar{
     /*display: flex;
     align-items: center;
     justify-content: center;*/
- 
     display: none;
 }
  
 .modal-background.modal-visible{
     display: flex;
 }
-
   
