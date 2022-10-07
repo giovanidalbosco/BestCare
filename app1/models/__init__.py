@@ -93,14 +93,6 @@ OCORRENCIAS = (
         (28, 'Retirada de Dispositivo')
     )
 
-FREQUENCIA = (
-        (1, 'Horario'),
-        (2, 'Diario'),
-        (3, 'Semanal'),
-        (4, 'Mensal'),
-        (5, 'Dias Alternados'),
-        (6, 'Criterio Medico')
-    )
 DOSE = (
         (1, '1/4'),
         (2, '1/2'),
@@ -128,9 +120,6 @@ from .Comorbidades import Comorbidades
 from .Uso_Consumo import Uso_Consumo
 from .Pessoas import Pessoas
 from .Estoque_Individual import Estoque_Individual
-from .Documentos import Documentos
-from .Eventos import Eventos
 from .Ocorrencias import Ocorrencias
-from .Prescricao import Prescricao
 from .SinalVital import SinalVital
 from .Event import Event
