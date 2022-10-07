@@ -10,6 +10,8 @@ def Cadastro(request):
     
     if request.method == 'POST':
         nomeUsuario = request.POST['usuario']
+        nomeCompleto = request.POST['nomeCompleto']
+        entidade = request.POST['entidade']
         email = request.POST['email']
         senha = request.POST['senha']
         cadastroForm = CadastroForm(request.POST)
@@ -28,6 +30,9 @@ def Cadastro(request):
                 # novo_cuidador.cria_cuidador(nomeUsuario, email)
                 # novo_cuidador.save()
                 usuario = User.objects.create_user(nomeUsuario, email, senha)
+                usuario.first_name = nomeCompleto
+                usuario.last_name = entidade
+                usuario.save()
                 if usuario is not None:
                     mensagem = { 'type': 'success', 'text': 'Conta criada com sucesso!' }
                 else:
