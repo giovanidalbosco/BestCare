@@ -120,9 +120,7 @@ from .Comorbidades import Comorbidades
 from .Uso_Consumo import Uso_Consumo
 from .Pessoas import Pessoas
 from .Estoque_Individual import Estoque_Individual
-from .Documentos import Documentos
 from .Eventos import Eventos
 from .Ocorrencias import Ocorrencias
-from .Prescricao import Prescricao
 from .SinalVital import SinalVital
 from .Event import Event

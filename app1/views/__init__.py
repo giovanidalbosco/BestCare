@@ -43,10 +43,6 @@ from .Responsavel_list import Responsavel_list
 from .Responsavel_add import Responsavel_add
 from .Responsavel_edit import Responsavel_edit
 from .Responsavel_delete import Responsavel_delete
-from .Prescricao_list import Prescricao_list
-from .Prescricao_add import Prescricao_add
-from .Prescricao_edit import Prescricao_edit
-from .Prescricao_delete import Prescricao_delete
 from .SinalVital_list import SinalVital_list
 from .SinalVital_add import SinalVital_add
 from .SinalVital_edit import SinalVital_edit

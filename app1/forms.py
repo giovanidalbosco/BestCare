@@ -119,21 +119,6 @@ class ResponsavelForm(forms.ModelForm):
         self.fields['pessoa_telefone'].widget.attrs.update({'class': 'mask-telefone'})
         
 
-class PrescricaoForm(forms.ModelForm):
-    
-    class Meta:
-        model = Prescricao
-        fields = (
-            'prescricao_pessoa_nome',
-            'prescricao_consumo_nome',
-            'prescricao_aprazamento',
-            'prescricao_dose',
-            'prescricao_inicio',
-            'prescricao_fim',
-            'prescricao_observacao',
-        )
-
-
 class SinalVitalForm(forms.ModelForm):
     sinalVital_pessoa_nome = forms.ModelChoiceField(
         widget = forms.Select,
