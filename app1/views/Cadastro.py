@@ -24,9 +24,9 @@ def Cadastro(request):
             elif verificaEmail is not None:
                 mensagem = { 'type': 'danger', 'text': 'Já existe um usuário com este e-mail!' }
             else:
-                novo_cuidador = Pessoas()
-                novo_cuidador.cria_cuidador(nomeUsuario, email)
-                novo_cuidador.save()
+                # novo_cuidador = Pessoas()
+                # novo_cuidador.cria_cuidador(nomeUsuario, email)
+                # novo_cuidador.save()
                 usuario = User.objects.create_user(nomeUsuario, email, senha)
                 if usuario is not None:
                     mensagem = { 'type': 'success', 'text': 'Conta criada com sucesso!' }
