@@ -14,4 +14,4 @@ class Event(models.Model):
     @property
     def get_html_url(self):
         url = reverse('event_edit', args=(self.id,))
-        return f'<a href="{url}"> {self.title} </a>'
+        return f'<a href="{url}"> {self.get_title_display()} </a>'
