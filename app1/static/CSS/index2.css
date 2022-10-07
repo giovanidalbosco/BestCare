@@ -11,7 +11,7 @@
 body{
     width: 100%;
     height: 100vh;
-    background: var(--cor-fundo);
+    background:#f5f2f2d5;
     transition: 0.3 ease-in-out;
 
     display: flex;
@@ -70,9 +70,9 @@ body{
 
 .Caracteristicas{
     position: fixed;
-    width: 28.12em;
-    height: 28.12em;
-    padding: 2%;
+    width: auto;
+    height: auto;
+    padding: 1.5%;
     top:18%;
     background-color:#FFFFFF;
     z-index: 99999;
@@ -152,8 +152,8 @@ div a{
 
 .btn-cad-geral{
     position: fixed;
-    width: 28.12em;
-    height: 28.12em;
+    width: 38.12em;
+    height: 38.12em;
     padding: 2%;
     top:25%;
     background-color:#FFFFFF;
