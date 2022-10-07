@@ -330,7 +330,7 @@ div a{
 }
 
 .content3 ::-webkit-scrollbar {
-    width: 12px;
+    width: 15px;
     background: #5b878db0;
 }
 .content3 ::-webkit-scrollbar-thumb {
@@ -498,4 +498,64 @@ a .adicionar{
 .modal-background.modal-visible{
     display: flex;
 }
+
+/*fim teste modal*/
+
+/*teste excluir*/
+.modal-excluir-background{
+    position: fixed;
+    width: 18.12em;
+    height: 18.12em;
+    padding: 2%;
+    top:18%;
+    background-color:#FFFFFF;
+    z-index: 99999;
+    /*opacity:1;*/
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    transition: 0.3 ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px 8px rgba(0, 0, 0, 0.5);
+    border: grey solid 1px;
+    margin-left: 33%;
+    margin-right: 33%;
+    pointer-events: auto;
+}
+
+.modal-excluir-background{
+    position: fixed;
+    width: 28.12em;
+    height: 28.12em;
+    padding: 2%;
+    top:25%;
+    background-color:#FFFFFF;
+    z-index: 99999;
+    opacity:1;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    transition: 0.3 ease-in-out;
+    border-radius: 10px;
+    border: grey solid 1px;
+    margin-left: 33%;
+    margin-right: 33%;
+}
+
+.excluir-background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+}
+
+.modal-excluir-background.exclud-visible{
+    display: flex;
+}
+
+
+
+
   
