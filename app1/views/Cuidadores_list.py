@@ -5,7 +5,7 @@ from app1.views import *
 def Cuidadores_list(request):
     search = request.GET.get('search')
     if search:
-        cuidador = Pessoas.objects.filter(pessoa_nome__icontains=search)
+        cuidador = Pessoas.objects.filter(pessoa_classe__icontains='1').filter(pessoa_nome__icontains=search)
     else:
         cuidador = Pessoas.objects.filter(pessoa_classe__icontains='1')
 

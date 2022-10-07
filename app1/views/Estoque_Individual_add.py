@@ -9,6 +9,8 @@ def Estoque_Individual_add(request, nome):
         if form.is_valid():
             estoque_Individual = form.save(commit=False)
             estoque_Individual.save()
+            if hasattr(form, 'save_m2m'):
+                form.save_m2m()
             return HttpResponseRedirect('/estoque_individual_list')
             # return redirect('/estoque_individual_list')
     else:

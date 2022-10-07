@@ -5,7 +5,7 @@ from app1.views import *
 def Responsavel_list(request):
     search = request.GET.get('search')
     if search:
-        responsavel = Pessoas.objects.filter(pessoa_nome__icontains=search)
+        responsavel = Pessoas.objects.filter(pessoa_classe__icontains='3').filter(pessoa_nome__icontains=search)
     else:
         responsavel = Pessoas.objects.filter(pessoa_classe__icontains='3')
 
