@@ -43,7 +43,18 @@ class Estoque_IndividualForm(forms.ModelForm):
 
 
 class OcorrenciasForm(forms.ModelForm):
-    
+    ocorrencia_pessoa_nome = forms.ModelChoiceField(
+        widget = forms.Select,
+        queryset = Pessoas.objects.filter(pessoa_classe=2),
+        label = 'Residente'
+    )
+
+    ocorrencia_pessoa_cuidador = forms.ModelChoiceField(
+        widget = forms.Select,
+        queryset = Pessoas.objects.filter(pessoa_classe=1),
+        label = 'Cuidador'
+    )
+
     class Meta:
         model = Ocorrencias
         fields = ('ocorrencia_nome', 'ocorrencia_pessoa_nome', 'ocorrencia_pessoa_cuidador', 'ocorrencia_observacao',)
