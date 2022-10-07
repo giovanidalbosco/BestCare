@@ -3,11 +3,12 @@ from .models import *
 
 
 class LoginForm(forms.Form):
-    usuario = forms.CharField(widget=forms.TextInput, label='Usuario', required=True)
+    usuario = forms.CharField(widget=forms.TextInput, label='Login', required=True)
     senha = forms.CharField(max_length=32, widget=forms.PasswordInput, label='Senha', required=True)
 
 class CadastroForm(forms.Form):
-    usuario = forms.CharField(widget=forms.TextInput, label='Usuario', required=True)
+    usuario = forms.CharField(widget=forms.TextInput, label='Login', required=True)
+    nomeCompleto = forms.CharField(widget=forms.TextInput, label='Nome Completo', required=True)
     entidade = forms.CharField(widget=forms.TextInput, label='Entidade', required=True)
     # endereco = forms.CharField(widget=forms.TextInput, label='Endereço', required=True)
     # numero = forms.CharField(widget=forms.TextInput, label='Número', required=True)
