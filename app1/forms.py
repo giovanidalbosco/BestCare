@@ -126,7 +126,6 @@ class PrescricaoForm(forms.ModelForm):
         fields = (
             'prescricao_pessoa_nome',
             'prescricao_consumo_nome',
-            'prescricao_frequencia',
             'prescricao_aprazamento',
             'prescricao_dose',
             'prescricao_inicio',
