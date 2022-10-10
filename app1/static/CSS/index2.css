@@ -367,11 +367,6 @@ a .adicionar{
 /*Fim soluções*/
 
 .btn-cad-geral{
-    display: flex;
-    flex-direction: column;
-}
-
-.btn-cad-geral{
     position: fixed;
     width: 31em;
     height: 28em;
@@ -383,6 +378,8 @@ a .adicionar{
     margin-left: 33%;
     margin-right: 33%;
     align-items:center;
+    display: flex;
+    flex-direction: column;
 }
 .input-btn input{
     top:10%;
@@ -410,15 +407,8 @@ a .adicionar{
 }
 /* fim telas internas com scroll bar*/
 
-.btn-light {
-    border: none;
-}
-
 .btn-light:hover {
     background-color: #003f69;
     color: black;
+    transition-duration: 0.3s;
 }
-
-
-
-
