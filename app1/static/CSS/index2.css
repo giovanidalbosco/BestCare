@@ -29,6 +29,10 @@ body{
     margin-right: 2%;
 }
 
+#header-button:hover{
+    color:#000
+}
+
 .row .img {
     width: 3.5em;
     height: 2.3em;
@@ -58,6 +62,10 @@ body{
 #header a {
     color:#FFFFFF;
     font-weight:800; 
+}
+
+#header a:hover{
+    color: #000;
 }
 
 /*Fim do header*
@@ -149,7 +157,7 @@ div a{
     margin-top: 1.8%; 
 }
 .btn-entrar{
-    margin-left: 23%;
+    margin-left: 31%;
     margin-top: 5%;
 }
 
@@ -170,23 +178,29 @@ div a{
 
 /*Início Cadastro*/
 
-.btn-cad-geral .input-cadastrar{
+/*.btn-cad-geral .input-cadastrar{
     background:rgba(204, 204, 197, 0.826);
     cursor: pointer;
-}
+    margin-left: 38%;
+}*/
 .btn-cad-geral .input-cadastrar:hover{
     color:rgba(14, 94, 200,1);
 }
 
-.input-btn .input-cadastrar{
-    margin-left: 33%;
+.btn-cad-geral .input-cadastrar{
+    margin-left: 38%;
+}
+
+
+/*.input-btn .input-cadastrar{
+    margin-left: 38%;
     margin-right: 33%;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;    
-}
+}*/
 
 
 /*Fim Cadastro*/
@@ -249,8 +263,8 @@ div a{
     margin-left: 10%
 }
 #desenvolvedores{
-    font-size: 4em;
-    margin-top: 9%;
+    font-size: 3.5em;
+    margin-top: 8%;
 }
 
 #div-dev{
@@ -302,7 +316,7 @@ div a{
     background:url("/static/img/fundo-inicial.jpeg");
     width: 100%;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
 }
 
 .back{
@@ -310,6 +324,7 @@ div a{
     width: 13%;
     height: 100%;  
 }
+
 
 #base_inicial_solucoes{
     margin-top: 48%;
@@ -334,7 +349,7 @@ div a{
     background: rgb(107, 132, 150);
     border-radius: 3px;
 }
-.content3 ::-webkit-scrollbar-button{
+.content3 ::-webkit-scrollbar-button {
     background-color:rgb(107, 132, 150);
     border-radius: 3px;
 }
@@ -366,11 +381,6 @@ a .adicionar{
 /*Fim soluções*/
 
 .btn-cad-geral{
-    display: flex;
-    flex-direction: column;
-}
-
-.btn-cad-geral{
     position: fixed;
     width: 31em;
     height: 28em;
@@ -382,6 +392,8 @@ a .adicionar{
     margin-left: 33%;
     margin-right: 33%;
     align-items:center;
+    display: flex;
+    flex-direction: column;
 }
 .input-btn input{
     top:10%;
@@ -409,9 +421,8 @@ a .adicionar{
 }
 /* fim telas internas com scroll bar*/
 
-
-
-
-
-
-  
+.btn-light:hover {
+    background-color: #003f69;
+    color: black;
+    transition-duration: 0.3s;
+}
