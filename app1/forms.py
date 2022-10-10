@@ -72,7 +72,7 @@ class ResidentesForm(forms.ModelForm):
             'pessoa_compl',
             'pessoa_cidade',
             'pessoa_CEP',
-            'pessoa_classe',
+            # 'pessoa_classe',
             'pessoa_CPF',
             'pessoa_comorbidade',
             'pessoa_plano',

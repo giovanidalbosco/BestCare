@@ -7,6 +7,7 @@ def Residentes_add(request):
         form = ResidentesForm(request.POST)
         if form.is_valid():
             novo_residente = form.save(commit=False)
+            novo_residente.pessoa_classe = '2'
             novo_residente.save()
             if hasattr(form, 'save_m2m'):
                 form.save_m2m()

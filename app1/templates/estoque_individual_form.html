@@ -6,7 +6,7 @@
 <div class=" col-6 px-5">
     <div class=" align-middle table" id="dashboard-done">
         <h1>Adicione Estoque Individual:</h1>
-        <form action="" method="post" class="col-lg-3 form-group">
+        <form method="post" class="col-lg-3 form-group">
             {% csrf_token %}
             {{ form.as_p }}
             <a class="bg-transparent mx-lg-5" id="add-link" href="/uso_consumo_add">
