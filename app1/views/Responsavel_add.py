@@ -7,6 +7,7 @@ def Responsavel_add(request):
         form = ResponsavelForm(request.POST)
         if form.is_valid():
             novo_responsavel = form.save(commit=False)
+            novo_responsavel.pessoa_classe = '3'
             novo_responsavel.save()
             return HttpResponseRedirect('/responsavel_list')
     else:
@@ -14,5 +15,4 @@ def Responsavel_add(request):
 
     responsavel = Pessoas.objects.all()
 
-    return render(request, 'responsavel_form.html', {'form': form,
-    'responsavel': responsavel})
+    return render(request, 'responsavel_form.html', {'form': form, 'responsavel': responsavel})
