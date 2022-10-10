@@ -13,10 +13,10 @@
     <h3 class="text-secondary text-center mt-5">Cadastro</h3>
     <form action="" method="POST" class="input-btn">    
         {% csrf_token %}  
-        <table>
+        <table class="form form-table">
             {{ form.as_table}}
         </table>       
-        <input class="input-cadastrar" type="submit" value="Cadastrar">
+        <input class="input-cadastrar" type="submit" >
     </form>    
 </div>
 
