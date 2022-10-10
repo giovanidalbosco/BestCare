@@ -9,7 +9,7 @@
         width: 2em;
         height: 1.1em;
         margin-top: 0%;
-        margin-left: 5%;
+        margin-left: 2%;
     }
         
     #best2{
@@ -18,6 +18,21 @@
         border-radius: 0;
         margin-top: 2.5%; 
     }
+
+    
+    .text-header{
+        font-size: 0.7em;
+    }
+
+    #header a span{
+        font-size: 0.9em;
+        font-weight:300; 
+    }
+
+    #slogan{
+        font-size: 0.9em;
+    }
+
 }
 
 
@@ -31,9 +46,10 @@
         justify-content:space-between;
     }
 
-    .row img{
+    .row .img{
         width: 2em;
         height: 1.1em;
+        margin-left: 0.5%;
     }
 
     #best1{
@@ -41,7 +57,7 @@
         height: 0.5em;
         border-radius:0;
         margin-top: 22%;
-        margin-left: 10%;
+        margin-left: 0.5%;
     }
 
     #solucoes a{
@@ -50,7 +66,7 @@
 
     .Caracteristicas{
         width: 85%;
-        height: 70vh;
+        height: 80vh;
         margin-left: 2%;
         margin-right: 2%;
     }
@@ -71,6 +87,11 @@
         height: 0.5em;
         border-radius: 0;
         margin-top: 2.5%; 
+    }
+
+    .btn-entrar{
+        margin-left: 10%;
+        
     }
 
     .carrossel1 #carousel img{

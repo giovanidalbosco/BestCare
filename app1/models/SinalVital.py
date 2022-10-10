@@ -9,10 +9,9 @@ class SinalVital(models.Model):
     sinalVital_fc = models.CharField(max_length=5, verbose_name='FC', default='')
     sinalVital_fr = models.CharField(max_length=5, verbose_name='FR', default='')
     sinalVital_temp = models.CharField(max_length=5, verbose_name='TEMP', default='')
-    sinalVital_peso = models.IntegerField(verbose_name='Peso', default=0)
-    sinalVital_altura = models.IntegerField(verbose_name='Altura', default=0)
-    sinalVital_IMC = models.IntegerField(verbose_name='IMC', default=0)
-# Calcular o IMC (peso / (Altura**2))
+    sinalVital_peso = models.FloatField(verbose_name='Peso', default=0)
+    sinalVital_altura = models.FloatField(verbose_name='Altura', default=0)
+    sinalVital_IMC = models.FloatField(verbose_name='IMC', default=0)
 
 
     def __str__(self):
