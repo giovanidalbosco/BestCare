@@ -117,7 +117,7 @@ EVENTO = (
 
 from .Cidades import Cidades
 from .Comorbidades import Comorbidades
-from .Uso_Consumo import Uso_Consumo
+from .Medicamentos import Medicamentos
 from .Pessoas import Pessoas
 from .Estoque_Individual import Estoque_Individual
 from .Ocorrencias import Ocorrencias

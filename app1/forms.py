@@ -30,11 +30,11 @@ class ComorbidadesForm(forms.ModelForm):
         model = Comorbidades
         fields = ('comorbidade_nome',)
 
-class Uso_ConsumoForm(forms.ModelForm):
+class MedicamentosForm(forms.ModelForm):
     
     class Meta:
-        model = Uso_Consumo
-        fields = ('consumo_nome', 'consumo_fabricante', 'consumo_apresentacao', 'consumo_via',)
+        model = Medicamentos
+        fields = ('medicamento_nome', 'medicamento_fabricante', 'medicamento_apresentacao', 'medicamento_via',)
 
 class Estoque_IndividualForm(forms.ModelForm):
     

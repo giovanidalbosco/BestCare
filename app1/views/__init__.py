@@ -20,10 +20,10 @@ from .index import index
 from .Inicial import Inicial
 from .Solucoes import Solucoes
 from .Somos import Somos
-from .Uso_Consumo_delete import Uso_Consumo_delete
-from .Uso_Consumo_edit import Uso_Consumo_edit
-from .Uso_Consumo_add import Uso_Consumo_add
-from .Uso_Consumo_list import Uso_Consumo_list
+from .Medicamentos_delete import Medicamentos_delete
+from .Medicamentos_edit import Medicamentos_edit
+from .Medicamentos_add import Medicamentos_add
+from .Medicamentos_list import Medicamentos_list
 from .Estoque_Individual_list import Estoque_Individual_list
 from .Estoque_Individual_add import Estoque_Individual_add
 from .Ocorrencias_list import Ocorrencias_list
