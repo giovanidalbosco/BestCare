@@ -9,5 +9,5 @@ def Cuidadores_list(request):
     else:
         cuidador = Pessoas.objects.filter(pessoa_classe__icontains='1')
 
-    return render(request, 'cuidadores_list.html',
-                  {'cuidador': cuidador})
+
+    return render(request, 'cuidadores_list.html', {'cuidador': cuidador})

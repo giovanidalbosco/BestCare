@@ -9,4 +9,5 @@ def Residentes_list(request):
     else:
         residente = Pessoas.objects.filter(pessoa_classe__icontains='2')
 
+
     return render(request, 'residentes_list.html', {'residente': residente})
