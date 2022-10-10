@@ -33,6 +33,7 @@
         font-size: 0.9em;
     }
 
+
 }
 
 
@@ -97,5 +98,19 @@
     .carrossel1 #carousel img{
         width: 100%;
         height: 70vh;
+    }
+}
+
+
+@media (max-width: 490px){
+    .form input, .form select, .form textarea {
+        width: 21em;
+    }
+}
+
+
+@media (max-width: 412px){
+    .form input, .form select, .form textarea {
+        width: 17em;
     }
 }
