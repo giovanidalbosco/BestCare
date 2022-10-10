@@ -41,7 +41,7 @@ body{
 }
 
 #header{
-    background-color:#5b878d74;
+    background-color:#003f69;
 }
 
 .text-header{
@@ -299,17 +299,17 @@ div a{
 .base_telainicial{
     margin: 0;
     padding: 0;
-    background:#FFFFFF;
+    background:url("/static/img/fundo-inicial.jpeg");
     width: 100%;
     display: flex;
     flex-direction:row;
 }
 
 .back{
-    background: #b2aeae48;
-    width: 14em;
+    background: #106b87;
+    width: 13%;
     height: 100%;
-    border-radius: 5px;
+   
 }
 
 #base_inicial_solucoes{
@@ -317,13 +317,13 @@ div a{
 }
 
 #base_inicial_solucoes a{
-    color:#000;
-    font-size: 1.1em;
+    color:#eae7e7c2;
+    font-size: 1.3em;
     margin-top: 15%;
 }
 
 .content3{  
-    width: 100%;
+    width: 87%;
     height: 100%;
 }
 
