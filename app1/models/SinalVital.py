@@ -11,7 +11,7 @@ class SinalVital(models.Model):
     sinalVital_temp = models.CharField(max_length=5, verbose_name='TEMP', default='')
     sinalVital_peso = models.FloatField(verbose_name='Peso', default=0)
     sinalVital_altura = models.FloatField(verbose_name='Altura', default=0)
-    sinalVital_IMC = models.IntegerField(verbose_name='IMC', default=0)
+    sinalVital_IMC = models.FloatField(verbose_name='IMC', default=0)
 
 
     def __str__(self):
