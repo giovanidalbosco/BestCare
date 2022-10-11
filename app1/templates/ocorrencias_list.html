@@ -4,7 +4,7 @@
 
 {% block content3 %}
 <div class="tamanho-div">
-    <h1 class="text-secondary text-center mt-4">Ocorrências</h1>
+    <h1 class="text-dark m-lg-4 mt-4">Ocorrências</h1>
     <div class="w-100" style="margin-top: 3%;">
         <div class="col-12 dashboard-box" id="dashboard-done">
             {% if messages %}
@@ -18,7 +18,6 @@
             {% endif %}
             <div class="row d-inline-block">
                 <div class="modal-header">
-                    <h5>Ocorrências</h5>
                     <a class="bg-transparent mx-lg-5" href="/ocorrencias_add">
                         <div class="adicionar">
                             <i class="fas fa-plus" style="font-size:0.875rem;"></i>
@@ -37,20 +36,16 @@
                 <table class="table table-hover">
                     <thead>
                       <tr>
+                        <th scope="col"></th>
                         <th scope="col">Ocorrência</th>
                         <th scope="col">Residente</th>
                         <th scope="col">Cuidador</th>
                         <th scope="col">Observação</th>
-                        <th scope="col"></th>
                       </tr>
                     </thead>
                     <tbody>
                     {% for i in ocorrencia %}
                       <tr>
-                        <td>{{i.get_ocorrencia_nome_display}}</td>
-                        <td>{{i.ocorrencia_pessoa_nome}}</td>
-                        <td>{{i.ocorrencia_pessoa_cuidador}}</td>
-                        <td>{{i.ocorrencia_observacao}}</td>
                         <td>
                             <div class="justify-content-end d-flex">
                                 <a href="/ocorrencias_edit/{{i.id}}" class="delete-btn bg-transparent"><span><abbr title="EDITAR">
@@ -59,6 +54,10 @@
                                     <i class="fas fa-trash" style="cursor:pointer;"></i></abbr></span></a>
                             </div>
                         </td>
+                        <td>{{i.get_ocorrencia_nome_display}}</td>
+                        <td>{{i.ocorrencia_pessoa_nome}}</td>
+                        <td>{{i.ocorrencia_pessoa_cuidador}}</td>
+                        <td>{{i.ocorrencia_observacao}}</td>
                       </tr>
                     {% endfor %}
                     </tbody>
