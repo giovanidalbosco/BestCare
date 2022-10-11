@@ -62,10 +62,12 @@ body{
 #header a {
     color:#FFFFFF;
     font-weight:800; 
+    text-decoration: none;
 }
 
 #header a:hover{
     color: #000;
+    transition-duration: 0.3s;
 }
 
 /*Fim do header*
@@ -282,14 +284,17 @@ div a{
     display: flex;
     flex-direction: column;
 }
+
 #linkfotos{
     color:rgba(18, 31, 52, 0.888);
     font-size: 1em;
     
 }
+
 /*Fim bloco do quemSomos*/
 
 /*Rodapé=> Será igual sempre */
+
 .card-footer{
     font-size: small;
     font-family: Times;
@@ -297,16 +302,44 @@ div a{
     width: 100%;
     height: 100%;
 }
+
+.card-footer-names{
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    font-size: 1.25em; 
+}
+
+.card-footer-names i:hover{
+    color: goldenrod;
+}
+
 .card-footer a{
     color: black;
     font-size: 1.1em;
     font-weight: 600;
    
 }
+
 .card-footer p{
     color: darkgrey;
     margin-top: 1%;
 }
+
+.footer-foot{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;  
+    text-align: center;
+}
+
+.card-footer span{
+    color: darkgrey;
+    margin-top: 1%;
+}
+
 /*Fim do rodapé*/
 
 /*Inicio Base_telainicial*/
@@ -332,7 +365,7 @@ div a{
 
 #base_inicial_solucoes a{
     color:#eae7e7c2;
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin-top: 15%;
 }
 
@@ -362,6 +395,47 @@ a .adicionar{
 
 /*Inicio solucoes*/
 
+.solucoes00{
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-evenly;  
+    text-align: center;
+    margin-top: 5%;
+}  
+
+.solucoes1{
+    width: 25em;
+    height: 12em;
+    background-color: aliceblue;
+    border: #dae0e1 0.1px solid;
+    border-radius: 5px 35px 5px 35px;
+    box-shadow: 0px 8px 15px 8px rgba(161, 167, 169, 0.5);
+}
+
+.solucoes1 img{
+    width:35%;
+    height:75%;
+    opacity: 0.8;
+}
+.solucoes1 aside{
+    text-align:start;
+    margin-top: 25%;
+    margin-left: 5%;
+    font-weight: 200;
+}
+
+.solucoes1 aside:hover{
+    font-weight: 700;
+}
+
+.solucoes1:hover{
+    border-radius: 45px 0px 45px 0px;
+    box-shadow: 0px 8px 15px 8px rgba(19, 37, 235, 0.349);
+    opacity: 1;
+}
+
+
 #solucoes-margin{
     margin-bottom: 10%;
 }
@@ -372,7 +446,7 @@ a .adicionar{
     margin-top: 8em;
 }
 
-.media img{
+/*.media img{
     width:100px;
     height:100px;
     border-radius: 4px;

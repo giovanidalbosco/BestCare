@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Best Care/start/</title>
+    <link rel="shortcut icon" href="/static/img/bestcare-logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v2.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'CSS/index2.css' %}">
@@ -24,8 +25,8 @@
                     <a href="/agenda" class="bg-transparent "><img src="/static/img/bestcare.png" alt="Logo" id="best1"></a> 
                 </div>
                 <div class="row" id="header-button">
-                    <a href="/agenda" type="button" class="btn btn-secondary btn-sm">Home</a>
-                    <a href="/accounts/logout" type="button" class="btn btn-secondary btn-sm">Sair</a>
+                    <a href="/agenda" type="button" class="btn btn-outline-light btn-sm">Home</a>
+                    <a href="/accounts/logout" type="button" class="btn btn-outline-light btn-sm">Sair</a>
                 </div>
             </div>
             {% else %}
@@ -50,11 +51,48 @@
     {% endblock %}
 
 
-    <div class="card-footer text-center text-white bg-dark ">
-        <p class="card-text" id="names"> &copy; Giovani Dalbosco &nbsp &nbsp Jackson Castellain &nbsp &nbsp Lucas Rezende &nbsp &nbsp Samir Buhatem</p>
-        <a href="/solucoes" type="button" class="btn btn-link">Soluções</a>
-        <a href="/quemSomos" class="btn btn-link">Quem Somos</a>
-        <p class="card-text" > Projeto Entra 21 &reg;</p>
+    <div class="card-footer  text-white bg-dark ">
+        <div class="card-footer-names">
+            <div>
+                <p>Giovani Dalbosco</p>
+                <p>
+                    <a href="https://www.linkedin.com/in/giovanidalbosco/" type="button" target="_blank"  class="bg-transparent"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/giovanidalbosco" type="button" target="_blank"  class="bg-transparent"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:giovani.dalbosco@gmail.com?subject=BestCare" title="" class="bg-transparent"><i class="fa-regular fa-at"></i></a>
+                </p>
+            </div>
+            <div>
+                <p>Jackson Giovanni Castellain</p>
+                <p>
+                    <a href="https://www.linkedin.com/in/jacksongiovannicastellain/" type="button" target="_blank"  class="bg-transparent"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/JacksonCastellain" type="button" target="_blank"  class="bg-transparent"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:jgcastellain@gmail.com?subject=BestCare" title="" class="bg-transparent"><i class="fa-regular fa-at"></i></a>
+                </p>
+            </div>
+            <div>
+                <p>Lucas Rezende</p>
+                <p>
+                    <a href="" type="button" target="_blank"  class="bg-transparent"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/LucasRznde" type="button" target="_blank"  class="bg-transparent"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:lucasreboizao97@gmail.com?subject=BestCare" title="" class="bg-transparent"><i class="fa-regular fa-at"></i></a>
+                </p>
+            </div>
+            <div>
+                <p>Samir Buhatem</p>
+                <p>
+                    <a href="https://www.linkedin.com/in/samir-buhatem-8a1565112/" type="button" target="_blank"  class="bg-transparent"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Sbuhatem" type="button" target="_blank"  class="bg-transparent"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:rcphdsamir@gmail.com?subject=BestCare" title="" class="bg-transparent"><i class="fa-regular fa-at"></i></a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-foot">
+            <div>
+                <a href="/solucoes" type="button" class="btn btn-dark">Soluções</a>
+                <a href="/quemSomos" class="btn btn-dark">Quem Somos</a>
+            </div>
+            <span> Projeto Entra 21 &reg;</span>
+        </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
