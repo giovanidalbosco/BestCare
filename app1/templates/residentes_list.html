@@ -4,7 +4,7 @@
 
 {% block content3 %}
 <div class="tamanho-div">
-    <h1 class="text-secondary text-center mt-4">Residentes</h1>
+    <h1 class="text-dark m-lg-4 mt-4">Residentes</h1>
     <div class="w-100" style="margin-top: 3%;">
         <div class="col-12 dashboard-box">
             {% if messages %}
@@ -16,7 +16,6 @@
             {% endif %}
             <div class="row d-inline-block">
                 <div class="modal-header">
-                    <h5>Residentes</h5>
                     <a class="bg-transparent mx-lg-5"  id="add-link" href="/residentes_add">
                         <div class="adicionar">
                             <i class="fas fa-plus" style="font-size:0.875rem;"></i>
@@ -35,6 +34,7 @@
                 <table class="table table-hover" id="tabresidentes">
                     <thead>
                       <tr>
+                        <th scope="col"></th>
                         <th scope="col">Nome</th>
                         <th scope="col">Endereço</th>
                         <th scope="col">Número</th>
@@ -44,12 +44,19 @@
                         <th scope="col">CPF</th>
                         <th scope="col">Comorbidade</th>
                         <th scope="col">Plano</th>
-                        <th scope="col"></th>
                       </tr>
                     </thead>
                     <tbody>
                     {% for i in residente %}
                       <tr>
+                        <td>
+                            <div class="justify-content-end d-flex">
+                                <a href="/residentes_edit/{{i.id}}" class="delete-btn bg-transparent"><span><abbr title="EDITAR">
+                                    <i class="fas fa-edit" style="cursor:pointer;"></i></abbr></span></a>
+                                <a class="delete-btn bg-transparent js-delete" data-id={{i.id}}><span><abbr title="EXCLUIR">
+                                <i class="fas fa-trash" style="cursor:pointer;"></i></abbr></span></a>
+                            </div>
+                        </td>
                         <td>{{i.pessoa_nome}}</td>
                         <td>{{i.pessoa_endereco}}</td>
                         <td>{{i.pessoa_numero}}</td>
@@ -65,14 +72,6 @@
                             {% endfor %} 
                         </td>
                         <td>{{i.get_pessoa_plano_display}}</td>
-                        <td>
-                            <div class="justify-content-end d-flex">
-                                <a href="/residentes_edit/{{i.id}}" class="delete-btn bg-transparent"><span><abbr title="EDITAR">
-                                    <i class="fas fa-edit" style="cursor:pointer;"></i></abbr></span></a>
-                                <a class="delete-btn bg-transparent js-delete" data-id={{i.id}}><span><abbr title="EXCLUIR">
-                                <i class="fas fa-trash" style="cursor:pointer;"></i></abbr></span></a>
-                            </div>
-                        </td>
                       </tr>
                     {% endfor %}
                     </tbody>
