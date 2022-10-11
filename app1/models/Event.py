@@ -1,4 +1,3 @@
-from tabnanny import verbose
 from app1.models import *
 
 
