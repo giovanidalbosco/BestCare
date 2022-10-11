@@ -254,16 +254,92 @@ div a{
 
 /*Bloco do quemSomos*/
 
-.quemsomos{
-    color:rgba(18, 31, 52, 0.888); 
+.quemsomos00{
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-evenly;  
+    text-align: center;
+    margin-top: 5%;
+}  
+
+.quemsomos1{
+    width: 30em;
+    height: 16em;
+    background-color:#FFFFFF;
+    border: #dae0e1 0.1px solid;
+    border-radius: 5px 35px 5px 35px;
+    box-shadow: 0px 8px 15px 8px rgba(161, 167, 169, 0.5);
+    transition: all 1s;
+
 }
 
-.media #quemSomos{
-    width:50px;
-    height:50px;
-    border-radius: 4px;
-    margin-left: 10%
+.quemsomos1 img{
+    width:20%;
+    height:40%;
+    opacity: 0.8;
+    
 }
+
+.quemsomos1 aside{
+    text-align:start;
+    margin-top: 15%;
+    margin-left: 5%;
+    font-weight: 200;
+}
+
+.quemsomos1:hover{
+    border-radius: 45px 0px 45px 0px;
+    box-shadow: 0px 8px 15px 8px rgba(19, 37, 235, 0.349);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.quemsomos1 aside:hover{
+    font-weight: 700;
+}
+
+.quemsomos2{
+    width: 71em;
+    height: 36em;
+    background-color:#FFFFFF;
+    border: #dae0e1 0.1px solid;
+    border-radius: 5px 35px 5px 35px;
+    box-shadow: 0px 8px 15px 8px rgba(161, 167, 169, 0.5);
+    transition: all 1s;
+}
+
+.quemsomos2 img{
+    width:10%;
+    height:20%;
+    opacity: 0.8;
+    
+}
+
+.quemsomos2 aside{
+    text-align:start;
+    margin-top: 5%;
+    margin-left: 5%;
+    font-weight: 200;
+}
+
+.quemsomos2:hover{
+    border-radius: 45px 0px 45px 0px;
+    box-shadow: 0px 8px 15px 8px rgba(19, 37, 235, 0.349);
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
+    opacity: 1;
+}
+
+.quemsomos2 aside:hover{
+    font-weight: 700;
+}
+
+#first-quemsomos{
+    margin-top: 8%;
+}
+
 #desenvolvedores{
     font-size: 3.5em;
     margin-top: 8%;
@@ -279,19 +355,20 @@ div a{
     margin-top: 9%;
     border: blanchedalmond 1.5px solid;
 }
-
-.imagens a{
-    display: flex;
-    flex-direction: column;
+.imagens{
+    text-align: center;
 }
 
-#linkfotos{
-    color:rgba(18, 31, 52, 0.888);
-    font-size: 1em;
-    
+#icon-quemsomos{
+    font-size: 1.7em;
 }
+#icon-quemsomos:hover{
+    color: rgb(11, 52, 214);
+}
+
 
 /*Fim bloco do quemSomos*/
+
 
 /*Rodapé=> Será igual sempre */
 
@@ -319,7 +396,6 @@ div a{
     color: black;
     font-size: 1.1em;
     font-weight: 600;
-   
 }
 
 .card-footer p{
@@ -342,6 +418,7 @@ div a{
 
 /*Fim do rodapé*/
 
+
 /*Inicio Base_telainicial*/
 .base_telainicial{
     margin: 0;
@@ -358,7 +435,6 @@ div a{
     height: 100%;  
 }
 
-
 #base_inicial_solucoes{
     margin-top: 48%;
 }
@@ -367,6 +443,11 @@ div a{
     color:#eae7e7c2;
     font-size: 1.2em;
     margin-top: 15%;
+}
+
+.btn-light:hover {
+    background-color: #003f69;
+    transition-duration: 0.3s;
 }
 
 .content3{  
@@ -393,6 +474,7 @@ a .adicionar{
 
 /*Fim-Base-telainicial*/
 
+
 /*Inicio solucoes*/
 
 .solucoes00{
@@ -407,10 +489,16 @@ a .adicionar{
 .solucoes1{
     width: 25em;
     height: 12em;
-    background-color: aliceblue;
+    background-color:#FFFFFF;
     border: #dae0e1 0.1px solid;
     border-radius: 5px 35px 5px 35px;
     box-shadow: 0px 8px 15px 8px rgba(161, 167, 169, 0.5);
+    transition: all 1s;
+
+}
+
+#first-solucoes{
+    margin-top: 10%;
 }
 
 .solucoes1 img{
@@ -432,12 +520,9 @@ a .adicionar{
 .solucoes1:hover{
     border-radius: 45px 0px 45px 0px;
     box-shadow: 0px 8px 15px 8px rgba(19, 37, 235, 0.349);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
     opacity: 1;
-}
-
-
-#solucoes-margin{
-    margin-bottom: 10%;
 }
 
 .media{
@@ -446,12 +531,10 @@ a .adicionar{
     margin-top: 8em;
 }
 
-/*.media img{
-    width:100px;
-    height:100px;
-    border-radius: 4px;
-    margin-left: 18%
+#last-solucoes{
+    margin-bottom: 8%;
 }
+
 /*Fim soluções*/
 
 .btn-cad-geral{
@@ -494,9 +577,3 @@ a .adicionar{
     width: 100%;
 }
 /* fim telas internas com scroll bar*/
-
-.btn-light:hover {
-    background-color: #003f69;
-    color: black;
-    transition-duration: 0.3s;
-}
