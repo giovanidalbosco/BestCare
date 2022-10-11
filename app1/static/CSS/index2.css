@@ -374,6 +374,7 @@ div a{
     bottom: 0;
     width: 100%;
     height: 100%;
+    background-color: rgb(44, 50, 51);
 }
 
 .card-footer-names{
@@ -389,7 +390,6 @@ div a{
 }
 
 .card-footer a{
-    color: black;
     font-size: 1.1em;
     font-weight: 600;
 }
@@ -405,6 +405,12 @@ div a{
     flex-direction:column;
     justify-content:center;  
     text-align: center;
+}
+
+.footer-foot a:hover{
+    background-color: white;
+    color: #000;
+    transition-duration: 0.3s;
 }
 
 .card-footer span{
@@ -573,3 +579,17 @@ a .adicionar{
     width: 100%;
 }
 /* fim telas internas com scroll bar*/
+
+.btn-light:hover {
+    background-color: #003f69;
+    color: black;
+    transition-duration: 0.3s;
+}
+
+.fa-brands {
+    color: white;
+}
+
+.btn-dark {
+    border-color: #f7edde;
+}
