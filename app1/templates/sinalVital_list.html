@@ -4,7 +4,7 @@
 
 {% block content3 %}
 <div class="tamanho-div">
-    <h1 class="text-dark m-lg-4 mt-4">Sinal Vital</h1>
+    <h2 class="text-dark m-lg-4 mt-4">Sinal Vital</h2>
     <div class="w-100" style="margin-top: 3%;">
         <div class="col-12 dashboard-box">
             {% if messages %}
@@ -16,9 +16,9 @@
                 {% endfor %}
             </ul>
             {% endif %}
-            <div class="row-lg-12 d-inline-block">
-                <div class="modal-header">
-                    <a class="bg-transparent mx-lg-5" id="add-link" href="/sinalvital_add">
+            <div class="row d-inline-block">
+                <div class="modal-header align-baseline">
+                    <a class="bg-transparent mr-5" id="add-link" href="/sinalvital_add">
                         <div class="adicionar">
                             <i class="fas fa-plus" style="font-size:0.875rem;"></i>
                             Adicionar Sinal Vital

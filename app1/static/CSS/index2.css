@@ -176,11 +176,7 @@ div a{
 
 /*Início Cadastro*/
 
-/*.btn-cad-geral .input-cadastrar{
-    background:rgba(204, 204, 197, 0.826);
-    cursor: pointer;
-    margin-left: 38%;
-}*/
+
 .btn-cad-geral .input-cadastrar:hover{
     color:rgba(14, 94, 200,1);
 }
@@ -188,17 +184,6 @@ div a{
 .btn-cad-geral .input-cadastrar{
     margin-left: 38%;
 }
-
-
-/*.input-btn .input-cadastrar{
-    margin-left: 38%;
-    margin-right: 33%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;    
-}*/
 
 
 /*Fim Cadastro*/
@@ -382,7 +367,11 @@ div a{
     display: flex;
     flex-direction:row;
     justify-content:space-evenly;
-    font-size: 1.25em; 
+    font-size: 1.25em;
+}
+
+.card-footer-names i{
+    color: #f7edde;
 }
 
 .card-footer-names i:hover{
@@ -394,8 +383,12 @@ div a{
     font-weight: 600;
 }
 
+.card-footer a:hover{
+    color: #000;
+}
+
 .card-footer p{
-    color: darkgrey;
+    color:#f7edde;
     margin-top: 1%;
 }
 
@@ -407,15 +400,22 @@ div a{
     text-align: center;
 }
 
+#btn-quemsomos{
+    color: #f7edde;
+}
+
+#btn-quemsomos:hover{
+    color: #000; 
+    transition-duration: 0.3s;
+}
 .footer-foot a:hover{
-    background-color: white;
-    color: #000;
+    background-color: #f7edde;
     transition-duration: 0.3s;
 }
 
-.card-footer span{
-    color: darkgrey;
-    margin-top: 1%;
+.footer-foot span{
+    color: #f7edde;
+    margin-top: 1.2%;
 }
 
 /*Fim do rodapé*/
@@ -522,8 +522,8 @@ a .adicionar{
 .solucoes1:hover{
     border-radius: 45px 0px 45px 0px;
     box-shadow: 0px 8px 15px 8px rgba(19, 37, 235, 0.349);
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
     opacity: 1;
 }
 
@@ -586,10 +586,7 @@ a .adicionar{
     transition-duration: 0.3s;
 }
 
-.fa-brands {
-    color: white;
-}
 
-.btn-dark {
-    border-color: #f7edde;
-}
+
+
+
