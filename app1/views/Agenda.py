@@ -28,16 +28,13 @@ class Agenda(generic.ListView):
 
         search = self.request.GET.get('search')
         if search:
-            dono_estoque = Event.objects.filter(event_pessoa_nome__pessoa_nome__icontains=search)
             residente = Pessoas.objects.get(pessoa_nome=search)
             html_cal = cal.formatmonth(residente.id, withyear=True)
             context['dono'] = residente
         else:
-            dono_estoque = ''
             html_cal = cal.formatmonth(withyear=True)
 
 
-        context['estoque_individual'] = dono_estoque
         context['residentes'] = residentes
         # Call the formatmonth method, which returns our calendar as a table
         context['calendar'] = mark_safe(html_cal)

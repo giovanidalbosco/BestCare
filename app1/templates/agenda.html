@@ -15,16 +15,16 @@
 		</form>
 	</div>
 	<div>Residente: {{request.GET.search}}</div>
+	{%if request.GET.search != null %}
 	<div class="clearfix">
-		<a class="btn btn-info right" href="/agenda/?{{ next_month }}"> Próximo Mês </a>
-		<a class="btn btn-info right" href="/agenda/?{{ prev_month }}"> Mês Anterior </a>
-		{%if request.GET.search != null %}
-			<a class="btn btn-info left" href="/event/new/{{dono.id}}"> Novo Evento </a>
-		{% endif %}
+		<a class="btn btn-info right" href="/agenda/?{{ next_month }}&search={{dono.pessoa_nome}}"> Próximo Mês </a>
+		<a class="btn btn-info right" href="/agenda/?{{ prev_month }}&search={{dono.pessoa_nome}}"> Mês Anterior </a>
+		<a class="btn btn-info left" href="/event/new/{{dono.id}}"> Novo Evento </a>
 	</div>
 	<div>
 		<table>
 			{{ calendar }}
 		</table>
 	</div>
+	{% endif %}
 {% endblock content3 %}
