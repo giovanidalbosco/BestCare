@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Best Care/start/</title>
-    <link rel="shortcut icon" href="/static/img/bestcare-logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/static/img/BestCareLogoBlack.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v2.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="{% static 'CSS/index2.css' %}">
@@ -22,26 +22,26 @@
             <div class="header-logout">
                 <div class="row" id="header-image">
                     <a href="/agenda" class="bg-transparent"><img src="/static/img/best_tec.png" alt="Logo" class="img "></a> 
-                    <a href="/agenda" class="bg-transparent "><img src="/static/img/bestcare.png" alt="Logo" id="best1"></a> 
+                    
                 </div>
                 <div class="row" id="header-button">
-                    <a href="/agenda" type="button" class="btn btn-outline-light btn-sm">Home</a>
-                    <a href="/accounts/logout" type="button" class="btn btn-outline-light btn-sm">Sair</a>
+                    <a href="/agenda" type="button" class="btn btn-outline-light btn-sm  mb-sm-4">Home</a>
+                    <a href="/accounts/logout" type="button" class="btn btn-outline-light btn-sm  mb-sm-4">Sair</a>
                 </div>
             </div>
             {% else %}
             <div class="header-logout">
                 <div class="row" id="header-image">
-                    <a href="/"  class="bg-transparent"><img src="/static/img/bestcare-logo.png" alt="Logo"  class="img"></a> 
-                    <a href="/"  class="bg-transparent "><img src="/static/img/bestcare.png" alt="Logo" id="best1"></a> 
+                    <a href="/"  class="bg-transparent"><img src="/static/img/best_tec.png" alt="Logo"  class="img"></a> 
+                    
                 </div>
                 <div class="row">
                     <a href="/solucoes" type="button" class="btn btn-link text-header">Soluções</a>
                     <a href="/quemSomos" type="button" class="btn btn-link text-header">Quem Somos</a>
                 </div>
                 <div class="row" id="header-button">
-                    <a href="/cadastro" type="button" class="btn btn-outline-light btn-sm  mb-sm-2">Cadastre-se</a>
-                    <a href="/login" type="button" class="btn btn-outline-light btn-sm mb-sm-2">Entrar</a>
+                    <a href="/cadastro" type="button" class="btn btn-outline-light btn-sm  mb-sm-4">Cadastre-se</a>
+                    <a href="/login" type="button" class="btn btn-outline-light btn-sm mb-sm-4 ">Entrar</a>
                 </div>
             </div>
             {% endif %}

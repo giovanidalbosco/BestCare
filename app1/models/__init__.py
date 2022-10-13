@@ -104,13 +104,12 @@ DOSE = (
     )
 
 EVENTO = (
-    (1, 'Refeicao'),
-    (2, 'Medicamento'),
-    (3, 'Consulta Medica'),
-    (4, 'Fisioterapia'),
-    (5, 'Atividade Fisica'),
-    (6, 'Atividade Cultural'),
-    (7, 'Atividade Recreativa')
+    (1, 'Medicamento'),
+    (2, 'Consulta Medica'),
+    (3, 'Fisioterapia'),
+    (4, 'Atividade Fisica'),
+    (5, 'Atividade Cultural'),
+    (6, 'Atividade Recreativa')
 )
 
 
