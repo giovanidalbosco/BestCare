@@ -14,7 +14,7 @@ class Estoque_Individual(models.Model):
     def __str__(self):
         itens = ''
         for i in self.estoque_usos_consumo.all():
-            itens += i.consumo_nome
+            itens += i.medicamento_nome
 
         return f'{self.estoque_pessoa_nome.pessoa_nome}, {itens}'
 

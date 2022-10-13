@@ -9,6 +9,7 @@ import calendar
 from app1.models import Event
 from app1.utils import Calendar
 from app1.forms import EventForm
+from app1.views import *
 
 class Agenda(generic.ListView):
     model = Event
@@ -22,11 +23,33 @@ class Agenda(generic.ListView):
         # Instantiate our calendar class with today's year and date
         cal = Calendar(d.year, d.month)
 
+
+        residentes = Pessoas.objects.filter(pessoa_classe='2')
+
+        search = self.request.GET.get('search')
+        if search:
+            dono_estoque = Event.objects.filter(event_pessoa_nome__pessoa_nome__icontains=search)
+            residente = Pessoas.objects.get(pessoa_nome=search)
+            html_cal = cal.formatmonth(residente.id, withyear=True)
+            context['dono'] = residente
+        else:
+            dono_estoque = ''
+            html_cal = cal.formatmonth(withyear=True)
+
+
+        context['estoque_individual'] = dono_estoque
+        context['residentes'] = residentes
+        
+
+        # print(f'teste1: {residente}')
         # Call the formatmonth method, which returns our calendar as a table
-        html_cal = cal.formatmonth(withyear=True)
+        
         context['calendar'] = mark_safe(html_cal)
         context['prev_month'] = prev_month(d)
         context['next_month'] = next_month(d)
+
+        
+        
         return context
 
 def get_date(req_month):
@@ -48,15 +71,23 @@ def next_month(d):
     month = 'month=' + str(next_month.year) + '-' + str(next_month.month)
     return month
 
-def event(request, event_id=None):
+def event(request, residente_id=None, event_id=None):
     instance = Event()
     if event_id:
         instance = get_object_or_404(Event, pk=event_id)
+    elif residente_id:
+        residente = get_object_or_404(Pessoas, id=residente_id)
     else:
         instance = Event()
     
     form = EventForm(request.POST or None, instance=instance)
     if request.POST and form.is_valid():
-        form.save()
-        return HttpResponseRedirect('/agenda')
+        evento = form.save(commit=False)
+        if residente_id:
+            residente = get_object_or_404(Pessoas, id=residente_id)
+            evento.event_pessoa_nome = residente
+        evento.save()
+        if hasattr(form, 'save_m2m'):
+                form.save_m2m()
+        return HttpResponseRedirect(f'/agenda/?search={residente.pessoa_nome}')
     return render(request, 'event.html', {'form': form})

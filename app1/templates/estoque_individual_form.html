@@ -7,6 +7,7 @@
     <div class=" align-middle table" id="dashboard-done">
         <h1>Adicione Estoque Individual:</h1>
         <form method="post" class="col-lg-3 form-group">
+            <!-- <input type="text" value="{{residente}}" readonly> -->
             {% csrf_token %}
             {{ form.as_p }}
             <a class="bg-transparent mx-lg-5" id="add-link" href="/uso_consumo_add">

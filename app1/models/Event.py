@@ -10,6 +10,9 @@ class Event(models.Model):
     start_time = models.DateTimeField(verbose_name='Dia/Hora - Inicio')
     end_time = models.DateTimeField(verbose_name='Dia/Hora - Fim')
 
+    def __str__(self):
+        return f'{self.get_title_display()} {self.event_pessoa_nome}'
+
     @property
     def get_html_url(self):
         url = reverse('event_edit', args=(self.id,))

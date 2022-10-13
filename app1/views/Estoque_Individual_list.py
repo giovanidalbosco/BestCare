@@ -4,15 +4,19 @@ from app1.views import *
 @login_required
 def Estoque_Individual_list(request):
     search = request.GET.get('search')
-    pessoa_nome = Pessoas.objects.all()
+    residentes = Pessoas.objects.filter(pessoa_classe=2)
+    
     if search:
-        dono_estoque = Estoque_Individual.objects.filter(estoque_pessoa_nome__pessoa_nome__icontains=search)
+        estoque_individual = Estoque_Individual.objects.filter(estoque_pessoa_nome__pessoa_nome__icontains=search)
+        residente = Pessoas.objects.get(pessoa_nome=search)
     else:
-        dono_estoque = ''
+        estoque_individual = ''
+        residente = ''
 
     context = {
-        'estoque_individual': dono_estoque,
-        'pessoa_nome': pessoa_nome,
+        'estoque_individual': estoque_individual,
+        'residentes': residentes,
+        'dono': residente 
     }
 
     return render(request, template_name='estoque_individual_list.html', context=context)

@@ -8,21 +8,21 @@
     <div class="container dashboard" style="margin-top: 5%;">
         <div>
             <div>
-                <h6>Selecione o residente</h6>
                 <div class="search-div">
                     <form method="GET" id="search-form">
-                        <input list="pessoas" name="search" id="search" value={{request.GET.search}}>
+                        <input list="pessoas" name="search" id="search" placeholder="Selecione o residente...">
                         <datalist id="pessoas">
-                            <option value=" ">
-                            {% for item in pessoa_nome %}
-                                <option value={{item.pessoa_nome}}>
+                            {% for residente in residentes %}
+                                <option value="{{residente.pessoa_nome}}">
                             {% endfor %}
                         </datalist>
                         <input type="submit">
                         <i class="fas fa-search" id="search-btn"></i>
                     </form>
                 </div>
-            
+                
+                <div>Residente: {{request.GET.search}}</div>
+
                 <div class="row" style="margin-top: 5%;">
                     <div class="col">
                         <span
@@ -45,14 +45,14 @@
                 {% for i in estoque_individual %}
                 <div  class="border border-dark row">
                     <div class="col">
-                        <span>{{i.id}}</span>
+                        <span>{{i.estoque_pessoa_nome.id}}</span>
                     </div>
                     <div class="col">
                         <span>{{i.estoque_pessoa_nome.pessoa_nome}}</span>
                     </div>
                     {% for j in i.estoque_usos_consumo.all %}
                         <div class="col">
-                            <span>{{j.consumo_nome}}</span>
+                            <span>{{j.medicamento_nome}}</span>
                         </div>
                     {% endfor %}
                     <div class="col">
@@ -67,7 +67,7 @@
             </div>
             <div class="row">
                 {%if request.GET.search != null %}
-                <a id="add-link" href="/estoque_individual_add/{{request.GET.search}}">
+                <a id="add-link" href="/estoque_individual_add/{{dono.id}}">
                     <div class="add-div">
                         <i class="fas fa-plus"></i>
                         Adicionar Estoque Individual

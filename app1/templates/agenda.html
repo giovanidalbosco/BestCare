@@ -1,10 +1,26 @@
 {% extends 'base_telainicial.html' %}
 
 {% block content3 %}
+	<div class="search-div">
+		<form method="GET" id="search-form">
+			<input list="pessoas" name="search" id="search" placeholder="Selecione o residente">
+			<datalist id="pessoas">
+				<option value=" ">
+				{% for residente in residentes %}
+					<option value="{{residente.pessoa_nome}}">
+				{% endfor %}
+			</datalist>
+			<input type="submit">
+			<i class="fas fa-search" id="search-btn"></i>
+		</form>
+	</div>
+	<div>Residente: {{request.GET.search}}</div>
 	<div class="clearfix">
-		<a class="btn btn-info right" href="/agenda/?{{ prev_month }}"> Mês Anterior </a>
 		<a class="btn btn-info right" href="/agenda/?{{ next_month }}"> Próximo Mês </a>
-		<a class="btn btn-info left" href="/event/new"> Novo Evento </a>
+		<a class="btn btn-info right" href="/agenda/?{{ prev_month }}"> Mês Anterior </a>
+		{%if request.GET.search != null %}
+			<a class="btn btn-info left" href="/event/new/{{dono.id}}"> Novo Evento </a>
+		{% endif %}
 	</div>
 	<div>
 		<table>

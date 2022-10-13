@@ -37,10 +37,16 @@ class MedicamentosForm(forms.ModelForm):
         fields = ('medicamento_nome', 'medicamento_fabricante', 'medicamento_apresentacao', 'medicamento_via',)
 
 class Estoque_IndividualForm(forms.ModelForm):
-    
+
+    # estoque_pessoa_nome = forms.ModelChoiceField(
+    #     widget = forms.Select,
+    #     queryset = Pessoas.objects.filter(pessoa_classe=2),
+    #     label = 'Residente'
+    # )
+
     class Meta:
         model = Estoque_Individual
-        fields = ('estoque_pessoa_nome','estoque_usos_consumo','estoque_quantidade',)
+        fields = ('estoque_usos_consumo','estoque_quantidade',)
 
 
 class OcorrenciasForm(forms.ModelForm):
@@ -177,6 +183,7 @@ class EventForm(forms.ModelForm):
         'end_time': forms.DateInput(attrs={'type': 'datetime-local'}, format='%Y-%m-%dT%H:%M'),
         }
         fields = '__all__'
+        exclude = ('event_pessoa_nome',)
 
     def __init__(self, *args, **kwargs):
         super(EventForm, self).__init__(*args, **kwargs)
