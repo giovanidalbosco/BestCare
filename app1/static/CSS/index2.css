@@ -19,7 +19,7 @@ body{
 /* Inicio do header*/
 
 #header-image{
-    margin-left: 1%;
+    margin-left: 3%;
 }
 #header-button{
     margin-right: 2%;
@@ -30,14 +30,8 @@ body{
 }
 
 .row .img {
-    width: 3.5em;
-    height: 2.3em;
-}
-#best1{
     width: 6em;
-    height: 0.9em;
-    border-radius:0;
-    margin-top: 22%;
+    height: 3.3em;
 }
 
 #header{
@@ -93,7 +87,7 @@ body{
     width: auto;
     height: auto;
     padding: 2.3%;
-    top:11%;
+    top:13%;
     background-color:#FFFFFF;
     z-index: 99999;
     -webkit-transition: opacity 400ms ease-in;
@@ -109,25 +103,24 @@ body{
 }
        
 .Caracteristicas{
-    /*opacity: 1;*/
     pointer-events: auto;;
 }
 
 .fechar{
     position: absolute;
     width: 1em;
-    right: 0.9em;
-    top: 2%;
+    right:1.2em;
+    /*top: 2%;*/
     text-align: center;
     font-size: 1.1em;
-    line-height: 25px;
-    background:#FFFFFF;
-    color:#000;
+    /*line-height: 25px;*/
+    background:#003f69;
+    color:#FFFFFF;
     text-decoration: none; 
 }
 
 .fechar:hover{
-    color: red;
+    color:#000;
 }
 
 div a{
@@ -142,18 +135,23 @@ div a{
     border: none;
 }
 
-#img_best{
-    width: 2.5em;
-    height: 2em;
-    margin-top: -2%;
+.header-login{
+    width: auto;
+    height: auto;
+    background:#003f69;
+    margin-top: 0;
+    border-radius: 3px;
 }
 
-#best2{
-    width: 4.5em;
-    height: 0.8em;
-    border-radius: 0;
-    margin-top: 1.8%; 
+#img_best{
+    width: 5.5em;
+    height: 2.4em;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    /*margin-top: -2%;*/
 }
+
 .btn-entrar{
     margin-left: 31%;
     margin-top: 5%;
@@ -188,9 +186,13 @@ div a{
 
 /*Fim Cadastro*/
 
+#botton-inicial{
+    margin-bottom: 5%;
+}
+
 #slogan{
-    color:#05076ede;
-    font-size: 1.9em;
+    color:#171718de;
+    font-size: 1.8em;
     font-weight: 400;
 }
 
@@ -199,7 +201,12 @@ div a{
     display: flex;
     flex-direction: column;
     align-items:flex-start;
-    padding: 7rem;
+    padding: 6em;
+    margin-left: 2%;
+}
+
+.carrossel1{
+    margin-top: 8%;
 }
 
 .carrossel1 #carousel img{
