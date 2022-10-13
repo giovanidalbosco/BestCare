@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:Calibri, 'Trebuchet MS', sans-serif;
+    font-family:Calibri, 'Trebuchet MS', sans-                                                   rif;
 }
 
 body{
@@ -371,7 +371,7 @@ div a{
 }
 
 .card-footer-names i{
-    color: #f7edde;
+    color: white;
 }
 
 .card-footer-names i:hover{
@@ -401,7 +401,8 @@ div a{
 }
 
 #btn-quemsomos{
-    color: #f7edde;
+    color: #fff;
+    border-color: #f7edde;
 }
 
 #btn-quemsomos:hover{
@@ -585,8 +586,6 @@ a .adicionar{
     color: black;
     transition-duration: 0.3s;
 }
-
-
 
 
 
