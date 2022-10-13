@@ -6,7 +6,7 @@ Event
 
 {% block content3 %}
 <div class="clearfix">
-  <a class="btn btn-info left" href="/agenda"> Agenda </a>
+    <a class="btn btn-info left" href="/agenda"> Voltar </a>
 </div>
 
 {% if form.errors %}
@@ -25,10 +25,22 @@ Event
 {% endif %}
 
 <form method="POST">
-  {% csrf_token %}
-  <table class="form form-table">
-      {{ form }}
-      <tr><td colspan="2"><button type="submit" class="btn btn-info right"> Salvar </button></td></tr>
-  </table>
+    {% csrf_token %}
+    <table class="form form-table tabform">
+        <tbody>
+        {% for field in form.visible_fields %}
+            <tr>  
+                <th>
+                    <label for="id_{{ field.name }}" id="id_{{ field.name }}_label">{{ field.label }}:</label>
+                </th>
+                <td>
+                    {{ field }}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+        <tr><td colspan="2"><button type="submit" class="btn btn-info right"> Salvar </button></td></tr>
+    </table>
 </form>
+
 {% endblock content3 %}
