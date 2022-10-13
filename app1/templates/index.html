@@ -3,16 +3,16 @@
 {% block content %}
 {% if user.is_authenticated %}
 {% else %}
-<div class="container " id="botton-inicial">
+<div class="container-fluid " id="botton-inicial">
     <div class="row ">
-        <div id="slogan"  class="col  font-italic " style="margin-top: 5%;">
-            <p class=" display-5 p-lg-4">Pontualidade</p>
-            <p class=" display-5 p-lg-4">Compromisso</p>
-            <p class=" display-5 p-lg-4">Transparência</p>
-            <p class=" display-5 p-lg-4">Comunicação em tempo real</p>
+        <div id="slogan"  class="col  font-italic ">
+            <p class="slogan-1">Pontualidade</p>
+            <p class="slogan-tags">Compromisso</p>
+            <p class="slogan-tags">Transparência</p>
+            <p class="slogan-tags">Comunicação em tempo real</p>
         </div>
         <div class= "carrossel1">
-          <div id="carousel" class="carousel slide " data-ride="carousel" data-interval="4500" >
+          <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="4500" >
               <div class="carousel-inner">
                   <div class="carousel-item active">
                     <img  src="/static/img/nova-telafundo.png" class="d-block w-100" alt="Primeiro Slide">
