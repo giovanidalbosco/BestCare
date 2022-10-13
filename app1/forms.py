@@ -168,6 +168,7 @@ class SinalVitalForm(forms.ModelForm):
             'sinalVital_pad',
             'sinalVital_fc',
             'sinalVital_fr',
+            'sinalVital_temp',
             'sinalVital_peso',
             'sinalVital_altura',
             'sinalVital_IMC',
