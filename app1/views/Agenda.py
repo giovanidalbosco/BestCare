@@ -6,7 +6,7 @@ from django.urls import reverse
 from django.utils.safestring import mark_safe
 import calendar
 
-from app1.models import Event
+from app1.models import Event, Pessoas
 from app1.utils import Calendar
 from app1.forms import EventForm
 from app1.views import *
