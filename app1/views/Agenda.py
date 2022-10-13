@@ -39,17 +39,11 @@ class Agenda(generic.ListView):
 
         context['estoque_individual'] = dono_estoque
         context['residentes'] = residentes
-        
-
-        # print(f'teste1: {residente}')
         # Call the formatmonth method, which returns our calendar as a table
-        
         context['calendar'] = mark_safe(html_cal)
         context['prev_month'] = prev_month(d)
         context['next_month'] = next_month(d)
 
-        
-        
         return context
 
 def get_date(req_month):
