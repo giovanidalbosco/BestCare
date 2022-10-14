@@ -110,10 +110,9 @@ body{
     position: absolute;
     width: 1em;
     right:1.2em;
-    /*top: 2%;*/
+    top: 10%;
     text-align: center;
     font-size: 1.1em;
-    /*line-height: 25px;*/
     background:#003f69;
     color:#FFFFFF;
     text-decoration: none; 
@@ -123,7 +122,7 @@ body{
     color:#000;
 }
 
-div a{
+/*div a{
     color:rgb(76, 75, 75); 
     cursor: pointer;
     text-decoration: none;
@@ -133,7 +132,7 @@ div a{
     font-size: 16px;
     background:#FFFFFF;
     border: none;
-}
+}*/
 
 .header-login{
     width: auto;
@@ -152,9 +151,14 @@ div a{
     /*margin-top: -2%;*/
 }
 
-.btn-entrar{
+.btn-entrar a{
+    color:rgb(28, 26, 26); 
     margin-left: 31%;
     margin-top: 5%;
+}
+
+.btn-entrar a:hover{
+    color: #003f69;
 }
 
 .btn-entrar button{
@@ -170,12 +174,16 @@ div a{
 #slogan img{
     margin-left: 0;
 }
+
+a .fechar-cad{
+    top: -6%;
+}
 /*Termina janela input*/
 
 /*Início Cadastro*/
 
 
-.btn-cad-geral .input-cadastrar:hover{
+/*.btn-cad-geral .input-cadastrar:hover{
     color:rgba(14, 94, 200,1);
 }
 
@@ -199,6 +207,8 @@ div a{
 }
 
 .slogan-tags{
+    width: 18em;
+    height: 1.6em;
     margin-top: 10%;
     background: #106b87;
     text-align: center;
@@ -206,6 +216,8 @@ div a{
 }
 
 .slogan-1{
+    width: 18em;
+    height: 1.6em;
     background: #106b87;
     text-align: center;
     border-radius: 3px;
@@ -365,7 +377,6 @@ div a{
 #icon-quemsomos:hover{
     color: rgb(11, 52, 214);
 }
-
 
 /*Fim bloco do quemSomos*/
 
