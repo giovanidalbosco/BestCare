@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:Calibri, 'Trebuchet MS', sans-                                                   rif;
+    font-family:Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body{
@@ -365,7 +365,7 @@ div a{
     font-family: Times;
     bottom: 0;
     width: 100%;
-    height: 100%;
+    height: 50%;
     background-color: rgb(44, 50, 51);
 }
 
@@ -476,10 +476,6 @@ div a{
 .content3 ::-webkit-scrollbar-button {
     background-color:rgb(107, 132, 150);
     border-radius: 3px;
-}
-
-a .adicionar{
-    margin-top: -5%;
 }
 
 /*Fim-Base-telainicial*/
@@ -593,6 +589,5 @@ a .adicionar{
     color: black;
     transition-duration: 0.3s;
 }
-
 
 
