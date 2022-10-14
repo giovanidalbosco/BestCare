@@ -1,4 +1,11 @@
-
+@media (max-width:1505px){
+    .carrossel1 #carousel img{
+        width: 25em;
+        height: 18em;
+    }
+    
+}
+    
 @media (max-width: 670px){
     .Caracteristicas{
         margin-left: 10%;

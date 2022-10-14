@@ -3,7 +3,7 @@
 {% block content %}
 <div>
     <div id="login" class="Caracteristicas">
-        <div class="header-login ">
+        <div class="">
             <div class="row header-login">
                 <img src="/static/img/best_tec.png" alt="Logo"  id="img_best">
                 <a href="/" title="Fechar"class="fechar">x</a>
@@ -23,17 +23,30 @@
         </form>   
     </div>
 </div>
-<div class="back-login-cad">
-    <div class="row">
-        <div  id="slogan"  class="col " style="margin-top: 5%;">
-            <p class="ml-2  p-2">Pontualidade</p>
-            <p class="ml-2  p-2">Compromisso</p>
-            <p class="ml-2  p-2">Transparência</p>
-            <p class="ml-2  p-2">Comunicação em tempo real</p>
+
+<div class="container-fluid" id="botton-inicial">
+    <div class="row ">
+        <div id="slogan"  class="col  font-italic ">
+            <p class="slogan-1">Pontualidade</p>
+            <p class="slogan-tags">Compromisso</p>
+            <p class="slogan-tags">Transparência</p>
+            <p class="slogan-tags">Comunicação em tempo real</p>
         </div>
-        <div class= "col" style="margin-top: 5%;">
-            <img src="/static/img/imagem1.jpg" alt="Imagem Apresentação" id="imagemApresentacao" class="img-thumbnail">
-            <figcaption class="figure-caption">Sempre ao seu lado.</figcaption>
+        <div class= "carrossel1">
+          <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="4500" >
+              <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img  src="/static/img/nova-telafundo.png" class="d-block w-100" alt="Primeiro Slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img  src="/static/img/nova-carrossel2.png" class="d-block w-100" alt="Segundo Slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/static/img/nova-carrossel3.png" class="d-block w-100"  alt="Terceiro Slide">
+                  </div>
+              </div>
+          </div>
+          <figcaption class="figure-caption text-dark"><strong>Sempre ao seu lado.</strong></figcaption>
         </div>
     </div>
 </div>
