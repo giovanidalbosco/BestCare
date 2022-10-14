@@ -17,7 +17,7 @@
             <div class="row d-inline-block">
                 <div class="modal-header align-baseline">
                     <a class="bg-transparent mr-5"  id="add-link" href="/residentes_add">
-                        <div class="adicionar">
+                        <div>
                             <i class="fas fa-plus" style="font-size:0.875rem;"></i>
                             Adicionar Residente
                         </div>
@@ -50,7 +50,7 @@
                     {% for i in residente %}
                       <tr>
                         <td>
-                            <div class="justify-content-end d-flex">
+                            <div class="d-flex justify-content-start">
                                 <a href="/residentes_edit/{{i.id}}" class="delete-btn bg-transparent"><span><abbr title="EDITAR">
                                     <i class="fas fa-edit" style="cursor:pointer;"></i></abbr></span></a>
                                 <a class="delete-btn bg-transparent js-delete" data-id={{i.id}}><span><abbr title="EXCLUIR">

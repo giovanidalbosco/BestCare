@@ -383,7 +383,7 @@ div a{
     font-family: Times;
     bottom: 0;
     width: 100%;
-    height: 100%;
+    height: 50%;
     background-color: rgb(44, 50, 51);
 }
 
@@ -396,7 +396,7 @@ div a{
 }
 
 .card-footer-names i{
-    color: #f7edde;
+    color: white;
 }
 
 .card-footer-names i:hover{
@@ -426,7 +426,8 @@ div a{
 }
 
 #btn-quemsomos{
-    color: #f7edde;
+    color: #fff;
+    border-color: #f7edde;
 }
 
 #btn-quemsomos:hover{
@@ -493,10 +494,6 @@ div a{
 .content3 ::-webkit-scrollbar-button {
     background-color:rgb(107, 132, 150);
     border-radius: 3px;
-}
-
-a .adicionar{
-    margin-top: -5%;
 }
 
 /*Fim-Base-telainicial*/
@@ -610,8 +607,5 @@ a .adicionar{
     color: black;
     transition-duration: 0.3s;
 }
-
-
-
 
 
