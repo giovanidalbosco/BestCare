@@ -1,23 +1,27 @@
 {% extends 'base_telainicial.html' %}
-
-{% block title %}Estoque Individual{% endblock %}
+{% load crispy_forms_tags %}
 
 {% block content3 %}
-<div class=" col-6 px-5">
-    <div class=" align-middle table" id="dashboard-done">
-        <h1>Adicione Estoque Individual:</h1>
-        <form method="post" class="col-lg-3 form-group">
-            <!-- <input type="text" value="{{residente}}" readonly> -->
-            {% csrf_token %}
-            {{ form.as_p }}
-            <a class="bg-transparent mx-lg-5" id="add-link" href="/uso_consumo_add">
-                <div class="add-div">
-                    <i class="fas fa-plus btn"></i>
-                    Adicionar Uso e consumo
-                </div>
-            </a>
-            <input class="btn btn-outline-secondary btn-sm mt-lg-5" type="submit" value="Salvar">
-        </form>
+    {% if estoque_individual.id != null %}
+        <h4>Editar Medicamento '{{estoque_individual.estoque_usos_consumo.medicamento_nome}}'</h4>
+    {% else %}
+        <a class="btn btn-info left clearfix" href="/estoque_individual_list/?search={{residente.pessoa_nome}}"> Voltar </a>
+        <h4 class="d-flex justify-content-center py-4">Adicionar Sinal Vital</h4>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <table class="form form-table">
+            {{ form.as_table }}
+            <tr><td colspan="2"><button type="submit" class="btn btn-info right"> Salvar </button></td></tr>
+        </table>
+        <a class="bg-transparent mx-lg-5" id="add-link" href="/uso_consumo_add">
+            <div class="add-div">
+                <i class="fas fa-plus btn"></i>
+                Adicionar Uso e consumo
+            </div>
+        </a>
+    </form>
     </div>
 </div>
 {% endblock content3 %}
