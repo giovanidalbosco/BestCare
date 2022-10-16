@@ -148,7 +148,6 @@ div a{
     margin-top: 2%;
     margin-bottom: 2%;
     margin-left: 2%;
-    /*margin-top: -2%;*/
 }
 
 .btn-entrar a{
@@ -495,6 +494,17 @@ div a{
     background-color:rgb(107, 132, 150);
     border-radius: 3px;
 }
+.form-container{
+    margin-bottom: 10%;
+}
+
+.form-container2{
+    margin-bottom: 30%;
+}
+
+.form-container3{
+    margin-bottom: 38%;
+}
 
 /*Fim-Base-telainicial*/
 
@@ -608,4 +618,21 @@ div a{
     transition-duration: 0.3s;
 }
 
+/*Agenda*/
 
+#agenda-search{
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content:center;  
+    text-align: center;
+    margin-top: 2%; 
+}
+
+#agenda-search ::placeholder{
+    color: #000;
+}
+
+.agenda-body{
+    margin-top: -4.7%;
+}

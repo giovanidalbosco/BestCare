@@ -2,26 +2,27 @@
 {% load crispy_forms_tags %}
 
 {% block content3 %}
-    {% if estoque_individual.id != null %}
-        <h4>Editar Medicamento '{{estoque_individual.estoque_usos_consumo.medicamento_nome}}'</h4>
-    {% else %}
-        <a class="btn btn-info left clearfix" href="/estoque_individual_list/?search={{residente.pessoa_nome}}"> Voltar </a>
-        <h4 class="d-flex justify-content-center py-4">Adicionar Sinal Vital</h4>
-    {% endif %}
+    <div class="form-container">
+        {% if estoque_individual.id != null %}
+            <h4 class="text-dark m-lg-4 mt-4">Editar Medicamento '{{estoque_individual.estoque_usos_consumo.medicamento_nome}}'</h4>
+        {% else %}
+            <a class="btn btn-info left clearfix" href="/estoque_individual_list/?search={{residente.pessoa_nome}}"> Voltar </a>
+            <h4 class="d-flex justify-content-center py-4">Adicionar Sinal Vital</h4>
+        {% endif %}
 
-    <form method="POST">
-        {% csrf_token %}
-        <table class="form form-table">
-            {{ form.as_table }}
-            <tr><td colspan="2"><button type="submit" class="btn btn-info right"> Salvar </button></td></tr>
-        </table>
-        <a class="bg-transparent mx-lg-5" id="add-link" href="/uso_consumo_add">
-            <div class="add-div">
-                <i class="fas fa-plus btn"></i>
-                Adicionar Uso e consumo
-            </div>
-        </a>
-    </form>
+        <form method="POST">
+            {% csrf_token %}
+            <table class="form form-table">
+                {{ form.as_table }}
+                <tr><td colspan="2"><button type="submit" class="btn btn-info right"> Salvar </button></td></tr>
+            </table>
+            <a class="bg-transparent mx-lg-5" id="add-link" href="/uso_consumo_add">
+                <div class="add-div">
+                    <i class="fas fa-plus btn"></i>
+                    Adicionar Uso e consumo
+                </div>
+            </a>
+        </form>
     </div>
-</div>
+
 {% endblock content3 %}
