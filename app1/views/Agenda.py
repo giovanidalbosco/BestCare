@@ -66,29 +66,25 @@ def next_month(d):
 
 def event(request, residente_id=None, event_id=None):
     instance = Event()
-    print(f'residente id = {residente_id}')
-    print(f'evento id = {event_id}')
     if event_id:
-        print('test1')
         instance = get_object_or_404(Event, pk=event_id)
-    # elif residente_id:
-    #     print('test2')
     else:
-        print('test3')
         instance = Event()
+    
+    
     residente = get_object_or_404(Pessoas, id=residente_id)
-    
-    
     form = EventForm(request.POST or None, instance=instance)
     if request.POST and form.is_valid():
-        print('test4')
         evento = form.save(commit=False)
         if residente_id:
-            print('test5')
             evento.event_pessoa_nome = residente
         evento.save()
         if hasattr(form, 'save_m2m'):
-            print('test6')
             form.save_m2m()
         return HttpResponseRedirect(f'/agenda/?search={residente.pessoa_nome}')
     return render(request, 'event.html', {'form': form, 'residente': residente})
+
+def event_delete(request, event_id):
+    event = get_object_or_404(Event, pk=event_id)
+    event.delete()
+    return redirect(f'/agenda/?search={event.event_pessoa_nome.pessoa_nome}')

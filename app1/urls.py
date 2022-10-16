@@ -44,5 +44,6 @@ urlpatterns = [
     path('agenda/', views.Agenda.as_view(), name='agenda'),
     path('event/new/<int:residente_id>', views.event, name='event_new'),
     path('event/edit/<int:residente_id>/<int:event_id>', views.event, name='event_edit'),
+    path('event/delete/<int:event_id>', views.event_delete, name='event_delete')
     #path('email', views.Envia_email, name='envia_email'),
 ]
