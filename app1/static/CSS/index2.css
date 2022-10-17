@@ -643,7 +643,21 @@ div a{
     font-size: 1.5em;
 }
 
+/*Agenda tooltip*/
 
+.agendatooltip:hover .agendatooltipwindow {
+    display: block;
+  }
+  
+.agendatooltipwindow {
+    display: none;
+    background: rgb(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 10px;
+    position: absolute;
+    width: auto;
+    border-radius: 3px;
+}
 
 
 
