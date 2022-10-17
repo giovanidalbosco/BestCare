@@ -9,7 +9,6 @@
 				<form method="GET" id="search-form">
 					<input  class="btn btn-info" list="pessoas" name="search" id="search" placeholder="Selecione o residente">
 					<datalist id="pessoas">
-						<option value=" ">
 						{% for residente in residentes %}
 							<option value="{{residente.pessoa_nome}}">
 						{% endfor %}
@@ -19,8 +18,8 @@
 			</div>
 		</div>
 	</div>
-	{%if request.GET.search != null %}
-	<div class="agenda-body">
+	{% if request.GET.search.strip %}
+	<div class="agenda-body ">
 		<div class="clearfix">
 			<a class="btn btn-info right" href="/agenda/?{{ next_month }}&search={{dono.pessoa_nome}}"> Próximo Mês </a>
 			<a class="btn btn-info right" href="/agenda/?{{ prev_month }}&search={{dono.pessoa_nome}}"> Mês Anterior </a>
@@ -32,6 +31,8 @@
 			</table>
 		</div>
 	</div>
+	{% elif not request.GET.search.strip %}
+		<div>qqr coisa</div>
 	{% endif %}
 
 {% endblock content3 %}
