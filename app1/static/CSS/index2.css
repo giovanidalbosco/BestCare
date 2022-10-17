@@ -571,7 +571,7 @@ div a{
 
 /*Fim soluções*/
 
-.btn-cad-geral{
+/*.btn-cad-geral{
     position: fixed;
     width: 31em;
     height: 28em;
@@ -598,7 +598,7 @@ div a{
     height: 2em;
     padding: 5%;
     margin: 2%;  
-}
+}*/
 
 /*Telas internas com scroll bar */
 .base-scrool{
@@ -621,12 +621,12 @@ div a{
 /*Agenda*/
 
 #agenda-search{
-    width: 100%;
+    /*width: 100%;*/
     display: flex;
     flex-direction:row;
     justify-content:center;  
     text-align: center;
-    margin-top: 2%; 
+    margin-top: 1.8%; 
 }
 
 #agenda-search ::placeholder{
@@ -634,5 +634,17 @@ div a{
 }
 
 .agenda-body{
-    margin-top: -4.7%;
+    margin-top: -4.5%;
+    
 }
+
+.agenda-residente{
+    margin-right: 2%;
+    font-size: 1.5em;
+}
+
+
+
+
+
+   
