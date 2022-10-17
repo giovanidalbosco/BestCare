@@ -6,6 +6,8 @@ from django.urls import reverse
 from django.utils.safestring import mark_safe
 import calendar
 
+from requests import RequestException, request
+
 from app1.models import Event, Pessoas
 from app1.utils import Calendar
 from app1.forms import EventForm
@@ -66,19 +68,23 @@ def event(request, residente_id=None, event_id=None):
     instance = Event()
     if event_id:
         instance = get_object_or_404(Event, pk=event_id)
-    elif residente_id:
-        residente = get_object_or_404(Pessoas, id=residente_id)
     else:
         instance = Event()
     
+    
+    residente = get_object_or_404(Pessoas, id=residente_id)
     form = EventForm(request.POST or None, instance=instance)
     if request.POST and form.is_valid():
         evento = form.save(commit=False)
         if residente_id:
-            residente = get_object_or_404(Pessoas, id=residente_id)
             evento.event_pessoa_nome = residente
         evento.save()
         if hasattr(form, 'save_m2m'):
-                form.save_m2m()
+            form.save_m2m()
         return HttpResponseRedirect(f'/agenda/?search={residente.pessoa_nome}')
-    return render(request, 'event.html', {'form': form})
+    return render(request, 'event.html', {'form': form, 'residente': residente})
+
+def event_delete(request, event_id):
+    event = get_object_or_404(Event, pk=event_id)
+    event.delete()
+    return redirect(f'/agenda/?search={event.event_pessoa_nome.pessoa_nome}')

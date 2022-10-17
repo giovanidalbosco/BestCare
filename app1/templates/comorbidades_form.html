@@ -4,19 +4,20 @@
 {% block title %}{{comorbidade.comorbidade_nome}}{% endblock %}
 
 {% block content3 %}
+    <div class="form-container3">
+        {% if comorbidade.id != null %}
+            <h4 class="text-dark m-lg-4 mt-4">Editar Comorbidade '{{comorbidade.comorbidade_nome}}'</h4>
+        {% else %}
+        <a class="btn btn-info left clearfix" href="/comorbidades_list"> Voltar </a>
+            <h4 class="d-flex justify-content-center py-4">Adicionar Comorbidade</h4>
+        {% endif %}
 
-    {% if comorbidade.id != null %}
-        <h4>Editar Comorbidade '{{comorbidade.comorbidade_nome}}'</h4>
-    {% else %}
-    <a class="btn btn-info left clearfix" href="/comorbidades_list"> Voltar </a>
-        <h4 class="d-flex justify-content-center py-4">Adicionar Comorbidade</h4>
-    {% endif %}
-
-    <form method="POST">
-        {% csrf_token %}
-        <table class="form form-table">
-            {{ form.as_table}}
-            <tr><td colspan="2"><button type="submit" class="btn btn-info right"> Salvar </button></td></tr>
-        </table>
-    </form>                               
+        <form method="POST">
+            {% csrf_token %}
+            <table class="form form-table">
+                {{ form.as_table}}
+                <tr><td colspan="2"><button type="submit" class="btn btn-info right"> Salvar </button></td></tr>
+            </table>
+        </form> 
+    </div>                              
 {% endblock content3 %}

@@ -3,20 +3,20 @@
 
 {% block content3 %}
 
+    <div class="form-container">
+        {% if ocorrencia.id != null %}
+            <h4 class="text-dark m-lg-4 mt-4">Editar Ocorrência '{{ocorrencia.get_ocorrencia_nome_display}}'</h4>
+        {% else %}
+            <a class="btn btn-info left clearfix" href="/ocorrencias_list"> Voltar </a>
+            <h4 class="d-flex justify-content-center py-4">Adicionar Ocorrência</h4>
+        {% endif %}
 
-    {% if ocorrencia.id != null %}
-        <h4>Editar Ocorrência '{{ocorrencia.get_ocorrencia_nome_display}}'</h4>
-    {% else %}
-        <a class="btn btn-info left clearfix" href="/ocorrencias_list"> Voltar </a>
-        <h4 class="d-flex justify-content-center py-4">Adicionar Ocorrência</h4>
-    {% endif %}
-
-<form method="POST">
-    {% csrf_token %}
-    <table class="form form-table">
-          {{ form }}   
-          <tr><td colspan="2"><button type="submit" class="btn btn-info right"> Salvar </button></td></tr>
-    </table>
-</form>
-    
+        <form method="POST">
+            {% csrf_token %}
+            <table class="form form-table">
+                  {{ form }}   
+                  <tr><td colspan="2"><button type="submit" class="btn btn-info right"> Salvar </button></td></tr>
+            </table>
+        </form>
+    </div>
 {% endblock content3 %}

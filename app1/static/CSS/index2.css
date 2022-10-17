@@ -84,7 +84,7 @@ body{
 
 .Caracteristicas{
     position: fixed;
-    width: auto;
+    width: 32em;
     height: auto;
     padding: 2.3%;
     top:13%;
@@ -110,7 +110,7 @@ body{
     position: absolute;
     width: 1em;
     right:1.2em;
-    top: 10%;
+    top: 9%;
     text-align: center;
     font-size: 1.1em;
     background:#003f69;
@@ -135,7 +135,7 @@ div a{
 }
 
 .header-login{
-    width: auto;
+    width: 29.3em;
     height: auto;
     background:#003f69;
     margin-top: 0;
@@ -148,7 +148,6 @@ div a{
     margin-top: 2%;
     margin-bottom: 2%;
     margin-left: 2%;
-    /*margin-top: -2%;*/
 }
 
 .btn-entrar a{
@@ -175,9 +174,6 @@ div a{
     margin-left: 0;
 }
 
-a .fechar-cad{
-    top: -6%;
-}
 /*Termina janela input*/
 
 /*Início Cadastro*/
@@ -278,14 +274,12 @@ a .fechar-cad{
     border-radius: 5px 35px 5px 35px;
     box-shadow: 0px 8px 15px 8px rgba(161, 167, 169, 0.5);
     transition: all 1s;
-
 }
 
 .quemsomos1 img{
     width:20%;
     height:40%;
-    opacity: 0.8;
-    
+    opacity: 0.8;   
 }
 
 .quemsomos1 aside{
@@ -500,6 +494,17 @@ a .fechar-cad{
     background-color:rgb(107, 132, 150);
     border-radius: 3px;
 }
+.form-container{
+    margin-bottom: 10%;
+}
+
+.form-container2{
+    margin-bottom: 30%;
+}
+
+.form-container3{
+    margin-bottom: 38%;
+}
 
 /*Fim-Base-telainicial*/
 
@@ -608,4 +613,21 @@ a .fechar-cad{
 /* fim telas internas com scroll bar*/
 
 
+/*Agenda*/
 
+#agenda-search{
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content:center;  
+    text-align: center;
+    margin-top: 2%; 
+}
+
+#agenda-search ::placeholder{
+    color: #000;
+}
+
+.agenda-body{
+    margin-top: -4.7%;
+}
