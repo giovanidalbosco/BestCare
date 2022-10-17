@@ -1,4 +1,8 @@
+from cProfile import label
+from email.mime import message
+from glob import escape
 from operator import invert
+import textwrap
 from app1.models import *
 
 
@@ -23,3 +27,6 @@ class SinalVital(models.Model):
         ordering = ['-sinalVitalCreate']
         verbose_name = 'Sinal Vital'
         verbose_name_plural = 'Sinais Vitais'
+
+
+

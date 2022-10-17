@@ -1,3 +1,7 @@
+from cProfile import label
+from email import message
+from pyexpat.errors import messages
+from turtle import onclick
 from django import forms
 from .models import *
 
@@ -142,7 +146,7 @@ class SinalVitalForm(forms.ModelForm):
     sinalVital_pessoa_nome = forms.ModelChoiceField(
         widget = forms.Select,
         queryset = Pessoas.objects.filter(pessoa_classe=2),
-        label = 'Residente'
+        label = 'Residente'       
     )
     
     sinalVital_peso = forms.FloatField(
