@@ -122,7 +122,7 @@ body{
     color:#000;
 }
 
-/*div a{
+div a{
     color:rgb(76, 75, 75); 
     cursor: pointer;
     text-decoration: none;
@@ -132,7 +132,7 @@ body{
     font-size: 16px;
     background:#FFFFFF;
     border: none;
-}*/
+}
 
 .header-login{
     width: auto;
@@ -607,10 +607,5 @@ a .fechar-cad{
 }
 /* fim telas internas com scroll bar*/
 
-.btn-light:hover {
-    background-color: #003f69;
-    color: black;
-    transition-duration: 0.3s;
-}
 
 

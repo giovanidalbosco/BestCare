@@ -34,7 +34,7 @@ ul {
   padding: 0px 5px 0px 20px;
 }
 
-a {
+.clearfix a {
   color: #17a2b8;
 }
 .left {
