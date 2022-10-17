@@ -14,13 +14,13 @@
 							<option value="{{residente.pessoa_nome}}">
 						{% endfor %}
 					</datalist>
-					<input type="submit" value="Buscar" class="btn btn-info ">
+					<input type="submit" value="Buscar" class="btn btn-info">
 				</form>
 			</div>
 		</div>
 	</div>
 	{%if request.GET.search != null %}
-	<div class="agenda-body ">
+	<div class="agenda-body">
 		<div class="clearfix">
 			<a class="btn btn-info right" href="/agenda/?{{ next_month }}&search={{dono.pessoa_nome}}"> Próximo Mês </a>
 			<a class="btn btn-info right" href="/agenda/?{{ prev_month }}&search={{dono.pessoa_nome}}"> Mês Anterior </a>
@@ -33,6 +33,5 @@
 		</div>
 	</div>
 	{% endif %}
-
 
 {% endblock content3 %}

@@ -7,12 +7,17 @@
 
 .calendar tr, .calendar td {
   border: 1px solid black;
+  
+  resize:horizontal;
+  overflow: auto;
+
 }
 
 .calendar th {
   padding: 10px;
   text-align: center;
   font-size: 18px;
+  color:#003f69;
 }
 
 .calendar td {
@@ -27,11 +32,14 @@
 
 .date {
   font-size: 16px;
+  font-weight: 700;
+  color:#003f69;
 }
 
 ul {
   height: 100%;
   padding: 0px 5px 0px 20px;
+
 }
 
 a {

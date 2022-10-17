@@ -643,6 +643,10 @@ div a{
     font-size: 1.5em;
 }
 
+.tex-agenda1{
+    color:#000;
+}
+
 /*Agenda tooltip*/
 
 .agendatooltip:hover .agendatooltipwindow {
@@ -659,6 +663,7 @@ div a{
     border-radius: 3px;
 }
 
+/*Fim  Agenda tooltip*/
 
 
    

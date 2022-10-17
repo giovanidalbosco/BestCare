@@ -14,5 +14,3 @@ function exibir_ocultar(){
         $("#id_event_dose").hide();
     }
 };
-
-
