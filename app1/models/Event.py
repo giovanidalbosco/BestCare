@@ -1,5 +1,4 @@
 from app1.models import *
-from datetime import time
 
 
 class Event(models.Model):
