@@ -5,21 +5,22 @@
 {% block title %}{{cuidadores.pessoa_nome}}{% endblock %}
 
 {% block content3 %}
+    <div class="form-container">
+        {% if cuidadores.id != null %}
+            <h4 class="text-dark m-lg-4 mt-4">Editar Cuidador '{{cuidadores.pessoa_nome}}'</h4>
+        {% else %}
+        <a class="btn btn-info left clearfix" href="/cuidadores_list"> Voltar </a>
+            <h4 class="d-flex justify-content-center py-4">Adicionar Cuidador</h4>
+        {% endif %}
 
-    {% if cuidadores.id != null %}
-        <h4>Editar Cuidador '{{cuidadores.pessoa_nome}}'</h4>
-    {% else %}
-    <a class="btn btn-info left clearfix" href="/cuidadores_list"> Voltar </a>
-        <h4 class="d-flex justify-content-center py-4">Adicionar Cuidador</h4>
-    {% endif %}
-
-    <form method="POST">
-        {% csrf_token %}
-        <table class="form form-table">
-            {{ form.as_table }}
-            <tr><td colspan="2"><button type="submit" class="btn btn-info right"> Salvar </button></td></tr>
-        </table>
-    </form>
+        <form method="POST">
+            {% csrf_token %}
+            <table class="form form-table">
+                {{ form.as_table }}
+                <tr><td colspan="2"><button type="submit" class="btn btn-info right"> Salvar </button></td></tr>
+            </table>
+        </form>
+    </div>
 
     {% block script%}
     <script src="{% static 'JS/jquery.mask.min.js' %}"></script>
