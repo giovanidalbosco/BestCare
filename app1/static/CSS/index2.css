@@ -84,7 +84,7 @@ body{
 
 .Caracteristicas{
     position: fixed;
-    width: auto;
+    width: 32em;
     height: auto;
     padding: 2.3%;
     top:13%;
@@ -110,7 +110,7 @@ body{
     position: absolute;
     width: 1em;
     right:1.2em;
-    top: 10%;
+    top: 9%;
     text-align: center;
     font-size: 1.1em;
     background:#003f69;
@@ -122,7 +122,7 @@ body{
     color:#000;
 }
 
-/*div a{
+div a{
     color:rgb(76, 75, 75); 
     cursor: pointer;
     text-decoration: none;
@@ -132,10 +132,10 @@ body{
     font-size: 16px;
     background:#FFFFFF;
     border: none;
-}*/
+}
 
 .header-login{
-    width: auto;
+    width: 29.3em;
     height: auto;
     background:#003f69;
     margin-top: 0;
@@ -148,7 +148,6 @@ body{
     margin-top: 2%;
     margin-bottom: 2%;
     margin-left: 2%;
-    /*margin-top: -2%;*/
 }
 
 .btn-entrar a{
@@ -175,9 +174,6 @@ body{
     margin-left: 0;
 }
 
-a .fechar-cad{
-    top: -6%;
-}
 /*Termina janela input*/
 
 /*Início Cadastro*/
@@ -278,14 +274,12 @@ a .fechar-cad{
     border-radius: 5px 35px 5px 35px;
     box-shadow: 0px 8px 15px 8px rgba(161, 167, 169, 0.5);
     transition: all 1s;
-
 }
 
 .quemsomos1 img{
     width:20%;
     height:40%;
-    opacity: 0.8;
-    
+    opacity: 0.8;   
 }
 
 .quemsomos1 aside{
@@ -388,7 +382,7 @@ a .fechar-cad{
     font-family: Times;
     bottom: 0;
     width: 100%;
-    height: 100%;
+    height: 50%;
     background-color: rgb(44, 50, 51);
 }
 
@@ -401,7 +395,7 @@ a .fechar-cad{
 }
 
 .card-footer-names i{
-    color: #f7edde;
+    color: white;
 }
 
 .card-footer-names i:hover{
@@ -431,7 +425,8 @@ a .fechar-cad{
 }
 
 #btn-quemsomos{
-    color: #f7edde;
+    color: #fff;
+    border-color: #f7edde;
 }
 
 #btn-quemsomos:hover{
@@ -499,9 +494,16 @@ a .fechar-cad{
     background-color:rgb(107, 132, 150);
     border-radius: 3px;
 }
+.form-container{
+    margin-bottom: 10%;
+}
 
-a .adicionar{
-    margin-top: -5%;
+.form-container2{
+    margin-bottom: 30%;
+}
+
+.form-container3{
+    margin-bottom: 38%;
 }
 
 /*Fim-Base-telainicial*/
@@ -616,7 +618,21 @@ a .adicionar{
     transition-duration: 0.3s;
 }
 
+/*Agenda*/
 
+#agenda-search{
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content:center;  
+    text-align: center;
+    margin-top: 2%; 
+}
 
+#agenda-search ::placeholder{
+    color: #000;
+}
 
-
+.agenda-body{
+    margin-top: -4.7%;
+}

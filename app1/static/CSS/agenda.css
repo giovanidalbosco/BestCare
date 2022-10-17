@@ -39,12 +39,10 @@ a {
 }
 .left {
   float: left;
-  margin-left: -.175em;
 }
 
 .right {
   float: right;
-  margin-right: -.15rem;
 }
 
 .btn {
@@ -72,4 +70,5 @@ a {
   width: 25em;
   margin-top: 2%;
 }
+
 

@@ -3,11 +3,11 @@ from app1.views import *
 
 @login_required
 def Estoque_Individual_add(request, id):
+    residente = get_object_or_404(Pessoas, id=id)
     if request.method == 'POST':
         form = Estoque_IndividualForm(request.POST)
         if form.is_valid():
             estoque_Individual = form.save(commit=False)
-            residente = get_object_or_404(Pessoas, id=id)
             estoque_Individual.estoque_pessoa_nome = residente
             estoque_Individual.save()
             if hasattr(form, 'save_m2m'):
@@ -17,4 +17,4 @@ def Estoque_Individual_add(request, id):
         form = Estoque_IndividualForm()
 
         
-    return render(request, 'estoque_individual_form.html', {'form': form})
+    return render(request, 'estoque_individual_form.html', {'form': form, 'residente': residente})

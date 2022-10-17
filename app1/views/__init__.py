@@ -12,10 +12,12 @@ from .Base_telainicial import Base_telainicial
 from .Agenda import *
 from .Cadastro import Cadastro
 from .Login import Login
+
 from .Comorbidades_delete import Comorbidades_delete
 from .Comorbidades_edit import Comorbidades_edit
 from .Comorbidades_add import Comorbidades_add
 from .Comorbidades_list import Comorbidades_list
+
 from .index import index
 from .Inicial import Inicial
 from .Solucoes import Solucoes
@@ -24,6 +26,9 @@ from .Medicamentos_delete import Medicamentos_delete
 from .Medicamentos_edit import Medicamentos_edit
 from .Medicamentos_add import Medicamentos_add
 from .Medicamentos_list import Medicamentos_list
+
+from .Estoque_Individual_delete import Estoque_Individual_delete
+from .Estoque_Individual_edit import Estoque_Individual_edit
 from .Estoque_Individual_list import Estoque_Individual_list
 from .Estoque_Individual_add import Estoque_Individual_add
 from .Ocorrencias_list import Ocorrencias_list
