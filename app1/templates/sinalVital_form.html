@@ -3,10 +3,10 @@
 
 {% block content3 %}
     <div class="form-container">
+        <a class="btn btn-info left clearfix" href="/sinalvital_list"> Voltar </a>
         {% if sinalVital.id != null %}
             <h4 class="text-dark m-lg-4 mt-4">Editar Sinal Vital '{{sinalvital.get_sinalVital_pessoa_nome_display}}'</h4>
         {% else %}
-            <a class="btn btn-info left clearfix" href="/sinalvital_list"> Voltar </a>
             <h4 class="d-flex justify-content-center py-4">Adicionar Sinal Vital</h4>
         {% endif %}
 

@@ -3,11 +3,11 @@
 
 {% block content3 %}
     <div class="form-container">
+        <a class="btn btn-info left clearfix" href="/estoque_individual_list/?search={{residente.pessoa_nome}}"> Voltar </a>
         {% if estoque_individual.id != null %}
             <h4 class="text-dark m-lg-4 mt-4">Editar Medicamento '{{estoque_individual.estoque_usos_consumo.medicamento_nome}}'</h4>
         {% else %}
-            <a class="btn btn-info left clearfix" href="/estoque_individual_list/?search={{residente.pessoa_nome}}"> Voltar </a>
-            <h4 class="d-flex justify-content-center py-4">Adicionar Sinal Vital</h4>
+            <h4 class="d-flex justify-content-center py-4">Adicionar Medicamento</h4>
         {% endif %}
 
         <form method="POST">
@@ -24,5 +24,4 @@
             </a>
         </form>
     </div>
-
 {% endblock content3 %}
