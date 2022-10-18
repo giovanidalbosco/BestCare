@@ -160,7 +160,7 @@ class SinalVitalForm(forms.ModelForm):
     )
 
     sinalVital_IMC = forms.FloatField(
-        widget = forms.TextInput(attrs={'for': 'sinalVital_peso sinalVital_altura'}),
+        widget = forms.TextInput(attrs={'for': 'sinalVital_peso sinalVital_altura', 'oninput': 'arredondar();'}),
         label = 'IMC'
     )
 

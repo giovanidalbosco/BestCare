@@ -8,7 +8,8 @@
     <div class="form-container">
         <a class="btn btn-info left clearfix" href="/responsavel_list"> Voltar </a>
         {% if responsavel.id != null %}
-            <h4 class="text-dark m-lg-4 mt-4">Editar Responsável '{{responsavel.pessoa_nome}}'</h4>
+            <h4 class="d-flex justify-content-center py-4">Editar Responsável '{{responsavel.pessoa_nome}}'</h4>
+            <!-- <h4 class="text-dark m-lg-4 mt-4">Editar Responsável '{{responsavel.pessoa_nome}}'</h4> -->
         {% else %}
             <h4 class="d-flex justify-content-center py-4">Adicionar Responsável</h4>
         {% endif %}

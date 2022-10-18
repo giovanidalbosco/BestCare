@@ -4,6 +4,7 @@ from app1.views import *
 @login_required
 def Estoque_Individual_edit(request, id):
     estoque_individual = get_object_or_404(Estoque_Individual, pk=id)
+    residente = get_object_or_404(Pessoas, pk=estoque_individual.estoque_pessoa_nome.id)
     form = Estoque_IndividualForm(instance=estoque_individual)
     if (request.method == 'POST'):
         form = Estoque_IndividualForm(request.POST, instance=estoque_individual)
@@ -21,5 +22,6 @@ def Estoque_Individual_edit(request, id):
     else:
         return render(request, 'estoque_individual_form.html', {
             'form': form,
-            'estoque_individual': estoque_individual
+            'estoque_individual': estoque_individual,
+            'residente': residente
         })

@@ -67,7 +67,7 @@
                         {% for j in i.estoque_usos_consumo.all %}
                             <td>{{j.medicamento_nome}}</td>
                         {% endfor %}
-                        <td>{{i.estoque_saldo}}</td>
+                        <td>{{i.estoque_quantidade}}</td>
                     </tr>
                     {% endfor %}
                     </tbody>
