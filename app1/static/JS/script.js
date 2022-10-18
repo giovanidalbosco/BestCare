@@ -16,52 +16,17 @@ function exibir_ocultar(){
 };
 
 
-
-// $(document).ready(function () {
-//     $('.mask-IMC').mask('99.99');
-// });
-
-function arredondar(){
+function calculo_IMC(){
     let peso = document.querySelector("#sinalVital_peso");
-    console.log(peso.value)
     let altura = document.querySelector("#sinalVital_altura");
-    console.log(altura.value)
     let resultado = peso.value / (altura.value*altura.value);
-    console.log(resultado)
     let arredondado = parseFloat(resultado).toFixed(2);
-    console.log(arredondado)
-    var input = document.querySelector("#id_sinalVital_IMC");
-    var input2 = document.getElementById("id_sinalVital_temp");
 
-    // arredondado = input.value.toFixed(2)
-    
-    arredondado = parseFloat(input.value).toFixed(2)
+    let input2 = document.getElementById("id_sinalVital_IMC");
 
     if (arredondado >= 0 && arredondado!=Infinity) {
         input2.value = arredondado;
     } else {
         input2.value = 0;
     }
-    
-    
-    let num = 5.56789;
-    let n = num.toFixed(2);
-    console.log(typeof(parseFloat(input.value)));
-
-    // let peso = document.querySelector("#sinalVital_peso");
-    // let altura = document.querySelector("#sinalVital_altura");
-    // let resultado = peso / (altura*altura);
-    // let arredondado = parseFloat(resultado).toFixed(2);
-    // var input2 = document.getElementById("id_sinalVital_temp");
-    // var IMC = document.getElementById("id_sinalVital_IMC");
-    
-
-    // arredondado = input.value.toFixed(2)
-    
-    
-    // IMC.value = arredondado
-    // input2.value = arredondado
-    // let num = 5.56789;
-    // let n = num.toFixed(2);
-    // console.log(arredondado);
 }

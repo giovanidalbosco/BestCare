@@ -154,17 +154,17 @@ class SinalVitalForm(forms.ModelForm):
     )
     
     sinalVital_peso = forms.FloatField(
-        widget = forms.NumberInput(attrs={'type': 'number', 'step': '0.5', 'id': 'sinalVital_peso', 'onkeyup': 'arredondar();'}),
+        widget = forms.NumberInput(attrs={'type': 'number', 'step': '0.5', 'id': 'sinalVital_peso', 'onkeyup': 'calculo_IMC();'}),
         label = 'Peso'
     )
 
     sinalVital_altura = forms.FloatField(
-        widget = forms.NumberInput(attrs={'type': 'number', 'step': '0.01', 'id': 'sinalVital_altura', 'onkeyup': 'arredondar();'}),
+        widget = forms.NumberInput(attrs={'type': 'number', 'step': '0.01', 'id': 'sinalVital_altura', 'onkeyup': 'calculo_IMC();'}),
         label = 'Altura'
     )
 
     sinalVital_IMC = forms.FloatField(
-        widget = forms.TextInput(attrs={'for': 'sinalVital_peso sinalVital_altura'}),
+        widget = forms.TextInput(attrs={'readonly': ''}),
         label = 'IMC'
     )
 
