@@ -10,6 +10,7 @@ def Medicamentos_edit(request, id):
         if (form.is_valid()):
             medicamentos.save()
             return redirect('/medicamentos_list')
+        
         else:
             return render(request, 'medicamentos_form.html', {
                 'form': form, 

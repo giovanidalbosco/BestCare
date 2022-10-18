@@ -12,6 +12,7 @@ def Residentes_add(request):
             if hasattr(form, 'save_m2m'):
                 form.save_m2m()
             return HttpResponseRedirect('/residentes_list')
+    
     else:
         form = ResidentesForm()
 

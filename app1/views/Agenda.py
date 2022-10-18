@@ -5,13 +5,12 @@ from django.views import generic
 from django.urls import reverse
 from django.utils.safestring import mark_safe
 import calendar
-
 from requests import RequestException, request
-
 from app1.models import Event, Pessoas
 from app1.utils import Calendar
 from app1.forms import EventForm
 from app1.views import *
+
 
 class Agenda(generic.ListView):
     model = Event
@@ -25,7 +24,6 @@ class Agenda(generic.ListView):
         # Instantiate our calendar class with today's year and date
         cal = Calendar(d.year, d.month)
 
-
         residentes = Pessoas.objects.filter(pessoa_classe='2')
 
         search = self.request.GET.get('search')
@@ -36,7 +34,6 @@ class Agenda(generic.ListView):
         else:
             html_cal = cal.formatmonth(withyear=True)
 
-
         context['residentes'] = residentes
         # Call the formatmonth method, which returns our calendar as a table
         context['calendar'] = mark_safe(html_cal)
@@ -45,17 +42,20 @@ class Agenda(generic.ListView):
 
         return context
 
+
 def get_date(req_month):
     if req_month:
         year, month = (int(x) for x in req_month.split('-'))
         return date(year, month, day=1)
     return datetime.today()
 
+
 def prev_month(d):
     first = d.replace(day=1)
     prev_month = first - timedelta(days=1)
     month = 'month=' + str(prev_month.year) + '-' + str(prev_month.month)
     return month
+
 
 def next_month(d):
     days_in_month = calendar.monthrange(d.year, d.month)[1]
@@ -64,14 +64,14 @@ def next_month(d):
     month = 'month=' + str(next_month.year) + '-' + str(next_month.month)
     return month
 
+
 def event(request, residente_id=None, event_id=None):
     instance = Event()
     if event_id:
         instance = get_object_or_404(Event, pk=event_id)
     else:
         instance = Event()
-    
-    
+     
     residente = get_object_or_404(Pessoas, id=residente_id)
     form = EventForm(request.POST or None, instance=instance)
     if request.POST and form.is_valid():
@@ -83,6 +83,7 @@ def event(request, residente_id=None, event_id=None):
             form.save_m2m()
         return HttpResponseRedirect(f'/agenda/?search={residente.pessoa_nome}')
     return render(request, 'event.html', {'form': form, 'residente': residente})
+
 
 def event_delete(request, event_id):
     event = get_object_or_404(Event, pk=event_id)

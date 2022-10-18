@@ -10,11 +10,13 @@ def SinalVital_edit(request, id):
         if (form.is_valid()):
             sinalVital.save()
             return redirect('/sinalvital_list')
+        
         else:
             return render(request, 'sinalvital_form.html', {
                 'form': form, 
                 'sinalvital': sinalVital
             })
+    
     else:
         return render(request, 'sinalvital_form.html', {
             'form': form,

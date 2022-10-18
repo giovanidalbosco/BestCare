@@ -19,6 +19,7 @@ def Login(request):
             if usuario is not None:
                 login(request, usuario)
                 return redirect('/agenda')
+            
             else:
                 mensagem = {
                     'type': 'danger',
