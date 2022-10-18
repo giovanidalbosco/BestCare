@@ -13,10 +13,8 @@ class SinalVital(models.Model):
     sinalVital_altura = models.FloatField(verbose_name='Altura', default=0)
     sinalVital_IMC = models.FloatField(verbose_name='IMC', default=0)
 
-
     def __str__(self):
         return f'{self.sinalVitalCreate} : {self.sinalVital_pessoa_nome} PAS: {self.sinalVital_pas}  PAD: {self.sinalVital_pad}'
-
 
     class Meta:
         ordering = ['-sinalVitalCreate']
