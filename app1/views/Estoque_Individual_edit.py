@@ -13,12 +13,15 @@ def Estoque_Individual_edit(request, id):
             estoque_individual.save()
             if hasattr(form, 'save_m2m'):
                 form.save_m2m()
+            
             return redirect(f'/estoque_individual_list/?search={estoque_individual.estoque_pessoa_nome.pessoa_nome}')
+        
         else:
             return render(request, 'estoque_individual_form.html', {
                 'form': form, 
                 'estoque_individual': estoque_individual
             })
+    
     else:
         return render(request, 'estoque_individual_form.html', {
             'form': form,

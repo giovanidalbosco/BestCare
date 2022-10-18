@@ -9,12 +9,13 @@ def SinalVital_add(request):
             nova_sinalvital = form.save(commit=False)
             nova_sinalvital.save()
             return HttpResponseRedirect('/sinalvital_list')
+        
         else:
             return render(request, 'sinalvital_form.html', {
                 'form': form
             })
+    
     else:
         form = SinalVitalForm()
-
 
     return render(request, 'sinalvital_form.html', {'form': form})
