@@ -12,6 +12,5 @@ def Medicamentos_add(request):
     else:
         form = MedicamentosForm()
 
-
     return render(request, 'medicamentos_form.html', {'form': form})
     

@@ -18,15 +18,17 @@
             {% endif %}
             <div class="row d-inline-block">
                 <div class="modal-header align-baseline">
+                    {% if request.GET.search.strip %}
                     <a class="bg-transparent mr-5" id="add-link" href="/estoque_individual_add/{{dono.id}}">
                         <div>
                             <i class="fas fa-plus" style="font-size:0.875rem;"></i>
                             Adicionar Estoque Individual
                         </div>
-                    </a> 
+                    </a>
+                    {% endif %}
                     <div class="search-div bg-transparent">
                         <form method="GET" id="search-form">
-                            <input list="pessoas" class="btn btn-outline-dark btn-sm" id="search" name="search" placeholder="Digite o nome para buscar..." value="{{ request.GET.search }}">
+                            <input list="pessoas" class="btn btn-outline-dark btn-sm" id="search" name="search" placeholder="Selecione o residente" value="{{ request.GET.search }}">
                             <datalist id="pessoas">
                                 {% for residente in residentes %}
                                     <option value="{{residente.pessoa_nome}}">
@@ -65,7 +67,7 @@
                         {% for j in i.estoque_usos_consumo.all %}
                             <td>{{j.medicamento_nome}}</td>
                         {% endfor %}
-                        <td>{{i.estoque_saldo}}</td>
+                        <td>{{i.estoque_quantidade}}</td>
                     </tr>
                     {% endfor %}
                     </tbody>

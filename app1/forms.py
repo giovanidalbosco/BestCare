@@ -1,3 +1,7 @@
+from cProfile import label
+from email import message
+from pyexpat.errors import messages
+from turtle import onclick
 from django import forms
 from .models import *
 
@@ -5,6 +9,7 @@ from .models import *
 class LoginForm(forms.Form):
     usuario = forms.CharField(widget=forms.TextInput, label='Nome de Usuário', required=True)
     senha = forms.CharField(max_length=32, widget=forms.PasswordInput, label='Senha', required=True)
+
 
 class CadastroForm(forms.Form):
     usuario = forms.CharField(widget=forms.TextInput, label='Nome de Usuário', required=True)
@@ -24,17 +29,20 @@ class CadastroForm(forms.Form):
     #     fields = '__all__'
     #     exclude = ('pessoa_nome', 'pessoa_classe', 'pessoa_email', 'pessoa_comorbidade', 'pessoa_plano')
 
+
 class ComorbidadesForm(forms.ModelForm):
     
     class Meta:
         model = Comorbidades
         fields = ('comorbidade_nome',)
 
+
 class MedicamentosForm(forms.ModelForm):
     
     class Meta:
         model = Medicamentos
         fields = ('medicamento_nome', 'medicamento_fabricante', 'medicamento_apresentacao', 'medicamento_via',)
+
 
 class Estoque_IndividualForm(forms.ModelForm):
 
@@ -142,7 +150,7 @@ class SinalVitalForm(forms.ModelForm):
     sinalVital_pessoa_nome = forms.ModelChoiceField(
         widget = forms.Select,
         queryset = Pessoas.objects.filter(pessoa_classe=2),
-        label = 'Residente'
+        label = 'Residente'       
     )
     
     sinalVital_peso = forms.FloatField(
@@ -156,7 +164,7 @@ class SinalVitalForm(forms.ModelForm):
     )
 
     sinalVital_IMC = forms.FloatField(
-        widget = forms.TextInput(attrs={'for': 'sinalVital_peso sinalVital_altura'}),
+        widget = forms.TextInput(attrs={'for': 'sinalVital_peso sinalVital_altura', 'oninput': 'arredondar();'}),
         label = 'IMC'
     )
 

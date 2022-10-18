@@ -1,5 +1,3 @@
-from tabnanny import verbose
-from unittest.util import _MAX_LENGTH
 from app1.models import *
 
 

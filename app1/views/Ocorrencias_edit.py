@@ -10,11 +10,13 @@ def Ocorrencias_edit(request, id):
         if (form.is_valid()):
             ocorrencia.save()
             return redirect('/ocorrencias_list')
+        
         else:
             return render(request, 'ocorrencias_form.html', {
                 'form': form, 
                 'ocorrencia': ocorrencia
             })
+    
     else:
         return render(request, 'ocorrencias_form.html', {
             'form': form,
