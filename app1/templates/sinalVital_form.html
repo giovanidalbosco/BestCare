@@ -11,7 +11,7 @@
             <h4 class="d-flex justify-content-center py-4">Adicionar Sinal Vital</h4>
         {% endif %}
 
-        <form method="POST" oninput="sinalVital_IMC.value=sinalVital_peso.value/(sinalVital_altura.value*sinalVital_altura.value)">
+        <form method="POST">
             {% csrf_token %}
             <table class="form form-table">
                 {{ form.as_table }}
