@@ -10,6 +10,7 @@ class LoginForm(forms.Form):
     usuario = forms.CharField(widget=forms.TextInput, label='Nome de Usuário', required=True)
     senha = forms.CharField(max_length=32, widget=forms.PasswordInput, label='Senha', required=True)
 
+
 class CadastroForm(forms.Form):
     usuario = forms.CharField(widget=forms.TextInput, label='Nome de Usuário', required=True)
     nomeCompleto = forms.CharField(widget=forms.TextInput, label='Nome Completo', required=True)
@@ -28,17 +29,20 @@ class CadastroForm(forms.Form):
     #     fields = '__all__'
     #     exclude = ('pessoa_nome', 'pessoa_classe', 'pessoa_email', 'pessoa_comorbidade', 'pessoa_plano')
 
+
 class ComorbidadesForm(forms.ModelForm):
     
     class Meta:
         model = Comorbidades
         fields = ('comorbidade_nome',)
 
+
 class MedicamentosForm(forms.ModelForm):
     
     class Meta:
         model = Medicamentos
         fields = ('medicamento_nome', 'medicamento_fabricante', 'medicamento_apresentacao', 'medicamento_via',)
+
 
 class Estoque_IndividualForm(forms.ModelForm):
 
@@ -155,7 +159,7 @@ class SinalVitalForm(forms.ModelForm):
     )
 
     sinalVital_altura = forms.FloatField(
-        widget = forms.NumberInput(attrs={'type': 'number', 'step': '0.1', 'id': 'sinalVital_altura'}),
+        widget = forms.NumberInput(attrs={'type': 'number', 'step': '0.01', 'id': 'sinalVital_altura'}),
         label = 'Altura'
     )
 

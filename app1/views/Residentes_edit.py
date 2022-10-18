@@ -13,11 +13,13 @@ def Residentes_edit(request, id):
             if hasattr(form, 'save_m2m'):
                 form.save_m2m()
             return redirect('/residentes_list')
+       
         else:
             return render(request, 'residentes_form.html', {
                 'form': form, 
                  'residente': residente
              })
+    
     else:
         return render(request, 'residentes_form.html', {
             'form': form,

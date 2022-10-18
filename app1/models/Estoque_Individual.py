@@ -10,14 +10,12 @@ class Estoque_Individual(models.Model):
     estoque_saldo = models.IntegerField(verbose_name='Saldo em Estoque', default=0)
 # Calcular o saldo en estoque (estoque anterior + entrada - saida = saldo atual)
 
-
     def __str__(self):
         itens = ''
         for i in self.estoque_usos_consumo.all():
             itens += i.medicamento_nome
 
         return f'{self.estoque_pessoa_nome.pessoa_nome}, {itens}'
-
 
     class Meta:
         verbose_name = 'Estoque Individual'

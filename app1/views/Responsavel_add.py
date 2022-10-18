@@ -10,6 +10,7 @@ def Responsavel_add(request):
             novo_responsavel.pessoa_classe = '3'
             novo_responsavel.save()
             return HttpResponseRedirect('/responsavel_list')
+    
     else:
         form = ResponsavelForm()
 

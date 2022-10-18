@@ -8,8 +8,7 @@ class Cidades(models.Model):
 
     def __str__(self):
         return f'{self.cidade_nome} - {self.cidade_uf}'
-    
-    
+      
     class Meta:
         ordering = ['cidade_nome']
         verbose_name = 'Cidade'

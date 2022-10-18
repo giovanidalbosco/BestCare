@@ -15,6 +15,5 @@ def Estoque_Individual_add(request, id):
             return HttpResponseRedirect(f'/estoque_individual_list/?search={residente.pessoa_nome}')
     else:
         form = Estoque_IndividualForm()
-
         
     return render(request, 'estoque_individual_form.html', {'form': form, 'residente': residente})
