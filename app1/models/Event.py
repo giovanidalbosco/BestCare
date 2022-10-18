@@ -1,4 +1,5 @@
 from app1.models import *
+from datetime import time
 
 
 class Event(models.Model):
@@ -17,6 +18,7 @@ class Event(models.Model):
     def get_html_url(self):
         url = reverse('event_edit', args=(self.event_pessoa_nome.id, self.id,))
         url_delete = reverse('event_delete', args=(self.id,))
-        return f'''<a href="{url}"> {self.get_title_display()} </a>
+        info = f'<div class="agendatooltipwindow"><div>{self.description}</div><div>Horario: {self.start_time.time().strftime("%H:%M")}</div></div>'
+        return f'''<a href="{url}">{self.get_title_display()}{info}</a>
             <a href="{url_delete}" class="delete-btn bg-transparent"><span><abbr title="EXCLUIR">
             <i class="fas fa-trash" style="cursor:default;"></i></abbr></span></a>'''
