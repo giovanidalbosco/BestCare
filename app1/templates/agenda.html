@@ -1,7 +1,7 @@
 {% extends 'base_telainicial.html' %}
 
 {% block content3 %}
-	
+	{% if request.GET.search.strip %}
 	<div class="" >
 		<div class="">
 			<div class="row" id="agenda-search">
@@ -18,7 +18,7 @@
 			</div>
 		</div>
 	</div>
-	{% if request.GET.search.strip %}
+	
 	<div class="agenda-body ">
 		<div class="clearfix">
 			<a class="btn btn-info right" href="/agenda/?{{ next_month }}&search={{dono.pessoa_nome}}"> Próximo Mês </a>
@@ -32,7 +32,27 @@
 		</div>
 	</div>
 	{% elif not request.GET.search.strip %}
-		<div>qqr coisa</div>
+		<div class="div-agenda">
+			<img img src="/static/img/best_tec.png" class="fundo-best">
+			<span class="text-agenda-img">SEJA BEM VINDO</span>
+			<div class="text-agenda1">
+				<span class="agenda-residente2">Faça a busca pelo nome do residente</span>
+			</div>
+			<div class="text-agenda2">
+				<form method="GET" id="search-form">
+					<input  class="btn btn-info" list="pessoas" name="search" id="search" placeholder="Selecione o residente">
+					<datalist id="pessoas">
+						{% for residente in residentes %}
+							<option value="{{residente.pessoa_nome}}">
+						{% endfor %}
+					</datalist>
+					<input type="submit" value="Buscar" class="btn btn-info">
+				</form>
+			</div>
+			<div class="text-agenda3">
+				<span class="agenda-residente2">E tenha acesso a agenda de eventos</span>
+			</div>
+		</div>
 	{% endif %}
 
 {% endblock content3 %}
