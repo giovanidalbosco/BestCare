@@ -159,7 +159,7 @@ class SinalVitalForm(forms.ModelForm):
     )
 
     sinalVital_altura = forms.FloatField(
-        widget = forms.NumberInput(attrs={'type': 'number', 'step': '0.1', 'id': 'sinalVital_altura'}),
+        widget = forms.NumberInput(attrs={'type': 'number', 'step': '0.01', 'id': 'sinalVital_altura'}),
         label = 'Altura'
     )
 

@@ -30,8 +30,8 @@ body{
 }
 
 .row .img {
-    width: 6em;
-    height: 3.3em;
+    width: 8em;
+    height: 4.4em;
 }
 
 #header{
@@ -695,8 +695,8 @@ div a{
 }
 
 .text-agenda-img{
-    margin-top: -45%;
-    margin-left: 15%;
+    margin-top: -48%;
+    margin-left: 5%;
     font-size: 4em;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color:#003f69;
