@@ -679,7 +679,6 @@ div a{
     color: #000;
 }
 
-
 .fundo-best{
     width: 100%;
     height: 90vh;
@@ -687,7 +686,6 @@ div a{
     overflow: hidden;
     z-index: 0;
 }
-
 
 .agenda-residente2{
     margin-right: 3%;
@@ -698,7 +696,7 @@ div a{
     margin-top: -45%;
     margin-left: 15%;
     font-size: 4em;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family:system-ui, -apple-system, Oxygen,sans-serif;
     color:#003f69;
     z-index: 1;
     position: absolute;
@@ -725,7 +723,6 @@ div a{
     justify-content:center;  
     text-align: center;
 }
-
 
 .text-agenda2{
     margin-top: -28%;
