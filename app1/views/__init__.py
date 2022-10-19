@@ -5,6 +5,14 @@ from app1.forms import *
 from django.http import HttpResponseRedirect
 from django.core.mail import send_mail
 
+from datetime import datetime, timedelta, date  
+from django.shortcuts import render, get_object_or_404
+from django.views import generic
+from django.utils.safestring import mark_safe
+import calendar
+from app1.models import Event, Pessoas
+from app1.utils import Calendar
+from app1.forms import EventForm
 
 from .Base_telainicial import Base_telainicial
 from .Agenda import *
