@@ -16,21 +16,17 @@ function exibir_ocultar(){
 };
 
 
+function calculo_IMC(){
+    let peso = document.querySelector("#sinalVital_peso");
+    let altura = document.querySelector("#sinalVital_altura");
+    let resultado = peso.value / (altura.value*altura.value);
+    let arredondado = parseFloat(resultado).toFixed(2);
 
-// $(document).ready(function () {
-//     $('.mask-IMC').mask('99.99');
-// });
+    let input2 = document.getElementById("id_sinalVital_IMC");
 
-function arredondar(){
-    var input = document.querySelector("#id_sinalVital_IMC");
-    var input2 = document.getElementById("id_sinalVital_temp");
-
-    // arredondado = input.value.toFixed(2)
-    
-    arredondado = parseFloat(input.value).toFixed(2)
-
-    input2.value = 34.345345
-    let num = 5.56789;
-    let n = num.toFixed(2);
-    console.log(arredondado);
+    if (arredondado >= 0 && arredondado!=Infinity) {
+        input2.value = arredondado;
+    } else {
+        input2.value = 0;
+    }
 }

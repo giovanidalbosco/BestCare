@@ -7,8 +7,7 @@ class Comorbidades(models.Model):
 
     def __str__(self):
         return self.comorbidade_nome
-    
-    
+        
     class Meta:
         ordering = ['comorbidade_nome']
         verbose_name = 'Comorbidade'

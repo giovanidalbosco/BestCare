@@ -1,7 +1,3 @@
-from cProfile import label
-from email import message
-from pyexpat.errors import messages
-from turtle import onclick
 from django import forms
 from .models import *
 
@@ -154,17 +150,17 @@ class SinalVitalForm(forms.ModelForm):
     )
     
     sinalVital_peso = forms.FloatField(
-        widget = forms.NumberInput(attrs={'type': 'number', 'step': '0.5', 'id': 'sinalVital_peso'}),
+        widget = forms.NumberInput(attrs={'type': 'number', 'step': '0.5', 'id': 'sinalVital_peso', 'onkeyup': 'calculo_IMC();', 'onmouseup': 'calculo_IMC();'}),
         label = 'Peso'
     )
 
     sinalVital_altura = forms.FloatField(
-        widget = forms.NumberInput(attrs={'type': 'number', 'step': '0.1', 'id': 'sinalVital_altura'}),
+        widget = forms.NumberInput(attrs={'type': 'number', 'step': '0.01', 'id': 'sinalVital_altura', 'onkeyup': 'calculo_IMC();', 'onmouseup': 'calculo_IMC();'}),
         label = 'Altura'
     )
 
     sinalVital_IMC = forms.FloatField(
-        widget = forms.TextInput(attrs={'for': 'sinalVital_peso sinalVital_altura', 'oninput': 'arredondar();'}),
+        widget = forms.TextInput(attrs={'readonly': ''}),
         label = 'IMC'
     )
 
