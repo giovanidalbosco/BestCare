@@ -4,6 +4,7 @@ from app1.models import *
 from app1.forms import *
 from django.http import HttpResponseRedirect
 from django.core.mail import send_mail
+from django.contrib import messages
 
 from datetime import datetime, timedelta, date  
 from django.shortcuts import render, get_object_or_404
