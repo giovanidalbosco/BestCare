@@ -2,14 +2,12 @@
     .carrossel1 #carousel img{
         width: 25em;
         height: 18em;
-    }
-    
+    }   
 }
     
 @media (max-width: 670px){
     .Caracteristicas{
-        margin-left: 10%;
-        
+        margin-left: 10%;   
     }
 
     #img_best{
@@ -26,7 +24,6 @@
         margin-top: 2.5%; 
     }
 
-    
     .text-header{
         font-size: 0.7em;
     }
@@ -39,10 +36,7 @@
     #slogan{
         font-size: 0.9em;
     }
-
-
 }
-
 
 @media (max-width: 576px){
     body{
@@ -108,15 +102,18 @@
     }
 }
 
-
 @media (max-width: 490px){
     .form input, .form select, .form textarea {
         width: 21em;
     }
 }
 
-
 @media (max-width: 412px){
+
+    body{
+        width: 100%;
+        height: 100%;
+    }
     .form input, .form select, .form textarea {
         width: 17em;
     }
@@ -134,7 +131,6 @@
         margin-left: 2%;
     }
 
-
     .fechar{
         position: absolute;
         width: 1em;
@@ -150,7 +146,6 @@
         margin-left: 2%;
     }
 
-    
     .solucoes1{
         width: 10em;
         height: 5em;
@@ -188,7 +183,6 @@
         height:15%; 
     }
 
-    
     .quemsomos2{
         width: 20em;
         height: 42em;
@@ -220,11 +214,72 @@
         font-size: 0.9em;
     }
 
-
-
-
-
     .card-footer{
         height: 18em;
     }
+
+    .base_telainicial{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+    }
+
+    #base_inicial_solucoes a{
+        margin-top: 0;
+        font-size: 0.9em;
+    }
+
+    .back{
+        width: 100%;
+        height: 35%;
+    }
+
+    #base_inicial_solucoes{
+        margin-top: 1%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:space-between;
+    }
+
+    .content3{  
+        width: 100%;
+        height: 100%;
+    }
+
+    .div-agenda{
+        width: 100%;
+        
+    }
+
+    .text-agenda-img{
+        text-align: center;
+        font-size: 2em;
+        margin-top: 5%;
+    }
+
+    .agenda-residente2{
+        font-size: 1.2em;
+    }
+
+    .text-agenda1{
+        width: 17em;
+        height: 6em;
+        margin-top: 10%;
+    }
+
+    .text-agenda2{
+        width: 17em;
+        height: 6em;
+        margin-top: 15%;
+        padding: 0%;
+    }
+
+    .text-agenda3{
+        width: 17em;
+        height: 6em;
+        margin-top: 20%;
+        margin-bottom: 10%;
+    }
 }
+

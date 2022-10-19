@@ -14,8 +14,9 @@ body{
     display: flex;
     flex-direction: column;
     justify-content:space-between;
-
 }
+
+
 /* Inicio do header*/
 
 #header-image{
@@ -176,19 +177,8 @@ div a{
 
 /*Termina janela input*/
 
-/*Início Cadastro*/
 
-
-/*.btn-cad-geral .input-cadastrar:hover{
-    color:rgba(14, 94, 200,1);
-}
-
-.btn-cad-geral .input-cadastrar{
-    margin-left: 38%;
-}
-
-
-/*Fim Cadastro*/
+/*Inicio  Carrossel*/
 
 #botton-inicial{
     margin-bottom: 5%;
@@ -232,6 +222,7 @@ div a{
     opacity: 0.9;
 }
 
+
 /*Cor da lixeira */
 
 .fa-trash:hover{
@@ -254,6 +245,7 @@ div a{
 .entrar2:hover{
     color: aliceblue;
 }
+
 
 /*Bloco do quemSomos*/
 
@@ -445,6 +437,7 @@ div a{
 
 
 /*Inicio Base_telainicial*/
+
 .base_telainicial{
     margin: 0;
     padding: 0;
@@ -526,7 +519,6 @@ div a{
     border-radius: 5px 35px 5px 35px;
     box-shadow: 0px 8px 15px 8px rgba(161, 167, 169, 0.5);
     transition: all 1s;
-
 }
 
 #first-solucoes{
@@ -538,6 +530,7 @@ div a{
     height:75%;
     opacity: 0.8;
 }
+
 .solucoes1 aside{
     text-align:start;
     margin-top: 25%;
@@ -569,36 +562,9 @@ div a{
 
 /*Fim soluções*/
 
-/*.btn-cad-geral{
-    position: fixed;
-    width: 31em;
-    height: 28em;
-    padding: 2%;
-    top:25%;
-    font-family: Helvetica, sans-serif;
-    background-color:#ffffff;
-    border-radius: 10px;
-    margin-left: 33%;
-    margin-right: 33%;
-    align-items:center;
-    display: flex;
-    flex-direction: column;
-}
-.input-btn input{
-    top:10%;
-    background:rgba(204, 204, 197, 0.826);
-    font-weight: 700;
-    font-size: 14px;
-    border: none;
-    outline: none;
-    border-radius: 3px;
-    width: 24em;
-    height: 2em;
-    padding: 5%;
-    margin: 2%;  
-}*/
 
 /*Telas internas com scroll bar */
+
 .base-scrool{
     position: sticky;
     height: 70vh;
@@ -608,6 +574,7 @@ div a{
 .tamanho-div{
     width: 100%;
 }
+
 /* fim telas internas com scroll bar*/
 
 .btn-light:hover {
@@ -632,8 +599,7 @@ div a{
 }
 
 .agenda-body{
-    margin-top: -4.5%;
-    
+    margin-top: -4.5%;  
 }
 
 .agenda-residente{
@@ -668,10 +634,9 @@ div a{
 
 /*Tela Home "Seja Bem Vindo" */
 
-
 .div-agenda{
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 
 #search::placeholder{
@@ -684,30 +649,27 @@ div a{
 }
 
 .text-agenda-img{
-    margin-top: 3%;
+    margin-top: 1%;
     margin-left: 5%;
     font-size: 4em;
     font-family:system-ui, -apple-system, Oxygen,sans-serif;
     color:#003f69;
-    position: absolute;
     text-align:center;
     display: flex;
 }
 
 .text-agenda1{
-    margin-top: 14%;
+    margin-top: 3%;
     margin-left: 5%;
-    
     width: 70em;
-    height: 8em;
+    height: 7em;
     border-top-style: solid;
     border-bottom-style: solid;
     border-color:#003f69;
     border-left: 16px solid rgb(234, 135, 65);
     border-radius: 2px;
     padding: 2.5%;
-    z-index: 1;
-    position: absolute;
+
     display: flex;
     flex-direction:row;
     justify-content:center;  
@@ -715,18 +677,16 @@ div a{
 }
 
 .text-agenda2{
-    margin-top: 24%;
+    margin-top: 3%;
     margin-left: 5%;
-    
     width: 70em;
-    height: 8em;
+    height: 7em;
     border-top-style: solid;
     border-bottom-style: solid;
     border-color:#003f69;
     border-left: 16px solid rgb(234, 135, 65);
     border-radius: 2px;
     padding: 2.5%;
-    position: absolute;
 
     display: flex;
     flex-direction:row;
@@ -735,18 +695,17 @@ div a{
 }
 
 .text-agenda3{
-    margin-top: 34%;
+    margin-top: 3%;
     margin-left: 5%;
-    
+    margin-bottom: 10%;
     width: 70em;
-    height: 8em;
+    height: 7em;
     border-top-style: solid;
     border-bottom-style: solid;
     border-color:#003f69;
     border-left: 16px solid rgb(234, 135, 65);
     border-radius: 2px;
     padding: 2.5%;
-    position: absolute;
 
     display: flex;
     flex-direction:row;
