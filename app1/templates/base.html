@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{% static 'CSS/responsive.css' %}">
 </head>
 
-<body>
+<body onload="exibir_ocultar();">
     <div class="container-fluid shadow-lg p-3" id="header">
         <div class="row">
             {% if user.is_authenticated %}
@@ -102,6 +102,11 @@
     <script src="/static/JS/scriptCuidador.js"></script>
     <script src="/static/JS/scriptResidente.js"></script>
     <script src="/static/JS/scriptResponsavel.js"></script>
+    <script src="/static/JS/scriptOcorrencias.js"></script>
+    <script src="/static/JS/scriptSinalVital.js"></script>
+    <script src="/static/JS/scriptComorbidades.js"></script>
+    <script src="/static/JS/scriptMedicamentos.js"></script>
+    <script src="/static/JS/scriptEstoqueIndividual.js"></script>
     
     
     {% block script%}

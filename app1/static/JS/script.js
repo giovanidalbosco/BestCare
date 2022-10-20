@@ -1,6 +1,8 @@
 function exibir_ocultar(){
     var valor = $("#id_title").val();
 
+    console.log(valor)
+
     if(valor === '1'){
         $("#id_event_consumo_nome_label").show();
         $("#id_event_consumo_nome").show();

@@ -33,7 +33,7 @@
                 </div>
             </div>          
             <div class="base-scrool"> 
-                <table class="table table-hover">
+                <table class="table table-hover" id="tabsinalvital">
                     <thead>
                       <tr>
                         <th scope="col"></th>
@@ -54,10 +54,10 @@
                     <tr>
                         <td>
                             <div class="d-flex justify-content-start">
-                                <a href="/sinalvital_edit/{{i.id}}" class="delete-btn bg-transparent"><span><abbr title="EDITAR"><i 
-                                class="fas fa-edit" style="cursor:default;"></i></abbr></span></a>
-                                <a href="/sinalvital_delete/{{i.id}}" class="delete-btn bg-transparent"><span><abbr title="EXCLUIR"><i
-                                class="fas fa-trash" style="cursor:default;"></i></abbr></span></a>
+                                <a href="/sinalvital_edit/{{i.id}}" class="delete-btn bg-transparent"><span><abbr title="EDITAR">
+                                    <i class="fas fa-edit" style="cursor:default;"></i></abbr></span></a>
+                                <a class="delete-btn bg-transparent js-delete" data-id="{{i.id}}"><span><abbr title="EXCLUIR">
+                                    <i class="fas fa-trash" style="cursor:default;"></i></abbr></span></a>
                             </div>
                         </td>
                         <td>{{i.sinalVitalCreate}}</td>
@@ -78,5 +78,24 @@
         </div>
     </div>
 </div>
+
+<div class="modal" tabindex="-1" id="modalsinalvital">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Excluir Sinal Vital?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <p>Confirmar a exclusão do sinal vital?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="btnnao" data-dismiss="modal">Não</button>
+                <button type="button" class="btn btn-primary" id="btnsim">Sim</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 {% endblock content3 %}

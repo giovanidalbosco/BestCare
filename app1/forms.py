@@ -195,7 +195,7 @@ class EventForm(forms.ModelForm):
         widgets = {
             'start_time': forms.DateInput(attrs={'type': 'datetime-local'}, format='%Y-%m-%dT%H:%M'),
             'end_time': forms.DateInput(attrs={'type': 'datetime-local'}, format='%Y-%m-%dT%H:%M'),
-            'title': forms.Select(attrs = {'onchange' : "exibir_ocultar();"}),
+            'title': forms.Select(attrs = {'onchange': 'exibir_ocultar();'}),
         }
         
         
