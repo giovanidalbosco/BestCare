@@ -1,19 +1,16 @@
-from django.shortcuts import render, get_object_or_404, redirect
-from django.contrib.auth.decorators import login_required
 from app1.models import *
 from app1.forms import *
-from django.http import HttpResponseRedirect
-from django.core.mail import send_mail
-from django.contrib import messages
-
-from datetime import datetime, timedelta, date  
-from django.shortcuts import render, get_object_or_404
-from django.views import generic
-from django.utils.safestring import mark_safe
-import calendar
-from app1.models import Event, Pessoas
 from app1.utils import Calendar
-from app1.forms import EventForm
+from datetime import datetime, timedelta, date  
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.core.mail import send_mail
+from django.http import HttpResponseRedirect
+from django.shortcuts import render, get_object_or_404, redirect
+from django.utils.safestring import mark_safe
+from django.views import generic
+import calendar
+
 
 from .Base_telainicial import Base_telainicial
 from .Agenda import *

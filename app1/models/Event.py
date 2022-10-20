@@ -1,3 +1,4 @@
+from email.policy import default
 from app1.models import *
 
 
@@ -7,6 +8,7 @@ class Event(models.Model):
     event_consumo_nome = models.ForeignKey(Medicamentos, on_delete=models.CASCADE, verbose_name='Medicamento', default='')
     event_dose = models.IntegerField(choices=DOSE, default=0, verbose_name='Dose')
     description = models.TextField(verbose_name='Descricao')
+    status = models.BooleanField(verbose_name='Concluído?', default=False)
     start_time = models.DateTimeField(verbose_name='Dia/Hora - Inicio')
     end_time = models.DateTimeField(verbose_name='Dia/Hora - Fim')
 

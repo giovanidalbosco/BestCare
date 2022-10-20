@@ -44,6 +44,7 @@
                         <th scope="col">CPF</th>
                         <th scope="col">Comorbidade</th>
                         <th scope="col">Plano</th>
+                        <th scope="col">Responsável</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -72,6 +73,7 @@
                             {% endfor %} 
                         </td>
                         <td>{{i.get_pessoa_plano_display}}</td>
+                        <td>{{i.pessoa_responsavel}}</td>
                       </tr>
                     {% endfor %}
                     </tbody>

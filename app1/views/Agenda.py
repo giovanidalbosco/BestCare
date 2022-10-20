@@ -1,4 +1,5 @@
 from app1.views import *
+from proj.settings import DEFAULT_FROM_EMAIL
 
 
 class Agenda(generic.ListView):
@@ -65,8 +66,11 @@ def event(request, residente_id=None, event_id=None):
     form = EventForm(request.POST or None, instance=instance)
     if request.POST and form.is_valid():
         evento = form.save(commit=False)
-        if residente_id:
-            evento.event_pessoa_nome = residente
+
+        msgm = f'Evento: {evento.get_title_display()}\nMedicamento: {evento.event_consumo_nome}\nDose: {evento.get_event_dose_display()}\nDescrição: {evento.description}\nHorário início: {evento.start_time}\nHorário fim: {evento.end_time}'
+        send_mail(evento.event_pessoa_nome, msgm, DEFAULT_FROM_EMAIL, ['giovani.dalbosco@gmail.com'])
+
+        evento.event_pessoa_nome = residente
         evento.save()
         if hasattr(form, 'save_m2m'):
             form.save_m2m()

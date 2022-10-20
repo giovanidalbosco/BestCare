@@ -73,6 +73,12 @@ class OcorrenciasForm(forms.ModelForm):
 
 class ResidentesForm(forms.ModelForm):
     
+    pessoa_responsavel = forms.ModelChoiceField(
+        widget = forms.Select,
+        queryset = Pessoas.objects.filter(pessoa_classe=3),
+        label = 'Responsável'
+    )
+
     class Meta:
         model = Pessoas
         fields = (
@@ -86,6 +92,7 @@ class ResidentesForm(forms.ModelForm):
             'pessoa_CPF',
             'pessoa_comorbidade',
             'pessoa_plano',
+            'pessoa_responsavel'
         )
 
     def __init__(self, *args, **kwargs):

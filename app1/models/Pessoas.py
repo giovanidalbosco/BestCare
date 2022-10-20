@@ -14,6 +14,7 @@ class Pessoas(models.Model):
     pessoa_email = models.EmailField(verbose_name='E-mail', blank=True, null=True, unique=True)
     pessoa_comorbidade = models.ManyToManyField(Comorbidades, verbose_name='Comorbidades')
     pessoa_plano = models.IntegerField(choices=PLANO, blank=True, null=True)
+    pessoa_responsavel = models.ForeignKey('self', on_delete=models.CASCADE, verbose_name='Responsável', blank=True, null=True)
 
     def __str__(self):
         return self.pessoa_nome
