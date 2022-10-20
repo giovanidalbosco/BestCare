@@ -6,7 +6,6 @@
         <a class="btn btn-info left clearfix" href="/ocorrencias_list"> Voltar </a>
         {% if ocorrencia.id != null %}
             <h4 class="d-flex justify-content-center py-4">Editar Ocorrência '{{ocorrencia.get_ocorrencia_nome_display}}' de '{{ocorrencia.ocorrencia_pessoa_nome.pessoa_nome}}'</h4>
-            <!-- <h4 class="text-dark m-lg-4 mt-4">Editar Ocorrência '{{ocorrencia.get_ocorrencia_nome_display}}'</h4> -->
         {% else %}
             <h4 class="d-flex justify-content-center py-4">Adicionar Ocorrência</h4>
         {% endif %}

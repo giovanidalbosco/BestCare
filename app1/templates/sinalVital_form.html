@@ -6,7 +6,6 @@
         <a class="btn btn-info left clearfix" href="/sinalvital_list"> Voltar </a>
         {% if sinalVital.id != null %}
             <h4 class="d-flex justify-content-center py-4">Editar Sinal Vital '{{sinalVital.sinalVital_pessoa_nome.pessoa_nome}}'</h4>
-            <!-- <h4 class="text-dark m-lg-4 mt-4">Editar Sinal Vital '{{sinalVital.get_sinalVital_pessoa_nome_display}}'</h4> -->
         {% else %}
             <h4 class="d-flex justify-content-center py-4">Adicionar Sinal Vital</h4>
         {% endif %}
@@ -35,20 +34,5 @@
             </table>
         </form>
     </div>
-
-<!-- {% if form.errors %}
-    {% for field in form %}
-        {% for error in field.errors %}
-            <div class="alert alert-danger">
-                {{ field.label }} <strong>{{ error|escape }}</strong>
-            </div>
-        {% endfor %}
-    {% endfor %}
-    {% for error in form.non_field_errors %}
-        <div class="alert alert-danger">
-            {{ field.label }} <strong>{{ error|escape }}</strong>
-        </div>
-    {% endfor %}
-{% endif %} -->
 
 {% endblock content3 %}
