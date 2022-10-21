@@ -1,11 +1,11 @@
 (function(){
     $("#tabsinalvital").on("click", ".js-delete", function(){
         let botaoClicado = $(this);
-        $("#btnsim").attr("data-id",botaoClicado.attr("data-id"));
+        $("#btnsim-sinalvital").attr("data-id",botaoClicado.attr("data-id"));
         $("#modalsinalvital").modal("show");
     });
 
-    $("#btnsim").on("click",function(){
+    $("#btnsim-sinalvital").on("click",function(){
         let botaoSim = $(this);
         let id = botaoSim.attr("data-id");
         $.ajax({

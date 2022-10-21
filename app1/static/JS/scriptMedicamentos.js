@@ -1,18 +1,18 @@
 (function(){
-    $("#tabsinalvital").on("click", ".js-delete", function(){
+    $("#tabmedicamentos").on("click", ".js-delete", function(){
         let botaoClicado = $(this);
-        $("#btnsim").attr("data-id",botaoClicado.attr("data-id"));
-        $("#modalsinalvital").modal("show");
+        $("#btnsim-medicamentos").attr("data-id",botaoClicado.attr("data-id"));
+        $("#modalmedicamentos").modal("show");
     });
 
-    $("#btnsim").on("click",function(){
+    $("#btnsim-medicamentos").on("click",function(){
         let botaoSim = $(this);
         let id = botaoSim.attr("data-id");
         $.ajax({
-            url: "/sinalvital_delete/" + id,
+            url: "/medicamentos_delete/" + id,
             method: "GET",
             success: function() {
-                window.location.href="/sinalvital_list";
+                window.location.href="/medicamentos_list";
             }
         });
     });

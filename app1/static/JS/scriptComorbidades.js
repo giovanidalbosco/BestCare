@@ -1,18 +1,18 @@
 (function(){
-    $("#tabsinalvital").on("click", ".js-delete", function(){
+    $("#tabcomorbidades").on("click", ".js-delete", function(){
         let botaoClicado = $(this);
-        $("#btnsim").attr("data-id",botaoClicado.attr("data-id"));
-        $("#modalsinalvital").modal("show");
+        $("#btnsim-comorbidade").attr("data-id",botaoClicado.attr("data-id"));
+        $("#modalcomorbidades").modal("show");
     });
 
-    $("#btnsim").on("click",function(){
+    $("#btnsim-comorbidade").on("click",function(){
         let botaoSim = $(this);
         let id = botaoSim.attr("data-id");
         $.ajax({
-            url: "/sinalvital_delete/" + id,
+            url: "/comorbidades_delete/" + id,
             method: "GET",
             success: function() {
-                window.location.href="/sinalvital_list";
+                window.location.href="/comorbidades_list";
             }
         });
     });

@@ -66,10 +66,10 @@ def event(request, residente_id=None, event_id=None):
     form = EventForm(request.POST or None, instance=instance)
     if request.POST and form.is_valid():
         evento = form.save(commit=False)
-
-        titulo = f'Residente: {evento.event_pessoa_nome} Evento: {evento.get_title_display()}'
-        msgm = f'Evento: {evento.get_title_display()}\nMedicamento: {evento.event_consumo_nome}\nDose: {evento.get_event_dose_display()}\nDescrição: {evento.description}\nHorário início: {evento.start_time}\nHorário fim: {evento.end_time}'
-        send_mail(titulo, msgm, DEFAULT_FROM_EMAIL, [residente.pessoa_responsavel.pessoa_email])
+        if event_id:
+            titulo = f'Residente: {evento.event_pessoa_nome} Evento: {evento.get_title_display()}'
+            msgm = f'Evento: {evento.get_title_display()}\nMedicamento: {evento.event_consumo_nome}\nDose: {evento.get_event_dose_display()}\nDescrição: {evento.description}\nHorário início: {evento.start_time}\nHorário fim: {evento.end_time}'
+            send_mail(titulo, msgm, DEFAULT_FROM_EMAIL, [residente.pessoa_responsavel.pessoa_email])
 
         evento.event_pessoa_nome = residente
         evento.save()

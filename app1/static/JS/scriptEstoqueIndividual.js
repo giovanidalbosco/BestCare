@@ -1,18 +1,21 @@
 (function(){
-    $("#tabsinalvital").on("click", ".js-delete", function(){
+    $("#tabestoqueindividual").on("click", ".js-delete", function(){
         let botaoClicado = $(this);
-        $("#btnsim").attr("data-id",botaoClicado.attr("data-id"));
-        $("#modalsinalvital").modal("show");
+        $("#btnsim-estoque").attr("data-id",botaoClicado.attr("data-id"));
+        $("#btnsim-estoque").attr("data-nome",botaoClicado.attr("data-nome"));
+        $("#modalestoqueindividual").modal("show");
     });
 
-    $("#btnsim").on("click",function(){
+    $("#btnsim-estoque").on("click",function(){
         let botaoSim = $(this);
         let id = botaoSim.attr("data-id");
+        let nome = botaoSim.attr("data-nome");
+        console.log(nome)
         $.ajax({
-            url: "/sinalvital_delete/" + id,
+            url: "/estoque_individual_delete/" + id,
             method: "GET",
             success: function() {
-                window.location.href="/sinalvital_list";
+                window.location.href="/estoque_individual_list/?search=" + nome;
             }
         });
     });

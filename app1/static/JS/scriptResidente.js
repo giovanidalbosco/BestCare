@@ -1,11 +1,11 @@
 (function(){
     $("#tabresidentes").on("click", ".js-delete", function(){
         let botaoClicado = $(this);
-        $("#btnsim").attr("data-id",botaoClicado.attr("data-id"));
+        $("#btnsim-residentes").attr("data-id",botaoClicado.attr("data-id"));
         $("#modalresidentes").modal("show");
     });
 
-    $("#btnsim").on("click",function(){
+    $("#btnsim-residentes").on("click",function(){
         let botaoSim = $(this);
         let id = botaoSim.attr("data-id");
         $.ajax({

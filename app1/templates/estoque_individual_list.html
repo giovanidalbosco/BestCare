@@ -41,12 +41,10 @@
             </div>
             
             <div class="base-scrool"> 
-                <table class="table table-hover">
+                <table class="table table-hover" id="tabestoqueindividual">
                     <thead>
                         <tr>
                         <th scope="col"></th>
-                        <th scope="col">ID</th>
-                        <th scope="col">Nome</th>
                         <th scope="col">Item</th>
                         <th scope="col">Qtde</th>
                         </tr>
@@ -54,16 +52,16 @@
                     <tbody>
                     {% for i in estoque_individual %}
                     <tr>
+                        <td>{{i.id}}</td>
+                        <td>{{i.estoque_pessoa_nome.pessoa_nome}}</td>
                         <td>
                             <div class="d-flex justify-content-start">
-                                <a href="/estoque_individual_edit/{{i.id}}" class="delete-btn bg-transparent"><span><abbr title="EDITAR"><i 
-                                class="fas fa-edit" style="cursor:default;"></i></abbr></span></a>
-                                <a href="/estoque_individual_delete/{{i.id}}" class="delete-btn bg-transparent"><span><abbr title="EXCLUIR"><i
-                                class="fas fa-trash" style="cursor:default;"></i></abbr></span></a>
+                                <a href="/estoque_individual_edit/{{i.id}}" class="delete-btn bg-transparent"><span><abbr title="EDITAR">
+                                    <i class="fas fa-edit" style="cursor:default;"></i></abbr></span></a>
+                                <a class="delete-btn bg-transparent js-delete" data-id={{i.id}} data-nome="{{i.estoque_pessoa_nome.pessoa_nome}}"><span><abbr title="EXCLUIR">
+                                    <i class="fas fa-trash" style="cursor:default;"></i></abbr></span></a>
                             </div>
                         </td>
-                        <td>{{i.estoque_pessoa_nome.id}}</td>
-                        <td>{{i.estoque_pessoa_nome.pessoa_nome}}</td>
                         {% for j in i.estoque_usos_consumo.all %}
                             <td>{{j.medicamento_nome}}</td>
                         {% endfor %}
@@ -86,5 +84,24 @@
         </div>
     </div>
 </div>
+
+<div class="modal" tabindex="-1" id="modalestoqueindividual">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Excluir Medicamento</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <p>Confirmar a exclusão do medicamento?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="btnnao" data-dismiss="modal">Não</button>
+                <button type="button" class="btn btn-primary" id="btnsim-estoque">Sim</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 {% endblock content3 %}
