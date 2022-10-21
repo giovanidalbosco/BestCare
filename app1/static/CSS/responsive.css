@@ -1,8 +1,14 @@
 @media (max-width:1505px){
+
     .carrossel1 #carousel img{
         width: 25em;
         height: 18em;
-    }   
+    } 
+    
+    .carrossel1 .embed-responsive{
+        width: 38em;
+        height: 90%;
+    }  
 }
     
 @media (max-width: 670px){
