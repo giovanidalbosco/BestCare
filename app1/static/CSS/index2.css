@@ -84,11 +84,11 @@ body{
 }
 
 .Caracteristicas{
-    position: fixed;
+    position:absolute;
     width: auto;
     height: auto;
     padding: 2.3%;
-    top:13%;
+    top:11%;
     background-color:#FFFFFF;
     z-index: 99999;
     -webkit-transition: opacity 400ms ease-in;
@@ -104,14 +104,14 @@ body{
 }
        
 .Caracteristicas{
-    pointer-events: auto;;
+    pointer-events: auto;
 }
 
 .fechar{
     position: absolute;
     width: 1em;
     right:1.2em;
-    top: 10%;
+    top: 8%;
     text-align: center;
     font-size: 1.1em;
     background:#003f69;
@@ -214,16 +214,13 @@ a .fechar-cad{
 }
 
 .carrossel1{
-    margin-top: 6%;
+    margin-top: 9%;
     margin-right: 10%;
 }
 
-.carrossel1 #carousel img{
-    width: 30em;
-    height: 25em;
-}
-#carousel img{
-    opacity: 0.9;
+.carrossel1 .embed-responsive{
+    width: 50em;
+    height: 90%;
 }
 
 
