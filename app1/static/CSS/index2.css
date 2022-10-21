@@ -85,7 +85,7 @@ body{
 
 .Caracteristicas{
     position:absolute;
-    width: auto;
+    width: 32em;
     height: auto;
     padding: 2.3%;
     top:11%;
@@ -111,7 +111,7 @@ body{
     position: absolute;
     width: 1em;
     right:1.9em;
-    top: 8.5%;
+    top: 9%;
     text-align: center;
     font-size: 1.1em;
     background:#003f69;
