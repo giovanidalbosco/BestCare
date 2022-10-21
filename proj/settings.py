@@ -32,7 +32,7 @@ except ImportError:
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'entra21-bestcare.herokuapp.com']
 
@@ -167,6 +167,21 @@ try:
 except ImportError:
     pass
 
+try:
+    DBPASSWORD=os.getenv('DBPASSWORD')
+except ImportError:
+    pass
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'pye2122g4',
+        'USER': 'pye2122g4',
+        'PASSWORD': DBPASSWORD,
+        'HOST':'3.89.36.150',
+        'PORT': '3306'
+    }
+}
 
 try:
     from proj.local_settings import *
