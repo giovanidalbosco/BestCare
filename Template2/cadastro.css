@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Cor Geral seguindo o padrão da página inicial*/
+
+body{
+    background: rgb(116,189,203);
+    background: linear-gradient(90deg, rgba(116,189,203,0.4) 0%, 
+    rgba(123, 92, 55, 0.4) 100%, rgba(0,212,255,0.4) 100%);
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+h1{
+    color: grey;
+    margin-right: 650px;
+}
+
+.header_cadastro img{
+    height: 105px;
+    margin-left: 120px;   
+}
+
+.geral{
+    background-color:#485672;
+    width: 1220px;
+    margin-top: 10px;
+    margin-left: 120px;
+    margin-right:120px ;
+    height: 550px;
+    color: #000;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+
+input{
+    margin-top: 25px;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 1000px;
+    height: 40px;
+    padding: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    background-color: #252A34 ;
+}
+
+#nome{
+    background-color: aliceblue;
+}

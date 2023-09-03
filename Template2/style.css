@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*Cor geral da página*/
+
+body{
+    background: rgb(116,189,203);
+    background: linear-gradient(90deg, rgba(116,189,203,0.4) 0%, 
+    rgba(123, 92, 55, 0.4) 100%, rgba(0,212,255,0.4) 100%);
+}
+
+/*Inicio do cabeçalho*/
+
+header{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 8%;
+    margin-top: 3%;
+    transition: 0.2s ease-in-out;
+}
+
+.head_tab{
+    display: flex;
+    flex-direction: row;   
+}
+
+.header_header {
+    margin: 2px;
+    cursor: pointer;
+    padding: 10px 12px;
+    border-radius: 11%;
+    color:gray;
+    border:currentColor;
+    font-size: 18px;
+    background-color:inherit;
+    text-decoration:none;
+    list-style-type: none;
+}
+
+
+.header_header:hover{
+    color: #000;  
+}
+
+li{
+    list-style-type: none; 
+}
+
+.login a{
+    cursor: pointer;
+    padding: 10px 12px;
+    border-radius: 11%;
+    color:gray;
+    border:gray solid 1px;
+    font-size: 14px;
+    background-color:inherit;
+    list-style-type: none;
+    text-decoration:none; 
+}
+
+div .login a:hover{
+    color: #000;
+    box-shadow: inset 1px 1px 3px #000;
+}
+
+.header img{
+    height: 105px;
+    margin-left: 120px;
+}
+
+/* Fim do cabeçalho*/
+
+/*Inicio menu lateral*/
+
+.menu_lateral{
+    width: 178px;
+    background-color:aliceblue;
+    margin-top: 10px;
+    margin-left: 120px;
+    height: 550px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+
+div .lista_lateral .item_lateral{  
+    color:grey;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+}
+
+.lista_lateral .item_lateral:hover{
+    color: #000;
+}
+
+/*Fim menu lateral*/
+
+/*começa os slides*/
+/* Lembrar que o .slide também é o tamanho de ref. da janela*/
+
+.slides{
+    width: 1100px;
+    margin-top: -550px;
+    margin-left: 300px;
+}
+
+.slides li {
+    list-style: none;
+    position: absolute;
+}
+
+.slides img{
+    margin: auto;
+    height: 550px;
+    width: 1100px;
+    vertical-align: top;
+}
+
+.slides input {
+    display: none;
+}
+.slides label {
+    background-color: #000;
+    bottom: 10px;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    z-index: 10;
+}
+
+.slides li:nth-child(1) label {
+    left: 10px;
+}
+
+.slides li:nth-child(2) label {
+    left: 40px;
+}
+
+.slides li:nth-child(3) label {
+    left: 70px;
+}
+.slides img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slides li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+/*Termina os slides*/
+
+/*Começa janela do "Entrar"*/
+
+.Caracteristicas{
+    position: fixed;
+    height: 552px;
+    top:160px;
+    right:135px;
+    left: 296px;
+    bottom: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #485672;
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    transition: 0.3 ease-in-out;
+    
+}
+       
+.Caracteristicas:target{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.Caracteristicas>div{
+    text-align:left;
+    width: 400px;
+    position: relative;
+    margin: 50% auto;
+    padding: 90px 20px;
+    background: #373636;
+}
+
+.fechar{
+    position: absolute;
+    width: 15px;
+    right: 13px;
+    top: 10px;
+    text-align: center;
+    line-height: 25px;
+    margin-top: 0px;
+    background: #485672;
+    font-size: 20px;
+    border-radius: 8px;
+    color:#000;
+    text-decoration: none; 
+}
+.fechar:hover{
+    background-color:rgb(238, 233, 233);
+    color: red;
+}
+
+.formulario{
+    margin-top: 190px;
+    display: block;
+    background-color:#485672;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    cursor: pointer;
+}
+
+form input{
+    margin-top: 10px;
+    margin-left: 370px;
+    padding-left: 10px;
+    padding-top: 10px;
+    background-color: #252A34;
+    color: #CBD0F7;
+    border: none;
+    height: 45px;
+    outline: none;
+    border-radius: 10px;
+    width: 350px;
+    height: 40px;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form [type="submit"]{
+    display: block;
+    background-color: #5568FE;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-align: right;
+    font-weight: 800;
+    letter-spacing: 4px;
+    padding-left: 10px;
+    cursor: pointer;
+    width: 350px;
+    height: 40px;
+    padding: 5px;
+}
+
+::placeholder{
+    text-align:start;
+}
+
+div a{
+    color: #7f8be4;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 8px;
+}
+
+div a:hover{
+    color:rgba(12, 12, 225, 0.834)
+}
+div p{
+    text-align: center;
+    margin-top: 40px;
+}
