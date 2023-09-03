@@ -1,0 +1,23 @@
+{% extends 'base_telainicial.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{comorbidade.comorbidade_nome}}{% endblock %}
+
+{% block content3 %}
+    <div class="form-container3">
+        <a class="btn btn-info left clearfix" href="/comorbidades_list"> Voltar </a>
+        {% if comorbidade.id != null %}
+            <h4 class="d-flex justify-content-center py-4">Editar Comorbidade '{{comorbidade.comorbidade_nome}}'</h4>
+        {% else %}
+            <h4 class="d-flex justify-content-center py-4">Adicionar Comorbidade</h4>
+        {% endif %}
+
+        <form method="POST">
+            {% csrf_token %}
+            <table class="form form-table">
+                {{ form.as_table}}
+                <tr><td colspan="2"><button type="submit" class="btn btn-info right"> Salvar </button></td></tr>
+            </table>
+        </form> 
+    </div>                              
+{% endblock content3 %}

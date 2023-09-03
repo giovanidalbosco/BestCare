@@ -1,0 +1,38 @@
+{% extends 'base_telainicial.html' %}
+{% load crispy_forms_tags %}
+
+{% block content3 %} 
+    <div class="form-container">
+        <a class="btn btn-info left clearfix" href="/sinalvital_list"> Voltar </a>
+        {% if sinalVital.id != null %}
+            <h4 class="d-flex justify-content-center py-4">Editar Sinal Vital '{{sinalVital.sinalVital_pessoa_nome.pessoa_nome}}'</h4>
+        {% else %}
+            <h4 class="d-flex justify-content-center py-4">Adicionar Sinal Vital</h4>
+        {% endif %}
+
+        <form method="POST">
+            {% csrf_token %}
+            <table class="form form-table">
+                {% for field in form %}
+                    <tr>  
+                        <th>
+                            <label>{{ field.label }}:</label>
+                        </th>
+                        <td>
+                            {{ field }}
+                            {% if form.errors %}
+                                {% for error in field.errors %}
+                                    <div class="alert alert-primary">
+                                        {{ field.label }} <strong>{{ error|escape }}</strong>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+                <tr><td colspan="2"><button type="submit" class="btn btn-info right"> Salvar </button></td></tr>
+            </table>
+        </form>
+    </div>
+
+{% endblock content3 %}

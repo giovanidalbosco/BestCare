@@ -1,0 +1,334 @@
+@media (max-width:1505px){
+
+    .carrossel1 #carousel img{
+        width: 25em;
+        height: 18em;
+    } 
+    
+    .carrossel1 .embed-responsive{
+        width: 38em;
+        height: 90%;
+    }  
+}
+    
+@media (max-width: 670px){
+    .Caracteristicas{
+        margin-left: 10%;   
+    }
+
+    #img_best{
+        width: 2em;
+        height: 1.1em;
+        margin-top: 0%;
+        margin-left: 2%;
+    }
+        
+    #best2{
+        width: 4em;
+        height: 0.5em;
+        border-radius: 0;
+        margin-top: 2.5%; 
+    }
+
+    .text-header{
+        font-size: 0.7em;
+    }
+
+    #header a span{
+        font-size: 0.9em;
+        font-weight:300; 
+    }
+
+    #slogan{
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 576px){
+    body{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        transition: 0.4 ease-in-out;
+        flex-direction: column;
+        justify-content:space-between;
+    }
+
+    .row .img{
+        width: 2em;
+        height: 1.1em;
+        margin-left: 0.5%;
+    }
+
+    #best1{
+        width: 4em;
+        height: 0.5em;
+        border-radius:0;
+        margin-top: 22%;
+        margin-left: 0.5%;
+    }
+
+    #solucoes a{
+        font-size: 1em;
+    }
+
+    .Caracteristicas{
+        width: 85%;
+        height: 80vh;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .Caracteristicas h3{
+        font-size: 1.1em;
+    }
+
+    #img_best{
+        width: 2em;
+        height: 1.1em;
+        margin-top: 0%;
+        margin-left: 5%;
+    }
+    
+    #best2{
+        width: 4em;
+        height: 0.5em;
+        border-radius: 0;
+        margin-top: 2.5%; 
+    }
+
+    .btn-entrar{
+        margin-left: 10%;
+        
+    }
+
+    .carrossel1 #carousel img{
+        width: 100%;
+        height: 70vh;
+    }
+}
+
+@media (max-width: 490px){
+    .form input, .form select, .form textarea {
+        width: 21em;
+    }
+}
+
+@media (max-width: 412px){
+
+    body{
+        width: 100%;
+        height: 100%;
+    }
+    .form input, .form select, .form textarea {
+        width: 17em;
+    }
+
+    #header a {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .carrossel1 .embed-responsive{
+        width: 19em;
+        height: 90%;
+        margin-left: 10%;
+    }
+
+    .Caracteristicas{
+        width: 19em;
+        height: auto;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .header-login{
+        width: 17.3em;
+        height: auto;
+        margin-left: 2%;
+    }
+
+    .fechar{
+        position: absolute;
+        width: 1em;
+        right:1.2em;
+        top: 2%;
+        text-align: center;
+        font-size: 0.5em;
+    }
+
+    #img_best{
+        margin-top: 2%;
+        margin-bottom: 2%;
+        margin-left: 2%;
+    }
+
+    .solucoes1{
+        width: 10em;
+        height: 5em;
+    }
+
+    .solucoes1 img{
+        width:25%;
+        height:65%;
+    }
+
+    .solucoes1 aside{
+        text-align:start;
+        margin-top: 5%;
+        margin-left: 5%;
+        font-size: small;
+        font-weight: 400;
+    }
+
+    #last-solucoes{
+        margin-bottom: 18%;
+    }
+
+    #div-dev p{
+        font-size: small;
+    }
+
+    .quemsomos1{
+        width: 20em;
+        height: 12em;
+        font-size: small;
+    }
+
+    .quemsomos1 img{
+        width:10%;
+        height:15%; 
+    }
+
+    .quemsomos2{
+        width: 20em;
+        height: 42em;
+    }
+
+    .quemsomos2 img{
+        width:10%;
+        height:15%;
+    }
+
+    .quemsomos2 aside{
+        text-align:start;
+        margin-top: 5%;
+        margin-left: 5%;
+        font-size: small;
+        font-weight: 400;
+    }
+
+    #desenvolvedores{
+        font-size: 1.5em;
+    }
+    
+    #fotos{
+        width: 39px;
+        height: 45px;
+    }
+    
+    #icon-quemsomos{
+        font-size: 0.9em;
+    }
+
+    .card-footer{
+        height: 18em;
+    }
+
+    .base_telainicial{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+    }
+
+    #base_inicial_solucoes a{
+        margin-top: 0;
+        font-size: 0.9em;
+    }
+
+    .back{
+        width: 100%;
+        height: 35%;
+    }
+
+    #base_inicial_solucoes{
+        margin-top: 1%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:space-between;
+    }
+
+    .content3{  
+        width: 100%;
+        height: 100%;
+    }
+
+    .div-agenda{
+        width: 100%;
+        
+    }
+
+    .text-agenda-img{
+        text-align: center;
+        font-size: 2em;
+        margin-top: 5%;
+    }
+
+    .agenda-residente2{
+        font-size: 1.2em;
+    }
+
+    .text-agenda1{
+        width: 17em;
+        height: 6em;
+        margin-top: 10%;
+    }
+
+    .text-agenda2{
+        width: 17em;
+        height: 6em;
+        margin-top: 15%;
+        padding: 0%;
+    }
+
+    .text-agenda3{
+        width: 17em;
+        height: 6em;
+        margin-top: 20%;
+        margin-bottom: 10%;
+    }
+
+    .calendario1{
+        margin-top: 0;
+        width:100%;
+        
+        position: sticky;
+        overflow:auto;
+    }
+
+    .calendar {
+        max-width:100%;
+        font-size:small;
+    }
+
+    
+    .clearfix {
+        margin-top: 4%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:center;
+        
+    }
+
+    .agenda-residente{
+        margin-right: 2%;
+        font-size:medium;
+    }
+
+    .novo_evento{
+        margin-right: 6%;
+    }
+}
+

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <div id="login" class="Caracteristicas">
+        <div class="">
+            <div class="row header-login">
+                <img src="/static/img/best_tec.png" alt="Logo"  id="img_best">
+                <a href="/" title="Fechar"class="fechar">x</a>
+            </div>
+        </div>
+        <h3 class="text-center">{{titulo}}</h3>
+        <form class="form form-table"  method="POST">
+            {% if mensagem is not None %}
+                <div class="alert alert-{{ mensagem.type }}">{{ mensagem.text }}</div>
+            {% endif %}
+            {% csrf_token %}
+            {{ form.as_table }}
+            <div class="btn-entrar">
+                <a href="{{link_href}}" >{{link_text}}</a>
+                <button type="submit" class="btn btn-primary btn-sm">{{button_text}}</button>
+            </div>
+        </form>   
+    </div>
+</div>
+
+<div style="opacity: 0.70; background: rgba(0,0,0,0.2)">
+    <div class="container-fluid" id="botton-inicial">
+        <div class="row ">
+            <div id="slogan"  class="col  font-italic ">
+                <p class="slogan-1">Pontualidade</p>
+                <p class="slogan-tags">Compromisso</p>
+                <p class="slogan-tags">Transparência</p>
+                <p class="slogan-tags">Comunicação em tempo real</p>
+            </div>
+            <div class= "carrossel1">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed//w6ngXF3CGPQ?autoplay=1mute=1"allowfullscreen></iframe>
+                </div>
+              <figcaption class="figure-caption text-dark"><strong>Sempre ao seu lado.</strong></figcaption>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

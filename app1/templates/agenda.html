@@ -1,0 +1,55 @@
+{% extends 'base_telainicial.html' %}
+
+{% block content3 %}
+	{% if request.GET.search.strip %}
+	<div class="tamanho-div">
+		<div class="row" id="agenda-search">
+			<span class="agenda-residente">Residente: {{request.GET.search}}</span>
+			<form method="GET" id="search-form">
+				<input  class="btn btn-info" list="pessoas" name="search" id="search" placeholder="Selecione o residente">
+				<datalist id="pessoas">
+					{% for residente in residentes %}
+						<option value="{{residente.pessoa_nome}}">
+					{% endfor %}
+				</datalist>
+				<input type="submit" value="Buscar" class="btn btn-info">
+			</form>
+		</div>
+	</div>
+	
+	<div class="agenda-body">
+		<div class="clearfix">
+			<a class="btn btn-info right" href="/agenda/?{{ next_month }}&search={{dono.pessoa_nome}}"> Próximo Mês </a>
+			<a class="btn btn-info right" href="/agenda/?{{ prev_month }}&search={{dono.pessoa_nome}}"> Mês Anterior </a>
+			<a class="btn btn-info left novo_evento" href="/event/new/{{dono.id}}"> Novo Evento </a>
+		</div>
+		<div class="calendario1">
+			<table>
+				{{ calendar }}
+			</table>
+		</div>
+	</div>
+	{% elif not request.GET.search.strip %}
+		<div class="div-agenda ">
+			<span class="text-agenda-img">SEJA BEM VINDO</span>
+			<div class="text-agenda1">
+				<span class="agenda-residente2">Faça a busca pelo nome do residente</span>
+			</div>
+			<div class="text-agenda2">
+				<form method="GET" id="search-form">
+					<input  class="btn btn-info" list="pessoas" name="search" id="search" placeholder="Selecione o residente">
+					<datalist id="pessoas">
+						{% for residente in residentes %}
+							<option value="{{residente.pessoa_nome}}">
+						{% endfor %}
+					</datalist>
+					<input type="submit" value="Buscar" class="btn btn-info">
+				</form>
+			</div>
+			<div class="text-agenda3">
+				<span class="agenda-residente2">E tenha acesso a agenda de eventos</span>
+			</div>
+		</div>
+	{% endif %}
+
+{% endblock content3 %}

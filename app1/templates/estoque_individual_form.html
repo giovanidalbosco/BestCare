@@ -1,0 +1,27 @@
+{% extends 'base_telainicial.html' %}
+{% load crispy_forms_tags %}
+
+{% block content3 %}
+    <div class="form-container">
+        <a class="btn btn-info left clearfix" href="/estoque_individual_list/?search={{residente.pessoa_nome}}"> Voltar </a>
+        {% if estoque_individual.id != null %}
+            <h4 class="d-flex justify-content-center py-4">Editar Medicamento '{{estoque_individual.estoque_pessoa_nome.pessoa_nome}}'</h4>
+        {% else %}
+            <h4 class="d-flex justify-content-center py-4">Adicionar Medicamento</h4>
+        {% endif %}
+
+        <form method="POST">
+            {% csrf_token %}
+            <table class="form form-table">
+                {{ form.as_table }}
+                <tr><td colspan="2"><button type="submit" class="btn btn-info right"> Salvar </button></td></tr>
+            </table>
+            <a class="bg-transparent mx-lg-5" id="add-link" href="/uso_consumo_add">
+                <div class="add-div">
+                    <i class="fas fa-plus btn"></i>
+                    Adicionar Uso e consumo
+                </div>
+            </a>
+        </form>
+    </div>
+{% endblock content3 %}

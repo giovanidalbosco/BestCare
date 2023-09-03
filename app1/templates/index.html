@@ -1,0 +1,24 @@
+
+{% extends 'base.html' %}
+{% block content %}
+{% if user.is_authenticated %}
+{% else %}
+<div class="container-fluid" id="botton-inicial">
+    <div class="row ">
+        <div id="slogan"  class="col  font-italic ">
+            <p class="slogan-1">Pontualidade</p>
+            <p class="slogan-tags">Compromisso</p>
+            <p class="slogan-tags">Transparência</p>
+            <p class="slogan-tags">Comunicação em tempo real</p>
+        </div>
+        <div class= "carrossel1">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed//w6ngXF3CGPQ?autoplay=1&mute=1"allowfullscreen></iframe>
+          </div>
+          <figcaption class="figure-caption text-dark"><strong>Sempre ao seu lado.</strong></figcaption>
+        </div>
+    </div>
+</div>
+
+{% endif %}
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base_telainicial.html' %}
+{% load crispy_forms_tags %}
+
+{% block content3 %}
+    <div class="form-container">
+        <a class="btn btn-info left clearfix" href="/ocorrencias_list"> Voltar </a>
+        {% if ocorrencia.id != null %}
+            <h4 class="d-flex justify-content-center py-4">Editar Ocorrência '{{ocorrencia.get_ocorrencia_nome_display}}' de '{{ocorrencia.ocorrencia_pessoa_nome.pessoa_nome}}'</h4>
+        {% else %}
+            <h4 class="d-flex justify-content-center py-4">Adicionar Ocorrência</h4>
+        {% endif %}
+
+        <form method="POST">
+            {% csrf_token %}
+            <table class="form form-table">
+                {{ form.as_table }}   
+                <tr><td colspan="2"><button type="submit" class="btn btn-info right"> Salvar </button></td></tr>
+            </table>
+        </form>
+    </div>
+{% endblock content3 %}

@@ -1,0 +1,502 @@
+:root{
+    --cor-fundo:linear-gradient(90deg, rgba(116,189,203,0.4) 0%, rgba(123, 92, 55, 0.4) 100%, rgba(0,212,255,0.4) 100%);}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: var(--cor-fundo);
+    transition: 0.3 ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+
+}
+/* Inicio do header*/
+
+.row img{
+    width: 4em;
+    height: 2.8em;
+    border-radius: 8px;
+}
+
+#header a{
+    color:rgba(18, 31, 52, 0.888);
+}
+#solucoes a{
+    font-size: 1.3em;
+}
+
+.header-logout{
+    width: 95%;
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+}
+
+#header a span{
+    color: rgba(18, 31, 52, 0.888);
+    font-size: 1.6em;
+    font-weight:500; 
+}
+
+/*Fim do header*
+
+/*Tela inicial*/
+
+#imagemApresentacao{
+    width: 33.5em;
+    height: 22.5em;
+}
+
+/*Fim Tela inicial*/
+
+/*Inicio da janela de input*/
+.Caracteristicas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Caracteristicas{
+    position: fixed;
+    width: 28.12em;
+    height: 28.12em;
+    padding: 2%;
+    top:25%;
+    font-family: Helvetica, sans-serif;
+    background-color:#FFFFFF;
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    transition: 0.3 ease-in-out;
+    border-radius: 10px;
+    border: grey solid 1px;
+    margin-left: 33%;
+    margin-right: 33%;
+}
+       
+.Caracteristicas:target{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.fechar{
+    position: absolute;
+    width: 1em;
+    right: 0.9em;
+    top: 2%;
+    text-align: center;
+    line-height: 25px;
+    background:#FFFFFF;
+    color:#000;
+    text-decoration: none; 
+}
+
+.fechar:hover{
+    color: red;
+}
+
+.header-login img{
+    width: 3.5em;
+    height: 2.3em;
+    margin-top: -18%;
+}
+
+.header-login span{
+    margin-top: -16%; 
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario input{
+    background:rgba(204, 204, 197, 0.826);
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    width: 350px;
+    height: 40px;
+    padding: 5px;
+    margin: 2%;
+    margin-top: 2%;
+}
+.login2 button{
+    background:rgba(204, 204, 197, 0.826);
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    margin: 2%;
+    cursor: pointer;
+}
+
+.login2 button{   
+    text-decoration: none;
+    list-style-type: none;
+    color: #000;
+}
+.login2 button:hover{
+    color:rgba(14, 94, 200,1);
+}
+
+::placeholder{
+    text-align:start;
+}
+
+div a{
+    color:rgb(76, 75, 75); 
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 2%;
+    margin-left: 8px;
+    font-weight: 900;
+    font-size: 17px;
+    background:#FFFFFF;
+    border: none;
+}
+
+div .criar_conta{
+    margin: 3%;
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;  
+}
+
+/*Termina janela input*/
+
+/*Início Cadastro*/
+
+.btn-cad-geral{
+    position: fixed;
+    width: 28.12em;
+    height: 28.12em;
+    padding: 2%;
+    top:25%;
+    font-family: Helvetica, sans-serif;
+    background-color:#FFFFFF;
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    transition: 0.3 ease-in-out;
+    border-radius: 10px;
+    border: grey solid 1px;
+    margin-left: 33%;
+    margin-right: 33%;
+}
+
+.btn-cad-geral{
+    opacity: 1;
+    pointer-events: auto;
+}
+.btn-cad-geral .input-cadastrar{
+    background:rgba(204, 204, 197, 0.826);
+    color:#000;
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+}
+.btn-cad-geral .input-cadastrar:hover{
+    color:rgba(14, 94, 200,1);
+}
+
+.input-btn .input-cadastrar{
+    margin-left: 33%;
+    margin-right: 33%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.cadastro-login img{
+    width: 3.5em;
+    height: 2.3em;
+    margin-top: -5%;
+}
+
+.cadastro-login span{
+    margin-top: -3%; 
+}
+
+/*Fim Cadastro*/
+
+.slogan{
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    padding: 7rem;
+}
+
+.carrossel1 #carousel img{
+    width: 30em;
+    height: 25em;
+}
+#carousel img{
+    opacity: 0.9;
+}
+.carrossel1 .carrossel1-frase{
+    color: rgba(6, 12, 27, 0.934);
+    font-family:'Segoe UI';
+    font-size: 2.5em;
+    font-weight: 400;
+    text-shadow: 9px 9px 4px  rgb(4, 50, 69), 5px 5px 3em black;
+}
+
+/*Cor da lixeira */
+
+.fa-trash:hover{
+    color: rgb(188, 58, 58);
+}
+
+.entrar2{
+    font-size: 2em;
+    font-weight: 500;
+    cursor: pointer;
+    width: 29rem;
+    height: 2.5rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    background:var(--cor-fundo);
+    color:rgb(14, 94, 200);
+    text-decoration: none;  
+}
+
+.entrar2:hover{
+    color: aliceblue;
+}
+
+/*Bloco do quemSomos*/
+
+.quemsomos{
+    color:rgba(18, 31, 52, 0.888); 
+}
+
+.media #quemSomos{
+    width:50px;
+    height:50px;
+    border-radius: 4px;
+    margin-left: 10%
+}
+#desenvolvedores{
+    font-size: 4em;
+    margin-top: 9%;
+}
+#fotos{
+    width: 250px;
+    height: 330px;
+    margin-top: 9%;
+    border: blanchedalmond 1.5px solid;
+}
+#linkfotos{
+    color:rgba(18, 31, 52, 0.888);
+    font-size: 1.5em;
+}
+/*Fim bloco do quemSomos*/
+
+/*Rodapé=> Será igual sempre */
+.card-footer{
+    font-size: small;
+    font-family: Times;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 10%;
+}
+.card-footer a{
+    color: black;
+    font-size: 1.1em;
+    font-weight: 600;
+   
+}
+.card-footer p{
+    color: darkgrey;
+    margin-top: 1%;
+}
+/*Fim do rodapé*/
+/*Inicio Base_telainicial*/
+.base_telainicial{
+    background:#FFFFFF;
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    margin-bottom: -10%;
+}
+
+.back{
+    background: #b2aeae48;
+    width: 14em;
+    height: 100vh;
+    border-radius: 5px;
+}
+
+#solucoes a{
+    color:#000;
+    font-size: 1.1em;
+    margin-top: 18%;
+}
+
+.content3{
+    padding: 1%;  
+}
+
+/*Fim-Base-telainicial*/
+
+/*Inicio solucoes*/
+.media{
+    width: 100%;
+    color:rgba(18, 31, 52, 0.888);
+    margin-top: 9em;
+}
+
+.media img{
+    width:130px;
+    height:130px;
+    border-radius: 4px;
+    margin-left: 18%
+}
+
+.btn-cad-geral{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-cad-geral{
+    position: fixed;
+    width: 31em;
+    height: 28em;
+    padding: 2%;
+    top:25%;
+    font-family: Helvetica, sans-serif;
+    background-color:#ffffff;
+    border-radius: 10px;
+    margin-left: 33%;
+    margin-right: 33%;
+    align-items:center;
+}
+.input-btn input{
+    top:10%;
+    background:rgba(204, 204, 197, 0.826);
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    width: 24em;
+    height: 2em;
+    padding: 5%;
+    margin: 2%;  
+}
+
+/*Início post-it*/
+
+/*post-it posição*/
+.sticky-container {
+    max-width: 270px;
+    position: relative;
+}
+
+.sticky-outer {
+  display: flex;
+  padding-top: 92%;
+  position: relative; 
+}
+
+.sticky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+  
+  /* Sombra atrás do post-it */
+.sticky:before {
+  box-shadow: -2px 2px 15px 0 rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.25);
+  content: '';
+  width: 90%;
+  left: 5px;
+  height: 75%;
+  position: absolute;
+  top: 30%;
+}
+  
+  /*Conteúdo do post-it*/
+.sticky-content {
+    background:rgb(197, 209, 210);
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    font-family:monospace;
+    font-size: 1.25rem;
+    
+    display: flex;
+    align-items:center;
+    justify-content:center; 
+
+  clip-path: url(#stickyClip);
+}
+
+.container-inner {
+  width: 40%;
+  margin: 2em;
+}
+
+.post-it{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+
+}
+
+.base-scrool{
+    height: 70vh;
+    overflow-y: scroll;
+}
+
+.tamanho-div{
+    width: 78rem;
+}
+
+    
+    
+    
+
+ 
+
+ 
+ 
+ 
+
+  

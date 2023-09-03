@@ -1,0 +1,97 @@
+{% extends 'base_telainicial.html' %}
+
+{% block title %}Cuidadores{% endblock %}
+
+{% block content3 %}
+<div class="tamanho-div">
+    <h2 class="text-dark m-lg-4 mt-4">Cuidadores</h2>
+    <div class="w-100" style="margin-top: 3%;">
+        <div class="col-lg-12 dashboard-box">
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li {% if message.tags %} class="alert alert-{{messages.tags}}"{% endif %}>{{message}}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <div class="row d-inline-block">
+                <div class="modal-header align-baseline">
+                    <a class="bg-transparent mr-5"  id="add-link" href="/cuidadores_add">
+                        <div>
+                            <i class="fas fa-plus" style="font-size:0.875rem;"></i>
+                            Adicionar Cuidador
+                        </div>
+                    </a> 
+                    <div class="search-div bg-transparent">
+                        <form method="GET" id="search-form">
+                            <input class="btn btn-outline-dark btn-sm" type="search" id="search" name="search" placeholder="Selecione o cuidador" value="{{  request.GET.search }}">
+                            <input class="btn btn-outline-dark btn-sm" type="submit" value="Buscar">
+                        </form>
+                    </div> 
+                </div>
+            </div>
+            <div class="base-scrool"> 
+                <table class="table table-hover" id="tabcuidadores">
+                    <thead>
+                      <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Endereço</th>
+                        <th scope="col">Número</th>
+                        <th scope="col">Complemento</th>
+                        <th scope="col">Cidade</th>
+                        <!-- <th scope="col">Classe</th> -->
+                        <th scope="col">CPF</th>
+                        <th scope="col">Telefone</th>
+                        <th scope="col">E-Mail</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for i in cuidador %}
+                      <tr>
+                        <td>
+                            <div class="d-flex justify-content-start">
+                                <a href="/cuidadores_edit/{{i.id}}" class="delete-btn bg-transparent"><span><abbr title="EDITAR">
+                                    <i class="fas fa-edit" style="cursor:pointer;"></i></abbr></span></a>
+                                <a class="delete-btn bg-transparent js-delete" data-id="{{i.id}}"><span><abbr title="EXCLUIR">
+                                    <i class="fas fa-trash" style="cursor:pointer;"></i></abbr></span></a>
+                            </div>
+                        </td>
+                        <td>{{i.pessoa_nome}}</td>
+                        <td>{{i.pessoa_endereco}}</td>
+                        <td>{{i.pessoa_numero}}</td>
+                        <td>{{i.pessoa_compl}}</td>
+                        <td>{{i.pessoa_cidade}}</td>
+                        <!-- <td>{{i.get_pessoa_classe_display}}</td> -->
+                        <td>{{i.pessoa_CPF}}</td>
+                        <td>{{i.pessoa_telefone}}</td>
+                        <td>{{i.pessoa_email}}</td>
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" id="modalcuidadores">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Excluir Cuidador</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <p>Confirmar a exclusão do cuidador?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="btnnao" data-dismiss="modal">Não</button>
+                <button type="button" class="btn btn-primary" id="btnsim-cuidador">Sim</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content3 %}

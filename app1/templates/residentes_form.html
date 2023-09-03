@@ -1,0 +1,36 @@
+{% extends 'base_telainicial.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+{% block title %}{{residente.pessoa_nome}}{% endblock %}
+
+{% block content3 %}
+    <div class="form-container">
+        <a class="btn btn-info left clearfix" href="/residentes_list"> Voltar </a>
+        {% if residente.id != null %}
+            <h4 class="d-flex justify-content-center py-4">Editar Residente '{{residente.pessoa_nome}}'</h4>
+        {% else %}
+            <h4 class="d-flex justify-content-center py-4">Adicionar Residente</h4>
+        {% endif %}
+
+        <form method="POST">
+            {% csrf_token %}
+            <table class="form form-table">
+                {{ form.as_table }}
+                <tr><td colspan="2"><button type="submit" class="btn btn-info right"> Salvar </button></td></tr>
+            </table>
+        </form>
+    </div>
+    {% block script%}
+        <script src="{% static 'JS/jquery.mask.min.js' %}"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('.mask-cpf').mask('000.000.000-00');
+                $('.mask-cep').mask('00.000-000');
+            });
+        </script>
+    {% endblock%}
+
+{% endblock content3 %}
